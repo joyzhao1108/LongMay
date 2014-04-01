@@ -1,0 +1,2012 @@
+[ 2014-03-06T20:04:00+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Admin&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.013822s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014255s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.046196s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015234s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.061637s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.117190s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.179186s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.189428s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.199451s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.210303s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.041982s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.221344s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010530s ]
+
+[ 2014-03-06T20:04:00+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Admin&a=verify
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.019456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019872s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+
+[ 2014-03-06T20:04:09+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=System&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.010157s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010425s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.007310s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = null ) AND ( `pid` = 2 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.548113s ]
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.011130s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `display` = 1 ) AND ( `status` = 1 ) ORDER BY `sort` asc  [ RunTime:0.007742s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.701168s ]
+INFO: [ view_template ] --END-- [ RunTime:0.016895s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.718247s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.109372s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.827796s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.837599s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.848321s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.857601s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.039219s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.867229s ]
+INFO: [ view_end ] --END-- [ RunTime:0.012204s ]
+
+[ 2014-03-06T20:04:10+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=System&a=menu
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.010807s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011153s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.007504s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = null ) AND ( `pid` = 2 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.006136s ]
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.007401s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `display` = 2 ) AND ( `status` = 1 ) AND ( `pid` = 2 ) AND ( `level` = 2 ) ORDER BY `sort` asc  [ RunTime:0.007246s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.198456s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015793s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.214385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.089637s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.304293s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.314657s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.327828s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.339808s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.050186s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.354816s ]
+INFO: [ view_end ] --END-- [ RunTime:0.012956s ]
+
+[ 2014-03-06T20:04:11+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=System&a=main
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.012532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012823s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.009524s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = null ) AND ( `pid` = 2 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.003077s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.400864s ]
+INFO: [ view_template ] --END-- [ RunTime:0.026251s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant SERVER_SOFTWARE - assumed 'SERVER_SOFTWARE' C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\eed9ff2e9e193dd9eab4f2f83f5ee926.php 第 15 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.427398s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.118109s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.545629s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.556584s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.567002s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.576570s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.041872s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.587735s ]
+INFO: [ view_end ] --END-- [ RunTime:0.012434s ]
+
+[ 2014-03-06T20:04:25+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=System&a=menu&pid=80&level=2&title=%E5%85%AC%E4%BC%97%E5%8F%B7%E7%AE%A1%E7%90%86
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.013333s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013798s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.011754s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 2 ) AND ( `pid` = 80 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.008361s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.192403s ]
+INFO: [ view_template ] --END-- [ RunTime:0.017156s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.209782s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.100974s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.310877s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.320758s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.332570s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.342134s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.042042s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.353150s ]
+INFO: [ view_end ] --END-- [ RunTime:0.012514s ]
+
+[ 2014-03-06T20:04:29+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Token&a=index&pid=81&level=3
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.012210s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012500s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.008459s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 3 ) AND ( `pid` = 81 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.007257s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.009071s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_wxuser` LIMIT 1   [ RunTime:0.006564s ]
+SQL: SELECT * FROM `wx_wxuser` ORDER BY id desc LIMIT 0,5   [ RunTime:0.000840s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.008167s ]
+SQL: SELECT `id`,`gid`,`username` FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.006468s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.199769s ]
+INFO: [ view_template ] --END-- [ RunTime:0.019883s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  usr C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\caab36e47d2a42932e05e5da84077449.php 第 33 行.
+NOTIC: [8] Undefined index:  usenum C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\caab36e47d2a42932e05e5da84077449.php 第 35 行.
+NOTIC: [8] Undefined index:  status C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\caab36e47d2a42932e05e5da84077449.php 第 36 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\caab36e47d2a42932e05e5da84077449.php 第 40 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.219834s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.126705s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.346809s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.358988s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.371877s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.384055s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.051317s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.398484s ]
+INFO: [ view_end ] --END-- [ RunTime:0.013894s ]
+
+[ 2014-03-06T20:04:47+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=System&a=menu&pid=45&level=2&title=%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009839s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010100s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.034927s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 2 ) AND ( `pid` = 45 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.008954s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.167497s ]
+INFO: [ view_template ] --END-- [ RunTime:0.013977s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.181646s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076669s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.258464s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.267466s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.276269s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.285514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.036463s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.295205s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010149s ]
+
+[ 2014-03-06T20:04:48+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Function&a=index&pid=46&level=3
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.012602s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012908s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.007410s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 3 ) AND ( `pid` = 46 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.006818s ]
+SQL: SHOW COLUMNS FROM `wx_function` [ RunTime:0.007709s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_function` LIMIT 1   [ RunTime:0.008084s ]
+SQL: SELECT * FROM `wx_function` ORDER BY id ASC LIMIT 0,5   [ RunTime:0.000751s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.174979s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015815s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.191092s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.103908s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.295084s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.304188s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.313980s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.322198s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.036204s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.331555s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010702s ]
+
+[ 2014-03-06T20:04:53+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Function&a=index&pid=46&level=3&p=2
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.010028s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010354s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.007700s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 3 ) AND ( `pid` = 46 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.003651s ]
+SQL: SHOW COLUMNS FROM `wx_function` [ RunTime:0.007803s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_function` LIMIT 1   [ RunTime:0.006115s ]
+SQL: SELECT * FROM `wx_function` ORDER BY id ASC LIMIT 5,5   [ RunTime:0.000937s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.180510s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014112s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.194815s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.120538s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.315475s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.324537s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.334086s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.342389s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037265s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.352965s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009794s ]
+
+[ 2014-03-06T20:04:55+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Function&a=index&pid=46&level=3&p=3
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.013033s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013469s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.007169s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 3 ) AND ( `pid` = 46 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.005467s ]
+SQL: SHOW COLUMNS FROM `wx_function` [ RunTime:0.007194s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_function` LIMIT 1   [ RunTime:0.005799s ]
+SQL: SELECT * FROM `wx_function` ORDER BY id ASC LIMIT 10,5   [ RunTime:0.000883s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.162501s ]
+INFO: [ view_template ] --END-- [ RunTime:0.016027s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.178733s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106042s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.284895s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.294174s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.302993s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.314165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.038311s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.323418s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010076s ]
+
+[ 2014-03-06T20:04:58+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Function&a=index&pid=46&level=3&p=4
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009909s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010249s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.008153s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 3 ) AND ( `pid` = 46 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.007484s ]
+SQL: SHOW COLUMNS FROM `wx_function` [ RunTime:0.007718s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_function` LIMIT 1   [ RunTime:0.005842s ]
+SQL: SELECT * FROM `wx_function` ORDER BY id ASC LIMIT 15,5   [ RunTime:0.001163s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.196576s ]
+INFO: [ view_template ] --END-- [ RunTime:0.016270s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.213048s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.096323s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.309559s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.318599s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.328659s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.338864s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.039635s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.349429s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009730s ]
+
+[ 2014-03-06T20:04:59+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Function&a=index&pid=46&level=3&p=5
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009704s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.007145s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 3 ) AND ( `pid` = 46 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.005130s ]
+SQL: SHOW COLUMNS FROM `wx_function` [ RunTime:0.007547s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_function` LIMIT 1   [ RunTime:0.005406s ]
+SQL: SELECT * FROM `wx_function` ORDER BY id ASC LIMIT 20,5   [ RunTime:0.001002s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.162927s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014241s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\94b11c929c4cad87091c0fac32d2f6d1.php 第 40 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.177426s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.092370s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.269908s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.279213s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.289008s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.297798s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037462s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.307593s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010383s ]
+
+[ 2014-03-06T20:05:01+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=System&a=menu&pid=5&level=2&title=%E5%86%85%E5%AE%B9%E7%AE%A1%E7%90%86
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.014632s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014970s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.009038s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 2 ) AND ( `pid` = 5 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.007446s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.142737s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015907s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.158781s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.074516s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.233490s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.242949s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.252200s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.261065s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037664s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.271368s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010497s ]
+
+[ 2014-03-06T20:05:04+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Article&a=index&pid=38&level=3
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009714s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.007673s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 3 ) AND ( `pid` = 38 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.005948s ]
+SQL: SHOW COLUMNS FROM `wx_img` [ RunTime:0.009705s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.014814s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_img` LIMIT 1   [ RunTime:0.007059s ]
+SQL: SELECT * FROM `wx_img` LIMIT 0,25   [ RunTime:0.000578s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\Admin\ArticleAction.class.php 第 10 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.190677s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014227s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.205112s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.095218s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.300536s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.309507s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.321408s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.329963s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.039005s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.339730s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009928s ]
+
+[ 2014-03-06T20:05:06+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Text&a=index&pid=57&level=3
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010203s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.007195s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 3 ) AND ( `pid` = 57 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.005831s ]
+SQL: SHOW COLUMNS FROM `wx_text` [ RunTime:0.007649s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.008839s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_text` LIMIT 1   [ RunTime:0.006750s ]
+SQL: SELECT * FROM `wx_text` LIMIT 0,25   [ RunTime:0.000631s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\Admin\TextAction.class.php 第 10 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.193001s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015546s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.208710s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.095909s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.304768s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.314316s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.325321s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.334136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.038590s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.343570s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009549s ]
+
+[ 2014-03-06T20:05:10+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Article&a=index&pid=38&level=3
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009849s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.007826s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 3 ) AND ( `pid` = 38 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.005494s ]
+SQL: SHOW COLUMNS FROM `wx_img` [ RunTime:0.009265s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.008110s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_img` LIMIT 1   [ RunTime:0.007376s ]
+SQL: SELECT * FROM `wx_img` LIMIT 0,25   [ RunTime:0.000946s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\Admin\ArticleAction.class.php 第 10 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.194731s ]
+INFO: [ view_template ] --END-- [ RunTime:0.018183s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.213044s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.102236s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.315571s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.325433s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.334252s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.343001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037418s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.353146s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009832s ]
+
+[ 2014-03-06T20:05:29+08:00 ] 127.0.0.1 /weixin/index.php?g=Home&m=Index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009802s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.052376s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014311s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\47f3eb7a4a5c9661138d7d37e96fcc81.php 第 28 行.
+NOTIC: [8] Undefined index:  uid C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\47f3eb7a4a5c9661138d7d37e96fcc81.php 第 28 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.066767s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.115612s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.182530s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.191639s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.202039s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.210700s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037545s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.220301s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010513s ]
+
+[ 2014-03-06T20:05:42+08:00 ] 127.0.0.1 /weixin/index.php?g=Home&m=Index&a=price
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009322s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009603s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.053077s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015074s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\47ff555cbc6903f06f2ce37c70ce0ec6.php 第 28 行.
+NOTIC: [8] Undefined index:  uid C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\47ff555cbc6903f06f2ce37c70ce0ec6.php 第 28 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.068306s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.171324s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.239785s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.249278s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.258876s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.268487s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037847s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.277871s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010087s ]
+
+[ 2014-03-06T20:06:07+08:00 ] 127.0.0.1 /weixin/index.php?g=Home&m=Index&a=fc
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.010549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010863s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.055066s ]
+INFO: [ view_template ] --END-- [ RunTime:0.016229s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\9f72c086e7fd28394605e09011795541.php 第 28 行.
+NOTIC: [8] Undefined index:  uid C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\9f72c086e7fd28394605e09011795541.php 第 28 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.071482s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.171082s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.242720s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.252231s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.262581s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.271293s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037779s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.280766s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010885s ]
+
+[ 2014-03-06T20:06:24+08:00 ] 127.0.0.1 /weixin/index.php?g=Home&m=Index&a=help
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.010227s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010603s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.066305s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015790s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\1923ca92b2cbd35b9267c9fc28129f20.php 第 31 行.
+NOTIC: [8] Undefined index:  uid C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\1923ca92b2cbd35b9267c9fc28129f20.php 第 31 行.
+NOTIC: [8] Undefined index:  token C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\1923ca92b2cbd35b9267c9fc28129f20.php 第 147 行.
+NOTIC: [8] Undefined index:  token C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\1923ca92b2cbd35b9267c9fc28129f20.php 第 174 行.
+NOTIC: [8] Undefined index:  token C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\1923ca92b2cbd35b9267c9fc28129f20.php 第 178 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.082278s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.140371s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.222767s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.231708s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.241482s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.249899s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.036553s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.259534s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010477s ]
+
+[ 2014-03-06T20:06:37+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=System&a=menu&pid=3&level=2&title=%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.012136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012480s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.009131s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 2 ) AND ( `pid` = 3 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.006475s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.162435s ]
+INFO: [ view_template ] --END-- [ RunTime:0.018968s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.181486s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.095270s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.276895s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.286615s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.295349s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.304001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037506s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.314779s ]
+INFO: [ view_end ] --END-- [ RunTime:0.012363s ]
+
+[ 2014-03-06T20:06:39+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=User&a=index&pid=18&level=3
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.010928s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011238s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.008898s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 3 ) AND ( `pid` = 18 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.007320s ]
+SQL: SHOW COLUMNS FROM `wx_role` [ RunTime:0.008721s ]
+SQL: SELECT `id`,`name` FROM `wx_role`  [ RunTime:0.008642s ]
+SQL: SHOW COLUMNS FROM `wx_user` [ RunTime:0.008102s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_user` LIMIT 1   [ RunTime:0.007865s ]
+SQL: SELECT * FROM `wx_user` ORDER BY id ASC LIMIT 0,15   [ RunTime:0.000779s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.217781s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014301s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.232263s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.096291s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.328814s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.338772s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.347734s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.356316s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037391s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.366385s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009637s ]
+
+[ 2014-03-06T20:06:45+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Group&a=index&pid=25&level=3
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009957s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010228s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.006915s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 3 ) AND ( `pid` = 25 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.006333s ]
+SQL: SHOW COLUMNS FROM `wx_role` [ RunTime:0.006843s ]
+SQL: SELECT * FROM `wx_role` ORDER BY sort DESC  [ RunTime:0.007578s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.161786s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014558s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.176546s ]
+INFO: [ view_parse ] --END-- [ RunTime:1.099778s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-1.276464s ]
+INFO: Run TokenBuild Behavior [ RunTime:-1.285545s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-1.294522s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-1.303047s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.036785s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-1.313476s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009713s ]
+
+[ 2014-03-06T20:06:48+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=User_group&a=index&pid=48&level=3
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.013867s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014153s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.009395s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 3 ) AND ( `pid` = 48 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.007566s ]
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.009751s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_user_group` LIMIT 1   [ RunTime:0.007216s ]
+SQL: SELECT * FROM `wx_user_group` ORDER BY id ASC LIMIT 0,15   [ RunTime:0.000988s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.205842s ]
+INFO: [ view_template ] --END-- [ RunTime:0.017348s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\07e53de691a706cde63630c26b6bf4ba.php 第 43 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\07e53de691a706cde63630c26b6bf4ba.php 第 43 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\07e53de691a706cde63630c26b6bf4ba.php 第 43 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\07e53de691a706cde63630c26b6bf4ba.php 第 43 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\07e53de691a706cde63630c26b6bf4ba.php 第 43 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\07e53de691a706cde63630c26b6bf4ba.php 第 43 行.
+NOTIC: [8] Undefined index:  username C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\07e53de691a706cde63630c26b6bf4ba.php 第 43 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.223455s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.115712s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.339276s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.348412s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.357941s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.367404s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037640s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.377144s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009918s ]
+
+[ 2014-03-06T20:06:55+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Users&a=index&pid=50&level=3
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009715s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.007116s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 3 ) AND ( `pid` = 50 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.005832s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.007123s ]
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.012376s ]
+SQL: SELECT `id`,`name` FROM `wx_user_group` ORDER BY id desc  [ RunTime:0.006673s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_users` LIMIT 1   [ RunTime:0.000506s ]
+SQL: SELECT * FROM `wx_users` ORDER BY id desc LIMIT 0,25   [ RunTime:0.000854s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.180719s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014338s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.195232s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.098166s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.293688s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.302638s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.312267s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.321535s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037128s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.330889s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009816s ]
+
+[ 2014-03-06T20:07:56+08:00 ] 127.0.0.1 /weixin/index.php?m=Index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.013139s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013487s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.073050s ]
+INFO: [ view_template ] --END-- [ RunTime:0.020727s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\47f3eb7a4a5c9661138d7d37e96fcc81.php 第 28 行.
+NOTIC: [8] Undefined index:  uid C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\47f3eb7a4a5c9661138d7d37e96fcc81.php 第 28 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.094098s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.125826s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.220036s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.231311s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.240878s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.250311s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.041400s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.261664s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010193s ]
+
+[ 2014-03-06T20:08:17+08:00 ] 127.0.0.1 /weixin/index.php?m=Users&a=checkreg
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.011639s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011995s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.009698s ]
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.014947s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.005792s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `username` = 'joyzhao1108' ) LIMIT 1   [ RunTime:0.000802s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `email` = 'joyzhao1108@gmail.com' ) LIMIT 1   [ RunTime:0.000655s ]
+NOTIC: [2] md5() expects at least 1 parameter, 0 given C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Model.class.php 第 917 行.
+SQL: INSERT INTO `wx_users` (`username`,`password`,`email`,`createtime`,`createip`,`viptime`,`lasttime`,`lastip`,`status`,`gid`) VALUES ('joyzhao1108','8fe56cd12da959ac5776100063c53afd','joyzhao1108@gmail.com',1394107696,'127.0.0.1',1396786096,1394107696,'127.0.0.1',1,4) [ RunTime:0.000932s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.159647s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014688s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.174513s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.118150s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.292951s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.304878s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.317841s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.330692s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.051317s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.344599s ]
+INFO: [ view_end ] --END-- [ RunTime:0.017942s ]
+
+[ 2014-03-06T20:08:18+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.010922s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011273s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.008295s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.005710s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.007680s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 21 ) LIMIT 1   [ RunTime:0.006206s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.010329s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = null ) AND ( `uid` = 21 ) LIMIT 1   [ RunTime:0.007925s ]
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.007567s ]
+SQL: SELECT * FROM `wx_user_group`  [ RunTime:0.005630s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_wxuser` WHERE ( `uid` = 21 ) LIMIT 1   [ RunTime:0.000739s ]
+SQL: SELECT * FROM `wx_wxuser` WHERE ( `uid` = 21 ) LIMIT 0,25   [ RunTime:0.000935s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.234073s ]
+INFO: [ view_template ] --END-- [ RunTime:0.019942s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.254274s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.202322s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.456821s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.470129s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.482912s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.496277s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.052470s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.509638s ]
+INFO: [ view_end ] --END-- [ RunTime:0.014787s ]
+
+[ 2014-03-06T20:08:19+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.013349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013637s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.008152s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.005921s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.007899s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 21 ) LIMIT 1   [ RunTime:0.006208s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.008089s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = null ) AND ( `uid` = 21 ) LIMIT 1   [ RunTime:0.005800s ]
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.007366s ]
+SQL: SELECT * FROM `wx_user_group`  [ RunTime:0.006849s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_wxuser` WHERE ( `uid` = 21 ) LIMIT 1   [ RunTime:0.000339s ]
+SQL: SELECT * FROM `wx_wxuser` WHERE ( `uid` = 21 ) LIMIT 0,25   [ RunTime:0.000511s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.222358s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014114s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.236776s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.131559s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.368440s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.377678s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.386658s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.395896s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.036683s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.405336s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009725s ]
+
+[ 2014-03-06T20:08:38+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Index&a=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009751s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.007405s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.008168s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.009440s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 21 ) LIMIT 1   [ RunTime:0.008412s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.008928s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = null ) AND ( `uid` = 21 ) LIMIT 1   [ RunTime:0.006058s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.170689s ]
+INFO: [ view_template ] --END-- [ RunTime:0.017051s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: province C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\7db099cc8e2a4e26c8a56c899b28f7ee.php 第 133 行.
+NOTIC: [8] Undefined variable: city C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\7db099cc8e2a4e26c8a56c899b28f7ee.php 第 133 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.187982s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.130507s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.318614s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.327536s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.337829s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.348806s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.039641s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.358474s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009711s ]
+
+[ 2014-03-06T20:08:41+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Alipay&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009621s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.007015s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.006923s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.007034s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 21 ) LIMIT 1   [ RunTime:0.007889s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.008509s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = null ) AND ( `uid` = 21 ) LIMIT 1   [ RunTime:0.228721s ]
+SQL: SELECT `id`,`name`,`price` FROM `wx_user_group` WHERE price>0  [ RunTime:0.000662s ]
+SQL: SELECT `price` FROM `wx_user_group` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000522s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.392906s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014276s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.407358s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.121768s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.529271s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.538222s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.548221s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.558291s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.038464s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.567980s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010824s ]
+
+[ 2014-03-06T20:08:45+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Index&a=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009731s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.007610s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.005508s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.007355s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 21 ) LIMIT 1   [ RunTime:0.005757s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.008418s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = null ) AND ( `uid` = 21 ) LIMIT 1   [ RunTime:0.005864s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.157904s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014353s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: province C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\7db099cc8e2a4e26c8a56c899b28f7ee.php 第 133 行.
+NOTIC: [8] Undefined variable: city C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\7db099cc8e2a4e26c8a56c899b28f7ee.php 第 133 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.172463s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.122353s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.294941s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.303978s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.314086s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.323123s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037280s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.332435s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009494s ]
+
+[ 2014-03-06T20:08:47+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Index&a=pay
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010199s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.008410s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.006225s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.007563s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 21 ) LIMIT 1   [ RunTime:0.006070s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.008120s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = null ) AND ( `uid` = 21 ) LIMIT 1   [ RunTime:0.006017s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 21 ) LIMIT 1   [ RunTime:0.000363s ]
+SQL: SELECT `id`,`name`,`price` FROM `wx_user_group` WHERE price > 0  [ RunTime:0.000628s ]
+SQL: SELECT `price` FROM `wx_user_group` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000318s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.174280s ]
+INFO: [ view_template ] --END-- [ RunTime:0.019927s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.194568s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.123748s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.318418s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.327815s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.339114s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.350925s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.042974s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.361611s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010425s ]
+
+[ 2014-03-06T20:08:51+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Alipay&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.013762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014103s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.007124s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.006218s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.007367s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 21 ) LIMIT 1   [ RunTime:0.006427s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.008271s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = null ) AND ( `uid` = 21 ) LIMIT 1   [ RunTime:0.006800s ]
+SQL: SELECT `id`,`name`,`price` FROM `wx_user_group` WHERE price>0  [ RunTime:0.000380s ]
+SQL: SELECT `price` FROM `wx_user_group` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.000285s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.166839s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015765s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.182737s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.129596s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.312531s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.322426s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.332738s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.342267s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.040795s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.353714s ]
+INFO: [ view_end ] --END-- [ RunTime:0.015459s ]
+
+[ 2014-03-06T20:08:56+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Alipay&a=post
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.010141s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010505s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.006658s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.005776s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.008521s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 21 ) LIMIT 1   [ RunTime:0.006499s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.008582s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = null ) AND ( `uid` = 21 ) LIMIT 1   [ RunTime:0.008188s ]
+NOTIC: [2048] Redefining already defined constructor for class AlipaySubmit C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\ORG\Alipay\AlipaySubmit.class.php 第 26 行.
+SQL: SHOW COLUMNS FROM `wx_indent` [ RunTime:0.008121s ]
+SQL: INSERT INTO `wx_indent` (`uid`,`title`,`uname`,`gid`,`create_time`,`indent_id`,`price`) VALUES (21,'充值vip会员1个月','joyzhao1108',4,1394107736,'joyzhao11081394107736',180) [ RunTime:0.007673s ]
+
+[ 2014-03-06T20:10:38+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Index&a=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.010596s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010915s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.007848s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 4 ) LIMIT 1   [ RunTime:0.005725s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.007299s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 21 ) LIMIT 1   [ RunTime:0.005510s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.008489s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = null ) AND ( `uid` = 21 ) LIMIT 1   [ RunTime:0.006255s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.176138s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015338s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: province C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\7db099cc8e2a4e26c8a56c899b28f7ee.php 第 133 行.
+NOTIC: [8] Undefined variable: city C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\7db099cc8e2a4e26c8a56c899b28f7ee.php 第 133 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.191846s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.127658s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.319569s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.328686s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.338030s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.347690s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037653s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.357446s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009835s ]
+
+[ 2014-03-06T20:11:19+08:00 ] 127.0.0.1 /weixin/index.php?g=Home&m=Index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.011386s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011672s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.050438s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015109s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.065852s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.132935s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.198885s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.209884s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.220490s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.229547s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.042995s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.242119s ]
+INFO: [ view_end ] --END-- [ RunTime:0.012769s ]
+
+[ 2014-03-06T20:11:22+08:00 ] 127.0.0.1 /weixin/index.php?m=Index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.011348s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011677s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.055884s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015173s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\47f3eb7a4a5c9661138d7d37e96fcc81.php 第 28 行.
+NOTIC: [8] Undefined index:  uid C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\47f3eb7a4a5c9661138d7d37e96fcc81.php 第 28 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.071253s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.124903s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.196302s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.206043s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.218193s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.228457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.041677s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.238202s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010107s ]
+
+[ 2014-03-06T20:11:30+08:00 ] 127.0.0.1 /weixin/index.php?m=Users&a=checklogin
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009650s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009929s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.008163s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `username` = 'arzn' ) LIMIT 1   [ RunTime:0.006988s ]
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.007384s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.005966s ]
+SQL: UPDATE `wx_users` SET `lasttime`=1394107890,`lastip`='127.0.0.1' WHERE ( `id` = 19 ) [ RunTime:0.000579s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.143273s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014695s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.158144s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.077161s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.235461s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.244403s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.253174s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.262165s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.036095s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.271801s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009711s ]
+
+[ 2014-03-06T20:11:32+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009837s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010171s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.009104s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.005906s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.008516s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.006544s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.008315s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = null ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.006019s ]
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.007716s ]
+SQL: SELECT * FROM `wx_user_group`  [ RunTime:0.005308s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_wxuser` WHERE ( `uid` = 19 ) LIMIT 1   [ RunTime:0.000606s ]
+SQL: SELECT * FROM `wx_wxuser` WHERE ( `uid` = 19 ) LIMIT 0,25   [ RunTime:0.000952s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.219945s ]
+INFO: [ view_template ] --END-- [ RunTime:0.016963s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.237092s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.144003s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.381328s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.393128s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.402927s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.411603s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.040993s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.422810s ]
+INFO: [ view_end ] --END-- [ RunTime:0.011579s ]
+
+[ 2014-03-06T20:11:32+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.011292s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011644s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.008003s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.006791s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.009042s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.005121s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.009895s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = null ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.004988s ]
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.006957s ]
+SQL: SELECT * FROM `wx_user_group`  [ RunTime:0.005875s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_wxuser` WHERE ( `uid` = 19 ) LIMIT 1   [ RunTime:0.000367s ]
+SQL: SELECT * FROM `wx_wxuser` WHERE ( `uid` = 19 ) LIMIT 0,25   [ RunTime:0.000553s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.328204s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015057s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.343434s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.140655s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.484451s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.497207s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.508596s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.519799s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.048520s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.533153s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010329s ]
+
+[ 2014-03-06T20:11:44+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Function&a=index&id=34&token=lotule1386732719
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.014371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014723s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.008706s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.006007s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.009065s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.008446s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.009113s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = null ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.005814s ]
+SQL: SELECT * FROM `wx_wxuser` WHERE ( `id` = 34 ) LIMIT 1   [ RunTime:0.000847s ]
+SQL: SHOW COLUMNS FROM `wx_token_open` [ RunTime:0.008098s ]
+SQL: SELECT `id`,`queryname` FROM `wx_token_open` WHERE ( `token` = 'lotule1386732719' ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.008330s ]
+SQL: SELECT `id`,`name` FROM `wx_user_group` WHERE status=1  [ RunTime:0.000693s ]
+SQL: SHOW COLUMNS FROM `wx_function` [ RunTime:0.007659s ]
+SQL: SELECT * FROM `wx_function` WHERE ( `status` = 1 ) AND ( `gid` = 1 )  [ RunTime:0.008042s ]
+SQL: SELECT * FROM `wx_function` WHERE ( `status` = 1 ) AND ( `gid` = 2 )  [ RunTime:0.000875s ]
+SQL: SELECT * FROM `wx_function` WHERE ( `status` = 1 ) AND ( `gid` = 3 )  [ RunTime:0.000789s ]
+SQL: SELECT * FROM `wx_function` WHERE ( `status` = 1 ) AND ( `gid` = 4 )  [ RunTime:0.000849s ]
+SQL: SELECT * FROM `wx_function` WHERE ( `status` = 1 ) AND ( `gid` = 5 )  [ RunTime:0.000508s ]
+SQL: SELECT * FROM `wx_function` WHERE ( `status` = 1 ) AND ( `gid` = 6 )  [ RunTime:0.000710s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\User\FunctionAction.class.php 第 23 行.
+SQL: SELECT * FROM `wx_function` WHERE ( `status` = 1 ) AND ( `gid` = 7 )  [ RunTime:0.000996s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\User\FunctionAction.class.php 第 23 行.
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = 'lotule1386732719' ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.002597s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.239886s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015025s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.255158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.193227s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.448602s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.457949s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.467451s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.476807s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037923s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.486739s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009764s ]
+
+[ 2014-03-06T20:12:04+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Admin&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.010453s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010743s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.031773s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014287s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.046267s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081564s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.127966s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.137407s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.147835s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.156182s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.039014s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.167205s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009927s ]
+
+[ 2014-03-06T20:12:05+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Admin&a=verify
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.013026s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013319s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+
+[ 2014-03-06T20:12:08+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Admin&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.011530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011847s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.026100s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014565s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.040843s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081879s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.122868s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.131803s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.140914s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.150066s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.038331s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.161453s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010323s ]
+
+[ 2014-03-06T20:12:09+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Admin&a=verify
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.010901s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011241s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+
+[ 2014-03-06T20:12:16+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=System&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009768s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010138s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.006967s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = null ) AND ( `pid` = 2 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.006051s ]
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.007198s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `display` = 1 ) AND ( `status` = 1 ) ORDER BY `sort` asc  [ RunTime:0.005335s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.143544s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014044s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.157765s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.086282s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.244221s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.253346s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.262510s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.272167s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037751s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.282197s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010747s ]
+
+[ 2014-03-06T20:12:17+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=System&a=menu
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.010393s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010726s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.006872s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = null ) AND ( `pid` = 2 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.005575s ]
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.007058s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `display` = 2 ) AND ( `status` = 1 ) AND ( `pid` = 2 ) AND ( `level` = 2 ) ORDER BY `sort` asc  [ RunTime:0.006806s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.157265s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014940s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.172461s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.080483s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.253072s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.262461s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.272540s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.281777s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.038457s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.291752s ]
+INFO: [ view_end ] --END-- [ RunTime:0.011892s ]
+
+[ 2014-03-06T20:12:17+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=System&a=main
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.012168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012538s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.016481s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = null ) AND ( `pid` = 2 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.006480s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.488887s ]
+INFO: [ view_template ] --END-- [ RunTime:0.017969s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant SERVER_SOFTWARE - assumed 'SERVER_SOFTWARE' C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\eed9ff2e9e193dd9eab4f2f83f5ee926.php 第 15 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.506996s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.087531s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.594778s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.603985s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.612895s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.623976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.038767s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.633735s ]
+INFO: [ view_end ] --END-- [ RunTime:0.012340s ]
+
+[ 2014-03-06T20:12:19+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=System&a=menu&pid=3&level=2&title=%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.018750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.019170s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.007048s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 2 ) AND ( `pid` = 3 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.006483s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.170946s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014645s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.185828s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081873s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.267958s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.278492s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.289155s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.299287s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.043009s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.311222s ]
+INFO: [ view_end ] --END-- [ RunTime:0.013337s ]
+
+[ 2014-03-06T20:12:21+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Users&a=index&pid=50&level=3
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.011622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011901s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.008201s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 3 ) AND ( `pid` = 50 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.038564s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.009318s ]
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.019686s ]
+SQL: SELECT `id`,`name` FROM `wx_user_group` ORDER BY id desc  [ RunTime:0.006601s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_users` LIMIT 1   [ RunTime:0.000577s ]
+SQL: SELECT * FROM `wx_users` ORDER BY id desc LIMIT 0,25   [ RunTime:0.001036s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.251277s ]
+INFO: [ view_template ] --END-- [ RunTime:0.018034s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.269445s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.108699s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.378409s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.390809s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.401565s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.410949s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.042972s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.421556s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010187s ]
+
+[ 2014-03-06T20:12:28+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Users&a=edit&id=19
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.018196s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.018549s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.009704s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = null ) AND ( `pid` = 2 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.009675s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.012188s ]
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.013336s ]
+SQL: SELECT `id`,`name` FROM `wx_user_group` WHERE status = 1  [ RunTime:0.006243s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.000350s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.213547s ]
+INFO: [ view_template ] --END-- [ RunTime:0.016274s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  remark C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Admin\66576ee9d3bedebb5d9d1101733e7f41.php 第 83 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.229946s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.098668s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.328757s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.338824s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.347880s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.357838s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.039669s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.368652s ]
+INFO: [ view_end ] --END-- [ RunTime:0.011149s ]
+
+[ 2014-03-06T20:12:36+08:00 ] 127.0.0.1 /weixin/index.php?g=Admin&m=Users&a=index&pid=50&level=3
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009931s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010227s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_node` [ RunTime:0.007530s ]
+SQL: SELECT * FROM `wx_node` WHERE ( `level` = 3 ) AND ( `pid` = 50 ) AND ( `status` = 1 ) AND ( `display` > 0 ) ORDER BY `sort` asc  [ RunTime:0.006007s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.007394s ]
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.013780s ]
+SQL: SELECT `id`,`name` FROM `wx_user_group` ORDER BY id desc  [ RunTime:0.005938s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_users` LIMIT 1   [ RunTime:0.000379s ]
+SQL: SELECT * FROM `wx_users` ORDER BY id desc LIMIT 0,25   [ RunTime:0.000718s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.189892s ]
+INFO: [ view_template ] --END-- [ RunTime:0.016626s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.206687s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.098603s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.305457s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.316086s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.325902s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.337594s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.045962s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.351627s ]
+INFO: [ view_end ] --END-- [ RunTime:0.015271s ]
+
+[ 2014-03-06T20:13:08+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Diymen&a=index&token=lotule1386732719
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.010130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010409s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.010592s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.006795s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.008094s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.008271s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.008404s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = 'lotule1386732719' ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.006313s ]
+SQL: SHOW COLUMNS FROM `wx_diymen_set` [ RunTime:0.007461s ]
+SQL: SELECT * FROM `wx_diymen_set` WHERE ( `token` = 'lotule1386732719' ) LIMIT 1   [ RunTime:0.007171s ]
+SQL: SHOW COLUMNS FROM `wx_diymen_class` [ RunTime:0.007491s ]
+SQL: SELECT * FROM `wx_diymen_class` WHERE ( `token` = 'lotule1386732719' ) AND ( `pid` = 0 ) ORDER BY sort desc  [ RunTime:0.007384s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\User\DiymenAction.class.php 第 31 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.224260s ]
+INFO: [ view_template ] --END-- [ RunTime:0.017725s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.242386s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.250357s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.492813s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.504358s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.521000s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.532205s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.051967s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.545165s ]
+INFO: [ view_end ] --END-- [ RunTime:0.011453s ]
+
+[ 2014-03-06T20:14:13+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Tmpls&a=index&token=lotule1386732719
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009159s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009424s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.009543s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.006065s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.009034s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.007458s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.010042s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = 'lotule1386732719' ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.006368s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.009262s ]
+SQL: SELECT * FROM `wx_wxuser` WHERE ( `token` = 'lotule1386732719' ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.006825s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.219131s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014833s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  color_id C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\1335076cd98ff14619de8d04aac87acf.php 第 499 行.
+NOTIC: [8] Undefined index:  color_id C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\1335076cd98ff14619de8d04aac87acf.php 第 500 行.
+NOTIC: [8] Undefined index:  color_id C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\1335076cd98ff14619de8d04aac87acf.php 第 501 行.
+NOTIC: [8] Undefined index:  color_id C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\1335076cd98ff14619de8d04aac87acf.php 第 502 行.
+NOTIC: [8] Undefined index:  color_id C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\1335076cd98ff14619de8d04aac87acf.php 第 503 行.
+NOTIC: [8] Undefined index:  color_id C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\1335076cd98ff14619de8d04aac87acf.php 第 504 行.
+NOTIC: [8] Undefined index:  color_id C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\1335076cd98ff14619de8d04aac87acf.php 第 505 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.234169s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.260614s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.494970s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.504889s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.514732s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.523189s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.038246s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.533469s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009719s ]
+
+[ 2014-03-06T20:15:00+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Yulan&a=index&token=lotule1386732719
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.010487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010771s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.045999s ]
+INFO: [ view_template ] --END-- [ RunTime:0.012417s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.058590s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073858s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.132763s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.145144s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.155928s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.165696s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.050432s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.183414s ]
+INFO: [ view_end ] --END-- [ RunTime:0.011353s ]
+
+[ 2014-03-06T20:15:01+08:00 ] 127.0.0.1 /weixin/index.php?g=Wap&m=Index&a=index&token=lotule1386732719
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.027834s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.028249s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.008415s ]
+SQL: SELECT * FROM `wx_wxuser` WHERE ( `token` = 'lotule1386732719' ) LIMIT 1   [ RunTime:0.006803s ]
+SQL: SHOW COLUMNS FROM `wx_classify` [ RunTime:0.009148s ]
+SQL: SELECT * FROM `wx_classify` WHERE ( `token` = 'lotule1386732719' ) AND ( `status` = 1 ) ORDER BY sorts desc  [ RunTime:0.007420s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\Wap\IndexAction.class.php 第 216 行.
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.007196s ]
+SQL: SELECT `gid` FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.008006s ]
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.007292s ]
+SQL: SELECT `iscopyright` FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.008513s ]
+SQL: SHOW COLUMNS FROM `wx_company` [ RunTime:0.006844s ]
+SQL: SELECT * FROM `wx_company` WHERE ( `token` = 'lotule1386732719' ) AND ( `isbranch` = 0 ) LIMIT 1   [ RunTime:0.007705s ]
+SQL: SHOW COLUMNS FROM `wx_home` [ RunTime:0.006496s ]
+SQL: SELECT * FROM `wx_home` WHERE ( `token` = 'lotule1386732719' )  [ RunTime:0.007660s ]
+SQL: SHOW COLUMNS FROM `wx_menuplus` [ RunTime:0.008624s ]
+SQL: SELECT * FROM `wx_menuplus` WHERE ( `token` = 'lotule1386732719' )  [ RunTime:0.006315s ]
+NOTIC: [2] array_slice() [<a href='function.array-slice'>function.array-slice</a>]: The first argument should be an array C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\Wap\IndexAction.class.php 第 48 行.
+NOTIC: [2] array_chunk() expects parameter 1 to be array, null given C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\Wap\IndexAction.class.php 第 49 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\Wap\IndexAction.class.php 第 51 行.
+NOTIC: [8] Undefined variable: newArray C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\Wap\IndexAction.class.php 第 71 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Extend\Function\extend.php 第 546 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.007886s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.005804s ]
+SQL: SHOW COLUMNS FROM `wx_flash` [ RunTime:0.007042s ]
+SQL: SELECT * FROM `wx_flash` WHERE ( `token` = 'lotule1386732719' )  [ RunTime:0.006110s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.297929s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015513s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.313622s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.088852s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.402625s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.414793s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.425080s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.433866s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.041945s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.445009s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010021s ]
+
+[ 2014-03-06T20:15:23+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Tmpls&a=add&style=2&r=0.2209333584178239
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009744s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.015915s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.008357s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.012645s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.008555s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.013320s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = 'lotule1386732719' ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.008279s ]
+SQL: UPDATE `wx_wxuser` SET `tpltypeid`=2,`tpltypename`='tpl_102_index' WHERE ( `token` = 'lotule1386732719' ) [ RunTime:0.000995s ]
+
+[ 2014-03-06T20:15:29+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Tmpls&a=add&style=3&r=0.14901890722103417
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009950s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010229s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.010431s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.008486s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.016318s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.007130s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.012552s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = 'lotule1386732719' ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.006569s ]
+SQL: UPDATE `wx_wxuser` SET `tpltypeid`=3,`tpltypename`='tpl_103_index' WHERE ( `token` = 'lotule1386732719' ) [ RunTime:0.000852s ]
+
+[ 2014-03-06T20:15:31+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Yulan&a=index&token=lotule1386732719
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.011492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011826s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.045928s ]
+INFO: [ view_template ] --END-- [ RunTime:0.013793s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.059946s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.075236s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.135326s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.148353s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.159034s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.168092s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.044878s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.180514s ]
+INFO: [ view_end ] --END-- [ RunTime:0.011006s ]
+
+[ 2014-03-06T20:15:32+08:00 ] 127.0.0.1 /weixin/index.php?g=Wap&m=Index&a=index&token=lotule1386732719
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.010438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010735s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.015113s ]
+SQL: SELECT * FROM `wx_wxuser` WHERE ( `token` = 'lotule1386732719' ) LIMIT 1   [ RunTime:0.006744s ]
+SQL: SHOW COLUMNS FROM `wx_classify` [ RunTime:0.010173s ]
+SQL: SELECT * FROM `wx_classify` WHERE ( `token` = 'lotule1386732719' ) AND ( `status` = 1 ) ORDER BY sorts desc  [ RunTime:0.007715s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\Wap\IndexAction.class.php 第 216 行.
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.010403s ]
+SQL: SELECT `gid` FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.007583s ]
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.010514s ]
+SQL: SELECT `iscopyright` FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.006599s ]
+SQL: SHOW COLUMNS FROM `wx_company` [ RunTime:0.011102s ]
+SQL: SELECT * FROM `wx_company` WHERE ( `token` = 'lotule1386732719' ) AND ( `isbranch` = 0 ) LIMIT 1   [ RunTime:0.006901s ]
+SQL: SHOW COLUMNS FROM `wx_home` [ RunTime:0.010142s ]
+SQL: SELECT * FROM `wx_home` WHERE ( `token` = 'lotule1386732719' )  [ RunTime:0.008253s ]
+SQL: SHOW COLUMNS FROM `wx_menuplus` [ RunTime:0.013536s ]
+SQL: SELECT * FROM `wx_menuplus` WHERE ( `token` = 'lotule1386732719' )  [ RunTime:0.006780s ]
+NOTIC: [2] array_slice() [<a href='function.array-slice'>function.array-slice</a>]: The first argument should be an array C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\Wap\IndexAction.class.php 第 48 行.
+NOTIC: [2] array_chunk() expects parameter 1 to be array, null given C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\Wap\IndexAction.class.php 第 49 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\Wap\IndexAction.class.php 第 51 行.
+NOTIC: [8] Undefined variable: newArray C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\Wap\IndexAction.class.php 第 71 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Extend\Function\extend.php 第 546 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.007412s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.005550s ]
+SQL: SHOW COLUMNS FROM `wx_flash` [ RunTime:0.007069s ]
+SQL: SELECT * FROM `wx_flash` WHERE ( `token` = 'lotule1386732719' )  [ RunTime:0.007264s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.332326s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015447s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  copyright C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Wap\3739d0f1b62ac87cbbb6ceeccf8ba612.php 第 118 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.347950s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.106524s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.454618s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.464311s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.474331s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.483145s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.039038s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.493878s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010289s ]
+
+[ 2014-03-06T20:15:49+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Tmpls&a=add&style=14&r=0.1778013207949698
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009594s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.014460s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.007011s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.011593s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.005748s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.009859s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = 'lotule1386732719' ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.005749s ]
+SQL: UPDATE `wx_wxuser` SET `tpltypeid`=14,`tpltypename`='tpl_114_index' WHERE ( `token` = 'lotule1386732719' ) [ RunTime:0.000661s ]
+
+[ 2014-03-06T20:16:56+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Lottery&a=index&token=lotule1386732719
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009675s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009964s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.283599s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.006982s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.011349s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.006643s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.014412s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = 'lotule1386732719' ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.008398s ]
+SQL: SELECT `gid`,`activitynum` FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.000702s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.000377s ]
+SQL: SHOW COLUMNS FROM `wx_lottery` [ RunTime:0.012851s ]
+SQL: SELECT `id`,`title`,`joinnum`,`click`,`keyword`,`statdate`,`enddate`,`status` FROM `wx_lottery` WHERE ( `token` = 'lotule1386732719' ) AND ( `type` = 1 )  [ RunTime:0.007127s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_lottery` WHERE ( `token` = 'lotule1386732719' ) AND ( `type` = 1 ) LIMIT 1   [ RunTime:0.000817s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.491717s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015213s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.507145s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.212951s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.720360s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.732073s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.741587s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.750331s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.040366s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.760908s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009682s ]
+
+[ 2014-03-06T20:17:15+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Lottery&a=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.012360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012775s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.016582s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.006399s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.014161s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.007750s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.012790s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = 'lotule1386732719' ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.006734s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.188274s ]
+INFO: [ view_template ] --END-- [ RunTime:0.016610s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 268 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 273 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 284 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 291 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 297 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 302 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 304 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 309 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 315 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 333 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 336 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 343 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 361 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 367 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 372 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 377 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 382 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 387 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 392 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 398 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 403 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 409 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 414 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 420 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 428 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 432 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 437 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 437 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.205208s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.223400s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.428727s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.438166s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.449162s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.461859s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.046543s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.475503s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010228s ]
+
+[ 2014-03-06T20:18:59+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Lottery&a=add
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010053s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.008480s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.012858s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.007575s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.006951s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.012013s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = 'lotule1386732719' ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.011239s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.188989s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014537s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 268 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 273 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 284 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 291 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 297 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 302 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 304 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 309 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 315 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 333 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 336 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 343 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 361 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 367 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 372 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 377 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 382 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 387 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 392 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 398 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 403 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 409 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 414 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 420 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 428 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 432 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 437 行.
+NOTIC: [8] Undefined variable: vo C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\User\691d6315e49413696354cf1f2934ae54.php 第 437 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.203708s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.215232s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.419094s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.428865s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.439034s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.448126s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.038531s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.457878s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010086s ]
+
+[ 2014-03-06T20:19:02+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Function&a=index&token=lotule1386732719&id=34
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009749s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010073s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.008993s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.010737s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.011978s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.016670s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.012614s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = 'lotule1386732719' ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.010186s ]
+SQL: SELECT * FROM `wx_wxuser` WHERE ( `id` = 34 ) LIMIT 1   [ RunTime:0.000936s ]
+SQL: SHOW COLUMNS FROM `wx_token_open` [ RunTime:0.010598s ]
+SQL: SELECT `id`,`queryname` FROM `wx_token_open` WHERE ( `token` = 'lotule1386732719' ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.007536s ]
+SQL: SELECT `id`,`name` FROM `wx_user_group` WHERE status=1  [ RunTime:0.000302s ]
+SQL: SHOW COLUMNS FROM `wx_function` [ RunTime:0.010432s ]
+SQL: SELECT * FROM `wx_function` WHERE ( `status` = 1 ) AND ( `gid` = 1 )  [ RunTime:0.008224s ]
+SQL: SELECT * FROM `wx_function` WHERE ( `status` = 1 ) AND ( `gid` = 2 )  [ RunTime:0.000361s ]
+SQL: SELECT * FROM `wx_function` WHERE ( `status` = 1 ) AND ( `gid` = 3 )  [ RunTime:0.000325s ]
+SQL: SELECT * FROM `wx_function` WHERE ( `status` = 1 ) AND ( `gid` = 4 )  [ RunTime:0.000312s ]
+SQL: SELECT * FROM `wx_function` WHERE ( `status` = 1 ) AND ( `gid` = 5 )  [ RunTime:0.000302s ]
+SQL: SELECT * FROM `wx_function` WHERE ( `status` = 1 ) AND ( `gid` = 6 )  [ RunTime:0.000295s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\User\FunctionAction.class.php 第 23 行.
+SQL: SELECT * FROM `wx_function` WHERE ( `status` = 1 ) AND ( `gid` = 7 )  [ RunTime:0.000334s ]
+NOTIC: [2] Invalid argument supplied for foreach() C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\Lib\Action\User\FunctionAction.class.php 第 23 行.
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = 'lotule1386732719' ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.000308s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.259400s ]
+INFO: [ view_template ] --END-- [ RunTime:0.014068s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.273617s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.189911s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.463690s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.474094s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.485284s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.494969s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.041378s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.505313s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010381s ]
+
+[ 2014-03-06T20:19:11+08:00 ] 127.0.0.1 /weixin/index.php?g=User&m=Token_open&a=del&token=lotule1386732719&id=15&r=0.796996520832181
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.009382s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009641s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.008146s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:1.006409s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.007779s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.005997s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.007683s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = 'lotule1386732719' ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.005875s ]
+SQL: SHOW COLUMNS FROM `wx_function` [ RunTime:0.007918s ]
+SQL: SELECT * FROM `wx_function` WHERE ( `id` = 15 ) LIMIT 1   [ RunTime:0.005802s ]
+SQL: SHOW COLUMNS FROM `wx_token_open` [ RunTime:0.006246s ]
+SQL: SELECT * FROM `wx_token_open` WHERE ( `uid` = 19 ) AND ( `token` = 'lotule1386732719' ) LIMIT 1   [ RunTime:0.008222s ]
+SQL: UPDATE `wx_token_open` SET `queryname`='tianqi,qiushi,jishuan,jiankang,kuaidi,xiaohua,changtoushi,peiliao,liaotian,mengjian,yuyinfanyi,huoche,gongjiao,shouji,yinle,fujin,choujiang,taobao,userinfo,fanyi,api,suanming,baike,caipiao,choujiang,gua2,shouye,adma,huiyuanka,shenhe,geci,host_kev,diyform,dx,shop,etuan,diymen_set,langdu,' WHERE ( `uid` = 19 ) AND ( `token` = 'lotule1386732719' ) [ RunTime:0.000975s ]
+
+[ 2014-03-06T20:19:45+08:00 ] 127.0.0.1 /weixin/index.php?g=Home&m=Index&a=price
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.010608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.011174s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.057192s ]
+INFO: [ view_template ] --END-- [ RunTime:0.015246s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\weixin\data\logs\Cache\Home\47ff555cbc6903f06f2ce37c70ce0ec6.php 第 28 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.072632s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.181236s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.254023s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.264652s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.274958s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.284741s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.041030s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.295367s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010935s ]
+
+[ 2014-03-06T20:31:02+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.006129s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006404s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.030559s ]
+INFO: [ view_template ] --END-- [ RunTime:0.007765s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.038483s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.123362s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.161997s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.167313s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.173636s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.179054s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.024990s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.187212s ]
+INFO: [ view_end ] --END-- [ RunTime:0.008277s ]
+
+[ 2014-03-06T20:56:59+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.008859s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.009166s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.049955s ]
+INFO: [ view_template ] --END-- [ RunTime:0.012245s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.062381s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.140867s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.203404s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.212854s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.222906s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.230063s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.036154s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.239782s ]
+INFO: [ view_end ] --END-- [ RunTime:0.009854s ]
+
+[ 2014-03-06T20:57:06+08:00 ] 127.0.0.1 /index.php?g=User&m=Index&a=index
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.011936s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.012226s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.019459s ]
+SQL: SELECT * FROM `wx_user_group` WHERE ( `id` = 7 ) LIMIT 1   [ RunTime:0.008457s ]
+SQL: SHOW COLUMNS FROM `wx_users` [ RunTime:0.010725s ]
+SQL: SELECT * FROM `wx_users` WHERE ( `id` = 19 ) LIMIT 1   [ RunTime:0.009649s ]
+SQL: SHOW COLUMNS FROM `wx_wxuser` [ RunTime:0.010253s ]
+SQL: SELECT `wxname`,`wxid`,`headerpic`,`weixin` FROM `wx_wxuser` WHERE ( `token` = 'lotule1386732719' ) AND ( `uid` = 19 ) LIMIT 1   [ RunTime:0.009225s ]
+SQL: SHOW COLUMNS FROM `wx_user_group` [ RunTime:0.013121s ]
+SQL: SELECT * FROM `wx_user_group`  [ RunTime:0.011525s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `wx_wxuser` WHERE ( `uid` = 19 ) LIMIT 1   [ RunTime:0.000948s ]
+SQL: SELECT * FROM `wx_wxuser` WHERE ( `uid` = 19 ) LIMIT 0,25   [ RunTime:0.000901s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.234108s ]
+INFO: [ view_template ] --END-- [ RunTime:0.013164s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.247452s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.134120s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.381717s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.389541s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.398077s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.405213s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.031627s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.413582s ]
+INFO: [ view_end ] --END-- [ RunTime:0.005785s ]
+
+[ 2014-03-06T20:57:16+08:00 ] 127.0.0.1 /index.php?g=Home&m=Index&a=help&id=34&token=lotule1386732719
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.005312s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005576s ]
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+NOTIC: [8] Undefined index:  1 C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.033329s ]
+INFO: [ view_template ] --END-- [ RunTime:0.005131s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' C:\TDDOWNLOAD\Easy2PHP5 build 2\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\1923ca92b2cbd35b9267c9fc28129f20.php 第 31 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.038632s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.119673s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.158588s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.165399s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.171110s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.176321s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.029523s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.188405s ]
+INFO: [ view_end ] --END-- [ RunTime:0.010274s ]
+

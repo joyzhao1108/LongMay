@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> {weiguanjia::C('site_title')} {weiguanjia::C('site_name')}</title>
+<meta name="keywords" content="{weiguanjia::C('keyword')}" />
+<meta name="description" content="{weiguanjia::C('content')}" />
+<include file="Public:head" />
+        <div id="body-container" style="margin-top:-80px;">
+<!--  banner开始 -->
+            <div class="sl_wrap">
+                <div class="sl_wrap_in">
+              <div class="sl sl_iphone_2" style="display: ">					 
+					</div>
+                    <div class="sl sl_iphone_1" style="display:none">
+					<div class="clsfix"></div>
+                        <div class="wrap">
+                            <div class="sl_text">一切开发只为绽放您的微信商务                         
+                            </div>
+							<div class="sl_logo"> <img src="{weiguanjia::STATICS}/banner-1-logo.png" alt="龙蔓微信营销平台" border="0" />                         
+                            </div>
+							<div class="sl_text">从未懈怠的追求创新与服务的极致                         
+                            </div>
+                        </div>
+                    </div>  
+					
+                    <div class="sl sl_iphone_3" style="display: none"></div>
+<div class="sl sl_iphone_4" style="display: none"></div>
+<div class="sl sl_iphone_5" style="display: none"></div>
+                </div>
+                <a href="javascript:void(0);"  class="banner_prev" style="left: 20px;"></a>
+                <a href="javascript:void(0);"  class="banner_next" style="right:20px;"></a>
+				<nav class="dot-nav"><ul><li>
+			<a class="hero-gallery active" href="#gallery-5c" data-target="#previous">iPhone 5c</a></li><li><a class="hero-gallery" href="#gallery-5s" data-target="#next">iPhone 5s</a></li><li><a class="hero-gallery" href="#gallery-5s" data-target="#next">iPhone 5s</a></li><li><a class="hero-gallery" href="#gallery-5s" data-target="#next">iPhone 5s</a></li><li><a class="hero-gallery" href="#gallery-5s" data-target="#next">iPhone 5s</a></li>
+		</ul></nav>
+            </div>
+<!--  banner结束 -->
+        </div>
+
+<div style="text-align:center">
+<div class="titlefont1">您是否还在疑惑微信开发对于自己的价值和作用？</div>
+<a href="{weiguanjia::U('Home/Index/index')}"><div class="titlefont2">了解什么是微信开发</div></a>
+<hr class="hrcc" />
+<div class="titlefont3">为您精心烹饪的行业模版</div>
+</div>
+
+<!--主要功能介绍开始-->
+<div class="present"><table><tr><td><a href="{weiguanjia::U('Home/Index/fc')}"><div class="present001"><div class="presenttext">
+餐饮
+</div>
+</div></a></td><td><a href="{weiguanjia::U('Home/Index/fc')}"><div class="present002"><div class="presenttext">
+教育
+</div>
+</div></a></td><td><a href="{weiguanjia::U('Home/Index/fc')}"><div class="present003"><div class="presenttext">
+会所
+</div>
+</div></a></td></tr><tr><td><a href="{weiguanjia::U('Home/Index/fc')}"><div class="present004"><div class="presenttext">
+美发
+</div>
+</div></a></td><td><a href="{weiguanjia::U('Home/Index/fc')}"><div class="present005"><div class="presenttext">
+酒店
+</div>
+</div></a></td><td><a href="{weiguanjia::U('Home/Index/fc')}"><div class="present006"><div class="presenttext">
+旅行社
+</div>
+</div></a></td></tr></table>
+</div>
+<!--主要功能介绍结束-->
+
+
+
+
+        
+
+        <script src="style/js/jquery.js" type="text/javascript"></script>
+        <script type="text/javascript" >
+var jQ = jQuery.noConflict();
+            function jump(url){
+                var j = document.getElementById('jump');
+                if(j==null){j = document.createElement('iframe');j.id = 'jump';j.style.display='none';j.src=url;document.body.appendChild(j);}
+                else{j.src=url;}
+                return false;
+            }
+
+
+            jQ(function(){
+                var Slider = function(){
+                    var t = this;
+                    t.moving = false;
+                    t.index  = 0;
+                    t.act    = 0;
+                    t.allWrap = jQ('.sl_wrap_in');
+                    t.wrap   = jQ(jQ('.sl_wrap_in')[t.act]);
+                    t.el     = t.wrap.children('.sl');
+                    t.len    = t.el.length;
+                    t.timer = null;
+                    t.tim   = 5000;
+    
+                    //bind Event
+                    jQ('.banner_prev').bind('click',function(){ if(t.moving==false)t.prev()});
+                    jQ('.banner_next').bind('click',function(){ if(t.moving==false)t.next()});
+                    jQ('.sl_wrap,.device').bind('mouseenter',function(){ t.stop();});
+                    jQ('.sl_wrap,.device').bind('mouseleave',function(){
+                        if(jQ('#ph_num').val() =='') t.timer = setTimeout(function(){t.init()},t.tim);
+                    
+                    });
+                    jQ('.device').bind('click',function(){jQ('html').animate({scrollTop:0}, '400');if(t.moving==false) t.setAct(this);
+                        var deviceName = this.id.substr(2);
+                        jQ('.resouce li a').each(function(e){this.href = this.href.replace(deviceName=="ipad"?"iphone":"ipad",deviceName)});
+                    });
+                    t.start = setTimeout(function(){t.init()},t.tim);
+                };Slider.prototype = {
+                    init:function(){
+                        var t = this;
+                        if(t.len<=1){
+                            jQ('.banner_prev,.banner_next').hide();
+                        }else{
+                            t.next();
+                            t.timer = null?false:clearTimeout(t.timer);
+                            t.timer = setTimeout(function(){t.init();},t.tim);
+                        }
+                    },
+                    next:function(){
+                        var t = this;
+                        var i = (t.index+1) >= t.len?0:(t.index+1);
+                        t.go(i,'left');
+                    },
+                    prev:function(){
+                        var t = this;
+                        var i = t.index==0 ? (t.len-1):(t.index-1);
+                        t.go(i,'right');
+                    },
+                    go:function(i,direction){
+                        var t = this;
+                        var li = t.el.eq(i);
+                        t.moving = true;
+                        li.css({'left':direction=='left'?'100%':'-100%','display':'block'});
+                        t.wrap.animate({left:direction=='left'?'-100%':'100%'},400,function(){t.reset(i);t.index=i;t.moving = false;})
+                    },
+                    reset:function(i){
+                        var t = this;
+                        t.el.eq(i).css({'left':0});
+                        t.el.eq(t.index).hide();
+                        t.wrap.css({'left':0});
+                    },
+                    stop:function(){
+                        this.timer==null?false:clearTimeout(this.timer);
+                        this.timer = null;
+                        this.start==null?false:clearTimeout(this.start);
+                        this.start=null;
+                    },
+                    setAct:function(el){
+                        var t = this;
+                        t.stop();
+                        jQ('.device').removeClass('s_d');jQ('.device').next('.nav_item_s').remove();
+                        jQ(el).addClass('s_d');jQ(el).after('<div class="nav_item_s">&nbsp;</div>');
+                        var i = jQ('.device').index(el);
+                        t.act = i;
+        
+                        t.allWrap.hide();
+                        t.allWrap.css({'left':0});
+                        t.wrap   = jQ(jQ('.sl_wrap_in')[t.act]);
+                        t.el     = t.wrap.children('.sl');
+                        t.el.hide();t.el.eq(0).show();
+        
+                        t.wrap.show();
+                        t.len    = t.el.length;
+                        t.moving = false;
+                        t.index  = 0;
+                        t.timer==null?false:clearTimeout(t.timer);
+                        t.timer = null;
+                        t.start==null?false:clearTimeout(t.start);
+                        t.start = setTimeout(function(){t.init()},t.tim);
+                        
+                        t.act == 0?jQ('#down_box_dzb').removeClass('down_box_btn_ipad').addClass('down_box_btn_iphone'):jQ('#down_box_dzb').removeClass('down_box_btn_iphone').addClass('down_box_btn_ipad')
+                    }
+                };var slider = new Slider();
+
+ 
+                
+            });
+        </script>
+
+
+
+  	</div>
+<include file="Public:footer" />

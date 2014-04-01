@@ -1,0 +1,92 @@
+<include file="Public:head"/> 
+<link rel="stylesheet" type="text/css" href="{weiguanjia::RES}/css/cymain.css" />
+        <div class="content">
+<div class="cLineB">
+<h4 class="left">课程管理 ({weiguanjia:$page}) </h4>
+<div class="searchbar right">
+<form method="post" action="">
+<input type="text" id="msgSearchInput" class="txt left" placeholder="输入关键词搜索" name="searchkey" value="">
+<input type="hidden" name="ac" value="hotels-list">
+<input type="hidden" name="id" value="9878">
+<input type="hidden" name="wxid" value="gh_423dwjkewad">
+<input type="submit" value="搜索" id="msgSearchBtn" href="" class="btnGrayS" title="搜索">
+</form>
+</div>
+<div class="clr"></div>
+</div>
+<!--tab start-->
+<div class="tab">
+<ul>
+<li class="current tabli" id="tab0"><a href="{weiguanjia::U('Lesson/index',array('token'=>$token))}">课程管理</a></li>
+<li class="tabli" id="tab2"><a href="{weiguanjia::U('Lesson/cats',array('token'=>$token))}">课程分类管理</a></li>
+</ul>
+</div>
+<!--tab end-->
+<div class="cLine">
+<div class="pageNavigator left"> <a href="{weiguanjia::U('Lesson/add',array('token'=>$token,'dining'=>$isDining))}" title="添加" class="btnGrayS vm bigbtn"><img src="{weiguanjia::RES}/images/product/add.png" width="16" class="vm">添加课程</a></div>
+<div class="clr"></div>
+</div>
+<div class="msgWrap">
+<form method="post" action="" id="info">
+<input name="delall" type="hidden" value="">
+<input name="wxid" type="hidden" value="">
+<table class="ListProduct" border="0" cellspacing="0" cellpadding="0" width="100%">
+<thead>
+<tr>
+<th class="select">选择</th>
+<th width="80">课程分类</th>
+<th width="120">课程名称</th>
+<th width="190">内容简介</th>
+<th width="130">创建时间</th>
+ 
+<th width="200" class="norightborder">操作</th>
+</tr>
+</thead>
+<tbody>
+<tr></tr>
+<volist name="list" id="hostlist"> 
+<tr>
+<td><input type="checkbox" name="del_id[{weiguanjia:$i}]" value="285" class="checkitem"></td>
+<td>{weiguanjia:$hostlist.catname}</td>
+<td>{weiguanjia:$hostlist.name}</td>
+<td>{weiguanjia:$hostlist.intro}</td>
+<td>{weiguanjia:$hostlist.time|date="Y-m-d H:i:s",###}</td> 
+
+<td class="norightborder"><a href="{weiguanjia::U('Lesson/set',array('id'=>$hostlist['id'],'token'=>$token))}">修改</a> <a href="javascript:drop_confirm('您确定要删除吗?', '{weiguanjia::U('Lesson/del',array('id'=>$hostlist['id'],'token'=>$token))}');">删除</a></td>
+</tr>
+</volist>
+</tbody>
+</table>
+</form>
+<script>
+   function checkvotethis() {
+var aa=document.getElementsByName('del_id[]');
+var mnum = aa.length;
+j=0;
+for(i=0;i<mnum;i++){
+if(aa[i].checked){
+j++;
+}
+}
+if(j>0) {
+document.getElementById('info').submit();
+} else {
+alert('未选中任何课程或回复！')
+}
+}
+
+   </script> 
+</div>
+					<div class="cLine">
+						<div class="pageNavigator right">
+							<div class="pages">{weiguanjia:$page}</div>
+						</div>
+						<div class="clr"></div>
+					</div>
+				</div>
+			</div>
+			<div class="clr"></div>
+		</div>
+	</div>
+	<div class="clr"></div>
+<include file="Public:footer"/>

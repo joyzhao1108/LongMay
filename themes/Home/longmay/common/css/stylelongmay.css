@@ -1,0 +1,89 @@
+﻿#nvlongmay
+{
+    overflow: hidden;
+    padding-left: 3px;
+    height: 37px;
+    width: 880px;
+    margin: 0 auto;	
+	position:absolute;
+	top:20px;
+	left:50%;
+	margin-left:-440px;
+	z-index:99;
+}
+#nvlongmay li
+{
+    float: left;   
+    height: 37px;
+    line-height: 37px;    
+    font-size: 14px;
+	font-weight:500;
+	font-family:华文细黑;	
+	width:122px;
+}
+.ie_all #nvlongmay li
+{
+    line-height: 38px;
+	width:122px;
+}
+.ie6 #nvlongmay li
+{
+    line-height: 37px;
+	width:122px;
+}
+#nvlongmay li a
+{
+    height: 37px;
+    width: 80px;
+    display: block;
+    text-align: center;
+	color:#444;
+}
+#nvlongmay li span
+{
+    display: none;
+}
+
+#nvlongmay .nvmenu a
+{
+    background: url(img/menubg.png) no-repeat 0 0;
+	width:122px;
+}
+#nvlongmay .nvmenu a:hover
+{
+    background: url(img/menubg_hover.png) no-repeat 0 0;
+    color: #FFF;
+    text-decoration: none;
+}
+#nvlongmay .nvmenu a.visited
+{
+    background: url(img/menubg_visited.png) no-repeat 0 0;
+    color: #FFF;
+    text-decoration: none;
+}
+#nvlongmay .nvmenulogo
+{
+	text-indent:-1000px;
+}
+#nvlongmay .nvmenulogo a
+{
+    background: url(img/menulogo.png) no-repeat 0 0;
+	width:124px;
+}
+#nvlongmay .nvmenulogo a:hover
+{
+    background: url(img/menulogo_hover.png) no-repeat 0 0;
+    color: #FFF;
+    text-decoration: none;
+}
+#nvlongmay .nvmenulogo a.visited
+{
+    background: url(img/menulogo_visited.png) no-repeat 0 0;
+    color: #FFF;
+    text-decoration: none;
+}
+#nvlongmay .nvmenu.hover a:hover, #nv li.hover a
+{
+    background: url(img/menubg_hover.png) no-repeat 0 0;
+    text-decoration: none;
+}

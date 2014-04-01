@@ -1,0 +1,1 @@
+<?php	return array ( 0 => array ( 'id' => '1', 'name' => '动维网', 'url' => 'http://www.powkey.com', 'status' => '1', ), ); ?>

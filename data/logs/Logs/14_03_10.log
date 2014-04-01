@@ -1,0 +1,1094 @@
+[ 2014-03-10T00:14:44+08:00 ] 111.161.48.138 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000770s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004555s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000976s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.005588s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019561s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.025206s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.025887s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.026808s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.027324s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002852s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.028138s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000872s ]
+
+[ 2014-03-10T00:15:09+08:00 ] 111.161.48.138 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.005145s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000920s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.006123s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025881s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.032061s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.032861s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.033719s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.034252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002947s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.035093s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000885s ]
+
+[ 2014-03-10T00:15:10+08:00 ] 111.161.48.138 //index.php?r=site/page&view[]=about
+NOTIC: [8] Array to string conversion D:\Easy2PHP5 build 2\WebSite\Core\_Core\Lib\Core\App.class.php 第 69 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000564s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000654s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003650s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000427s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004137s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018554s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022745s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.023135s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023582s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023857s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001598s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024420s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000610s ]
+
+[ 2014-03-10T00:15:12+08:00 ] 111.161.48.138 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003492s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000415s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.003963s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018147s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022198s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022593s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023042s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023301s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001623s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.023866s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000641s ]
+
+[ 2014-03-10T00:15:13+08:00 ] 111.161.48.138 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000646s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003538s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000424s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004019s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017850s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.021923s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022312s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.022779s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001608s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.023608s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000622s ]
+
+[ 2014-03-10T04:22:22+08:00 ] 115.236.140.12 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000831s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000929s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004599s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000927s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.005582s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019270s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.024905s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.025562s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.026493s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.027012s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002880s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.027865s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000905s ]
+
+[ 2014-03-10T04:22:41+08:00 ] 115.236.140.12 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003605s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000413s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004074s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017963s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022091s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022480s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023317s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023715s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002113s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024281s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000623s ]
+
+[ 2014-03-10T04:22:42+08:00 ] 115.236.140.12 //index.php?r=site/page&view[]=about
+NOTIC: [8] Array to string conversion D:\Easy2PHP5 build 2\WebSite\Core\_Core\Lib\Core\App.class.php 第 69 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000618s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003622s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000411s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004089s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017897s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022041s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022443s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023325s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023749s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002219s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024338s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000640s ]
+
+[ 2014-03-10T04:22:44+08:00 ] 115.236.140.12 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000628s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003597s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000414s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004067s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017680s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.021802s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022196s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023022s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023416s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002105s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.023985s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000613s ]
+
+[ 2014-03-10T04:22:46+08:00 ] 115.236.140.12 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000534s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000630s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003615s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000418s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004091s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017824s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.021969s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022358s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023183s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023575s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002097s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024143s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000616s ]
+
+[ 2014-03-10T08:25:20+08:00 ] 111.161.48.138 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000800s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000913s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004828s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000928s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.005815s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019777s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.025647s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.026304s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.027222s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.027742s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002832s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.028562s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000889s ]
+
+[ 2014-03-10T08:25:43+08:00 ] 111.161.48.138 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003927s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000410s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004395s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018013s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022461s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022851s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023670s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.024063s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002088s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024629s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000614s ]
+
+[ 2014-03-10T08:25:44+08:00 ] 111.161.48.138 //index.php?r=site/page&view[]=about
+NOTIC: [8] Array to string conversion D:\Easy2PHP5 build 2\WebSite\Core\_Core\Lib\Core\App.class.php 第 69 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000530s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000618s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003926s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000415s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004396s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017824s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022274s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022672s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023507s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023928s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002144s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024496s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000612s ]
+
+[ 2014-03-10T08:25:46+08:00 ] 111.161.48.138 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003978s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000416s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004453s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017991s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022500s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022895s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023725s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.024117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002108s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024689s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000619s ]
+
+[ 2014-03-10T08:25:48+08:00 ] 111.161.48.138 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000625s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003972s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000411s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004438s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017639s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022133s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022520s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023338s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023732s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002086s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024296s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000612s ]
+
+[ 2014-03-10T08:36:40+08:00 ] 91.214.20.134 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000778s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000875s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004914s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000883s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.005855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019781s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.025719s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.026660s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.028014s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.028673s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003830s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.029630s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000882s ]
+
+[ 2014-03-10T12:27:34+08:00 ] 115.236.140.12 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.005024s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000887s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.005969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019469s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.025495s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.026158s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.027081s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.027596s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002837s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.028427s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000876s ]
+
+[ 2014-03-10T12:27:54+08:00 ] 115.236.140.12 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003955s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000413s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004425s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017922s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022406s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022801s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023632s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.024025s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002111s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024603s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000620s ]
+
+[ 2014-03-10T12:27:55+08:00 ] 115.236.140.12 //index.php?r=site/page&view[]=about
+NOTIC: [8] Array to string conversion D:\Easy2PHP5 build 2\WebSite\Core\_Core\Lib\Core\App.class.php 第 69 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003999s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000414s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004469s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017670s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022194s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022583s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023416s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023809s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002105s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024374s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000613s ]
+
+[ 2014-03-10T12:27:57+08:00 ] 115.236.140.12 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003999s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000415s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004476s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018305s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022832s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.023232s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.024160s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.024574s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002236s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.025152s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000656s ]
+
+[ 2014-03-10T12:27:58+08:00 ] 115.236.140.12 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000643s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.015057s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000415s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.015529s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018063s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.033646s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.034059s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.034928s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.035324s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002182s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.035910s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000636s ]
+
+[ 2014-03-10T12:58:07+08:00 ] 121.37.59.173 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000888s ]
+NOTIC: [8] Undefined index:  HTTP_HOST D:\Easy2PHP5 build 2\WebSite\Core\_Core\Lib\Core\Action.class.php 第 344 行.
+NOTIC: [8] Undefined index:  1 D:\Easy2PHP5 build 2\WebSite\Core\_Core\Lib\Core\Action.class.php 第 57 行.
+NOTIC: [8] Undefined index:  HTTP_HOST D:\Easy2PHP5 build 2\WebSite\Core\_Core\Common\common.php 第 261 行.
+NOTIC: [8] Undefined index:  1 D:\Easy2PHP5 build 2\WebSite\Core\_Core\Lib\Core\View.class.php 第 70 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004901s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000904s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.005865s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019648s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.025566s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.026231s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.027154s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.027676s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002849s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.028495s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000885s ]
+
+[ 2014-03-10T15:34:27+08:00 ] 218.6.198.251 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000877s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004734s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000885s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.005679s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019328s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.025060s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.025703s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.026617s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.027125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002826s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.027965s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000861s ]
+
+[ 2014-03-10T16:56:25+08:00 ] 111.161.48.138 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000785s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000896s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004827s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000923s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.005814s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025268s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.031134s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.031806s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.032620s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.033132s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002757s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.033969s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000886s ]
+
+[ 2014-03-10T16:56:43+08:00 ] 111.161.48.138 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003565s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000411s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004032s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018177s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022263s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022651s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023096s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023354s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001575s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.023914s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000609s ]
+
+[ 2014-03-10T16:56:44+08:00 ] 111.161.48.138 //index.php?r=site/page&view[]=about
+NOTIC: [8] Array to string conversion D:\Easy2PHP5 build 2\WebSite\Core\_Core\Lib\Core\App.class.php 第 69 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000526s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003569s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000408s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017596s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.021680s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022064s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.022506s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.022761s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001570s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.023324s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000606s ]
+
+[ 2014-03-10T16:56:46+08:00 ] 111.161.48.138 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000532s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003499s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000412s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.003969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017583s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.021600s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.021988s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.022434s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.022693s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001576s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.023253s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000611s ]
+
+[ 2014-03-10T16:56:47+08:00 ] 111.161.48.138 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000531s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003772s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000413s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004240s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017727s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022020s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022408s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.022859s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023117s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001580s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.023676s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000610s ]
+
+[ 2014-03-10T19:54:25+08:00 ] 183.60.48.110 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000891s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004739s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000905s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.005702s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019394s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.025152s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.025805s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.026506s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.027020s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002610s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.027841s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000870s ]
+
+[ 2014-03-10T20:41:25+08:00 ] 101.226.103.146 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000811s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000907s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004615s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000936s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.005610s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019614s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.025282s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.025946s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.026655s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.027179s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002642s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.028021s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000895s ]
+
+[ 2014-03-10T20:41:25+08:00 ] 101.226.103.146 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000647s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003627s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000427s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004109s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018282s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022458s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022859s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023307s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023571s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001611s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024152s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000616s ]
+
+[ 2014-03-10T20:41:25+08:00 ] 101.226.103.146 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000535s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003493s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000409s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.003958s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017862s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.021875s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022266s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.022712s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.022971s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001584s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.023536s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000609s ]
+
+[ 2014-03-10T20:48:14+08:00 ] 171.216.69.71 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000895s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004489s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000901s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.005446s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019231s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.024735s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.025388s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.026090s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.026606s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002617s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.027431s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000899s ]
+
+[ 2014-03-10T20:48:16+08:00 ] 171.216.69.71 /index.php?g=Home&m=Index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000540s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003591s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000736s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\47f3eb7a4a5c9661138d7d37e96fcc81.php 第 28 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\47f3eb7a4a5c9661138d7d37e96fcc81.php 第 28 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016450s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.020890s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.021284s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.021773s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.022039s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001652s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.022652s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000626s ]
+
+[ 2014-03-10T20:48:30+08:00 ] 171.216.69.71 /index.php?g=Home&m=Index&a=about
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000912s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004936s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000979s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\62da13d6a4a39bfa726bf0328a3d140c.php 第 28 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\62da13d6a4a39bfa726bf0328a3d140c.php 第 28 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.005972s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016335s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022362s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022991s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023888s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.024402s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002789s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.025227s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000868s ]
+
+[ 2014-03-10T20:48:38+08:00 ] 171.216.69.71 /index.php?g=Home&m=Index&a=help
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004219s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000737s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\1923ca92b2cbd35b9267c9fc28129f20.php 第 31 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\1923ca92b2cbd35b9267c9fc28129f20.php 第 31 行.
+NOTIC: [8] Undefined index:  token D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\1923ca92b2cbd35b9267c9fc28129f20.php 第 147 行.
+NOTIC: [8] Undefined index:  token D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\1923ca92b2cbd35b9267c9fc28129f20.php 第 174 行.
+NOTIC: [8] Undefined index:  token D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\1923ca92b2cbd35b9267c9fc28129f20.php 第 178 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.005015s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017648s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022721s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.023201s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.024097s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.024505s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002293s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.025105s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000652s ]
+
+[ 2014-03-10T20:48:40+08:00 ] 171.216.69.71 /index.php?g=Home&m=Index&a=about
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004024s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000763s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\62da13d6a4a39bfa726bf0328a3d140c.php 第 28 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\62da13d6a4a39bfa726bf0328a3d140c.php 第 28 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004847s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014945s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.019848s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.020225s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.021029s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.021429s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002071s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.021998s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000629s ]
+
+[ 2014-03-10T20:48:46+08:00 ] 171.216.69.71 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003798s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000669s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004550s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018347s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022961s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.023374s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.024227s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.024627s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002167s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.025215s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000627s ]
+
+[ 2014-03-10T20:48:49+08:00 ] 171.216.69.71 /index.php?g=Home&m=Index&a=help
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000682s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004022s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000729s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\1923ca92b2cbd35b9267c9fc28129f20.php 第 31 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\1923ca92b2cbd35b9267c9fc28129f20.php 第 31 行.
+NOTIC: [8] Undefined index:  token D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\1923ca92b2cbd35b9267c9fc28129f20.php 第 147 行.
+NOTIC: [8] Undefined index:  token D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\1923ca92b2cbd35b9267c9fc28129f20.php 第 174 行.
+NOTIC: [8] Undefined index:  token D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\1923ca92b2cbd35b9267c9fc28129f20.php 第 178 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004811s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017632s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022499s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022889s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023758s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.024160s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002195s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024776s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000623s ]
+
+[ 2014-03-10T20:48:56+08:00 ] 171.216.69.71 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000541s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003646s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000575s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004278s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017894s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022232s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022633s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023486s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023886s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002150s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024464s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000621s ]
+
+[ 2014-03-10T20:49:00+08:00 ] 171.216.69.71 /index.php?m=Index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004021s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000728s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\47f3eb7a4a5c9661138d7d37e96fcc81.php 第 28 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\47f3eb7a4a5c9661138d7d37e96fcc81.php 第 28 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004809s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016884s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.021747s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022175s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023046s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023444s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002205s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024032s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000627s ]
+
+[ 2014-03-10T20:49:08+08:00 ] 171.216.69.71 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003608s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000541s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004206s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017741s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022002s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022395s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023221s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023616s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002364s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024445s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000650s ]
+
+[ 2014-03-10T20:49:10+08:00 ] 171.216.69.71 /index.php?m=Index&a=reg
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000637s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004013s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000736s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\6a86ef8323149770a1dbccc8067f70d5.php 第 28 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\6a86ef8323149770a1dbccc8067f70d5.php 第 28 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004808s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016710s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.021575s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.021997s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.022854s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023262s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002197s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.023852s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000626s ]
+
+[ 2014-03-10T20:49:15+08:00 ] 171.216.69.71 /index.php?m=Index&a=login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000656s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004142s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000846s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\47f3eb7a4a5c9661138d7d37e96fcc81.php 第 28 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\47f3eb7a4a5c9661138d7d37e96fcc81.php 第 28 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.005045s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016656s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.021756s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022150s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.022988s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.023403s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002161s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.023998s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000626s ]
+
+[ 2014-03-10T21:50:26+08:00 ] 115.236.140.12 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000797s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000895s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.004800s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000904s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.005763s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019323s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.025143s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.025798s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.026728s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.027244s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002847s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.028068s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000873s ]
+
+[ 2014-03-10T21:50:48+08:00 ] 115.236.140.12 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000644s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003974s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000542s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004574s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018148s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022778s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.023205s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.024073s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.024476s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002198s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.025058s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000869s ]
+
+[ 2014-03-10T21:50:50+08:00 ] 115.236.140.12 //index.php?r=site/page&view[]=about
+NOTIC: [8] Array to string conversion D:\Easy2PHP5 build 2\WebSite\Core\_Core\Lib\Core\App.class.php 第 69 行.
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003928s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000542s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004540s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017821s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022409s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022804s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023645s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.024044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002131s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024619s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000620s ]
+
+[ 2014-03-10T21:50:53+08:00 ] 115.236.140.12 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000633s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003924s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000545s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004528s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017915s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022496s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022892s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023765s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.024164s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002165s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024740s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000619s ]
+
+[ 2014-03-10T21:50:55+08:00 ] 115.236.140.12 /index.php
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000539s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000634s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.003940s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000541s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant uid - assumed 'uid' D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+NOTIC: [8] Undefined index:  uid D:\Easy2PHP5 build 2\WebSite\data\logs\Cache\Home\377f56f2e5ecfd9a39dba2c0f96d64d6.php 第 29 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.004538s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017849s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.022443s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.022838s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.023916s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.024347s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002398s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.024920s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000619s ]
+

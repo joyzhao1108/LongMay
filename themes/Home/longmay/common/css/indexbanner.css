@@ -1,0 +1,275 @@
+.dot-nav {
+	margin: 0px; padding: 0px; width: 100%; text-align: center; line-height: 1px;
+}
+.dot-nav li {
+	display: inline-block;
+}
+.dot-nav li a {
+	display: inline-block;
+}
+.dot-nav li {
+	margin: 0px; width: 13px; height: 15px; overflow: hidden; position: relative; z-index: 1;
+}
+.dot-nav li a:hover {
+	top: -15px;
+}
+.dot-nav li a.active {
+	top: -30px; cursor: default;
+}
+.dot-nav li a {
+	background: url("http://images.apple.com/global/elements/buttons/dots_08c.png") no-repeat 0px 0px; left: 0px; top: 0px; width: 13px; height: 45px; text-indent: -1000em; position: absolute; z-index: 1; cursor: pointer; behavior: url(/global/scripts/lib/ie7pngfix.htc);
+}
+:nth-child(n).dot-nav li {
+	margin: 0px 2px; padding: 0px; width: 10px; height: 10px;
+}
+:nth-child(n).dot-nav li a {
+	background: rgb(224, 225, 227); border-radius: 5px; width: 10px; height: 10px; box-shadow: inset 0px 1px 1px rgba(0,0,0,0.25); -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .25); -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .25);
+}
+:nth-child(n).dot-nav li a:hover {
+	background: rgb(204, 204, 204); top: 0px;
+}
+:nth-child(n).dot-nav li a.active {
+	background: rgb(0, 136, 204); top: 0px; box-shadow: inset 0px 1px 0px rgba(0,0,0,0.25); -moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, .25); -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, .25);
+}
+#body-container .dot-nav li {
+	margin: 0px 8px; width: 12px; height: 12px;
+}
+#body-container .dot-nav li a {
+	background: rgb(148, 148, 148); border-radius: 50%; border: 1px solid transparent; left: 2px; top: 2px; width: 6px; height: 6px; box-shadow: none; -moz-border-radius: 50%; -webkit-border-radius: 50%; -moz-box-shadow: none; -webkit-box-shadow: none;
+}
+#body-container .dot-nav li a:hover {
+	background: rgb(102, 102, 102); top: 2px;
+}
+#body-container .dot-nav li a.active {
+	border: 1px solid rgb(0, 136, 204); left: 0px; top: 0px; width: 10px; height: 10px; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;background-color:transparent;
+}
+#body-container .dot-nav li a {
+	pointer-events: none; -webkit-pointer-events: none;
+}
+#body-container .dot-nav {
+	left: 50%; width: 180px; bottom: 16px; margin-left: -90px; position: absolute; z-index: 1002;
+}
+#body-container .dot-nav li a {
+	background: rgb(225, 225, 225);
+}
+#body-container .dot-nav li a:hover {
+	background: rgb(225, 225, 225);
+}
+#body-container .dot-nav li a.active {
+	border: 1px solid rgb(225, 225, 225);
+}
+.wrap {width: 960px;margin: 0 auto;}
+.sl { position: absolute;left:0;top:0; margin: 0; color: white;height: 555px;width:100%;
+}
+.sl_iphone_1{background:url('img/banner-1.jpg') top center no-repeat}
+.sl_iphone_1 .sl_text {margin:0px auto;font-family:华文彩云;font-size:28pt;text-align:center; }
+.sl_iphone_1 .sl_logo {margin:50px auto;width:372px; }
+.sl_iphone_1 .clsfix {height:120px; }
+.sl_iphone_2{background:url('img/banner-2.jpg') top center no-repeat}
+.sl_iphone_3{background:url('img/banner-3.jpg') top center no-repeat}
+.sl_iphone_4{background:url('img/banner-4.jpg') top center no-repeat}
+.sl_iphone_4 .sl_con {margin:216px 0 0 30px;}
+.sl_iphone_4 .sl_con ul { width:440px}
+.sl_iphone_5{background:url('img/banner-5.jpg') top center no-repeat}
+.sl_iphone_5 .sl_con {margin:265px 0 0 555px;}
+.sl_iphone_5 .sl_con ul { width:350px}
+.sl_iphone_6{background:url('img/banner-6.jpg') top center repeat-x}
+.sl_iphone_6 .sl_con {margin:193px 0 0 31px;}
+.sl_iphone_6 .sl_con ul { width:350px}
+.sl_iphone_6 .btn_ljxq {
+    background: url("img/banner-ljxq.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 54px;
+    text-indent: -9999px;
+    width: 147px;
+}
+.sl_iphone_6 .btn_ljxq:hover {
+    background: url("img/banner-ljxq2.png") no-repeat scroll 0 0 transparent;
+}
+.sl_iphone_6 .btn_ljxq:active {
+    background: url("img/banner-ljxq.png") no-repeat scroll 0 0 transparent;
+}
+.sl_iphone_7{background:url('img/banner-7.jpg') top center repeat-x}
+
+.sl_iphone_7 .wrap {
+    height: 555px;
+    margin: 0 auto;
+    width: 960px;
+	display:block;
+}
+
+.sl_wrap{position: relative;left:0;top:0px;width:100%;height:555px;overflow:hidden;}
+.sl_wrap .wrap {width: 960px;margin: 0 auto;}
+.sl_wrap .btn {margin-top: 20px;}
+.sl_wrap_in{position:absolute;left:0;top:0;z-index:2;width:100%;height:100%;}
+.sl_con ul {font-size: 18px;margin-top: 20px;}
+.sl_con ul li {margin-top:12px;line-height: 31px;text-shadow:0 1px 2px rgba(51, 51, 51, 0.5);}
+.sl_con {margin:183px 0 0 35px;font-family: 微软雅黑,黑体,宋体; }
+.banner_prev, .banner_next { display: block; position: absolute; z-index: 10; width: 17px; height: 45px;  top: 265px;}
+.banner_prev {background: url(img/banner_prev1.png) no-repeat;_background: url(img/banner_prev1.gif) no-repeat;}
+.banner_next {background: url(img/banner_next1.png) no-repeat;_background: url(img/banner_next1.gif) no-repeat;}
+
+.present{ width:800px; margin:0 auto; }
+.present div {margin: 3px;width: 257px;float:left;}
+.present a:hover .presenttext
+{
+	color:#0093d3;
+}
+.present001{background: url(img/case01.jpg) no-repeat center center;height: 187px;  }
+.present001 .presenttext{ font-family: 华文细黑;color:#fff;font-size:18pt;margin-top:145px;text-align:center}
+.present002{background: url(img/case02.jpg) no-repeat center center; height: 187px; }
+.present002 .presenttext{ font-family: 华文细黑;color:#fff;font-size:18pt;margin-top:145px;text-align:center }
+.present003{background: url(img/case03.jpg) no-repeat center center; height: 187px; }
+.present003 .presenttext{  font-family: 华文细黑;color:#fff;font-size:18pt;margin-top:145px;text-align:center}
+.present004{background: url(img/case04.jpg) no-repeat center center;height: 187px;  }
+.present004 .presenttext{  font-family: 华文细黑;color:#fff;font-size:18pt;margin-top:145px;text-align:center }
+.present005{background: url(img/case05.jpg) no-repeat center center;height: 187px;  }
+.present005 .presenttext{  font-family: 华文细黑;color:#fff;font-size:18pt;margin-top:145px;text-align:center}
+.present006{background: url(img/case06.jpg) no-repeat center center;height: 187px;  }
+.present006 .presenttext{  font-family: 华文细黑;color:#fff;font-size:18pt;margin-top:145px;text-align:center }
+
+
+
+
+.weixinapps{display: block;background-color: #f1f1f2;
+    padding: 40px 0;
+	border-top: 1px solid #C7C7CD;
+	margin:0 auto; width:960px;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix:before, .clearfix:after {
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+}
+.clearfix:before, .clearfix:after {
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+}
+.weibo {
+    left: 420px;
+    position: absolute;
+    text-align: center;
+    top: 30px;
+    width: 52px;
+}
+.xl_weibo {
+    background: url("img/weibo.png") no-repeat scroll 0 -38px transparent;
+    display: block;
+    height: 34px;
+    margin: 10px 0;
+    width: 42px;
+}
+.tx_weibo {
+    background: url("img/weibo.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    float: left;
+    height: 38px;
+    margin: 10px 0;
+    width: 42px;
+}
+.xl_weibo:hover {
+    background-position: 0 -110px;
+}
+.tx_weibo:hover {
+    background-position: 0 -72px;
+}
+
+.weixinapps .weixinapps-inner {
+    margin: 0 auto;
+    padding: 0 25px;
+    width: 940px;
+}
+.weixinapps .app-box {
+	margin: 0 auto;
+    width: 920px;
+}
+.weixinapps h2 {
+	font-size:16px; font-weight:normal; color:#636B89;
+}
+.weixinapps .app-item {
+    background: none repeat scroll 0 0 #F9F9F9;
+    border-color: #FFFFFF #E4E4E4 #E4E4E4;
+    border-image: none;
+    border-radius: 3px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+    border-right: 1px solid #E4E4E4;
+    border-style: solid;
+    border-width: 1px;
+    float: left;
+    margin:10px 10px 0 0;
+    text-align: center;
+	display: block;
+    height: 66px;
+    overflow: hidden;
+    padding: 17px 5px;
+    text-decoration: none;
+    transition: background 0.2s linear 0s;
+    width: 90px;
+	color: #666666;
+}
+
+.weixinapps .app-item:hover {
+    background: none repeat scroll 0 0 #FFFFFF;
+    color: #3C7800;
+}
+.weixinapps .app-item:hover a{
+    color: #3C7800;
+}
+.weixinapps .app-item img {
+    border: medium none;
+	width:48px; height:48px;
+	border-radius: 30px;
+	-webkit-border-radius:30px;
+	-moz-border-radius:30px;
+}
+.weixinapps .app-item span {
+    display: block;
+    height: 16px;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+}
+.weixinapps .app-item:hover {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow:0 1px 3px rgba(0, 0, 0, 0.05);
+	-webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.weixinapps .left-box {
+    float: right;
+}
+.weixinapps .more {
+    float: right;
+    margin: 10px 12px 0 0;
+}
+.more {
+    color: #3C7800;
+    display: inline-block;
+}
+.more:hover {
+    color: #3C7800;
+}
+.more .more-arrow {
+	 background: url("img/more.gif") no-repeat scroll 0 center transparent;
+    display: inline-block;
+    height: 16px;
+    line-height: 13px;
+    margin: -3px 0 0 5px;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 16px;
+}
