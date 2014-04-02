@@ -96,21 +96,34 @@ function setlatlng(longitude,latitude){
         <td><input type="text" id="address" name="address" value="{weiguanjia:$set.address}" class="px require" style="width:400px;" /></td> 
        </tr> 
        <tr> 
-        <th><span class="red">*</span>Logo地址：</th> 
-        <td><input type="text" id="logourl" name="logourl" value="{weiguanjia:$set.logourl}" class="px require" style="width:400px;" /></td> 
+        <th><span class="red">*</span>欢迎图片地址：</th>
+        <td><input type="text" id="welcomepic" name="welcomepic" value="{weiguanjia:$set.welcomepic}" class="px require" style="width:400px;" /><input class="btnFile btnGreen" type=button onclick="window.open('{weiguanjia::U('Upload/index',array('token'=>$token,'n'=>welcomepic))}')" value="点击上传图片"></td>
        </tr>
-        <tr> 
+       <tr>
+           <th><span class="red">*</span>欢迎标题：</th>
+           <td><input type="text" id="welcometitle" name="welcometitle" value="{weiguanjia:$set.welcometitle}" class="px require" style="width:400px;" /></td>
+       </tr>
+       <tr>
         <th><span class="red">*</span>经纬度：</th> 
-        <td>经度 <input type="text" id="longitude"  name="longitude" size="14" class="px" value="{weiguanjia:$set.longitude}" /> 纬度 <input type="text"  name="latitude" size="14" id="latitude" class="px" value="{weiguanjia:$set.latitude}" /> <a href="###" onclick="setlatlng($('#longitude').val(),$('#latitude').val())">在地图中查看/设置</a></td> 
+        <td>经度lat <input type="text" id="longitude"  name="longitude" size="14" class="px" value="{weiguanjia:$set.longitude}" /> 纬度lng <input type="text"  name="latitude" size="14" id="latitude" class="px" value="{weiguanjia:$set.latitude}" />  <a href="http://api.map.baidu.com/lbsapi/getpoint/index.html" target="_blank">坐标获取</a></td>
        </tr>
-       <tr> 
-        <th><span class="red"></span>顺序：</th> 
-        <td><input type="text" id="taxis" name="taxis" value="{weiguanjia:$set.taxis}" class="px require" style="width:100px;" /></td> 
+
+       <tr>
+           <th><span class="red">*</span>业务简介：</th>
+           <td><input type="text" id="introbrief" name="introbrief" value="{weiguanjia:$set.introbrief}" class="px require" style="width:400px;" /></td>
+       </tr>
+       <tr>
+           <th><span class="red">*</span>业务简介LOGO：</th>
+           <td><input type="text" id="briefpic" name="briefpic" value="{weiguanjia:$set.briefpic}" class="px require" style="width:400px;" /><input class="btnFile btnGreen" type=button onclick="window.open('{weiguanjia::U('Upload/index',array('token'=>$token,'n'=>briefpic))}')" value="点击上传图片"></td>
        </tr>
         <TR>
-                  <TH valign="top"><label for="info">图文详细页内容：</label></TH>
+                  <TH valign="top"><label for="info">业务介绍详细页内容：</label></TH>
                   <TD><textarea name="intro" id="intro"  rows="5" style="width:590px;height:360px">{weiguanjia:$set.intro}</textarea></TD>
-                </TR>  
+                </TR>
+       <tr>
+           <th><span class="red"></span>顺序：</th>
+           <td><input type="text" id="taxis" name="taxis" value="{weiguanjia:$set.taxis}" class="px require" style="width:100px;" /></td>
+       </tr>
        <tr>         
        <th>&nbsp;</th>
        <td>

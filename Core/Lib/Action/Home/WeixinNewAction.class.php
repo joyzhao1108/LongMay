@@ -505,35 +505,69 @@ class WeixinNewAction extends Action
     }
     function shouye($name)
     {
-        $home = M('Home')->where(array(
+        $company = M('Company')->where(array(
             'token' => $this->token
         ))->find();
-        if ($home == false) {
+        if ($company == false) {
             return array(
-                '商家未做首页配置，请稍后再试',
+                '商家未设置公司信息，请稍后再试',
                 'text'
             );
         } else {
-			$this->requestdata('3g');
-            $imgurl = $home['picurl'];
-            if ($home['apiurl'] == false) {
-				$url = rtrim(C('site_url'), '/') . U('Wap/Index/index', array(
-					'token' => $this->token,
-					'wecha_id' => $this->data['FromUserName']
-				));
-            } else {
-                $url = $home['apiurl'];
-            }
+            $this->requestdata('3g');
+            $url = rtrim(C('site_url'), '/') . U('Wap/Index/index', array(
+                    'token' => $this->token,
+                    'wecha_id' => $this->data['FromUserName']
+                ));
+            //欢迎标题
+            $return[] = array(
+                $company['welcometitle'],
+                '',
+                $company['welcomepic'],
+                $url
+            );
+            //地址
+            $address = '地址:'.$company['address'];
+            $imgUrl='http://api.map.baidu.com/staticimage?center='.$company['longitude'].','.$company['latitude'].'&width=80&height=80&zoom=11&markers='.$company['longitude'].','.$company['latitude'].'&markerStyles=l,1';
+            $url = 'http://api.map.baidu.com/marker?location='.$company['longitude'].','.$company['latitude'].'&title='.$company['name'].'&output=html&wxref=mp.weixin.qq.com';
+            $return[] = array(
+                $address,
+                '',
+                $imgUrl,
+                $url
+            );
+            //电话
+            $phone = '电话:'.$company['tel'];
+            $url = rtrim(C('site_url'), '/') . U('Wap/Company/index', array(
+                'token' => $this->token,
+                'wecha_id' => $this->data['FromUserName']
+            ));
+            $imgUrl = rtrim(C('site_url'), '/') .'/images/tel.png';
+            $return[] = array(
+                $phone,
+                '',
+                $imgUrl,
+                $url
+            );
+            //手机
+            $phone = '手机:'.$company['mp'];
+            $imgUrl = rtrim(C('site_url'), '/') .'/images/tel.png';
+            $return[] = array(
+                $phone,
+                '',
+                $imgUrl,
+                $url
+            );
+            //介绍
+            $return[] = array(
+                $company['introbrief'],
+                $company['intro'],
+                $company['briefpic'],
+                ''
+            );
         }
         return array(
-            array(
-                array(
-                    $home['title'],
-                    $home['info'],
-                    $imgurl,
-                    $url
-                )
-            ),
+            $return,
             'news'
         );
     }

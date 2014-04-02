@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>{weiguanjia:$company['name']}|联系我们</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link href="{weiguanjia::RES}/css/style/css/hotels.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="" >
+<include file="Public:menu"/>
+<div class="qiandaobanner"> 
+  <if condition="$company['welcomepic'] neq false">
+   <img src="{weiguanjia:$company['welcomepic']}"  />
+  <else />
+    <img src="{weiguanjia::RES}/css/style/images/default.jpg"  />  
+ </if>
+ </div>
+<div class="cardexplain"> 
+
+  <!--普通用户登录时显示-->
+     
+
+<!--商家房价及类型-->
+<ul class="round">
+<li class="title"><span class="none">{weiguanjia:$company['name']}</span></li>
+<if condition="$company['tel'] neq false">
+<li class="tel"><a href="tel:{weiguanjia:$company['tel']}"><span>电话：{weiguanjia:$company['tel']} </span></a></li>
+</if>
+<if condition="$company['tel2'] neq false">
+<li class="tel"><a href="tel:{weiguanjia:$company['tel2']}"><span>电话：{weiguanjia:$company['tel2']} </span></a></li>
+</if>
+<if condition="$company['mp'] neq false">
+        <li class="tel"><a href="tel:{weiguanjia:$company['mp']}"><span>手机：{weiguanjia:$company['mp']} </span></a></li>
+</if>
+<if condition="$company['mp2'] neq false">
+        <li class="tel"><a href="tel:{weiguanjia:$company['mp2']}"><span>手机：{weiguanjia:$company['mp2']} </span></a></li>
+</if>
+<li class="addr"><a href="?g=Wap&m=Company&a=map&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}"><span>地址：{weiguanjia:$company['address']}</span></a></li>
+</ul>
+    <a href="?g=Wap&m=Company&a=map&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}"><span><img src="{weiguanjia:$companymapurl}" width="100%" /> </span></a>
+</div>
+</body>
+</html>

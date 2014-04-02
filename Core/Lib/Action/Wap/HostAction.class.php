@@ -2,9 +2,9 @@
 class HostAction extends BaseAction{
     public function index(){
         $agent = $_SERVER['HTTP_USER_AGENT']; 
-        if(!strpos($agent,"MicroMessenger")) {
-            echo '此功能只能在微信浏览器中使用';exit;
-        }
+        //if(!strpos($agent,"MicroMessenger")) {
+            //echo '此功能只能在微信浏览器中使用';exit;
+        //}
         $token      = $this->_get('token'); 
         $hid         = $this->_get('hid'); 
         $where      = array('token'=>$token,'hid'=>$hid);             

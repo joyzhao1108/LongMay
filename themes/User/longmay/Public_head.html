@@ -112,10 +112,7 @@
 							<div class="nav-header">微网站设置</div>
 							<li <if condition="MODULE_NAME eq 'Company'">class="selected" <else/>class="subCatalogList"</if>>
 								<a href="{weiguanjia::U('Company/index',array('token'=>$token))}">公司信息</a>
-							</li>	
-							<li <if condition="MODULE_NAME eq 'Home'">class="selected" <else/>class="subCatalogList"</if>>
-								<a href="{weiguanjia::U('Home/set',array('token'=>$token))}">首页回复配置</a>
-							</li>					
+							</li>
 							<li <if condition="MODULE_NAME eq 'Flash'">class="selected" <else/>class="subCatalogList"</if>>
 								<a href="{weiguanjia::U('Flash/index',array('token'=>$token))}">主页幻灯片<span class="new"></span></a>
 							</li>
@@ -205,7 +202,10 @@
 							</li>
 							<li <if condition="MODULE_NAME eq 'Lottery'">class="selected" <else/>class="subCatalogList"</if>>
 								<a href="{weiguanjia::U('Lottery/index',array('token'=>$token))}">抽奖活动</a><span class="new"></span>
-							</li>							
+							</li>
+                            <li <if condition="MODULE_NAME eq 'Lottery'">class="selected" <else/>class="subCatalogList"</if>>
+                            <a href="{weiguanjia::U('Adma/index',array('token'=>$token))}">二维码推广设置</a><span class="new"></span>
+                            </li>
 						</ul>
 						<ul>
 						<div class="nav-header">会员卡<span class="new"></span></div>

@@ -91,8 +91,10 @@ class IndexAction extends BaseAction
     {
         $where['token'] = $this->_get('token');
         $flash          = M('Flash')->where($where)->select();
+        $bulletin          = M('Bulletin')->where($where)->select();
         $count          = count($flash);
         $this->assign('flash', $flash);
+        $this->assign('bulletin', $bulletin);
         $this->assign('info', $this->info);
         $this->assign('num', $count);
         $this->assign('info', $this->info);

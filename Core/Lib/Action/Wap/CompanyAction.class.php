@@ -3,12 +3,29 @@ class CompanyAction extends BaseAction{
 	public $token;
 	public $apikey;
 	public function _initialize() {
+        parent::_initialize();
 		$this->token=$this->_get('token');
 		$this->assign('token',$this->token);
 		$this->apikey=C('baidu_map_api');
 		$this->assign('apikey',$this->apikey);
 		$this->assign('staticFilePath',str_replace('./','/',THEME_PATH.'common/css/product'));
 	}
+    public function index(){
+        //$agent = $_SERVER['HTTP_USER_AGENT'];
+        //if(!strpos($agent,"MicroMessenger")) {
+            //echo '此功能只能在微信浏览器中使用';exit;
+        //}
+        $company_model=M('Company');
+        $where=array('token'=>$this->token);
+        if (isset($_GET['companyid'])){
+            $where['id']=intval($_GET['companyid']);
+        }
+        $company=$company_model->where($where)->find();
+        $companymapurl = 'http://api.map.baidu.com/staticimage?center='.$company['longitude'].','.$company['latitude'].'&width=370&height=370&zoom=14&markers='.$company['longitude'].','.$company['latitude'].'&markerStyles=l,1';
+        $this->assign('company',$company);
+        $this->assign('companymapurl',$companymapurl);
+        $this->display();
+    }
 	public function map(){
 		//店铺信息
 		$company_model=M('Company');
