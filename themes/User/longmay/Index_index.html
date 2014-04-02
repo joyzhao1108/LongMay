@@ -1,13 +1,12 @@
 <include file="Index:header"/>
 <div class="content">
-	<!--<div class="usercontent">
+	<div class="usercontent">
 		<ul>
-			<li><a href="{weiguanjia::U('Index/pay_history')}" class="gold" title="查看金币历史记录" ><p><strong>账户金币总数：</strong>5</p><p>已消费金币数：0</p></a></li>
 			<li class="addli"><a class="addwx" title="添加微信公众号" onclick="location.href='{weiguanjia::U('Index/add')}';">添加微信公众号</a></li>
 			<li style="height:47px;line-height:47px;color:red;padding:10px;">请添加公众帐号,进入功能管理,再进行功能测试，</li>
 		</ul>
 		<div class="clr"></div>
-	</div>-->
+	</div>
           <div class="msgWrap">
             <TABLE class="ListProduct" border="0" cellSpacing="0" cellPadding="0" width="100%">
               <THEAD>
@@ -32,7 +31,7 @@
 					  <td><p>图文：<php>echo $_SESSION['diynum'].'/'.$group[$_SESSION['gid']]['did'];</php></p></td>
 					   <td><p>总请求数:<php>echo $_SESSION['connectnum']</php></p><p> 本月请求数:<php>echo $group[$_SESSION['gid']]['cid'];</php></p></td>
 					  
-					  <td class="norightborder">　<a href="{weiguanjia::U('Index/edit',array('id'=>$vo['id']))}">编辑</a>　<a  href="{weiguanjia::U('Index/del',array('id'=>$vo['id']))};">删除</a>　
+					  <td class="norightborder">　<a href="{weiguanjia::U('Index/edit',array('id'=>$vo['id']))}">编辑</a>　
 					  <a href="{weiguanjia::U('Company/index',array('id'=>$vo['id'],'token'=>$vo['token']))}" class="btnGreens" >功能管理</a>
 					  <a href="{weiguanjia::U('Home/Index/help',array('id'=>$vo['id'],'token'=>$vo['token']))}" class="btnGreens" >API接口</a>
 					  </td>
