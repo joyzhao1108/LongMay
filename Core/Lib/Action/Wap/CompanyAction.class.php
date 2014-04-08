@@ -26,6 +26,20 @@ class CompanyAction extends BaseAction{
         $this->assign('companymapurl',$companymapurl);
         $this->display();
     }
+    public function about(){
+        //$agent = $_SERVER['HTTP_USER_AGENT'];
+        //if(!strpos($agent,"MicroMessenger")) {
+        //echo '此功能只能在微信浏览器中使用';exit;
+        //}
+        $company_model=M('Company');
+        $where=array('token'=>$this->token);
+        if (isset($_GET['companyid'])){
+            $where['id']=intval($_GET['companyid']);
+        }
+        $company=$company_model->where($where)->find();
+        $this->assign('company',$company);
+        $this->display();
+    }
 	public function map(){
 		//店铺信息
 		$company_model=M('Company');

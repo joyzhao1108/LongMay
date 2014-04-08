@@ -1,0 +1,93 @@
+<html>
+<head>
+<title>{weiguanjia:$company['name']}|最新活动</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link href="{weiguanjia::RES}/css/style/css/hotels.css" rel="stylesheet" type="text/css">
+<link href="{weiguanjia::RES}/css/lesson/news.css" rel="stylesheet" type="text/css" />
+<script>
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideToolbar');
+    });
+</script>
+    <style>
+        .title
+        {
+            color: rgb(218,85,36);
+            font-size: 20px;
+            padding:0px 8px 3px;
+        }
+        .title2
+        {
+            color: rgb(218,85,36);
+            padding:0px 8px 3px;
+        }
+        .title3
+        {
+            color: rgb(199,3,22);
+        }
+        .title4
+        {
+            color: rgb(67,151,211);
+        }
+        .content
+        {
+            padding:0px 8px 3px;
+        }
+
+
+    </style>
+    <script>
+        window.onload = function ()
+        {
+            var oWin = document.getElementById("win");
+            var oLay = document.getElementById("overlay");
+            var oBtn = document.getElementById("popmenu");
+            var oClose = document.getElementById("close");
+            oBtn.onclick = function ()
+            {
+                oLay.style.display = "block";
+                oWin.style.display = "block"
+            };
+            oLay.onclick = function ()
+            {
+                oLay.style.display = "none";
+                oWin.style.display = "none"
+            }
+        };
+    </script>
+</head>
+
+<body id="" >
+<include file="Public:menu"/>
+<ul>
+    <volist name="list" id="vo">
+        <li class="dandanb"> <!--课程-->
+            <a href="index.php?g=Wap&m=Activity&a=content&token={weiguanjia:$vo.token}&id={weiguanjia:$vo.id}&wecha_id={weiguanjia:$Think.get.wecha_id}">
+                <span>
+                    <table class="jiagebiao" width="100%" border="0" cellspacing="0" cellpadding="5">
+
+                        <tr><td><img src="{weiguanjia:$vo.headerpic}" width="100%"></td></tr>
+                        <tr>
+                            <td class="title">{weiguanjia:$vo.name}</td>
+                        </tr>
+                        <tr>
+                            <td class="title2">活动时间:<span class="title4">{weiguanjia:$vo.statdate|date='Y年m月d日',###}-{weiguanjia:$vo.enddate|date='Y年m月d日',###}</span></td>
+                        </tr>
+                        <tr>
+                            <td class="content"> <p>详细内容:{weiguanjia:$vo.intro}<span class="title3">[详情]</span></p></td>
+                        </tr>
+                        <tr><td colspan="2"><img src="{weiguanjia::RES}/images/edu01/lessonsplitb.png" width="100%"></td></tr>
+                    </table>
+                </span>
+            </a>
+            <br>
+        </li>
+    </volist>
+
+</ul>
+</body>
+</html>

@@ -1,29 +1,65 @@
 <include file="Index:header"/>
 <div class="content">
-          <div class="cLineB"><h4>修改密码<span class="FAQ"></span></h4></div>
           <form method="post" action="{weiguanjia::U('Index/usersave')}" enctype="multipart/form-data">
-          <div class="msgWrap">
-            <table class="userinfoArea" border="0" cellspacing="0" cellpadding="0" width="100%">
-             
-              <tbody>
-				<tr>
-                	<th><span class="red">*</span><label for="QQ">修改密码</label></th>
-                	<td><input type="password" class="px"  value="" name="password">　为确保消息畅通，请确认QQ号码填写无误。</td>
-                </tr>
-                 <tr>
-                 	<th></th>
-                 	<td><button type="submit" name="button" class="btnGreen">提交</button></td>
-                 	</tr>
-              </tbody>
-            </table>
-            
+              <div class="regpnl">
+                  <div class="regcontent">
+                      <div>
+                          <table>
+                              <tr>
+                                  <th><span class="red">*</span>用户名</th>
+                                  <td><input id="username" type="text" maxlength="15" placeholder="" name="username" class="inputext"></td>
+                              </tr>
+                              <tr>
+                                  <td>&nbsp;</td>
+                                  <td><span class="info">龙蔓用户名由字母与数字组成</span></td>
+                              </tr>
+                          </table>
+                      </div>
+                      <div>
+                          <table>
+                              <tr>
+                                  <th><span class="red">*</span>密码</th>
+                                  <td><input id="password" type="password" placeholder="" name="password" class="inputext"></td>
+                              </tr>
+                              <tr>
+                                  <td>&nbsp;</td>
+                                  <td><span class="info">字母、数字，最短6位，区分大小写</span></td>
+                              </tr>
+                          </table>
+                      </div>
+                      <div>
+                          <table>
+                              <tr>
+                                  <th><span class="red">*</span>确认密码</th>
+                                  <td><input id="confirmpwd" type="password" placeholder="" name="confirmpwd" class="inputext"></td>
+                              </tr>
+                              <tr>
+                                  <td>&nbsp;</td>
+                                  <td><span class="info">请再次输入密码</span></td>
+                              </tr>
+                          </table>
+                      </div>
+                      <div>
+                          <table>
+                              <tr>
+                                  <th><span class="red">*</span>邮箱</th>
+                                  <td><input id="mail" type="text" placeholder="" name="mail" class="inputext"></td>
+                              </tr>
+                              <tr>
+                                  <td>&nbsp;</td>
+                                  <td><span class="info">请输入您常用的电子邮箱</span></td>
+                              </tr>
+                          </table>
+                      </div>
+                      <div class="reg-btn-panel">
+                          <input title="下一步" type="button" class="next-btn" value="下一步">
+                      </div>
+                  </div>
           </div>
           </form>
           
         </div>
-        <div class="clr"></div>
-      </div>
-    </div>
-  </div>
+<div class="clr"></div>
+</div>
   <!--底部-->
-  	</div>
+</div>

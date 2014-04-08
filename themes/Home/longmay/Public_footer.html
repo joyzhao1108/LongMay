@@ -43,7 +43,7 @@
 .fotherNew .box2 { float:left; width:115px;}
 .fotherNew .box3 { float:left; width:80px;}
 
-.fLink { background:#d1d1d1; height:37px; text-align:center; color:#333; font-size:14px;}
+.fLink { height:37px; text-align:center; color:#333; font-size:14px;}
 .fLink a { color:#0093d3 !important; text-decoration:none; font-size:14px; height:32px; line-height:32px; margin:0 10px; font-family:"宋体";}
 .fLink a:hover { color:#820C0C !important; text-decoration:underline;}
 .flinkMain { width:960px; margin:0 auto; height:35px; line-height:38px; border-bottom:#bdc7d0 2px solid;}
@@ -53,76 +53,78 @@
 
 
 <div id="ft" class="wp cl">
-<div class="footNew">
-	<div class="footOutNew">
-    	<!-- 其他 begin -->
-        <div class="fotherNew" style="display:none">
-            <ul>
-                <li class="fir">
-                    <h3>关联媒体</h3>
-                    <dl>
-                        <dt class="box1">
-							<a href="http://paper.people.com.cn/rmrb/" target="_blank" rel="nofollow">人民日报</a>
-                        	<a href="http://health.huanqiu.com/" target="_blank" rel="nofollow">生命时报</a>
-							<a href="http://www.globalpeople.com.cn/" target="_blank" rel="nofollow">环球人物</a>
-                            
-						</dt>
-						<dt class="box2">
-							<a href="http://www.people.com.cn" target="_blank" rel="nofollow" class="widBig">人民网</a>
-                            <a href="http://www.globaltimes.cn/" target="_blank" rel="nofollow" class="widBig">Global Times</a>
-							<a href="http://www.globaltraveler.com.cn/" target="_blank" rel="nofollow" class="widBig">环球旅游周刊</a><br>
-                            
-						</dt>
-						<dt class="box3">
-							<a href="http://data.huanqiu.com/" target="_blank" rel="nofollow" class="widSmall">环球时报</a>
-                            <a href="http://humor.huanqiu.com/" target="_blank" rel="nofollow" class="widSmall">讽刺与幽默</a>
-                        </dt>
-                    </dl>
-                </li>
-          <li class="sec">
-                    <h3>友情连接</h3>
-                    <dl>         
-						<dt>
-							<php>$info=F('links');</php>
-							<volist name="info" id="loo">
-							<a href="{weiguanjia:$loo.url}" >{weiguanjia:$loo.name}</a><br/>
-							</volist>
-						</dt>
-                    </dl>
-                </li>
-          <li class="last">
-                    <h3>推荐服务</h3>
-                    <dl>
-                        <dt class="iconArea"><a href="http://www.huanqiu.com/weibo.html">官方微博，欢迎关注</a></dt>
-                        <dt><a href="http://data.huanqiu.com/" target="_blank" title="环球时报-版权数据库">环球时报-版权数据库</a><span class="iconNew"></span></dt>
-                        <dt><a href="http://mobile.huanqiu.com/wap/" target="_blank" title="手机环球网">手机环球网</a><em>|</em><span class="iconRss"></span><a href="http://rss.huanqiu.com">RSS订阅</a></dt>
-                        
-                    </dl>
-                </li>
-          </ul>
+    <div class="footNew">
+        <div class="footOutNew">
+            <!-- 其他 begin -->
+            <div class="fotherNew" style="display:none">
+                <ul>
+                    <li class="fir">
+                        <h3>关联媒体</h3>
+                        <dl>
+                            <dt class="box1">
+                                <a href="http://paper.people.com.cn/rmrb/" target="_blank" rel="nofollow">人民日报</a>
+                                <a href="http://health.huanqiu.com/" target="_blank" rel="nofollow">生命时报</a>
+                                <a href="http://www.globalpeople.com.cn/" target="_blank" rel="nofollow">环球人物</a>
+
+                            </dt>
+                            <dt class="box2">
+                                <a href="http://www.people.com.cn" target="_blank" rel="nofollow" class="widBig">人民网</a>
+                                <a href="http://www.globaltimes.cn/" target="_blank" rel="nofollow" class="widBig">Global Times</a>
+                                <a href="http://www.globaltraveler.com.cn/" target="_blank" rel="nofollow" class="widBig">环球旅游周刊</a><br>
+
+                            </dt>
+                            <dt class="box3">
+                                <a href="http://data.huanqiu.com/" target="_blank" rel="nofollow" class="widSmall">环球时报</a>
+                                <a href="http://humor.huanqiu.com/" target="_blank" rel="nofollow" class="widSmall">讽刺与幽默</a>
+                            </dt>
+                        </dl>
+                    </li>
+                    <li class="sec">
+                        <h3>友情连接</h3>
+                        <dl>
+                            <dt>
+                                <php>$info=F('links');</php>
+                                <volist name="info" id="loo">
+                                    <a href="{weiguanjia:$loo.url}" >{weiguanjia:$loo.name}</a><br/>
+                                </volist>
+                            </dt>
+                        </dl>
+                    </li>
+                    <li class="last">
+                        <h3>推荐服务</h3>
+                        <dl>
+                            <dt class="iconArea"><a href="http://www.huanqiu.com/weibo.html">官方微博，欢迎关注</a></dt>
+                            <dt><a href="http://data.huanqiu.com/" target="_blank" title="环球时报-版权数据库">环球时报-版权数据库</a><span class="iconNew"></span></dt>
+                            <dt><a href="http://mobile.huanqiu.com/wap/" target="_blank" title="手机环球网">手机环球网</a><em>|</em><span class="iconRss"></span><a href="http://rss.huanqiu.com">RSS订阅</a></dt>
+
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+            <!-- 其他 end -->
+
+            <!-- 链接 begin -->
+            <div class="fLink">
+                <div class="flinkMain marWid">
+                    <a href="index.php?g=Home&m=Index&a=index" target="_blank">龙蔓首页</a>|
+                    <a href="index.php?g=Home&m=Index&a=about" target="_blank">关于我们</a>|
+                    <a href="index.php?g=Home&m=Index&a=help" target="_blank">行业资讯</a>|
+                    <a href="" target="_blank">在线联系</a>|
+                    <a href="https://mp.weixin.qq.com/" target="_blank">微信官方入口</a>
+                </div>
+            </div>
+            <!-- 链接 end -->
         </div>
-        <!-- 其他 end -->
-                
-        <!-- 链接 begin -->
-        <div class="fLink">
-            <div class="flinkMain marWid">
-                <a href="index.php?g=Home&m=Index&a=index" target="_blank">龙蔓首页</a>|
-                <a href="index.php?g=Home&m=Index&a=about" target="_blank">关于我们</a>|
-                <a href="index.php?g=Home&m=Index&a=help" target="_blank">行业资讯</a>|
-                <a href="" target="_blank">在线联系</a>|
-                <a href="https://mp.weixin.qq.com/" target="_blank">微信官方入口</a>
+
+        <!-- 版权区 begin -->
+        <div class="copyArea">
+            <div class="copyMain">
+                版权所有 深圳龙蔓网络科技有限公司
             </div>
         </div>
-        <!-- 链接 end -->        
+        <!-- 版权区 end -->
+        <div style="display:none">{weiguanjia::C('counts')}</div>
     </div>
-    
-    <!-- 版权区 begin -->
-    <div class="copyArea">
-    	<div class="copyMain">
-        			版权所有 深圳龙蔓网络科技有限公司
-      </div>
-    </div>
-    <!-- 版权区 end -->
-	<div style="display:none">{weiguanjia::C('counts')}</div>
+</div>
 </div>
 </html>

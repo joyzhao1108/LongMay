@@ -7,16 +7,22 @@ class LotteryAction extends BaseAction{
 		}
 		$token		= $this->_get('token');
 		$wecha_id	= $this->_get('wecha_id');
-		$id 		= $this->_get('id');
+
+        $Lottery = M('Lottery')->where(array('token'=>$token,'type'=>1,'status'=>1))->find();
+        if($Lottery == Null){
+            echo '暂无抽奖活动';
+            exit;
+        }
+		$id 		= $Lottery['id'];
 		
 		$redata		= M('Lottery_record');
 		$where 		= array('token'=>$token,'wecha_id'=>$wecha_id,'lid'=>$id);
-		$record 	= $redata->where($where)->find();		
+		$record 	= $redata->where($where)->find();
 		if($record == Null){
 			$redata->add($where);
 			$record = $redata->where($where)->find();
 		}
-		$Lottery = M('Lottery')->where(array('id'=>$id,'token'=>$token,'type'=>1,'status'=>1))->find();
+
 		
 		//1.活动过期,显示结束
 		  
@@ -36,16 +42,12 @@ class LotteryAction extends BaseAction{
 			$data['prize']	 = $record['prize'];
 			$data['tel'] 	 = $record['phone'];	
 		}
-//1.新增
-$click = $Lottery['click']+1;
-		$upsql="update arzn_lottery set click='".$click."' where id='".$_GET["id"]."'";
-        mysql_query($upsql);
-		
-		$jsql="select * from arzn_lottery_record where lid='".$_GET["id"]."'";
-        $jquery=mysql_query($jsql);
-		$jnum=mysql_num_rows($jquery);
-		$jupsql="update arzn_lottery set joinnum='".$jnum."' where id='".$_GET["id"]."'";
-		mysql_query($jupsql);
+        //1.新增
+        $click = $Lottery['click']+1;
+        M('Lottery')->where(array('id'=>$id))->setField('click',$click);
+
+        $recordcount 	= $redata->where(array('lid'=>$id))->count();
+        M('Lottery')->where(array('id'=>$id))->setField('joinnum',$recordcount);
 		
 		$data['On'] 		= 1;
 		$data['token'] 		= $token;

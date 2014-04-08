@@ -17,7 +17,7 @@
 	top: -30px; cursor: default;
 }
 .dot-nav li a {
-	background: url("http://images.apple.com/global/elements/buttons/dots_08c.png") no-repeat 0px 0px; left: 0px; top: 0px; width: 13px; height: 45px; text-indent: -1000em; position: absolute; z-index: 1; cursor: pointer; behavior: url(/global/scripts/lib/ie7pngfix.htc);
+	background: url("http://images.apple.com/global/elements/buttons/dots_08c.png") no-repeat 0px 0px; left: 0px; top: 0px; width: 13px; height: 45px; text-indent: -1000em; position: absolute; z-index: 1;
 }
 :nth-child(n).dot-nav li {
 	margin: 0px 2px; padding: 0px; width: 10px; height: 10px;

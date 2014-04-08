@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-/W3C/DTD XHTML 1.0 Transitional/EN" "http:/www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http:/www.w3.org/1999/xhtml">
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> 
+<title>{weiguanjia:$lesson.name}-{weiguanjia:$wxuser.wxname}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<link href="{weiguanjia::RES}/css/lesson/news.css" rel="stylesheet" type="text/css" />
+</head>
+<body id="news">
+<div class="Listpage">
+<div class="page-bizinfo">
+
+<div class="header" style="position: relative;">
+<h1 id="activity-name">{weiguanjia:$lesson.name}</h1>
+<span id="post-date">{weiguanjia:$lesson.time|date="y-m-d",###}</span>
+</div>
+<a id="biz-link" class="btn" href="{weiguanjia::U('Teacher/index',array('token'=>$lesson['token']))}"  data-transition="slide" >
+    <div class="arrow">
+    <div class="icons arrow-r"></div>
+    </div>
+    <div class="logo">
+    <div class="circle"></div>
+    <img id="img" src="{weiguanjia:$wxuser.headerpic}">
+    </div>
+    <div id="nickname">{weiguanjia:$wxuser.wxname}</div>
+    <div id="weixinid">微信号:{weiguanjia:$wxuser.weixin}</div>
+</a>
+    <div class="showpic"><img src="{weiguanjia:$lesson.logourl}" /></div>
+<div class="text" id="content">
+{weiguanjia:$lesson.introdetail|htmlspecialchars_decode}
+</div>
+
+ <script>
+
+function dourl(url){
+location.href= url;
+}
+</script>
+
+</div>	
+
+    <div class="list">
+<div id="olload">
+<span>更多名师</span>
+</div>
+
+<div id="oldlist">
+<ul>
+  <volist name="lists" id="lo">
+	<li class="newsmore">
+		<a href="{weiguanjia::U('Teacher/content',array('token'=>$lo['token'],'id'=>$lo['id']))}">
+		<div class="olditem">
+		<div class="title">{weiguanjia:$lo.name}</div>
+		</div>
+		</a>
+	</li>
+	</volist>
+    </ul>
+   <a class="more" href="{weiguanjia::U('Teacher/index',array('token'=>$token,'catid'=>$lesson['catid']))}">更多精彩课程</a>	</div>
+</div>
+<include file="Public:footer"/>
+</div>
+</body>
+</html>

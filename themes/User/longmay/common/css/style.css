@@ -108,10 +108,11 @@ textarea {
 .contentmanage{
 	 margin: 0 auto;
     text-align: left;
-    width: 1210px;
+    width: 960px;
+    background: #ffffff;
 }
 
-.article, .intro, .download, .document, .developer {
+.article, .intro, .download, .document {
 	margin:40px 0px;
 	border:1px solid #c7cdd6;/*border-radius:8px;*/
 	background:#f5f6f7;
@@ -140,7 +141,6 @@ textarea {
 .normalTitle {
 	border-bottom:1px solid #d7dde6;
 	border-radius:10px 10px 0 0;/*border-top:1px solid #fff;*/
-	padding:20px 40px;
 	text-shadow:0 1px 1px #fff;
 }
 .normalTitle2 {
@@ -156,7 +156,6 @@ textarea {
 }
 .normalTitle h2, .panelTitle h2, .processTitle h2 {
 	font-size:20px;
-	font-weight:bold;
 }
 .red{ color: #F00;background-color: transparent; border:0;}
 .green{ color:#090;background-color: transparent; border:0;}
@@ -403,6 +402,10 @@ textarea {
 .normalTitle h2, .panelTitle h2, .processTitle h2 {
     font-size: 20px;
     font-weight: bold;
+    color: rgb(0,147,211);
+    Letter-spacing:3px;
+    text-align: center;
+
 }
 .accountInfo {
     float: right;
@@ -450,8 +453,10 @@ textarea {
 
 
 /*????????????*/
-.tableContent{background: none repeat scroll 0 0 #ffffff;
-    padding: 0;}
+.tableContent{
+    background: none repeat scroll 0 0 #cccccc;
+    padding: 0;
+}
 .accountInfo .avatar {
     float: left;
     margin-right: 20px;
@@ -464,7 +469,6 @@ textarea {
     float: left;
 }
 .sideBar {
-    border-right: 1px solid #D3D3D3;
     float: left;
     padding: 0 0 10px 0;
     width: 170px;
@@ -496,8 +500,7 @@ textarea {
 	float: left;
     position: relative;
     text-align: center;
-    width: 100%;	background-color: #FCFCFC;text-align: left;
-    text-indent: 30px;
+    width: 100%;
 }
 .sideBar .catalogList ul li .new{
 	position: absolute; top:8px; right:0; width:23px; height:11px; z-index:10;background: url("../images/img/icon_new.gif") no-repeat transparent; display:block;border: 0 none;
@@ -511,7 +514,7 @@ textarea {
 	border-bottom: 1px solid #f4f4f4;
 }
 .sideBar .catalogList ul li:hover {
-	background-color:#69b310;
+	background-color:rgb(77,73,72);
 	background-image:linear-gradient(bottom, #4d910c 3%, #69b310 100%);
 	background-image:-moz-linear-gradient(bottom, #4d910c 3%, #69b310 100%);
 	background-image:-webkit-linear-gradient(bottom, #4d910c 3%, #69b310 97%100%)
@@ -519,11 +522,12 @@ textarea {
 .sideBar .catalogList ul li:hover a, .sideBar .catalogList ul li:hover span {
 	color:#fff
 }
-.sideBar .catalogList ul .subCatalogList, .sideBar .catalogList ul .selected {
-	padding-left:0px
+.sideBar .catalogList ul .subCatalogList {
+	padding-left:0px;
 }
 .sideBar .catalogList ul .selected {
-	background-color:#69b310;
+    padding-left:0px;
+	background-color:rgb(77,73,72);
 	background-image:linear-gradient(bottom, #4d910c 3%, #69b310 100%);
 	background-image:-moz-linear-gradient(bottom, #4d910c 3%, #69b310 100%);
 	background-image:-webkit-linear-gradient(bottom, #4d910c 3%, #69b310 100%)
@@ -536,9 +540,9 @@ textarea {
     float: right;
     margin-left: -2px;
     padding: 20px;
-    width: 997px;
+    width:749px;
 	background-color: #FFFFFF;
-	min-height:925px;
+	min-height:380px;
 }
 .tableContent .content h4{
 	font-size:16px;
@@ -1016,11 +1020,12 @@ TABLE.ListProduct .edit{
 .homebg { background: url(../images/img/bg_home1.png) repeat-x scroll 0 0 transparent; }
 .homebg2 { background: url(../images/img/bg_home2.jpg) no-repeat scroll center 0 transparent; }
 #nv_member #hd .wp { width: 960px; margin: 0 auto;}
-#nv_member .wp { width: 100%}
+#nv_member .wp { width: 960px;}
 #nv_member #ft {
     margin: 0 auto;
-    width: 1210px;
+    width: 960px;
 	border:0;
+    background:rgb(204, 204, 204);
 }
 .propaganda {
     display: block;

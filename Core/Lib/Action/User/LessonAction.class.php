@@ -261,7 +261,7 @@ class LessonAction extends UserAction{
         }        
 	}
 	public function orders(){
-		$lesson_cart_model=M('lesson_cart');
+		$lesson_cart_model=M('lesson_order');
 	
 		$where=array('token'=>$this->_session('token'));			
 		if(IS_POST){
@@ -271,9 +271,10 @@ class LessonAction extends UserAction{
 			}
 			$where['truename|tel'] = array('like',"%$key%");
 			$orders = $lesson_cart_model->where($where)->select();
-			$count      = $lesson_cart_model->where($where)->limit($Page->firstRow.','.$Page->listRows)->count();
-			$Page       = new Page($count,20);
-			$show       = $Page->show();
+            $count      = $lesson_cart_model->where($where)->count();
+            $Page       = new Page($count,20);
+            $show       = $Page->show();
+            $orders     = $lesson_cart_model->where($where)->limit($Page->firstRow.','.$Page->listRows)->count();
 		}else {
 			if (isset($_GET['handled'])){
 				$where['handled']=intval($_GET['handled']);
@@ -296,10 +297,23 @@ class LessonAction extends UserAction{
 		
 	}
 	public function handleOrder(){
-		$lesson_cart_model=M('lesson_cart');
-		if($this->_get('token')!=session('token')){$this->error('非法操作');}
-        $id = $this->_get('id');
-		 if(IS_GET){         
+		$lesson_cart_model=M('lesson_order');
+
+        if (IS_POST){
+            for ($i=0;$i<40;$i++){
+                if (isset($_POST['id_'.$i])){
+                    $thiCartInfo=$lesson_cart_model->where(array('id'=>intval($_POST['id_'.$i])))->find();
+                    if ($thiCartInfo['handled']){
+                        $lesson_cart_model->where(array('id'=>intval($_POST['id_'.$i])))->save(array('handled'=>0));
+                    }else {
+                        $lesson_cart_model->where(array('id'=>intval($_POST['id_'.$i])))->save(array('handled'=>1));
+                    }
+                }
+            }
+            $this->success('操作成功',U('Lesson/orders',array('token'=>session('token'))));
+        }else if(IS_GET){
+            if($this->_get('token')!=session('token')){$this->error('非法操作');}
+            $id = $this->_get('id');
 		 	if (isset($_GET['handled'])){
 			$handled=intval($_GET['handled']);				                  
             $where=array('id'=>$id,'token'=>session('token'));

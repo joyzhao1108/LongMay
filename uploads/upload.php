@@ -17,7 +17,7 @@ error_reporting(0);
 .files{height:22px; line-height:22px; margin:10px 0}
 .delimg{margin-left:20px; color:#090; cursor:pointer}
 </style>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.min.js"></script>
 <script type="text/javascript" src="jquery.form.js"></script>
 </head>
 

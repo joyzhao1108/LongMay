@@ -132,8 +132,16 @@
 								<a href="{weiguanjia::U('Teacher/index',array('token'=>$token))}">名师管理</a>
 							</li>
 							<li <if condition="(MODULE_NAME eq 'Lesson') and (ACTION_NAME eq 'orders')">class="selected"<else/>class="subCatalogList"</if> >
-								<a href="{weiguanjia::U('Lesson/orders',array('token'=>$token))}">预订管理</a>
+								<a href="{weiguanjia::U('Lesson/orders',array('token'=>$token))}">预约管理</a>
 							</li>
+                            <li <if condition="MODULE_NAME eq 'Host'">class="selected"<else/>class="subCatalogList"</if>>
+                            <a href="{weiguanjia::U('Host/index',array('token'=>$token))}">通用订单(酒店,KTV)</a></li>
+                            <li <if condition="(MODULE_NAME eq 'Product') and (ACTION_NAME eq 'index')">class="selected"<else/>class="subCatalogList"</if> >
+                            <a href="{weiguanjia::U('Product/index',array('token'=>$token))}">微商城</a>
+                            </li>
+                            <li <if condition="(MODULE_NAME eq 'Product') and (ACTION_NAME eq 'orders')">class="selected"<else/>class="subCatalogList"</if> >
+                            <a href="{weiguanjia::U('Product/orders',array('token'=>$token,'dining'=>1))}">无线订餐（网络打印）</a>
+                            </li>
                          <!--<li <if condition="MODULE_NAME eq 'Home'">class="selected" <else/>class="subCatalogList"</if>>
 								<a href="{weiguanjia::U('Home/menuplus',array('token'=>$token))}">一键导航<span class="new"></span></a>
 							</li>
@@ -144,22 +152,10 @@
 								<a href="{weiguanjia::U('Taobao/index',array('token'=>$token))}">淘宝天猫店铺配置</a></li>
 							<li <if condition="MODULE_NAME eq 'apilist'">class="selected"<else/>class="subCatalogList"</if>>
 								<a href="{weiguanjia::U('Api/index',array('token'=>$token))}">融合第三方</a></li>
-							<li <if condition="MODULE_NAME eq 'Adma'">class="selected"<else/>class="subCatalogList"</if>>
-								<a href="{weiguanjia::U('Adma/index',array('token'=>$token))}">DIY宣传页</a></li>
 							<li <if condition="MODULE_NAME eq 'Photo'">class="selected"<else/>class="subCatalogList"</if>>
 								<a href="{weiguanjia::U('Photo/index',array('token'=>$token))}">3G图集(相册)</a><span class="new"></span>
 							</li>
-							 <li <if condition="MODULE_NAME eq 'Host'">class="selected"<else/>class="subCatalogList"</if>>
-								<a href="{weiguanjia::U('Host/index',array('token'=>$token))}">通用订单(酒店,KTV)</a></li> 
-							 <li <if condition="(MODULE_NAME eq 'Product') and (ACTION_NAME eq 'index')">class="selected"<else/>class="subCatalogList"</if>>
-								<a href="{weiguanjia::U('Groupon/index',array('token'=>$token))}">微团购</a>
-							 </li>
-							 <li <if condition="(MODULE_NAME eq 'Product') and (ACTION_NAME eq 'index')">class="selected"<else/>class="subCatalogList"</if> >
-								<a href="{weiguanjia::U('Product/index',array('token'=>$token))}">微商城</a>
-							</li> 
-							<li <if condition="ACTION_NAME eq 'orders'">class="selected"<else/>class="subCatalogList"</if> >
-								<a href="{weiguanjia::U('Product/orders',array('token'=>$token,'dining'=>1))}">无线订餐（网络打印）</a>
-							</li>
+
 							<li <if condition="MODULE_NAME eq 'Selfform'">class="selected"<else/>class="subCatalogList"</if> >
 								<a href="{weiguanjia::U('Selfform/index',array('token'=>$token))}">万能表单,报名,留言,预约</a>
 							</li>-->
@@ -197,13 +193,13 @@
 						</ul>
 						<ul>
 							<div class="nav-header">推广活动</div>
-							<li <if condition="MODULE_NAME eq 'Lottery'">class="selected" <else/>class="subCatalogList"</if>>
-								<a href="{weiguanjia::U('Lottery/index',array('token'=>$token))}">最新活动</a><span class="new"></span>
+							<li <if condition="MODULE_NAME eq 'Activity'">class="selected" <else/>class="subCatalogList"</if>>
+								<a href="{weiguanjia::U('Activity/index',array('token'=>$token))}">最新活动</a><span class="new"></span>
 							</li>
 							<li <if condition="MODULE_NAME eq 'Lottery'">class="selected" <else/>class="subCatalogList"</if>>
 								<a href="{weiguanjia::U('Lottery/index',array('token'=>$token))}">抽奖活动</a><span class="new"></span>
 							</li>
-                            <li <if condition="MODULE_NAME eq 'Lottery'">class="selected" <else/>class="subCatalogList"</if>>
+                            <li <if condition="MODULE_NAME eq 'Adma'">class="selected" <else/>class="subCatalogList"</if>>
                             <a href="{weiguanjia::U('Adma/index',array('token'=>$token))}">二维码推广设置</a><span class="new"></span>
                             </li>
 						</ul>
