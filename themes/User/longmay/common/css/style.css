@@ -1014,16 +1014,43 @@ TABLE.ListProduct .edit{
 	margin:5px 10px 10px 10px;
 }
 
-.changeapp li{ 
-	background-color: #ffffff;
-    border: 1px solid #eeeeee;
+.changeapp li{
     display: block;
     float: left;
-    margin: 0 5px 5px 0;
-    padding: 5px 10px;
-    width: 168px;
-	height: 20px;
+    margin: 0px 2px 10px 0;
+    padding: 0px;
+    width: 148px;
+	height: 25px;
 	position: relative;
+}
+.changeapp li .fun-checked{
+    line-height:25px;
+    background: url(img/funcopen.png);
+    font-size: 12px;
+    display: block;
+    height: 25px;
+    float: left;
+    width: 98px;
+    padding-left:10px;
+}
+.changeapp li .fun-unchecked{
+    line-height:25px;
+    background: url(img/funcclose.png);
+    font-size: 12px;
+    display: block;
+    height: 25px;
+    float: left;
+    width: 98px;
+    padding-left:10px;
+}
+.changeapp li .funnumred{
+    line-height:25px;
+    color: red;
+    font-size: 12px;
+    display: block;
+    height: 25px;
+    float: left;
+    margin-left:5px;
 }
 .changeapp2{ 
 	margin:5px 10px 10px 10px;
@@ -1039,9 +1066,8 @@ TABLE.ListProduct .edit{
 	height: 70px;
 	position: relative;
 }
-.changeapp li:hover{ 
-	background-color: #F0FFDC;
-    border: 1px solid #64C269;
+.changeapp li:hover{
+
 }
 .changeapp2 li:hover{ 
 	background-color: #F0FFDC;
@@ -1052,9 +1078,13 @@ TABLE.ListProduct .edit{
     cursor: pointer;
 }
 .changeapp li div{ 
-	display: none;position: absolute; top: 30px; left: -1px;background-color: #F0FFDC;
-    border: 1px solid #64C269; z-index:999; width:168px;
-    padding: 5px 10px; border-top:0;
+	display: none;
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    background-color: #F0FFDC;
+    border: 1px solid #64C269; z-index:999; width:108px;
+    padding: 5px 10px;
 }
 .changeapp li:hover div{ 
 	display: block;
@@ -1178,11 +1208,16 @@ TABLE.ListProduct .edit{
 .cateradio3 li.active{ background:url(../images/img/radio_iphone.png) no-repeat center top;}
 
 
-.msgWrap fieldset{ background-color: #f8f8f8; margin-top: 10px;border-radius:0 5px 5px 5px;-webkit-border-radius:0 5px 5px 5px;	-moz-border-radius:0 5px 5px }
+.msgWrap fieldset{ margin-top: 10px;border-radius:0 5px 5px 5px;-webkit-border-radius:0 5px 5px 5px;	-moz-border-radius:0 5px 5px }
 .msgWrap fieldset label img{ margin-bottom:10px;}
-.msgWrap fieldset legend{ background-color: #f8f8f8;color: #C18E06;display:block; font-size: 14px;
+.msgWrap fieldset legend{
+    display:block;
+    font-size: 14px;
     margin: 0 0 0 -1px;
-    padding: 10px 20px 10px 10px;border-radius: 5px 5px 0 0;-webkit-border-radius:  5px 5px 0 0;	-moz-border-radius:  5px 5px 0 0;}
+    padding: 0px 20px 10px 0px;
+    border-radius: 5px 5px 0 0;
+    -webkit-border-radius:  5px 5px 0 0;
+    -moz-border-radius:  5px 5px 0 0;}
 .tagContent fieldset{ margin-top: 0;background-color: #EEEEEE;}
 
 #tags {

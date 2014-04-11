@@ -14,22 +14,16 @@ class FunctionAction extends UserAction{
 		$toback=$token_open->field('id,queryname')->where(array('token'=>session('token'),'uid'=>session('uid')))->find();
 		$open['uid']=session('uid');
 		$open['token']=session('token');
+
 		//遍历功能列表
-		$group=M('User_group')->field('id,name')->where('status=1')->select();
+		$domains=M('Domain')->field('id,name')->order("id asc")->select();
 		$check=explode(',',$toback['queryname']);
 		$this->assign('check',$check);
-		foreach($group as $key=>$vo){
-			$fun=M('Function')->where(array('status'=>1,'gid'=>$vo['id']))->select();
-			foreach($fun as $vkey=>$vo){
-				$function[$key][$vkey]=$vo;
-			}
+		foreach($domains as $key=>$vo){
+			$fun=M('Function')->where(array('domainid'=>$vo['id']))->order("sort asc")->select();
+            $domains[$key]['sub']=$fun;
 		}
-		$this->assign('fun',$function);
-		//
-		$wecha=M('Wxuser')->field('wxname,wxid,headerpic,weixin,typename')->where(array('token'=>session('token'),'uid'=>session('uid')))->find();
-		$this->assign('wecha',$wecha);
-		$this->assign('token',session('token'));
-		//
+		$this->assign('domains',$domains);
 		$this->display();
 	}
 }
