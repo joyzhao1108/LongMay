@@ -1,0 +1,41 @@
+﻿input.inputext {
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    border: 0px currentColor;
+    font-size: 14px;
+    width: 260px;
+    height: 39px;
+    border: 0;
+    padding-left:10px ;
+    background: url(img/inputbg.png);
+}
+input.checkbox {
+    width: 20px;
+    height: 20px;
+    background: url(img/inputbg.png);
+}
+input.inputextwhite {
+     margin: 0px;
+     padding: 0px;
+     outline: 0px;
+     border: 0px currentColor;
+     font-size: 14px;
+     width: 259px;
+     height: 32px;
+     border: 0;
+     padding-left:10px ;
+     background: url(img/inputbgwhite.png);
+ }
+input.inputextdisabled {
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    border: 0px currentColor;
+    font-size: 14px;
+    width: 260px;
+    height: 39px;
+    border: 0;
+    padding-left:10px ;
+    background: url(img/inputbg.png);
+}

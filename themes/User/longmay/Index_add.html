@@ -1,77 +1,126 @@
 <include file="Index:header"/>
 <div class="content">
-          <div class="cLineB"><h4>添加微信公众号</h4></div>
-          <form method="post" action="{weiguanjia::U('User/Index/insert')}" enctype="multipart/form-data">
-          <div class="msgWrap">
-            <table class="userinfoArea" border="0" cellspacing="0" cellpadding="0" width="100%">
-              <thead>
-                <tr>
-                  <th><span class="red">*</span>公众号名称：</th>
-                  <td><input type="text" required="" class="px" name="wxname" value="" tabindex="1" size="25">
-                  </td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th><span class="red">*</span>公众号原始id：</th>
-                  <td><input type="text" required="" name="wxid" value="" class="px" tabindex="1" size="25">　<span class="red">请认真填写，错了不能修改。</span>比如：gh_423dwjkeww3 <a href="http://jingyan.baidu.com/article/9c69d48f46186e13c9024e30.html" target="_blank"><img src="{weiguanjia::RES}/images/help.png" class="vm helpimg" title="帮助"></a></td>
-                </tr>
-                <tr>
-                  <th><span class="red">*</span>微信号：</th>
-                  <td><input type="text" required="" name="weixin" value="" class="px" tabindex="1" size="25">　比如：liangmeizi8 </td>
-                </tr>
-                  <tr style="display:none">
-                  <th><span class="red">*</span>头像地址（url）:</th>
-                  <td><input class="px" name="headerpic" value="{weiguanjia::RES}/images/portrait.jpg" size="60">请填写图片外链地址 <a onclick="alert('请填写以jpg,png,gif,bmp等后缀的图文')" target="_blank"><img src="{weiguanjia::RES}/images/help.png" class="vm helpimg" title="帮助"></a></td>
-                </tr>
-                 <tr style="display:none">
-                  <th><span class="red">*</span>TOKEN</th>
-                  <td><input type="text" name="token" value="{weiguanjia:$tokenvalue}" class="px" tabindex="1" size="40">(填写你的公众号)例：liangmeizi8,请勿填写文,或者其它特殊字符，此处token和腾讯平台必须一致!</td>
-                </tr>
-                
-                <tr>
-                  <th><span class="red">*</span>地区：</th>
-                  <td>
-                  <input type="text" class="px" id="province" value="{weiguanjia:$province}" name="province" tabindex="1" size="20"> 省  <input id="city" value="{weiguanjia:$city}" type="text" name="city" class="px" tabindex="1" size="20"> 市
-               （此处关联公交等本地化查询）
-                  </td>
-                </tr>
-                <tr>
-                  <th><span class="red">*</span>公众号邮箱：</th>
-                  <td><input type="text" required="" name="qq" value="" class="px" tabindex="1" size="25">　比如：service@powkey.com</td>
-                </tr>
-                 <tr style="display:none">
-                  <th><span class="red">*</span>粉丝数：</th>
-                  <td><input type="text" required="" name="wxfans" value="0" class="px" tabindex="1" size="25"></td>
-                </tr>
-             
-                <tr>
-                  <th>行业类型：</th>
-                  <td><select id="type" name="type">                  
-                  <option value="1,餐饮">餐饮</option>
-                  <option value="2,教育">教育</option>
-                  <option value="3,会所">会所</option>
-                  <option value="4,美发">美发</option>
-                  <option value="5,酒店">酒店</option>
-                  <option value="6,旅行社">旅行社</option>                
-                  </select></td>
-                </tr>
-              
-                <tr>
-                  <th></th>
-                  <td><button type="submit" class="btnGreen" id="saveSetting">保存</button></td>
-                </tr>
-              </tbody>
-            </table>
-            
-          </div>
-          </form>
+    <form method="post" action="{weiguanjia::U('Index/insert')}" enctype="multipart/form-data">
+        <div class="regpnl">
+            <div class="regcontent">
+                <div>
+                    <table class="infoedittbl">
+                        <tr>
+                            <th>帐号类型</th>
+                            <td><input id="wxtype1" type="checkbox" name="wxtype1" class="wxtype checkbox" value="1"><label for="wxtype1">服务号</label>
+                                <input id="wxtype2" type="checkbox" name="wxtype2" class="wxtype checkbox" value="2"><label for="wxtype2">订阅号</label><input id="wxtype" type="hidden" name="wxtype"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><span class="info">请选择您的微信帐号类型</span></td>
+                        </tr>
+                    </table>
+                    <script>
+                        $('.wxtype').click(function(){
+                            $(this).siblings().removeAttr("checked");
+                            $('#wxtype').val($(this).val());
+                        });
+                    </script>
+                </div>
+                <div>
+                    <table class="infoedittbl">
+                        <tr>
+                            <th>公众号名称</th>
+                            <td><input id="wxname" type="text" placeholder="" name="wxname" class="inputextwhite" value="{weiguanjia:$info.wxname}"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><span class="info">字母、数字，最短6位，区分大小写</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table class="infoedittbl">
+                        <tr>
+                            <th>公众号原始ID</th>
+                            <td><input id="wxid" type="text" disabled="disabled"  name="wxid" class="inputext" value="{weiguanjia:$info.wxid}"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><span class="info">无法修改，您可以联系管理员，<a href="http://jingyan.baidu.com/article/9c69d48f46186e13c9024e30.html" target="_blank"><img src="{weiguanjia::RES}/images/help.png" class="vm helpimg" title="帮助"></a></span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table class="infoedittbl">
+                        <tr>
+                            <th>微信号</th>
+                            <td><input id="weixin" type="text"  value="{weiguanjia:$info.weixin}" name="weixin" class="inputextwhite"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><span class="info">请输入微信号,比如：szlongmey</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table class="infoedittbl">
+                        <tr>
+                            <th>头像地址</th>
+                            <td><input id="headerpic" type="text" value="{weiguanjia:$info.headerpic}" name="headerpic" class="inputextwhite"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><span class="info">请输入头像URL地址，<input style="font-size:12px;color:red"type=button onclick="window.open('{weiguanjia::U('Upload/index',array('token'=>$token,'n'=>headerpic))}')" value="点击上传图片"></span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table class="infoedittbl">
+                        <tr>
+                            <th>公众号邮箱</th>
+                            <td><input id="qq" type="text" name="qq" class="inputextwhite" value="{weiguanjia:$info.qq}"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><span class="info">微信公众号的邮箱,例如1293786462@qq.com</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table class="infoedittbl">
+                        <tr>
+                            <th>AppId</th>
+                            <td><input id="appid" type="text"  name="appid" class="inputextwhite"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><span class="info">微信公众号的AppId，例如wx6b6d3a9d4201d068</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <table class="infoedittbl">
+                        <tr>
+                            <th>AppSecret</th>
+                            <td><input id="appsecret" type="text" maxlength="32" name="appsecret" class="inputextwhite"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><span class="info">微信公众号的AppSecret，例如ba67c6cadb313d1a67cddf4a64c6d422</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="reg-btn-panel">
+                    <table class="infoedittbl">
+                        <tr>
+                            <th></th>
+                            <td> <input title="确认添加" type="submit"  value="确认添加" class="btnGreens"></td>
+                        </tr>
+                    </table>
+                </div>
+                <input type="hidden" name="token" value="{weiguanjia:$tokenvalue}">
+            </div>
         </div>
-        
-        <div class="clr"></div>
-      </div>
-    </div>
-  </div>
-  <!--底部-->
-  	</div>
-<include file="Public:footer"/>	
+    </form>
+</div>
+<div class="clr"></div>
+</div>
+</div>
+<!--底部-->
+<include file="Public:footer" />

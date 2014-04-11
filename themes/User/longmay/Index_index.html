@@ -1,15 +1,13 @@
 <include file="Index:header"/>
 <div class="content">
       <div class="msgWrap">
-        <TABLE class="ListProduct" border="0" cellSpacing="0" cellPadding="0" width="100%">
+        <TABLE class="ListProduct" border="0" cellSpacing="0" cellPadding="0" width="100%" style="margin-top: 20px">
           <THEAD>
             <tr>
               <TH>公众号名称</TH>
-              <TH>行业类型</TH>
-              <TH>VIP等级</TH>
-              <TH>创建时间/到期时间</TH>
-               <TH>已定义/上限</TH>
-               <TH>请求数</TH>
+              <TH>已购产品</TH>
+              <TH>服务等级</TH>
+              <TH>到期日期</TH>
               <TH>操作</TH>
             </tr>
           </THEAD>
@@ -17,29 +15,45 @@
             <tr></tr>
              <volist name="info" id="vo">
                 <tr>
-                  <td><p>{weiguanjia:$vo.wxname}</p></td>
-                  <td><p>{weiguanjia:$vo.typename}</p></td>
-                  <td align="center"><php>if($_SESSION['gid']>1){echo $_SESSION['gid']-1;}else{echo 0;}</php></td>
-                  <td><p>创建时间:{weiguanjia:$vo.createtime|date="Y-m-d",###}</p><p>到期时间:{weiguanjia:$viptime|date="Y-m-d",###}</p><p><a   href="{weiguanjia::U('Alipay/index')}" id="smemberss" class="green"><em>升降级vip续费</em></a></p></Td>
-                  <td><p>图文：<php>echo $_SESSION['diynum'].'/'.$group[$_SESSION['gid']]['did'];</php></p></td>
-                   <td><p>总请求数:<php>echo $_SESSION['connectnum']</php></p><p> 本月请求数:<php>echo $group[$_SESSION['gid']]['cid'];</php></p></td>
-
-                  <td class="norightborder">　<a href="{weiguanjia::U('Index/edit',array('id'=>$vo['id']))}">编辑</a>　
-                  <a href="{weiguanjia::U('Company/index',array('id'=>$vo['id'],'token'=>$vo['token']))}" class="btnGreens" >功能管理</a>
-                  <a href="{weiguanjia::U('Home/Index/help',array('id'=>$vo['id'],'token'=>$vo['token']))}" class="btnGreens" >API接口</a>
+                  <td>
+                      <p>{weiguanjia:$vo.wxname}</p>
+                  </td>
+                  <td>
+                      <p>{weiguanjia:$vo.typename}</p>
+                  </td>
+                  <td align="center">
+                      <p><php>if($_SESSION['gid']>1){echo $_SESSION['gid']-1;}else{echo 0;}</php></p>
+                  </td>
+                  <td>
+                      <p>剩余时间:{weiguanjia:$viptime|date="Y-m-d",###}</p>
+                  </Td>
+                  <td class="norightborder" align="right">
+                      <table border="0" cellSpacing="0" cellPadding="0">
+                          <tr>
+                              <td rowspan="2">
+                                  <a href="{weiguanjia::U('Index/edit',array('id'=>$vo['id']))}" class="btnGreensBig" >编辑</a>
+                              </td>
+                              <td>
+                                  <a href="{weiguanjia::U('Function/index',array('id'=>$vo['id'],'token'=>$vo['token']))}" class="btnGreens" >功能管理</a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <a href="{weiguanjia::U('Home/Index/help',array('id'=>$vo['id'],'token'=>$vo['token']))}" class="btnGreens" >API接口</a>
+                              </td>
+                          </tr>
+                      </table>
                   </td>
                 </tr>
               </volist>
-                <tr>
-                    <td colspan="10">
-                        <span style="height:47px;line-height:47px;color:red;padding:10px;">
-                            请添加公众帐号,进入功能管理,再进行功能测试。
-                        </span>
-                    </td>
-                </tr>
+
           </TBODY>
         </TABLE>
-
+            <div>
+                <span style="height:47px;line-height:47px;color:red;padding:10px;">
+                            请添加公众帐号,进入功能管理,再进行功能测试。
+                        </span>
+            </div>
       </div>
           
       <div class="cLine">
@@ -49,8 +63,8 @@
             <div class="clr"></div>
           </div>
         </div>
-        <div class="clr"></div>
-    </div>
-  </div>
+<div class="clr"></div>
+</div>
+</div>
   <!--底部-->
 <include file="Public:footer" />

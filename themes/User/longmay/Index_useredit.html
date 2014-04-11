@@ -1,65 +1,151 @@
 <include file="Index:header"/>
 <div class="content">
-          <form method="post" action="{weiguanjia::U('Index/usersave')}" enctype="multipart/form-data">
-              <div class="regpnl">
-                  <div class="regcontent">
-                      <div>
-                          <table>
-                              <tr>
-                                  <th><span class="red">*</span>用户名</th>
-                                  <td><input id="username" type="text" maxlength="15" placeholder="" name="username" class="inputext"></td>
-                              </tr>
-                              <tr>
-                                  <td>&nbsp;</td>
-                                  <td><span class="info">龙蔓用户名由字母与数字组成</span></td>
-                              </tr>
-                          </table>
-                      </div>
-                      <div>
-                          <table>
-                              <tr>
-                                  <th><span class="red">*</span>密码</th>
-                                  <td><input id="password" type="password" placeholder="" name="password" class="inputext"></td>
-                              </tr>
-                              <tr>
-                                  <td>&nbsp;</td>
-                                  <td><span class="info">字母、数字，最短6位，区分大小写</span></td>
-                              </tr>
-                          </table>
-                      </div>
-                      <div>
-                          <table>
-                              <tr>
-                                  <th><span class="red">*</span>确认密码</th>
-                                  <td><input id="confirmpwd" type="password" placeholder="" name="confirmpwd" class="inputext"></td>
-                              </tr>
-                              <tr>
-                                  <td>&nbsp;</td>
-                                  <td><span class="info">请再次输入密码</span></td>
-                              </tr>
-                          </table>
-                      </div>
-                      <div>
-                          <table>
-                              <tr>
-                                  <th><span class="red">*</span>邮箱</th>
-                                  <td><input id="mail" type="text" placeholder="" name="mail" class="inputext"></td>
-                              </tr>
-                              <tr>
-                                  <td>&nbsp;</td>
-                                  <td><span class="info">请输入您常用的电子邮箱</span></td>
-                              </tr>
-                          </table>
-                      </div>
-                      <div class="reg-btn-panel">
-                          <input title="下一步" type="button" class="next-btn" value="下一步">
-                      </div>
+    <form method="post" action="{weiguanjia::U('Index/usersave')}" enctype="multipart/form-data">
+     <div class="regpnl">
+         <div class="regcontent">
+                  <div>
+                      <table class="infoedittbl">
+                          <tr>
+                              <th>用户名</th>
+                              <td><input id="username" type="text"  value="{weiguanjia:$info.username}" name="username" class="inputextwhite"></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;</td>
+                              <td><span class="info">龙蔓用户名由字母与数字组成</span></td>
+                          </tr>
+                      </table>
                   </div>
-          </div>
-          </form>
-          
-        </div>
+                  <div>
+                      <table class="infoedittbl">
+                          <tr>
+                              <th>密码</th>
+                              <td><input id="password" type="password" name="password" class="inputextwhite"></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;</td>
+                              <td><span class="info">字母、数字，最短6位，区分大小写</span></td>
+                          </tr>
+                      </table>
+                  </div>
+                  <div>
+                      <table class="infoedittbl">
+                          <tr>
+                              <th>确认密码</th>
+                              <td><input id="confirmpwd" type="password"  name="confirmpwd" class="inputextwhite"></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;</td>
+                              <td><span class="info">请再次输入密码</span></td>
+                          </tr>
+                      </table>
+                  </div>
+                  <div>
+                      <table class="infoedittbl">
+                          <tr>
+                              <th>邮箱</th>
+                              <td><input id="email" type="text" value="{weiguanjia:$info.email}" name="email" class="inputextwhite"></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;</td>
+                              <td><span class="info">请输入您常用的电子邮箱</span></td>
+                          </tr>
+                      </table>
+                  </div>
+                  <div>
+                      <table class="infoedittbl">
+                          <tr>
+                              <th>真实姓名</th>
+                              <td><input id="truename" type="text" value="{weiguanjia:$info.truename}" name="truename" class="inputextwhite"></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;</td>
+                              <td><span class="info">请输入您的真实姓名，方便我们为您服务</span></td>
+                          </tr>
+                      </table>
+                  </div>
+                  <div>
+                      <table class="infoedittbl">
+                          <tr>
+                              <th>手机号码</th>
+                              <td><input id="mobile" type="text" maxlength="11" value="{weiguanjia:$info.mobile}" name="mobile" class="inputextwhite"></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;</td>
+                              <td><span class="info">请输入您的手机号码，方便我们为您服务</span></td>
+                          </tr>
+                      </table>
+                  </div>
+                  <div>
+                      <table class="infoedittbl">
+                          <tr>
+                              <th>公司名称</th>
+                              <td><input id="companyname" type="text" value="{weiguanjia:$info.companyname}" name="companyname" class="inputextwhite"></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;</td>
+                              <td><span class="info">请填写公司或商家的名称</span></td>
+                          </tr>
+                      </table>
+                  </div>
+                  <div clas="district-panel">
+                      <table class="infoedittbl">
+                          <tr>
+                              <th>所在地区</th>
+                              <td>
+                                  <select  id="province" name="province" class="area"></select>
+                                  <select  id="city" name="city" class="area"></select>
+                                  <select id="area" name="area" class="area"></select>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;</td>
+                              <td><span class="info">请输入您所在地区</span></td>
+                          </tr>
+                      </table>
+                      <script type="text/javascript" src="{weiguanjia::STATICS}/js/pcasunzip.js"></script>
+                      <script language="javascript">
+                          new PCAS("province","city","area","{weiguanjia:$info.province}","{weiguanjia:$info.city}","{weiguanjia:$info.area}");
+                      </script>
+                  </div>
+                  <div>
+                      <table class="infoedittbl">
+                          <tr>
+                              <th>所在行业</th>
+                              <td><input id="industry" type="text" maxlength="15"  value="{weiguanjia:$info.industry}" name="industry" class="inputextwhite"></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;</td>
+                              <td><span class="info">请输入您公司的所在行业</span></td>
+                          </tr>
+                      </table>
+                  </div>
+                  <div>
+                      <table class="infoedittbl">
+                          <tr>
+                              <th>您的职务</th>
+                              <td><input id="jobtitle" type="text" value="{weiguanjia:$info.jobtitle}" name="jobtitle" class="inputextwhite"></td>
+                          </tr>
+                          <tr>
+                              <td>&nbsp;</td>
+                              <td><span class="info">请输入您的公司职务</span></td>
+                          </tr>
+                      </table>
+                  </div>
+                  <div class="reg-btn-panel">
+                      <table class="infoedittbl">
+                          <tr>
+                              <th></th>
+                              <td> <input title="确认修改" type="submit"  value="确认修改" class="btnGreens"></td>
+                          </tr>
+                      </table>
+                  </div>
+              </div>
+              <input id="id" type="hidden"  value="{weiguanjia:$info.id}" name="id">
+     </div>
+     </form>
+ </div>
 <div class="clr"></div>
 </div>
-  <!--底部-->
 </div>
+  <!--底部-->
+<include file="Public:footer" />

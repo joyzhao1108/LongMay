@@ -163,20 +163,27 @@ class IndexAction extends UserAction{
 		$open['queryname']=rtrim($queryname,',');
 		$token_open->data($open)->add();
 	}
-	
+    public function useredit(){
+        $id=session('uid');
+        $res=M('Users')->find($id);
+        $this->assign('info',$res);
+        $this->display();
+    }
 	public function usersave(){
-		$pwd=$this->_post('password');
-		if($pwd!=false){
-			$data['password']=md5($pwd);
-			$data['id']=$_SESSION['uid'];
-			if(M('Users')->save($data)){
-				$this->success('密码修改成功！',U('Index/index'));
-			}else{
-				$this->error('密码修改失败！',U('Index/index'));
-			}
-		}else{
-			$this->error('密码不能为空!',U('Index/useredit'));
-		}
+        $db=D('Users');
+        $where=array('id'=>$_SESSION['uid']);
+        $check=$db->where($where)->find();
+        if($check==false)$this->error('非法操作');
+        if($db->create()){
+            if($db->save()){
+                session('uname',$_POST['username']);
+                $this->success('修改成功',U('User/Index/index'));
+            }else{
+                $this->error('修改失败',U('User/Index/useredit'));
+            }
+        }else{
+            $this->error($db->getError(),U('User/Index/useredit'));
+        }
 	}
 	
 	//余额续费

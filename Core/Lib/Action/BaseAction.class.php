@@ -105,6 +105,8 @@ class BaseAction extends Action
         } else {
             $id = $db->add();
             if ($id == true) {
+                dump($_REQUEST);
+                dump($_GET);
                 $this->success('操作成功', U(MODULE_NAME . $back));
             } else {
                 $this->error('操作失败', U(MODULE_NAME . $back));

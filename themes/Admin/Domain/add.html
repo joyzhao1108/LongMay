@@ -30,19 +30,19 @@
 					</td>
 				</tr>	
 				<tr>
-					<td height="48" align="right"><strong>行业名称：</strong></td>
+					<td height="48" align="right"><strong>分类名称：</strong></td>
 					<td colspan="3" class="lt">
 						<input type="text" name="name" class="ipt" size="45" value="{weiguanjia:$info.name}">
 					</td>
 				</tr>
-				<tr>
-					<td height="48" align="right"><strong>行业方法名称：</strong></td>
+				<tr style="display: none">
+					<td height="48" align="right"><strong>分类方法名称：</strong></td>
 					<td colspan="3" class="lt">
 						<input type="text" name="funname" class="ipt" size="45" value="{weiguanjia:$info.funname}">
 					</td>
 				</tr>
 				<tr>
-					<td height="48" align="right"><strong>行业说明：</strong></td>
+					<td height="48" align="right"><strong>描述：</strong></td>
 					<td colspan="3" class="lt">
 						<textarea type="text" name="info" value="" class="ipt" style="width:450px;height:60px;margin:5px 0 5px 0;">{weiguanjia:$info.info}</textarea>
 					</td>
@@ -54,7 +54,7 @@
 				<else />
 				<button class="button" type="submit" name="" value="">添 加</button></gt>
 			&nbsp;
-			<button class="button" onclick="javascript:history.back(-1);" value="" >返 回</button></td>
+			<button class="button" onclick="javascript:history.back(-1);return false;" value="" >返 回</button></td>
 	</tr>
 </table>
 </form>

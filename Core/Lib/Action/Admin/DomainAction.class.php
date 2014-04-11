@@ -16,20 +16,15 @@ class DomainAction extends BackAction{
 	
 	public function add(){
 		if(IS_POST){
-			$fun=$this->all_insert();		
-			if($fun==false){
-				$this->error('添加失败',U('Admin/Domain/index'));
-			}else{
-				$this->success('添加成功',U('Admin/Domain/index'));
-			}
-		}else{			
+            $this->insert();
+		}else{
 			$this->display();
 		}
 	}
 	
 	public function edit(){
 		if(IS_POST){
-			$this->all_save('','');
+            $fun=$this->all_save();
 		}else{
 			$id=$this->_get('id','intval',0);
 			if($id==0)$this->error('非法操作');

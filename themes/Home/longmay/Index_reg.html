@@ -9,11 +9,11 @@
 <include file="Public:head"/>
 <div id="body-container" style="margin-top:-80px;">
     <form action="{weiguanjia::U('Users/checkreg')}" enctype="multipart/form-data" id="regform" name="regform" autocomplete="off" method="post">
-    <div class="reg_wrap wrap1">
+    <div class="wrap1" id="reg_wrap">
         <div class="left-panel">
-            <div class="active"><a>基本信息</a></div>
-            <div class="normal"><a>个人资料</a></div>
-            <div class="normal"><a>完成注册</a></div>
+            <div class="nav active" id="nav1"><a>基本信息</a></div>
+            <div class="nav normal" id="nav2"><a>个人资料</a></div>
+            <div class="nav normal" id="nav3"><a>完成注册</a></div>
         </div>
         <div class="regpnl">
             <div id="step1" class="regcontent">
@@ -45,7 +45,7 @@
                     <table>
                         <tr>
                             <th><span class="red">*</span>确认密码</th>
-                            <td><input id="confirmpwd" type="password" placeholder="" name="confirmpwd" class="inputext"></td>
+                            <td><input id="repassword" type="password" placeholder="" name="repassword" class="inputext"></td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
@@ -57,7 +57,7 @@
                     <table>
                         <tr>
                             <th><span class="red">*</span>邮箱</th>
-                            <td><input id="mail" type="text" placeholder="" name="mail" class="inputext"></td>
+                            <td><input id="email" type="text" placeholder="" name="email" class="inputext"></td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
@@ -66,7 +66,7 @@
                     </table>
                 </div>
                 <div class="reg-btn-panel">
-                    <input title="下一步" type="button" class="next-btn" value="下一步">
+                    <span style="width: 140px;display: inline-block"></span><input title="下一步" type="button" onclick="nextstep()" class="next-btn" value="">
                 </div>
             </div>
             <div id="step2" style="display: none" class="regcontent">
@@ -106,24 +106,86 @@
                         </tr>
                     </table>
                 </div>
-                <div>
+                <div clas="district-panel">
                     <table>
                         <tr>
-                            <th><span class="red">*</span>邮箱</th>
-                            <td><input id="mail" type="text" placeholder="" name="mail" class="inputext"></td>
+                            <th><span class="red">*</span>所在地区</th>
+                            <td>
+                                <select  id="province" name="province" class="area"></select>
+                                <select  id="city" name="city" class="area"></select>
+                                <select id="area" name="area" class="area"></select>
+                            </td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
-                            <td><span class="info">请输入您常用的电子邮箱</span></td>
+                            <td><span class="info">请输入您所在地区</span></td>
+                        </tr>
+                    </table>
+                    <script type="text/javascript" src="{weiguanjia::STATICS}/js/pcasunzip.js"></script>
+                    <script language="javascript">
+                        new PCAS("province","city","area");
+                    </script>
+                </div>
+                <div class="reg-btn-panel">
+                    <input title="上一步" type="button" class="prev-btn" value="" onclick="prevstep()"><input title="下一步" onclick="nextstep()" type="button" class="next-btn" value="">
+                </div>
+            </div>
+            <div id="step3" class="regcontent" style="display: none">
+                <div>
+                    <table>
+                        <tr>
+                            <th><span class="red">*</span>所在行业</th>
+                            <td><input id="industry" type="text" maxlength="15" placeholder="" name="industry" class="inputext"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><span class="info">请输入您公司的所在行业</span></td>
                         </tr>
                     </table>
                 </div>
+                <div>
+                    <table>
+                        <tr>
+                            <th><span class="red">&nbsp;</span>您的职务</th>
+                            <td><input id="jobtitle" type="text" placeholder="" name="jobtitle" class="inputext"></td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><span class="info">请输入您的公司职务</span></td>
+                        </tr>
+                    </table>
+                </div>
+                <div></div>
+                <div></div>
                 <div class="reg-btn-panel">
-                    <input title="下一步" type="button" class="next-btn" value="下一步">
+                    <input title="上一步" type="button" class="prev-btn" value="" onclick="prevstep()"><input title="完成注册" type="submit" class="confirm-btn" value="">
                 </div>
             </div>
         </div>
+        <script language="javascript">
+            var currentIndex = 1;
+           function prevstep()
+           {
+               $(".regcontent").hide();
+               $("#nav"+currentIndex).removeClass("active").addClass("normal");
+               $("#reg_wrap").removeClass("wrap"+currentIndex);
+               currentIndex = currentIndex-1;
+               $("#step"+currentIndex).show();
+               $("#reg_wrap").addClass("wrap"+currentIndex);
+               $("#nav"+currentIndex).removeClass("normal").addClass("active");
+           }
 
+           function nextstep()
+           {
+                $(".regcontent").hide();
+               $("#nav"+currentIndex).removeClass("active").addClass("normal");
+               $("#reg_wrap").removeClass("wrap"+currentIndex);
+               currentIndex = currentIndex+1;
+               $("#step"+currentIndex).show();
+               $("#reg_wrap").addClass("wrap"+currentIndex);
+               $("#nav"+currentIndex).removeClass("normal").addClass("active");
+           }
+        </script>
     </div>
     </form>
 </div>

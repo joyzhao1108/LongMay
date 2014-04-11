@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>权限管理</title>
+<title>产品分类</title>
 <include file="common:public" />
 <div class="cr"></div>
 <table width="100%" border="0" cellspacing="0" cellpadding="0" id="alist">
 	  <tr>
 		<td >ID</td>
-		<td>行业名称</td>	
-		<td >行业描述</td>		
+		<td>分类名称</td>
+		<td >描述</td>
 		<td>状态</td>
 		<td>管理操作</td>
 	  </tr>
@@ -21,8 +21,8 @@
 				<td align='center'><eq name="vo.status" value="1"><font color="red">√</font><else/><font color="blue">×</font></eq> 
 				</td>
 				<td align='center'>
-					<a href="{weiguanjia::U('Domain/edit/',array('id'=>$vo['id']))}">修改</a>
-					| <eq name="vo.username" value="admin"><font color="#cccccc">删除</font><else/><a href="javascript:void(0)" onclick="return confirmurl('{weiguanjia::U('Domain/del/',array('id'=>$vo['id']))}','确定删除该用户吗?')">删除</a></eq>
+					<a href="{weiguanjia::U('Domain/edit',array('id'=>$vo['id']))}">修改</a>
+					| <eq name="vo.username" value="admin"><font color="#cccccc">删除</font><else/><a href="javascript:void(0)" onclick="return confirmurl('{weiguanjia::U('Domain/del/',array('id'=>$vo['id']))}','确定删除该项吗?')">删除</a></eq>
 				</td>
 			</tr>
 	    </volist>
