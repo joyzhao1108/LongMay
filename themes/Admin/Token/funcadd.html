@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="{weiguanjia::RES}/images/main.css" type="text/css" rel="stylesheet">
+<script src="{weiguanjia::STATICS}/jquery-1.4.2.min.js" type="text/javascript"></script>
+<meta http-equiv="x-ua-compatible" content="ie=7" />
+<script src="{weiguanjia::STATICS}/date/WdatePicker.js"></script>
+</head>
+<body class="warp">
+<div id="artlist" class="addn">
+
+        <gt name="info.id" value="0">
+			<form action="{weiguanjia::U('Token/funcedit')}" method="post" name="form" id="myform">
+			<input type="hidden" name="id" value="{weiguanjia:$info.id}">
+
+		<else />
+			<form action="{weiguanjia::U('Token/funcadd')}" method="post" name="form" id="myform">
+		</gt>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" id="addn">
+				 <tr>
+					<th colspan="4">{weiguanjia:$title}<input type="hidden" name="token" value="{weiguanjia:$token}"></th>
+				</tr>
+				<tr>
+					<td height="48" align="right"><strong>选择产品：</strong></td>
+					<td colspan="3" class="lt">
+                        <gt name="info.id" value="0">
+                            {weiguanjia:$info.funcname}
+                            <else />
+                                <select name="funcid" style="width:136px">
+                                    <volist name="func" id="vo">
+                                        <option value="{weiguanjia:$vo.id}" <eq name="vo.id" value="$info.funcid">selected=""</eq> >{weiguanjia:$vo.name}</option>
+                                    </volist>
+                                </select>
+                        </gt>
+					</td>
+				</tr>
+				<tr>
+					<td height="48" align="right"><strong>到期时间：</strong></td>
+					<td colspan="3" class="lt">
+						<input type="text" name="expiredate" onClick="WdatePicker()" class="ipt" size="45" value="<if condition="$info['expiredate'] neq ''">{weiguanjia:$info.expiredate|date="Y-m-d H:i:s",###}</if>">
+					</td>
+				</tr>
+
+	<tr>
+		<td colspan="4">
+			<gt name="info.id" value="0">
+				<input class="bginput" type="submit" name="dosubmit" value="修 改" >
+				<else />
+				<input class="bginput" type="submit" name="dosubmit" value="添 加"></gt>
+			&nbsp;
+			<input class="bginput" type="button" onclick="javascript:history.back(-1);return false;" value="返 回" ></td>
+	</tr>
+</table>
+</form>
+<br />
+<br />
+<br />
+
+</div>
+</body>
+</html>

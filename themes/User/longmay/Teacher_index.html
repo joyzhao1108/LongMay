@@ -14,6 +14,17 @@
 </div>
 <div class="clr"></div>
 </div>
+<!--tab start-->
+<div class="tab">
+    <ul>
+        <li class="tabli" id="tab0"><a href="{weiguanjia::U('Lesson/index',array('token'=>$token))}">课程管理</a></li>
+        <li class="tabli" id="tab2"><a href="{weiguanjia::U('Lesson/cats',array('token'=>$token))}">课程分类</a></li>
+        <li class="current tabli" id="tab3"><a href="{weiguanjia::U('Teacher/index',array('token'=>$token))}">名师管理</a></li>
+        <li class="tabli" id="tab4"><a href="{weiguanjia::U('Bulletin/index',array('token'=>$token))}">公告管理</a></li>
+        <li class="tabli" id="tab5"><a href="{weiguanjia::U('Activity/index',array('token'=>$token))}">最新活动</a></li>
+    </ul>
+</div>
+<!--tab end-->
 <div class="cLine">
 <div class="pageNavigator left"> <a href="{weiguanjia::U('Teacher/add',array('token'=>$token))}" title="添加" class="btnGrayS vm bigbtn"><img src="{weiguanjia::RES}/images/product/add.png" width="16" class="vm">添加名师</a></div>
 <div class="clr"></div>

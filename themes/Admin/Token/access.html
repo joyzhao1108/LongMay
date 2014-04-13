@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>公众号产品设置</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel='stylesheet' type='text/css' href='{weiguanjia::STATICS}/treetable/admin_style.css' />
+	<script type="text/javascript" src="{weiguanjia::STATICS}/jquery.min.js"></script>
+    <script src="{weiguanjia::STATICS}/date/WdatePicker.js"></script>
+    <style>
+        .changeapp li{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+	<form action="{weiguanjia::U('Token/access')}" method="post" name="form" id="myform">
+		<input type="hidden" name="token" value="{weiguanjia:$token}" />
+		<table id="tree" width="100%" border="0" cellpadding="4" cellspacing="1" class="table">
+            <tr class="tr lt">
+                <td>
+                    <div class="msgWrap">
+                        <volist id="vo" name="domains">
+                            <fieldset>
+                                <legend>
+                                    <h4>{weiguanjia:$vo.name}</h4>
+                                </legend>
+                                <ul class="changeapp">
+                                    <volist name="vo['sub']" id="sub">
+                                        <li>
+                                            <input type='checkbox' name='func_id[]' value='{weiguanjia:$sub.id}' class='radio' /><span>{weiguanjia:$sub.name}</span>
+                                        </li>
+                                    </volist>
+                                </ul>
+                            </fieldset>
+                        </volist>
+                    </div>
+                </td>
+            </tr>
+            <tr class="tr lt">
+                <td>
+                    到期时间：<input type="text" name="expiredate" id="expiredate" onClick="WdatePicker()" class="ipt" size="45" value="">
+                </td>
+            </tr>
+			<tr class="tr lt">
+				<td>
+					<input class="bginput" type="submit" name="dosubmit" value="批量更新" ></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

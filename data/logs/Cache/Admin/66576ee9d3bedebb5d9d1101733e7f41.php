@@ -8,7 +8,7 @@
 </head>
 <body class="warp">
 <div id="artlist" class="addn">
-<?php if(($info["id"]) > "0"): ?><script src="./themes/User/default/common/js/date/WdatePicker.js"></script>
+<?php if(($info["id"]) > "0"): ?><script src="{weiguanjia::STATICS}/date/WdatePicker.js"></script>
 			<form action="<?php echo U('Users/edit');?>" method="post" name="form" id="myform">
 			<input type="hidden" name="id" value="<?php echo ($info["id"]); ?>">
 		<?php else: ?>

@@ -58,12 +58,12 @@
 			   <div class="sideBar" id="sideBar">
 					<div class="catalogList">
                         <ul>
-                            <div class="nav-header-active">基础功能</div>
+                            <div class="nav-header">基础功能</div>
                             <li <if condition="MODULE_NAME eq 'Function'">class="selected" <else/> class="subCatalogList"</if>>
                             <a href="{weiguanjia::U('Function/index',array('token'=>$token,'id'=>session('wxid')))}">功能管理</a>
                             </li>
-                            <li <if condition="MODULE_NAME eq 'Areply'">class="selected" <else/>class="subCatalogList"</if>>
-                            <a href="{weiguanjia::U('Areply/index',array('token'=>$token))}">欢迎页面</a>
+                            <li <if condition="MODULE_NAME eq 'Company'">class="selected" <else/>class="subCatalogList"</if>>
+                            <a href="{weiguanjia::U('Company/index',array('token'=>$token))}">欢迎页面</a>
                             </li>
                             <li <if condition="MODULE_NAME eq 'Text'">class="selected" <else/>class="subCatalogList"</if>>
                             <a href="{weiguanjia::U('Text/index',array('token'=>$token))}">关键词回复</a>
@@ -72,16 +72,13 @@
                             <a href="{weiguanjia::U('Diymen/index',array('token'=>$token))}">菜单管理</a>
                             </li>
                             <li <if condition="MODULE_NAME eq 'Diymen'">class="selected" <else/>class="subCatalogList"</if>>
-                            <a href="{weiguanjia::U('Diymen/index',array('token'=>$token))}">管理员设置</a>
-                            </li>
-                            <li <if condition="MODULE_NAME eq 'Company'">class="selected" <else/>class="subCatalogList"</if>>
-                            <a href="{weiguanjia::U('Company/index',array('token'=>$token))}">公司信息</a>
+                            <a href="{weiguanjia::U('WXAdmin/index',array('token'=>$token))}">管理员设置</a>
                             </li>
                         </ul>
                         <ul>
                             <div class="nav-header">行业模版管理</div>
-                            <li <if condition="MODULE_NAME eq 'Company'">class="selected" <else/>class="subCatalogList"</if>>
-                            <a href="{weiguanjia::U('Company/index',array('token'=>$token))}">教育行业</a>
+                            <li <if condition="MODULE_NAME eq 'Lesson'">class="selected" <else/>class="subCatalogList"</if>>
+                            <a href="{weiguanjia::U('Lesson/index',array('token'=>$token))}">教育行业</a>
                             </li>
                             <li <if condition="MODULE_NAME eq 'Flash'">class="selected" <else/>class="subCatalogList"</if>>
                             <a href="{weiguanjia::U('Flash/index',array('token'=>$token))}">餐饮行业</a>
@@ -177,6 +174,8 @@
 					</div>
                    <script>
                        $(".nav-header").siblings("li").hide();
+                       $(".catalogList .selected").parent().find("div").removeClass("nav-header").addClass("nav-header-active");
+                       $(".nav-header-active").siblings("li").show();
                        $(".nav-header").toggle(function(){
                            $(this).siblings("li").show();
                            $(this).removeClass("nav-header").addClass("nav-header-active");

@@ -1,9 +1,9 @@
 <?php
 class LotteryAction extends UserAction{
 	public function index(){
-		if(session('gid')==1){
+		/*if(session('gid')==1){
 			$this->error('vip0无法使用抽奖活动,请充值后再使用',U('Home/Index/price'));
-		}
+		}*/
 		$user=M('Users')->field('gid,activitynum')->where(array('id'=>session('uid')))->find();
 		$group=M('User_group')->where(array('id'=>$user['gid']))->find();
 		$this->assign('group',$group);
@@ -16,9 +16,9 @@ class LotteryAction extends UserAction{
 	
 	}
 	public function sn(){
-		if(session('gid')==1){
+		/*if(session('gid')==1){
 			$this->error('vip0无法使用抽奖活动,请充值后再使用',U('Home/Index/price'));
-		}
+		}*/
 		$id=$this->_get('id');
 		$data=M('Lottery')->where(array('token'=>session('token'),'id'=>$id))->find();
 		$record=M('Lottery_record')->where('token="'.session('token').'" and lid='.$id.' and sn!=""')->select();
@@ -33,9 +33,9 @@ class LotteryAction extends UserAction{
 	
 	}
 	public function add(){
-		if(session('gid')==1){
+		/*if(session('gid')==1){
 			$this->error('vip0无法使用抽奖活动,请充值后再使用',U('Home/Index/price'));
-		}
+		}*/
 		if(IS_POST){
 			$data=D('lottery');
 			$_POST['statdate']=strtotime($this->_post('statdate'));
@@ -47,9 +47,9 @@ class LotteryAction extends UserAction{
 		}
 	}
 	public function setinc(){
-		if(session('gid')==1){
+		/*if(session('gid')==1){
 			$this->error('vip0无法开启活动,请充值后再使用',U('Home/Index/price'));
-		}
+		}*/
 		$id=$this->_get('id');
 		$where=array('id'=>$id,'token'=>session('token'));
 		$check=M('Lottery')->where($where)->find();

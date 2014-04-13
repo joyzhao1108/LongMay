@@ -1,9 +1,29 @@
 <include file="Public:head"/>
+<link rel="stylesheet" type="text/css" href="{weiguanjia::RES}/css/cymain.css" />
 <div class="content">
-
-<div class="cLineB">
-  <h4>回答不上来的配置 </h4><a href="javascript:history.go(-1);" class="right btnGrayS vm" style="margin-top:-27px">返回</a>
- </div>
+    <div class="cLineB">
+        <h4 class="left">图文回复 ({weiguanjia:$page}) </h4>
+        <div class="searchbar right">
+            <form method="post" action="">
+                <input type="text" id="msgSearchInput" class="txt left" placeholder="输入关键词搜索" name="searchkey" value="">
+                <input type="hidden" name="ac" value="hotels-list">
+                <input type="hidden" name="id" value="9878">
+                <input type="hidden" name="wxid" value="gh_423dwjkewad">
+                <input type="submit" value="搜索" id="msgSearchBtn" href="" class="btnGrayS" title="搜索">
+            </form>
+        </div>
+        <div class="clr"></div>
+    </div>
+    <!--tab start-->
+    <div class="tab">
+        <ul>
+            <li class="tabli" id="tab0"><a href="{weiguanjia::U('Text/index',array('token'=>$token))}">文本回复</a></li>
+            <li class="tabli" id="tab2"><a href="{weiguanjia::U('Img/index',array('token'=>$token))}">图文回复</a></li>
+            <li class="tabli" id="tab3"><a href="{weiguanjia::U('Voiceresponse/index',array('token'=>$token))}">语音回复</a></li>
+            <li class="current tabli" id="tab4"><a href="{weiguanjia::U('Other/index',array('token'=>$token))}">回答不上配置</a></li>
+        </ul>
+    </div>
+    <!--tab end-->
          
     <div class="msgWrap bgfc">
 	  <form class="form" method="post" action="" target="_top" >	 
@@ -35,4 +55,8 @@
  
   
         </div>
+<div class="clr"></div>
+</div>
+</div>
+<!--底部-->
 <include file="Public:footer"/>

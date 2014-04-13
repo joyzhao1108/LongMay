@@ -40,11 +40,11 @@
 	  <tr>
 		<td width="70">ID</td>
 		<td width="150">用户名称</td>
-		<td width="150">服务等级</td>
+		<td width="80">服务等级</td>
 		<td width="100">最后登录IP</td>
 		<td width="150">最后登录时间</td>
 		<td width="70">状态</td>
-		<td width="100">管理操作</td>
+		<td width="170">管理操作</td>
 	  </tr>
 	    <volist name="info" id="vo">
 			<tr>
@@ -56,8 +56,8 @@
 				<td align='center'><eq name="vo.status" value="1"><font color="red">√</font><else/><font color="blue">×</font></eq> 
 				</td>
 				<td align='center'>
-					<a href="{weiguanjia::U('Users/edit/',array('id'=>$vo['id']))}">修改</a>
-					| <eq name="vo.username" value="admin"><font color="#cccccc">删除</font><else/><a href="javascript:void(0)" onclick="return confirmurl('{weiguanjia::U('Users/del/',array('id'=>$vo['id']))}','确定删除该用户吗?')">删除</a></eq>
+                    <a href="{weiguanjia::U('Users/edit',array('id'=>$vo['id']))}">编辑资料</a>
+					| <eq name="vo.username" value="admin"><font color="#cccccc">删除</font><else/><a href="javascript:void(0)" onclick="return confirmurl('{weiguanjia::U('Users/del',array('id'=>$vo['id']))}','确定删除该用户吗?')">删除</a></eq>
 				</td>
 			</tr>
 	    </volist>

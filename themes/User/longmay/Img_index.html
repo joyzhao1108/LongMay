@@ -1,14 +1,33 @@
 <include file="Public:head"/>
+<link rel="stylesheet" type="text/css" href="{weiguanjia::RES}/css/cymain.css" />
 <div class="content">
-         
-          <div class="cLineB">
-              <h4 class="left">自定义回复信息</h4>
-              <div class="clr"></div>
-          </div>
+    <div class="cLineB">
+        <h4 class="left">图文回复 ({weiguanjia:$page}) </h4>
+        <div class="searchbar right">
+            <form method="post" action="">
+                <input type="text" id="msgSearchInput" class="txt left" placeholder="输入关键词搜索" name="searchkey" value="">
+                <input type="hidden" name="ac" value="hotels-list">
+                <input type="hidden" name="id" value="9878">
+                <input type="hidden" name="wxid" value="gh_423dwjkewad">
+                <input type="submit" value="搜索" id="msgSearchBtn" href="" class="btnGrayS" title="搜索">
+            </form>
+        </div>
+        <div class="clr"></div>
+    </div>
+    <!--tab start-->
+    <div class="tab">
+        <ul>
+            <li class="tabli" id="tab0"><a href="{weiguanjia::U('Text/index',array('token'=>$token))}">文本回复</a></li>
+            <li class="current tabli" id="tab2"><a href="{weiguanjia::U('Img/index',array('token'=>$token))}">图文回复</a></li>
+            <li class="tabli" id="tab3"><a href="{weiguanjia::U('Voiceresponse/index',array('token'=>$token))}">语音回复</a></li>
+            <li class="tabli" id="tab4"><a href="{weiguanjia::U('Other/index',array('token'=>$token))}">回答不上配置</a></li>
+        </ul>
+    </div>
+    <!--tab end-->
           <div class="cLine">
               <div class="pageNavigator left">
-  <a href='{weiguanjia::U("Text/add")}' title='新增文本自定义回复' class='btnGrayS vm bigbtn'><img src="{weiguanjia::RES}/images/text.png" class="vm" />新增文本自定义回复</a>　
-  <a href='{weiguanjia::U("Img/add")}' title='新增图文自定义回复' class='btnGrayS vm bigbtn'><img src="{weiguanjia::RES}/images/pic.png" class="vm" />新增图文自定义回复</a>　
+
+  <a href='{weiguanjia::U("Img/add")}' title='新增图文自定义回复' class='btnGrayS vm bigbtn'><img src="{weiguanjia::RES}/images/pic.png" class="vm" />添加图文自定义回复</a>　
               
             </div>
           

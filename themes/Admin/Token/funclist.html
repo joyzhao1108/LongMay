@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>公众号功能管理</title>
+    <link href="{weiguanjia::RES}/images/main.css" type="text/css" rel="stylesheet">
+    <script src="{weiguanjia::STATICS}/jquery.min.js" type="text/javascript"></script>
+    <script src="{weiguanjia::STATICS}/function.js" type="text/javascript"></script>
+    <meta http-equiv="x-ua-compatible" content="ie=7" />
+</head>
+<body class="warp">
+<div id="artlist">
+    <div class="mod kjnav">
+        <a href="{weiguanjia::U('Token/funcadd',array('token'=>$_GET['token']))}">添加产品</a>
+        <a href="{weiguanjia::U('Token/access',array('token'=>$_GET['token']))}">批量更新</a>
+    </div>
+</div>
+<div class="cr"></div>
+<div>
+	 <div class="ksearch">
+        <div class="fl">
+			<b>排序方式：</b>
+			<select id="sort">
+                <option value="">按功能排序</option>
+				<option value="">到期时间（升序）</option>
+				<option value="">到期时间（降序）</option>
+			</select>
+		</div>
+        <div class="fl">
+			<b>查看方式：</b>
+			<select id="domainid">
+				<option value="">按分类查看</option>
+                <volist name="domain" id="vo">
+                    <option value="{weiguanjia:vo.id}">{weiguanjia:vo.name}</option>
+                </volist>
+			</select>
+		</div>
+    </div>
+ 	
+</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" id="alist">
+	  <tr>
+		<td width="130">公众号名称</td>
+		<td width="100">产品分类</td>
+		<td width="100">已购产品</td>
+		<td width="150">过期时间</td>
+		<td width="150">创建时间</td>
+		<td width="170">管理操作</td>
+	  </tr>
+	    <volist name="info" id="vo">
+			<tr>
+				<td >{weiguanjia:$vo.wxname}</td>
+				<td >{weiguanjia:$vo.domainname}</td>
+				<td align='center'>{weiguanjia:$vo.funcname}</td>
+				<td align='center'><php>echo date('Y-m-d H:i:s', $vo['expiredate'])</php></td>
+                <td align='center'><php>echo date('Y-m-d H:i:s', $vo['time'])</php></td>
+				<td align='center'>
+                    <a href="{weiguanjia::U('Token/funcedit',array('id'=>$vo['id'],'token'=>$_GET['token']))}">修改</a>
+					| <a href="javascript:void(0)" onclick="return confirmurl('{weiguanjia::U('Token/funcdel',array('id'=>$vo['id']))}','确定删除该项吗?')">删除</a>
+				</td>
+			</tr>
+	    </volist>
+     <tr bgcolor="#FFFFFF"> 
+      <td colspan="8"><div class="listpage">{weiguanjia:$page}</div></td>
+    </tr>
+   
+</table>
+
+</body>
+</html>

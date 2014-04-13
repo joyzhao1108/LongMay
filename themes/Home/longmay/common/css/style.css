@@ -1,7 +1,7 @@
 ﻿* {
 	padding:0;
 	margin:0;
-	border:none;
+    border: none;
 }
 body, input, button, select, textarea {
     font: 12px/1.5 Microsoft YaHei,Helvitica,Verdana,Arial,san-serif;
@@ -1002,6 +1002,8 @@ TABLE.ListProduct .edit{
 #nv_member #ft {
     margin: 0 auto;
 	border:0;
+    width: 1024px;
+    background:#ccc;
 }
 .titlefont1
 {
@@ -1048,6 +1050,7 @@ TABLE.ListProduct .edit{
 	background:#fff;
 	height:1px;
 	margin-top:10px;
+    border: 1;
 }
 .propaganda {
     display: block;

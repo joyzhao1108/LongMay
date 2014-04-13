@@ -1,0 +1,127 @@
+#pcontainer
+{
+    background: #fff;
+}
+.picnavpnl
+{
+    margin: 0 auto;
+    height: 140px;
+    width:840px;
+}
+.picnavpnl li{
+    float: left;
+    width:120px;
+    height: 120px;
+    padding: 10px;
+}
+.picnavpnl li a.active{
+    background: lightblue;
+}
+.picnav table{
+    width:120px;
+    height: 120px;
+}
+.picnav table td{
+    text-align: center;
+}
+#mainpnl
+{
+    width: 1024px;
+}
+#mainpnl .banner
+{
+    display: none;
+}
+#mainpnl .active
+{
+    display: block;
+}
+.hrcc
+{
+    width:856px;
+    color:#fff;
+    background:#ccc;
+    height:1px;
+    margin-top:10px;
+}
+#banner4
+{
+    margin: 0 auto;
+    height: 160px;
+    width:760px;
+}
+#banner4 li{
+    float: left;
+    width:140px;
+    height: 140px;
+    padding: 10px;
+    margin: 15px;
+}
+#banner4 li a.active{
+    background: lightblue;
+}
+.funnav table{
+    width:140px;
+    height: 140px;
+}
+.funnav table td{
+    text-align: center;
+    color: #0093d3;
+}
+.funmore
+{
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+#contact td
+{
+    color: #c1c1c1;
+    font-size: 16px;
+    padding: 10px;
+}
+#contact td td
+{
+    font-size: 14px;
+    padding: 2px;
+}
+
+#banner1
+{
+    margin: 0 auto;
+    height: 120px;
+    width:800px;
+}
+#banner1 li{
+    float: left;
+    width:120px;
+    height: 100px;
+    padding: 10px;
+    margin: 15px 30px;
+}
+#banner1 li a.active{
+    background: lightblue;
+}
+.industrynav table{
+    width:120px;
+    height: 100px;
+}
+.industrynav table td{
+    text-align: center;
+    color: #0093d3;
+}
+.industrymore
+{
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+    color: #0093d3;
+}
+.industryhead
+{
+    width:295px;
+    height: 303px;
+    background: url("pimg/industry.png");
+    margin: auto;
+}
