@@ -15,13 +15,6 @@
                             <td><span class="info">请选择您的微信帐号类型</span></td>
                         </tr>
                     </table>
-                    <script>
-                        $('.wxtype').click(function(){
-                            $(this).siblings().removeAttr("checked");
-                            $('#wxtype').val($(this).val());
-
-                        });
-                    </script>
                 </div>
                 <div>
                     <table class="infoedittbl">
@@ -83,7 +76,7 @@
                         </tr>
                     </table>
                 </div>
-                <div>
+                <div class="appsecret">
                     <table class="infoedittbl">
                         <tr>
                             <th>AppId</th>
@@ -95,7 +88,7 @@
                         </tr>
                     </table>
                 </div>
-                <div>
+                <div class="appsecret">
                     <table class="infoedittbl">
                         <tr>
                             <th>AppSecret</th>
@@ -107,6 +100,29 @@
                         </tr>
                     </table>
                 </div>
+                <script>
+                    $('.wxtype').click(function(){
+                        $(this).siblings().removeAttr("checked");
+                        $('#wxtype').val($(this).val());
+                        if($(this).attr("id") == "wxtype1")
+                        {
+                            $(".appsecret").show();
+                        }
+                        else
+                        {
+                            $(".appsecret").hide();
+                        }
+                    });
+                    if($("#wxtype1").attr("checked") == "checked")
+                    {
+                        $(".appsecret").show();
+                    }
+                    else
+                    {
+                        $(".appsecret").hide();
+                    }
+
+                </script>
                 <div class="reg-btn-panel">
                     <table class="infoedittbl">
                         <tr>

@@ -12,6 +12,12 @@
         width: 100px;
         height: 30px;
     }
+    #mcover {
+        background: rgba(0, 0, 0, 0.7); left: 0px; top: 0px; width: 100%; height: 100%; display: none; position: fixed; z-index: 20000;
+    }
+    #mcover img {
+        top: 5px; width: 260px !important; height: 180px !important; right: 18px; position: fixed; z-index: 20001;
+    }
 </style>
 <div style="margin: 10px auto 10px"><img src="{weiguanjia::RES}/images/edu01/lessonsplitb.png" width="100%"></div>
 <table class="bottomctl" width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -21,6 +27,9 @@
         <td><a href="javascript:share()"><img src="{weiguanjia::RES}/images/share2.png"></a></td>
     </tr>
 </table>
+<div id="mcover" onclick="document.getElementById('mcover').style.display='';" style="display:none;">
+    <img src="{weiguanjia::RES}/images/guide.png?=2014-04-15-1">
+</div>
 <div class="copyright"  >
     <php>echo htmlspecialchars_decode(C('copyright'))</php>
 </div>
@@ -40,7 +49,7 @@
     };
     function share()
     {
-        alert("请点击右上角按钮分享");
+        document.getElementById('mcover').style.display='block';
     }
     function shareFriend() {
         WeixinJSBridge.invoke('sendAppMessage',{

@@ -6,17 +6,7 @@ class ProductAction extends UserAction{
 	public $isDining;
 	public function _initialize() {
 		parent::_initialize();
-		$token_open = M('token_open')->field('queryname')->where(array('token'=>session('token')))->find();
-		if(((!isset($_GET['dining']) || $_GET['dining'] == 0) && !strpos($token_open['queryname'],'shop')) || ((isset($_GET['dining']) && $_GET['dining'] == 1)&&!strpos($token_open['queryname'],'dx'))){
-            $this->error('您还未开启该模块的使用权,请到功能模块中添加',U('Function/index',array('token'=>session('token'),'id'=>session('wxid'))));
-		}
-		//是否是餐饮
-		if (isset($_GET['dining'])&&intval($_GET['dining'])){
-			$this->isDining=1;
-		}else {
-			$this->isDining=0;
-		}
-		$this->assign('isDining',$this->isDining);
+        parent::checkRight('shop');
 	}
 	public function index(){		
 		$catid=intval($_GET['catid']);
@@ -119,13 +109,9 @@ class ProductAction extends UserAction{
             if (count($productsOfCat)){
             	$this->error('本分类下有商品，请删除商品后再删除分类',U('Product/cats',array('token'=>session('token'),'dining'=>$this->isDining)));
             }
-            $back=$data->where($wehre)->delete();
+            $back=$data->where($where)->delete();
             if($back==true){
-            	if (!$this->isDining){
                 $this->success('操作成功',U('Product/cats',array('token'=>session('token'),'parentid'=>$check['parentid'])));
-            	}else {
-            		$this->success('操作成功',U('Product/cats',array('token'=>session('token'),'parentid'=>$check['parentid'],'dining'=>1)));
-            	}
             }else{
                  $this->error('服务器繁忙,请稍后再试',U('Product/cats',array('token'=>session('token'))));
             }
@@ -144,12 +130,7 @@ class ProductAction extends UserAction{
 			if($check==false)$this->error('非法操作');
 			if($data->create()){
 				if($data->where($where)->save($_POST)){
-					if (!$this->isDining){
-						$this->success('修改成功',U('Product/cats',array('token'=>session('token'),'parentid'=>$this->_post('parentid'))));
-					}else {
-						$this->success('修改成功',U('Product/cats',array('token'=>session('token'),'parentid'=>$this->_post('parentid'),'dining'=>1)));
-					}
-					
+                    $this->success('修改成功',U('Product/cats',array('token'=>session('token'),'parentid'=>$this->_post('parentid'))));
 				}else{
 					$this->error('操作失败');
 				}
@@ -275,7 +256,7 @@ class ProductAction extends UserAction{
             $check=$product_model->where($where)->find();
             if($check==false)   $this->error('非法操作');
 
-            $back=$product_model->where($wehre)->delete();
+            $back=$product_model->where($where)->delete();
             if($back==true){
             	$keyword_model=M('Keyword');
             	$keyword_model->where(array('token'=>session('token'),'pid'=>$id,'module'=>'Product'));
@@ -303,7 +284,6 @@ class ProductAction extends UserAction{
 			}
 			$this->success('操作成功',U('Product/orders',array('token'=>session('token'),'dining'=>$this->isDining)));
 		}else{
-			
 
 			$where=array('token'=>$this->_session('token'));
 			if ($this->isDining){
@@ -319,10 +299,10 @@ class ProductAction extends UserAction{
 				}
 
 				$where['truename|address'] = array('like',"%$key%");
-				$orders = $product_cart_model->where($where)->select();
-				$count      = $product_cart_model->where($where)->limit($Page->firstRow.','.$Page->listRows)->count();
-				$Page       = new Page($count,20);
-				$show       = $Page->show();
+                $count = $product_cart_model->where($where)->count();
+                $Page       = new Page($count,20);
+                $show       = $Page->show();
+                $orders      = $product_cart_model->where($where)->limit($Page->firstRow.','.$Page->listRows)->select();
 			}else {
 				if (isset($_GET['handled'])){
 					$where['handled']=intval($_GET['handled']);
@@ -431,11 +411,11 @@ class ProductAction extends UserAction{
 			}
 			for ($i=0;$i<40;$i++){
 				if (isset($_POST['id_'.$i])){
-					$thiCartInfo=$product_cart_model->where(array('id'=>intval($_POST['id_'.$i])))->find();
+					$thiCartInfo=$product_diningtable_model->where(array('id'=>intval($_POST['id_'.$i])))->find();
 					if ($thiCartInfo['handled']){
-					$product_cart_model->where(array('id'=>intval($_POST['id_'.$i])))->save(array('handled'=>0));
+                        $product_diningtable_model->where(array('id'=>intval($_POST['id_'.$i])))->save(array('handled'=>0));
 					}else {
-						$product_cart_model->where(array('id'=>intval($_POST['id_'.$i])))->save(array('handled'=>1));
+                        $product_diningtable_model->where(array('id'=>intval($_POST['id_'.$i])))->save(array('handled'=>1));
 					}
 				}
 			}
@@ -451,8 +431,8 @@ class ProductAction extends UserAction{
 				}
 
 				$where['truename|address'] = array('like',"%$key%");
-				$orders = $product_cart_model->where($where)->select();
-				$count      = $product_cart_model->where($where)->count();
+                $tables = $product_diningtable_model->where($where)->select();
+				$count      = $product_diningtable_model->where($where)->count();
 				$Page       = new Page($count,20);
 				$show       = $Page->show();
 			}else {
@@ -490,7 +470,7 @@ class ProductAction extends UserAction{
 					$this->error('操作失败');
 				}
 			}else{
-				$this->error($data->getError());
+				$this->error($product_diningtable_model->getError());
 			}
 		}else{
 			$this->assign('set',$checkdata);
@@ -507,7 +487,7 @@ class ProductAction extends UserAction{
             $check=$product_diningtable_model->where($where)->find();
             if($check==false)   $this->error('非法操作');
            
-            $back=$product_diningtable_model->where($wehre)->delete();
+            $back=$product_diningtable_model->where($where)->delete();
             if($back==true){
             	$this->success('操作成功',U('Product/tables',array('token'=>session('token'),'dining'=>1)));
             }else{

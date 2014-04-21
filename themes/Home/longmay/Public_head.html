@@ -21,11 +21,11 @@
                 管理中心</a></li>
             <li id="mn_N3e36" class="nvmenu"><a href="{weiguanjia::U('Home/Index/about')}" hidefocus="true" <eq name="Think.ACTION_NAME" value="about"> class="visited"</eq>>
                 联系我们</a></li>
-            <if condition="$_SESSION[uid]==false">
+            <if condition="$_SESSION['uid']==false">
             <li id="mn_N3e36"  class="nvmenu"> <a style="text-align:right;" href="{weiguanjia::U('Index/login')}" hidefocus="true" <eq name="Think.ACTION_NAME" value="login"> class="visited"</eq>>登录&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
             <li id="mn_N3e36"  class="nvmenu"><a  style="text-align:left" href="{weiguanjia::U('Index/reg')}" hidefocus="true" <eq name="Think.ACTION_NAME" value="reg"> class="visited"</eq>>&nbsp;&nbsp;&nbsp;&nbsp;注册</a></li>
             <else/>
-                <li id="mn_N3e36"  class="nvmenu"><a href="" hidefocus="true"  >{weiguanjia:$Think.session.uname}</a></li>
+                <li id="mn_N3e36"  class="nvmenu"><a href="{weiguanjia::U('User/Index/index')}" hidefocus="true"  >{weiguanjia:$Think.session.uname}</a></li>
             <li id="mn_N3e36"  class="nvmenu"><a href="{weiguanjia::U('Admin/Admin/logout')}" hidefocus="true"  >退出</a></li>
             </if>
         </ul>

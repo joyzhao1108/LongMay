@@ -1,5 +1,10 @@
 <?php
 class LotteryAction extends UserAction{
+    public function _initialize()
+    {
+        parent::_initialize();
+        parent::checkRight('choujiang');
+    }
 	public function index(){
 		/*if(session('gid')==1){
 			$this->error('vip0无法使用抽奖活动,请充值后再使用',U('Home/Index/price'));

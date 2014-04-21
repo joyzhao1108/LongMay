@@ -34,23 +34,19 @@ function selectall(name) {
 </div>
 <!--tab start-->
 <div class="tab">
-<ul>
-<li class="tabli" id="tab0"><a href="{weiguanjia::U('Product/index',array('token'=>$token,'dining'=>$isDining))}"><if condition="$isDining neq 1">商品<else/>菜品</if>管理</a></li>
-<li class="tabli" id="tab2"><a href="{weiguanjia::U('Product/cats',array('token'=>$token,'dining'=>$isDining))}"><if condition="$isDining neq 1">商品分类<else/>菜品分类</if>管理</a></li>
-<li class="tabli" id="tab2"><a href="{weiguanjia::U('Product/orders',array('token'=>$token,'dining'=>$isDining))}">订单管理</a></li>
-<if condition="$isDining eq 1"><li class="current tabli" id="tab2"><a href="{weiguanjia::U('Product/tables',array('token'=>$token,'dining'=>1))}">桌台管理</a></li></if>
-<if condition="$isDining neq 1">
-<li class="tabli" id="tab5"><a href="{weiguanjia::U('Reply_info/set',array('token'=>$token,'infotype'=>'Shop'))}">商城回复配置</a></li>
-<else/>
-<li class="tabli" id="tab5"><a href="{weiguanjia::U('Reply_info/set',array('token'=>$token,'infotype'=>'Dining'))}">订餐回复配置</a></li>
-</if>
-</ul>
+    <ul>
+        <li class="tabli" id="tab0"><a href="{weiguanjia::U('Food/index',array('token'=>$token))}">菜品管理</a></li>
+        <li class="tabli" id="tab1"><a href="{weiguanjia::U('Food/cats',array('token'=>$token))}">菜品分类管理</a></li>
+        <li class="tabli" id="tab2"><a href="{weiguanjia::U('Food/orders',array('token'=>$token))}">订单管理</a></li>
+        <li class="current tabli" id="tab3"><a href="{weiguanjia::U('Food/tables',array('token'=>$token))}">桌台管理</a></li>
+        <li class="tabli" id="tab4"><a href="{weiguanjia::U('Food/replyset',array('token'=>$token,'infotype'=>'Dining'))}">订餐回复配置</a></li>
+    </ul>
 </div>
 <!--tab end-->
 <div class="msgWrap">
 <form method="post" action="" id="info">
 <div class="cLine">
-<div class="pageNavigator left"> <a href="{weiguanjia::U('Product/tableAdd',array('token'=>$token,'dining'=>$isDining))}" title="" class="btnGrayS vm bigbtn"><img src="{weiguanjia::RES}/images/product/add.png" class="vm">添加桌台</a></div>
+<div class="pageNavigator left"> <a href="{weiguanjia::U('Food/tableAdd',array('token'=>$token,'dining'=>$isDining))}" title="" class="btnGrayS vm bigbtn"><img src="{weiguanjia::RES}/images/product/add.png" class="vm">添加桌台</a></div>
 <div class="clr"></div>
 </div>
 

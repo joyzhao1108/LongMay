@@ -80,6 +80,8 @@ class TokenAction extends BackAction{
             $user=M('Wxuser')->where($where)->find();
             $_POST['uid']=$user['uid'];
             $_POST['expiredate']=strtotime($_POST['expiredate']);
+            $func=D('function')->where('status=1')->find($_POST['funcid']);
+            $_POST['funname']=$func['funname'];
             $this->insert('Wxuser_func','/funclist?token='.$this->_post('token'));
         }else{
             $where['token'] = $_GET["token"];
@@ -116,37 +118,63 @@ class TokenAction extends BackAction{
 
     public function access(){
         if(IS_POST){
-            if($this->_post['expiredate'] == false) $this->error('请选择到期时间'.$this->_post['expiredate']);
+            $expdate = $this->_request('exp');
+            if(!is_array($expdate) || count($expdate) == 0) $this->error('请选择到期时间');
             $token =$this->_post('token');
             $where['token'] = $token;
             $user=M('Wxuser')->where($where)->find();
-            $func_id = $this->_post('func_id');
+            $func_id = $this->_request('funcids');
 
             $AccessDB = D('Wxuser_func');
             if (is_array($func_id) && count($func_id) > 0) {  //提交得有数据，则修改原权限配置
-                $where["funcid"]=array('in',$func_id);
-                $AccessDB->where($where)->delete();  //先删除原用户组的权限配置
+                $AccessDB->where(array('token'=>$token))->delete();  //先删除原用户组的权限配置
+                $func=D('function')->field('id,funname')->select();
+                $fundict = array();
+                foreach($func as $vo){
+                    $fundict[$vo['id']]=$vo['funname'];
+                }
                 foreach($func_id as $k => $funcid){
                     $data[$k]['token'] = $token;
                     $data[$k]['uid'] = $user['uid'];;
-                    $data[$k]['expiredate'] = strtotime($this->_post['expiredate']);
+                    $data[$k]['expiredate'] = strtotime($expdate[$funcid]);
                     $data[$k]['time'] = time();
                     $data[$k]['funcid'] = $funcid;
+                    $data[$k]['funname'] = $fundict[$funcid];
                 }
                 $AccessDB->addAll($data);   // 重新创建角色的权限配置
             } else {    //提交的数据为空，则删除权限配置
                 $this->error('设置失败，未选择产品');
             }
-            $this->success("设置成功",U('Token/funclist',array('token'=>$token)));
+            $this->success("设置成功",U('Token/access',array('token'=>$token)));
         }
         else{
             $domains=M('Domain')->field('id,name')->order("id asc")->select();
+            $token_open=D('Wxuser_func');
+            $where = array('token'=>$this->_get('token'));
             foreach($domains as $key=>$vo){
-                $fun=M('Function')->where(array('domainid'=>$vo['id']))->order("sort asc")->select();
-                $domains[$key]['sub']=$fun;
+                $fun=M('Function')->where(array('domainid'=>$vo['id'],'status'=>1))->order("sort asc")->select();
+                $funlist = array();
+                foreach($fun as $vof){
+                    $where["funcid"] = $vof["id"];
+                    $link=$token_open->where($where)->find();
+                    //echo $token_open->getLastSql();
+                    if($link == false)
+                    {
+                        $vof["has"] = 0;
+                        $vof["expiredate"] = '';
+                    }
+                    else{
+                        $vof["has"] = 1;
+                        $vof["expiredate"] = $link["expiredate"];
+                    }
+                    $funlist[] = $vof;
+                }
+                $domains[$key]['sub']=$funlist;
             }
+            $user=M('Wxuser')->where(array('token'=>$this->_get('token')))->find();
             $this->assign('domains',$domains);
-            $this->assign('token',$this->get('token'));
+            $this->assign('token',$this->_get('token'));
+            $this->assign('wxuser',$user);
             $this->display();
         }
     }

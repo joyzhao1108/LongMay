@@ -107,11 +107,15 @@ function setlatlng(longitude,latitude){
            <th><span class="red">*</span>业务简介LOGO：</th>
            <td><input type="text" id="briefpic" name="briefpic" value="{weiguanjia:$set.briefpic}" class="px require" style="width:400px;" /><input class="btnFile btnGreen" type=button onclick="window.open('{weiguanjia::U('Upload/index',array('token'=>$token,'n'=>briefpic))}')" value="点击上传图片"></td>
        </tr>
+       <tr>
+           <th><span class="red">*</span>详细页图片(关于我们)：</th>
+           <td><input type="text" id="logourl" name="logourl" value="{weiguanjia:$set.logourl}" class="px require" style="width:400px;" /><input class="btnFile btnGreen" type=button onclick="window.open('{weiguanjia::U('Upload/index',array('token'=>$token,'n'=>logourl))}')" value="点击上传图片"></td>
+       </tr>
         <TR>
-                  <TH valign="top"><label for="info">业务介绍详细页内容：</label></TH>
+                  <TH valign="top"><label for="info">详细页内容(关于我们)：</label></TH>
                   <TD><textarea name="intro" id="intro"  rows="5" style="width:590px;height:360px">{weiguanjia:$set.intro}</textarea></TD>
                 </TR>
-       <tr>
+       <tr style="display: none">
            <th><span class="red"></span>顺序：</th>
            <td><input type="text" id="taxis" name="taxis" value="{weiguanjia:$set.taxis}" class="px require" style="width:100px;" /></td>
        </tr>

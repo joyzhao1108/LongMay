@@ -1,10 +1,10 @@
  <include file="Public:head" /> 
 
-<input type="hidden" id="catUrl" value="{weiguanjia::U('Product/ajaxCatOptions',array('token'=>$token))}" />
+<input type="hidden" id="catUrl" value="{weiguanjia::U('Food/ajaxCatOptions',array('token'=>$token))}" />
   <div class="content"> 
    <div class="cLineB"> 
     <h4>桌台设置</h4> 
-    <a href="{weiguanjia::U('Product/tables',array('token'=>$token,'dining'=>$isDining))}" class="right  btnGreen" style="margin-top:-27px">返回</a> 
+    <a href="{weiguanjia::U('Food/tables',array('token'=>$token,'dining'=>$isDining))}" class="right  btnGreen" style="margin-top:-27px">返回</a>
    </div> 
    <form class="form" method="post" action="" enctype="multipart/form-data"> 
 <if condition="$isUpdate eq 1">
@@ -32,7 +32,7 @@
        <th>&nbsp;</th>
        <td>
        <input type="hidden" name="id" value="{weiguanjia:$set.id}" />
-       <button type="submit" name="button" class="btnGreen">保存</button> &nbsp; <a href="{weiguanjia::U('Product/tables',array('token'=>$token))}" class="btnGray vm">取消</a></td> 
+       <button type="submit" name="button" class="btnGreen">保存</button> &nbsp; <a href="{weiguanjia::U('Food/tables',array('token'=>$token))}" class="btnGray vm">取消</a></td>
        </tr> 
       </tbody> 
      </table> 

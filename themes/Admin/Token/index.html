@@ -13,7 +13,7 @@
 		<td >所属用户名</td>
 		<td >使用次数</td>
 		
-		<td>状态</td>
+	<!--	<td>状态</td>-->
 		<td>管理操作</td>
 	  </tr>
 	    <volist name="list" id="vo">
@@ -23,10 +23,10 @@
 				<td ><if condition="$vo['usr']['gid'] eq -1">0<else/>{weiguanjia:$vo.user.gid}</if></td>
 				<td >{weiguanjia:$vo.user.username}</td>
 				<td align='center'>{weiguanjia:$vo.usenum}</td>
-				<td align='center'><eq name="vo.status" value="1"><font color="red">√</font><else/><font color="blue">×</font></eq> 
-				</td>
+				<!--<td align='center'><eq name="vo.status" value="1"><font color="red">√</font><else/><font color="blue">×</font></eq>
+				</td>-->
 				<td align='center'>
-                    <a href="{weiguanjia::U('Token/funclist',array('token'=>$vo['token']))}">功能管理</a>
+                    <a href="{weiguanjia::U('Token/access',array('token'=>$vo['token']))}">产品管理</a>
                     | <eq name="vo.username" value="admin"><font color="#cccccc">删除</font><else/><a href="javascript:void(0)" onclick="return confirmurl('{weiguanjia::U('Token/del/',array('id'=>$vo['id']))}','确定删除该用户吗?')">删除</a></eq>
 				</td>
 			</tr>

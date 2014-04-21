@@ -3,6 +3,11 @@
  *文本回复
 **/
 class ImgAction extends UserAction{
+    public function _initialize()
+    {
+        parent::_initialize();
+        parent::checkRight('imgreply');
+    }
 	public function index(){
 		$db=D('Img');
 		$where['uid']=session('uid');

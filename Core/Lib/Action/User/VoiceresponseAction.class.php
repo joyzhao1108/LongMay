@@ -3,6 +3,11 @@
  *语音回复
 **/
 class VoiceresponseAction extends UserAction{
+    public function _initialize()
+    {
+        parent::_initialize();
+        parent::checkRight('voicereply');
+    }
 	public function index(){
 		$where['uid']=session('uid');
 		$res=M('Voiceresponse')->where($where)->select();

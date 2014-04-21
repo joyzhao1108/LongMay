@@ -24,11 +24,11 @@
     <ul>
         <li id="mn_N828e" class="nvmenulogo"><a href="{weiguanjia::U('Home/Index/index')}" hidefocus="true"  <eq name="Think.GROUP_NAME" value="Home"><eq name="Think.MODULE_NAME" value="Index"><eq name="Think.ACTION_NAME" value="index"> class="visited"</eq></eq></eq>>
             龙蔓</a></li>
-        <li id="mn_Nb47d" class="nvmenu"><a href="{weiguanjia::U('Home/Index/fc')}" hidefocus="true" <eq name="Think.ACTION_NAME" value="fc"> class="visited"</eq>>
+        <li id="mn_Nb47d" class="nvmenu"><a href="{weiguanjia::U('Home/Index/product')}" hidefocus="true" <eq name="Think.ACTION_NAME" value="product"> class="visited"</eq>>
             产品与服务</a></li>
-        <li id="mn_N564f" class="nvmenu"><a href="{weiguanjia::U('Home/Index/help')}" hidefocus="true" <eq name="Think.ACTION_NAME" value="help"> class="visited"</eq>>
+        <li id="mn_N564f" class="nvmenu"><a href="{weiguanjia::U('Home/Index/fc')}" hidefocus="true" <eq name="Think.ACTION_NAME" value="fc"> class="visited"</eq>>
             行业案例</a></li>
-        <li id="mn_N67c1" class="nvmenu"><a href="{weiguanjia::U('User/Index/index')}" hidefocus="true" <eq name="Think.GROUP_NAME" value="User"><eq name="Think.MODULE_NAME" value="Index"> class="visited"</eq></eq>>
+        <li id="mn_N67c1" class="nvmenu"><a href="{weiguanjia::U('User/Index/index')}" hidefocus="true" <eq name="Think.GROUP_NAME" value="User"> class="visited"</eq>>
             管理中心</a></li>
         <li id="mn_N3e36" class="nvmenu"><a href="{weiguanjia::U('Home/Index/about')}" hidefocus="true" <eq name="Think.ACTION_NAME" value="about"> class="visited"</eq>>
             联系我们</a></li>
@@ -36,23 +36,22 @@
             <li id="mn_N3e36"  class="nvmenu"> <a style="text-align:right;" href="{weiguanjia::U('Index/login')}" hidefocus="true" <eq name="Think.ACTION_NAME" value="login"> class="visited"</eq>>登录&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
             <li id="mn_N3e36"  class="nvmenu"><a  style="text-align:left" href="{weiguanjia::U('Index/reg')}" hidefocus="true" <eq name="Think.ACTION_NAME" value="reg"> class="visited"</eq>>&nbsp;&nbsp;&nbsp;&nbsp;注册</a></li>
             <else/>
-            <li id="mn_N3e36"  class="nvmenu"><a href="" hidefocus="true"  >{weiguanjia:$Think.session.uname}</a></li>
+            <li id="mn_N3e36"  class="nvmenu"><a href="{weiguanjia::U('User/Index/index')}" hidefocus="true"  >{weiguanjia:$Think.session.uname}</a></li>
             <li id="mn_N3e36"  class="nvmenu"><a href="{weiguanjia::U('Admin/Admin/logout')}" hidefocus="true"  >退出</a></li>
         </if>
     </ul>
 </div>
 <div id="wp" class="wp">
     <link href="{weiguanjia::RES}/css/style.css" rel="stylesheet" type="text/css" />
-
     <div class="contentmanage">
         <div style="height: 80px"></div>
 		<div class="developer">
             <div class="normalTitle">
-                <h2>管理中心</h2>
-                <div class="accountInfo"></div>
+                <div style="width: 300px;margin: auto"><h2>管理中心</h2></div>
+                <div class="accountDiv">您好，<a href="{weiguanjia::U('User/Index/index')}" hidefocus="true"  ><span style="color:red">{weiguanjia:$Think.session.uname}</span></a>（uid:{weiguanjia:$Think.session.uid}）
+                    <a href="javascript:void(0)" onclick="Javascript:window.open('{weiguanjia::U('Admin/Admin/logout')}','_blank')" >退出</a></div>
                 <div class="clr"></div>
             </div>
-			
 			<div class="tableContent">
 				<!--left-menu-->
 			   <div class="sideBar" id="sideBar">
@@ -65,23 +64,23 @@
                             <li <if condition="MODULE_NAME eq 'Company'">class="selected" <else/>class="subCatalogList"</if>>
                             <a href="{weiguanjia::U('Company/index',array('token'=>$token))}">欢迎页面</a>
                             </li>
-                            <li <if condition="MODULE_NAME eq 'Text'">class="selected" <else/>class="subCatalogList"</if>>
+                            <li <if condition="(MODULE_NAME eq 'Text') or (MODULE_NAME eq 'Img') or (MODULE_NAME eq 'Voiceresponse') or (MODULE_NAME eq 'Other')">class="selected" <else/>class="subCatalogList"</if>>
                             <a href="{weiguanjia::U('Text/index',array('token'=>$token))}">关键词回复</a>
                             </li>
                             <li <if condition="MODULE_NAME eq 'Diymen'">class="selected" <else/>class="subCatalogList"</if>>
                             <a href="{weiguanjia::U('Diymen/index',array('token'=>$token))}">菜单管理</a>
                             </li>
-                            <li <if condition="MODULE_NAME eq 'Diymen'">class="selected" <else/>class="subCatalogList"</if>>
-                            <a href="{weiguanjia::U('WXAdmin/index',array('token'=>$token))}">管理员设置</a>
+                            <li <if condition="MODULE_NAME eq 'WxAdmin'">class="selected" <else/>class="subCatalogList"</if>>
+                            <a href="{weiguanjia::U('WxAdmin/index',array('token'=>$token))}">管理员设置</a>
                             </li>
                         </ul>
                         <ul>
                             <div class="nav-header">行业模版管理</div>
-                            <li <if condition="MODULE_NAME eq 'Lesson'">class="selected" <else/>class="subCatalogList"</if>>
-                            <a href="{weiguanjia::U('Lesson/index',array('token'=>$token))}">教育行业</a>
+                            <li <if condition="(MODULE_NAME eq 'Lesson') or (MODULE_NAME eq 'Teacher')">class="selected" <else/>class="subCatalogList"</if>>
+                            <a href="{weiguanjia::U('Lesson/cats',array('token'=>$token))}">教育行业</a>
                             </li>
-                            <li <if condition="MODULE_NAME eq 'Flash'">class="selected" <else/>class="subCatalogList"</if>>
-                            <a href="{weiguanjia::U('Flash/index',array('token'=>$token))}">餐饮行业</a>
+                            <li <if condition="MODULE_NAME eq 'Food'">class="selected" <else/>class="subCatalogList"</if>>
+                            <a href="{weiguanjia::U('Food/cats',array('token'=>$token,'dining'=>1))}">餐饮行业</a>
                             </li>
                             <li <if condition="(MODULE_NAME eq 'Product') and (ACTION_NAME eq 'index')">class="selected"<else/>class="subCatalogList"</if> >
                             <a href="{weiguanjia::U('Product/index',array('token'=>$token))}">微商城</a>
@@ -113,7 +112,7 @@
                         </ul>
 						<ul>
 							<div class="nav-header">功能模块管理</div>
-                            <li <if condition="ACTION_NAME eq ''">class="selected" <else/>class="subCatalogList"</if>>
+                            <li <if condition="MODULE_NAME eq 'Member_card'">class="selected" <else/>class="subCatalogList"</if>>
                             <a href="{weiguanjia::U('Member_card/index',array('token'=>$token))}">微会员卡</a>
                             </li>
                             <li class="subCatalogList">
@@ -131,8 +130,8 @@
                             <li <if condition="MODULE_NAME eq 'Photo'">class="selected"<else/>class="subCatalogList"</if>>
                             <a href="{weiguanjia::U('Photo/index',array('token'=>$token))}">相册系统</a>
                             </li>
-                            <li class="subCatalogList">
-                                <a href="#">智能回复</a>
+                            <li <if condition="MODULE_NAME eq 'Robot'">class="selected"<else/>class="subCatalogList"</if>>
+                                <a href="{weiguanjia::U('Robot/index',array('token'=>$token))}">智能回复</a>
                             </li>
                             <li <if condition="MODULE_NAME eq 'Coupon'">class="selected" <else/>class="subCatalogList"</if>>
                             <a href="{weiguanjia::U('Coupon/index',array('token'=>$token))}">优惠券</a>
@@ -145,6 +144,15 @@
                             </li>
                             <li <if condition="MODULE_NAME eq 'Adma'">class="selected" <else/>class="subCatalogList"</if>>
                             <a href="{weiguanjia::U('Adma/index',array('token'=>$token))}">二维码推广</a>
+                            </li>
+                            <li <if condition="MODULE_NAME eq 'Flash'">class="selected" <else/>class="subCatalogList"</if>>
+                            <a href="{weiguanjia::U('Flash/index',array('token'=>$token))}">幻灯片管理</a>
+                            </li>
+                            <li <if condition="MODULE_NAME eq 'Bulletin'">class="selected" <else/>class="subCatalogList"</if>>
+                            <a href="{weiguanjia::U('Bulletin/index',array('token'=>$token))}">公告管理</a>
+                            </li>
+                            <li <if condition="MODULE_NAME eq 'Activity'">class="selected" <else/>class="subCatalogList"</if>>
+                            <a href="{weiguanjia::U('Activity/index',array('token'=>$token))}">最新活动</a>
                             </li>
 						</ul>
                         <ul>

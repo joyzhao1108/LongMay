@@ -88,22 +88,27 @@ class UsersAction extends BackAction{
             //根据表单提交的POST数据创建数据对象
                 $_POST['viptime']=strtotime($_POST['viptime']);
                 if($UserDB->save($_POST)){
-					if($_POST['gid']!=$users['gid']){
-						$fun=M('Function')->field('funname,gid,isserve')->where('`gid` <= '.$_POST['gid'])->select();
-						foreach($fun as $key=>$vo){
-							$queryname.=$vo['funname'].',';
-						}
-						$open['queryname']=rtrim($queryname,',');
+					/*if($_POST['accounttype'] == 0 && $_POST['status']!=$users['status'] && $_POST['status'] == 1){
 						$uid['uid']=$_POST['id'];
 						$token=M('Wxuser')->field('token')->where($uid)->select();
 						if($token){
-							$token_db=M('Token_open');
-							foreach($token as $key=>$val){
-								$wh['token']=$val['token'];
-								$token_db->where($wh)->save($open);
+                            $AccessDB = D('Wxuser_func');
+                            $FunDB = D('Function');
+							foreach($token as $val){
+                                $AccessDB->where(array('token'=>$val['token']))->delete();  //先删除原用户组的权限配置
+                                $fun=$FunDB->where(array('status'=>1))->select();
+                                foreach($fun as $k=>$vo){
+                                    $data[$k]['token'] = $val['token'];
+                                    $data[$k]['uid'] = $_POST['id'];
+                                    $d = new Date();
+                                    $data[$k]['expiredate'] = strtotime($d->dateAdd(3));
+                                    $data[$k]['time'] = time();
+                                    $data[$k]['funcid'] = $vo['id'];
+                                }
+                                $AccessDB->addAll($data);   // 重新创建角色的权限配置
 							}
 						}
-					}
+					}*/
                     $this->success('编辑成功！',U('Users/index'));
                 }else{
                      $this->error('编辑失败!');

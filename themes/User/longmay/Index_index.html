@@ -5,8 +5,9 @@
           <THEAD>
             <tr>
               <TH>公众号名称</TH>
-              <TH>已购产品</TH>
+              <TH>行业模版</TH>
               <TH>服务等级</TH>
+              <TH>已购产品</TH>
               <TH>到期日期</TH>
               <TH>操作</TH>
             </tr>
@@ -18,19 +19,26 @@
                   <td>
                       <p>{weiguanjia:$vo.wxname}</p>
                   </td>
+                    <td>
+                        <p><eq name="vo.industryname" value="">默认<else/>{weiguanjia:$vo.industryname}</eq></p>
+                    </td>
+                    <td align="center">
+                        <p>{weiguanjia:$group.name}</p>
+                    </td>
                   <td>
-                      <p>{weiguanjia:$vo.typename}</p>
-                  </td>
-                  <td align="center">
-                      <p><php>if($_SESSION['gid']>1){echo $_SESSION['gid']-1;}else{echo 0;}</php></p>
+                      <volist name="vo['fun']" id="fun">
+                          <p>{weiguanjia:$fun.funcname}</p>
+                      </volist>
                   </td>
                   <td>
-                      <p>剩余时间:{weiguanjia:$viptime|date="Y-m-d",###}</p>
+                      <volist name="vo['fun']" id="fun">
+                          <p>剩余时间：{weiguanjia:$fun.expiredate|GetLastDays}天</p>
+                      </volist>
                   </Td>
-                  <td class="norightborder" align="right">
+                  <td class="norightborder" align="right" valign="top">
                       <table border="0" cellSpacing="0" cellPadding="0">
                           <tr>
-                              <td rowspan="2">
+                              <td rowspan="3">
                                   <a href="{weiguanjia::U('Index/edit',array('id'=>$vo['id']))}" class="btnGreensBig" >编辑</a>
                               </td>
                               <td>
@@ -40,6 +48,11 @@
                           <tr>
                               <td>
                                   <a href="{weiguanjia::U('Home/Index/help',array('id'=>$vo['id'],'token'=>$vo['token']))}" class="btnGreens" >API接口</a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>
+                                  <a href="{weiguanjia::U('Index/setindustry',array('id'=>$vo['id'],'token'=>$vo['token']))}" class="btnGreens" >设置行业</a>
                               </td>
                           </tr>
                       </table>

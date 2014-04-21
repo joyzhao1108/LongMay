@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{weiguanjia:$tpl['wxname']}</title>
+
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta charset="utf-8">
+<link href="{weiguanjia::RES}/css/flash/css/news2.css" rel="stylesheet" type="text/css" />
+
+
+<style>
+#cate6 .mainmenu li.li0:nth-child(5) .menumesg {
+    background-color: #990000;
+}
+#cate6 .mainmenu li.li0:nth-child(1) .menumesg {
+    background-color: #01AA0A;
+}
+#cate6 .mainmenu li.li0:nth-child(9) .menumesg {
+    background-color: #8B4500;
+}
+
+#cate8 .mainmenu li .menubtn {
+    border-radius: 5px;
+}
+#cate8 .mainmenu li div img {
+    border-radius: 5px;
+}
+
+.themeStyle{background:#DE0C04}
+.bulletin{
+    width: 100%;
+}
+.bulletin .title{
+    width: 100%;
+    background:rgb(108,184,45);
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+}
+.menubtn
+{
+    width:80px ;
+    height: 80px;
+}
+.menubtn .aboutus a
+{
+    background:url({weiguanjia::RES}/images/edu01/aboutus.png);
+}
+.menubtn .aboutus a:hover
+{
+    background:url({weiguanjia::RES}/images/edu01/aboutus_down.png);
+}
+.menucontent {
+    background: lightgoldenrodyellow;
+    margin: auto;
+}
+.menucontent ul {
+
+}
+.menucontent ul li {
+
+    text-align: center;
+    float: left;
+    vertical-align: middle;
+    margin: 5px;
+    vertical-align: bottom;
+}
+.menucontent ul li a {
+    color:#000;
+    font-size: 14px;
+    display: block; cursor: pointer;
+}
+.title3
+{
+    color: rgb(199,3,22);
+}
+</style>
+<script src="{weiguanjia::RES}/css/flash/js/iscroll.js" type="text/javascript"></script>
+<script type="text/javascript">
+var myScroll;
+
+function loaded() {
+myScroll = new iScroll('wrapper', {
+snap: true,
+momentum: false,
+hScrollbar: false,
+onScrollEnd: function () {
+document.querySelector('#indicator > li.active').className = '';
+document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+}
+ });
+ 
+ 
+}
+
+document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
+ 
+</head>
+
+<body id="cate9">
+	<div class="banner">
+		<div id="wrapper">
+			<div id="scroller">
+				<ul id="thelist"> 
+				<volist name="flash" id="so">
+						<li><p>{weiguanjia:$so.info}</p><a href="{weiguanjia:$so.url}"><img src="{weiguanjia:$so.img}" /></a></li>
+					</volist>
+				</ul>
+			</div>
+		</div>
+		<div id="nav">
+			<div id="prev" onclick="myScroll.scrollToPage('prev', 0,400,3);return false">&larr; prev</div>
+			<ul id="indicator">
+			<volist name="flash" id="so">
+			<li   <if condition="$i eq 1">class="active"</if>  >{weiguanjia:$i}</li>
+			</volist>
+			 
+			</ul>
+			<div id="next" onclick="myScroll.scrollToPage('next', 0);return false">next &rarr;</div>
+		</div>
+		<div class="clr"></div>
+	</div>
+    <div class="bulletin">
+        <div class="title">公告栏</div>
+        <ul>
+            <volist name="bulletin" id="so">
+                <li class="content" style="font-size: 12px"><a href="{weiguanjia::U('Wap/Bulletin/content')}&id={weiguanjia:$so.id}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">{weiguanjia:$so.title}<span class="title3">[详情]</span></a></li>
+            </volist>
+        </ul>
+    </div>
+    <div style="margin: 10px auto 10px"><img src="{weiguanjia::RES}/images/edu01/lessonsplitb.png" width="100%"></div>
+    <div class="menucontent" id="menulist">
+        <ul>
+            <li>
+                <a target="_self" href="{weiguanjia::U('Wap/Company/about')}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr><td><img src="{weiguanjia::RES}/images/edu01/aboutus.png" width="50px" height="50px"></td></tr>
+                        <tr><td>关于我们</td></tr>
+                    </table>
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="{weiguanjia::U('Wap/Lottery/index')}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr><td><img src="{weiguanjia::RES}/images/edu01/choujiang.png" width="50px" height="50px"></td></tr>
+                        <tr><td>抽奖活动</td></tr>
+                    </table>
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="{weiguanjia::U('Wap/Lesson/index')}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr><td><img src="{weiguanjia::RES}/images/edu01/lesson.png" width="50px" height="50px"></td></tr>
+                        <tr><td>课程介绍</td></tr>
+                    </table>
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="{weiguanjia::U('Wap/Lesson/order')}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr><td><img src="{weiguanjia::RES}/images/edu01/book.png" width="50px" height="50px"></td></tr>
+                        <tr><td>在线预约</td></tr>
+                    </table>
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="{weiguanjia::U('Wap/Teacher/index')}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr><td><img src="{weiguanjia::RES}/images/edu01/teacher.png" width="50px" height="50px"></td></tr>
+                        <tr><td>名师风采</td></tr>
+                    </table>
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="{weiguanjia::U('Wap/Activity/index')}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr><td><img src="{weiguanjia::RES}/images/edu01/activity.png" width="50px" height="50px"></td></tr>
+                        <tr><td>最新活动</td></tr>
+                    </table>
+                </a>
+            </li>
+            <li>
+                <a target="_self" href="{weiguanjia::U('Wap/Company/index')}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr><td><img src="{weiguanjia::RES}/images/edu01/contactus.png" width="50px" height="50px"></td></tr>
+                        <tr><td>联系我们</td></tr>
+                    </table>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+
+<script>
+    var count = document.getElementById("thelist").getElementsByTagName("img").length;
+    for(i=0;i<count;i++){
+        document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+    }
+    document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+
+    var countmenu = document.getElementById("menulist").getElementsByTagName("img").length;
+    var imgwidth = (document.body.clientWidth-20)/5;
+    var divwidth = (imgwidth+10)*4;
+    document.getElementById("menulist").style.cssText = " width:"+divwidth+"px;";
+    for(i=0;i<countmenu;i++){
+        document.getElementById("menulist").getElementsByTagName("img").item(i).style.cssText = " width:"+imgwidth+"px;height:"+imgwidth+"px;";
+    }
+
+
+    setInterval(function(){
+    myScroll.scrollToPage('next', 0,400,count);
+    },3500 );
+
+    window.onresize = function(){
+        for(i=0;i<count;i++){
+        document.getElementById("thelist").getElementsByTagName("img").item(i).style.cssText = " width:"+document.body.clientWidth+"px";
+
+        }
+
+        document.getElementById("scroller").style.cssText = " width:"+document.body.clientWidth*count+"px";
+    }
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+        WeixinJSBridge.call('hideToolbar');
+    });
+</script>
+
+<script src="{weiguanjia::RES}/css/flash/js/zepto.min.js" type="text/javascript"></script>
+<script src="{weiguanjia::RES}/css/flash/js/plugmenu.js" type="text/javascript"></script>
+
+<div class="copyright">
+<if condition="$iscopyright eq 1">
+{weiguanjia:$homeInfo.copyright}
+<else/>
+{weiguanjia:$siteCopyright}
+</if>
+</div> 
+ 
+ <div style="display:none"> {weiguanjia:$tpl.tongji|htmlspecialchars_decode}</div>
+ </body>
+</html>

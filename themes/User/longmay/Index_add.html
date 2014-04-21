@@ -15,18 +15,12 @@
                             <td><span class="info">请选择您的微信帐号类型</span></td>
                         </tr>
                     </table>
-                    <script>
-                        $('.wxtype').click(function(){
-                            $(this).siblings().removeAttr("checked");
-                            $('#wxtype').val($(this).val());
-                        });
-                    </script>
                 </div>
                 <div>
                     <table class="infoedittbl">
                         <tr>
                             <th>公众号名称</th>
-                            <td><input id="wxname" type="text" placeholder="" name="wxname" class="inputextwhite" value="{weiguanjia:$info.wxname}"></td>
+                            <td><input id="wxname" type="text" placeholder="" name="wxname" class="inputextwhite" value=""></td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
@@ -38,11 +32,11 @@
                     <table class="infoedittbl">
                         <tr>
                             <th>公众号原始ID</th>
-                            <td><input id="wxid" type="text" disabled="disabled"  name="wxid" class="inputext" value="{weiguanjia:$info.wxid}"></td>
+                            <td><input id="wxid" type="text"  name="wxid" class="inputextwhite" value=""></td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
-                            <td><span class="info">无法修改，您可以联系管理员，<a href="http://jingyan.baidu.com/article/9c69d48f46186e13c9024e30.html" target="_blank"><img src="{weiguanjia::RES}/images/help.png" class="vm helpimg" title="帮助"></a></span></td>
+                            <td><span class="info"><a href="http://jingyan.baidu.com/article/9c69d48f46186e13c9024e30.html" target="_blank"><img src="{weiguanjia::RES}/images/help.png" class="vm helpimg" title="帮助"></a></span></td>
                         </tr>
                     </table>
                 </div>
@@ -74,7 +68,7 @@
                     <table class="infoedittbl">
                         <tr>
                             <th>公众号邮箱</th>
-                            <td><input id="qq" type="text" name="qq" class="inputextwhite" value="{weiguanjia:$info.qq}"></td>
+                            <td><input id="qq" type="text" name="qq" class="inputextwhite" value=""></td>
                         </tr>
                         <tr>
                             <td>&nbsp;</td>
@@ -82,7 +76,7 @@
                         </tr>
                     </table>
                 </div>
-                <div>
+                <div class="appsecret">
                     <table class="infoedittbl">
                         <tr>
                             <th>AppId</th>
@@ -94,7 +88,7 @@
                         </tr>
                     </table>
                 </div>
-                <div>
+                <div class="appsecret">
                     <table class="infoedittbl">
                         <tr>
                             <th>AppSecret</th>
@@ -106,6 +100,21 @@
                         </tr>
                     </table>
                 </div>
+                <script>
+                    $('.wxtype').click(function(){
+                        $(this).siblings().removeAttr("checked");
+                        $('#wxtype').val($(this).val());
+                        if($(this).attr("id") == "wxtype1")
+                        {
+                            $(".appsecret").show();
+                        }
+                        else
+                        {
+                            $(".appsecret").hide();
+                        }
+                    });
+                    $(".appsecret").hide();
+                </script>
                 <div class="reg-btn-panel">
                     <table class="infoedittbl">
                         <tr>

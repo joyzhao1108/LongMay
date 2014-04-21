@@ -4,13 +4,11 @@ class LessonAction extends UserAction{
 	public $lesson_model;
 	public $lesson_cat_model;
 	public $isDining;
-	public function _initialize() {
-		parent::_initialize();
-		$token_open = M('token_open')->field('queryname')->where(array('token'=>session('token')))->find();
-		if(!strpos($token_open['queryname'],'lesson')){
-            $this->error('您还未开启该模块的使用权,请到功能模块中添加',U('Index/index',array('token'=>session('token'),'id'=>session('wxid'))));
-		}	
-	}
+    public function _initialize()
+    {
+        parent::_initialize();
+        parent::checkRight('education');
+    }
 	public function index(){		
 		$catid=intval($_GET['catid']);
 		$catid=$catid==''?0:$catid;

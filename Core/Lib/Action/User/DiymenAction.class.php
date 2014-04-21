@@ -1,7 +1,11 @@
 <?php
 
 class DiymenAction extends UserAction{
-
+    public function _initialize()
+    {
+        parent::_initialize();
+        parent::checkRight('diymen_set');
+    }
 	public function index(){
 
 		$data=M('Diymen_set')->where(array('token'=>$_SESSION['token']))->find();
@@ -131,10 +135,11 @@ class DiymenAction extends UserAction{
 	public function class_send(){
 
 		if(IS_GET){
-
-			$api = M('Diymen_set')->where(array('token'=>session('token')))->find();
-
-			$url_get = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$api['appid'].'&secret='.$api['appsecret'];			
+            if ($this->wxuser['appid'] == false || $this->wxuser['appsecret'] == false ){
+                $this->error('必须先填写【AppId】和【 AppSecret】');
+                exit;
+            }
+			$url_get = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid='.$this->wxuser['appid'].'&secret='.$this->wxuser['appsecret'];
 
 			$result = file_get_contents($url_get);
 
@@ -156,13 +161,7 @@ class DiymenAction extends UserAction{
 
 			$json = json_decode($result);
 
-			if ($api['appid'] == false || $api['appsecret'] == false ){
 
-				$this->error('必须先填写【AppId】和【 AppSecret】');
-
-				exit;
-
-			}
 
 			$data = '{"button":[';
 

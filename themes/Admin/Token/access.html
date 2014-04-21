@@ -13,7 +13,11 @@
     </style>
 </head>
 <body>
-	<form action="{weiguanjia::U('Token/access')}" method="post" name="form" id="myform">
+<div id="artlist">
+    公众号产品设置：{weiguanjia:$wxuser.wxname}-{weiguanjia:$token}<input class="bginput" type="button" onclick="javascript:history.back(-1);" value="返 回" >
+</div>
+<div class="cr"></div>
+	<form action="{weiguanjia::U('Token/access')}" method="POST">
 		<input type="hidden" name="token" value="{weiguanjia:$token}" />
 		<table id="tree" width="100%" border="0" cellpadding="4" cellspacing="1" class="table">
             <tr class="tr lt">
@@ -24,13 +28,14 @@
                                 <legend>
                                     <h4>{weiguanjia:$vo.name}</h4>
                                 </legend>
-                                <ul class="changeapp">
+                                <table border="0" cellpadding="4" cellspacing="1">
                                     <volist name="vo['sub']" id="sub">
-                                        <li>
-                                            <input type='checkbox' name='func_id[]' value='{weiguanjia:$sub.id}' class='radio' /><span>{weiguanjia:$sub.name}</span>
-                                        </li>
+                                    <tr>
+                                        <td width="150px"><input type='checkbox' name="funcids[]" id="fun{weiguanjia:$sub.id}" value='{weiguanjia:$sub.id}' class='radio' <eq name="sub.has" value="1">checked='checked'</eq> /><label for="fun{weiguanjia:$sub.id}"><span>{weiguanjia:$sub.name}</span></label></td>
+                                        <td width="100px">到期时间：<input type="text" name="exp[{weiguanjia:$sub.id}]" onClick="WdatePicker({minDate:'%y-%M-#{%d+1}'})" class="expdate ipt" size="25" value="<if condition="$sub['expiredate'] neq ''">{weiguanjia:$sub.expiredate|date="Y-m-d",###}</if>"></td>
+                                    </tr>
                                     </volist>
-                                </ul>
+                                </table>
                             </fieldset>
                         </volist>
                     </div>
@@ -38,14 +43,21 @@
             </tr>
             <tr class="tr lt">
                 <td>
-                    到期时间：<input type="text" name="expiredate" id="expiredate" onClick="WdatePicker()" class="ipt" size="45" value="">
+                    <span class="red">[全选]</span>到期时间：<input type="text" name="expiredate" id="expiredateAll" onClick="WdatePicker({minDate:'%y-%M-#{%d+1}',onpicking:fDateChange})" class="ipt" size="25" value="">
                 </td>
             </tr>
 			<tr class="tr lt">
 				<td>
-					<input class="bginput" type="submit" name="dosubmit" value="批量更新" ></td>
+					<input class="bginput" type="submit" value="批量更新" ></td>
 			</tr>
 		</table>
 	</form>
+    <script>
+        function fDateChange(dp){
+            //if(!confirm('日期框原来的值为: '+dp.cal.getDateStr()+', 要用新选择的值:' + dp.cal.getNewDateStr() + '覆盖吗?')) return true;
+            $(".expdate").val(dp.cal.getNewDateStr());
+            $(".radio").attr("checked","checked");
+        }
+    </script>
 </body>
 </html>

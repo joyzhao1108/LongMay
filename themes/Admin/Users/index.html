@@ -6,7 +6,6 @@
 <include file="common:public" />
 <div class="cr"></div>
 <div id="artlist">
-
 	 <div class="ksearch">
     	<div class="fl">
 			<form action="{weiguanjia::U('Users/search')}" method="post">
@@ -38,18 +37,26 @@
 </div>
 <table width="100%" border="0" cellspacing="0" cellpadding="0" id="alist">
 	  <tr>
-		<td width="70">ID</td>
-		<td width="150">用户名称</td>
+		<td width="30">ID</td>
+		<td width="100">用户名称</td>
+          <td width="80">账户类型</td>
+          <td width="80">真实姓名</td>
+          <td width="200">公司名称</td>
+          <td width="80">手机号码</td>
 		<td width="80">服务等级</td>
 		<td width="100">最后登录IP</td>
 		<td width="150">最后登录时间</td>
-		<td width="70">状态</td>
+		<td width="50">状态</td>
 		<td width="170">管理操作</td>
 	  </tr>
 	    <volist name="info" id="vo">
 			<tr>
 				<td align='center'>{weiguanjia:$vo.id}</td>
 				<td >{weiguanjia:$vo.username}</td>
+                <td ><eq name="vo.accounttype" value="1"><font color="red">会员账户</font><else/><font color="blue">注册账户</font></eq> </td>
+                <td >{weiguanjia:$vo.truename}</td>
+                <td >{weiguanjia:$vo.companyname}</td>
+                <td >{weiguanjia:$vo.mobile}</td>
 				<td >{weiguanjia:$group[$vo['gid']]}</td>
 				<td align='center'>{weiguanjia:$vo.lastip}</td>
 				<td align='center'><php>echo date('Y-m-d H:i:s', $vo['lasttime'])</php></td>
@@ -62,7 +69,7 @@
 			</tr>
 	    </volist>
      <tr bgcolor="#FFFFFF"> 
-      <td colspan="8"><div class="listpage">{weiguanjia:$page}</div></td>
+      <td colspan="12"><div class="listpage">{weiguanjia:$page}</div></td>
     </tr>
    
 </table>

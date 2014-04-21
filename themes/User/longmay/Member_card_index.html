@@ -206,16 +206,8 @@ document.getElementById("tishi").innerHTML=document.getElementById("tishi2").val
 				</div>
 			</div>
 		</td>
-		<td align="center" valign="top">
-			<div class="banner">
-				<img src="{weiguanjia::RES}/images/cart_info/shopping-2.jpg">
-				<img id="shopping" src="{weiguanjia:$card.shopping}">
-				<img src="{weiguanjia::RES}/images/cart_info/shopping-3.jpg">
-			</div>
-		</td>
 	</tr>
 <tr>
-<td align="center">填写外链地址查看效果</td>
 <td align="center">填写外链地址查看效果</td>
 <td align="center">填写外链地址查看效果</td>
 <td align="center">填写外链地址查看效果</td>
@@ -230,9 +222,6 @@ document.getElementById("tishi").innerHTML=document.getElementById("tishi2").val
 	<td align="center">
 		<textarea name="qiandao" class="px" id="qiandao2" style="width:210px; height:36px" onblur="document.getElementById(&#39;qiandao&#39;).src=document.getElementById(&#39;qiandao2&#39;).value;">{weiguanjia:$card.qiandao}</textarea>
 	</td>
-	<td align="center">
-		<textarea name="shopping" class="px" id="shopping2" style="width:210px; height:36px" onblur="document.getElementById(&#39;shopping&#39;).src=document.getElementById(&#39;shopping2&#39;).value;">{weiguanjia:$card.shopping}</textarea>
-	</td>
  </tr>
 <tr>
 <td></td>
@@ -240,51 +229,78 @@ document.getElementById("tishi").innerHTML=document.getElementById("tishi2").val
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
+     <tr>
+         <td align="center" valign="top">
+             <div class="banner">
+                 <img src="{weiguanjia::RES}/images/cart_info/user-2.jpg">
+                 <img id="user" src="{weiguanjia:$card.memberinfo}">
+                 <img src="{weiguanjia::RES}/images/cart_info/user-3.jpg">
+             </div>
+         </td>
+         <td align="center" valign="top">
+             <div class="banner">
+                 <img src="{weiguanjia::RES}/images/cart_info/info-2.jpg">
+                 <img id="info" src="{weiguanjia:$card.membermsg}">
+                 <img src="{weiguanjia::RES}/images/cart_info/info-3.jpg">
+             </div>
+         </td>
+         <td align="center" valign="top">
+             <div class="banner">
+                 <img src="{weiguanjia::RES}/images/cart_info/addr-2.jpg">
+                 <img id="addr" src="{weiguanjia:$card.contact}">
+                 <img src="{weiguanjia::RES}/images/cart_info/addr-3.jpg">
+             </div>
+         </td>
+     </tr>
+     <tr>
+         <td align="center">填写外链地址查看效果</td>
+         <td align="center">填写外链地址查看效果</td>
+         <td align="center">填写外链地址查看效果</td>
+     </tr>
+     <tr>
+         <td align="center">
+             <textarea name="memberinfo" class="px" id="user2" style="width:210px; height:36px" onblur="document.getElementById(&#39;user&#39;).src=document.getElementById(&#39;user2&#39;).value;">{weiguanjia:$card.memberinfo}</textarea>
+         </td>
+         <td align="center">
+             <textarea name="membermsg" class="px" id="info2" style="width:210px; height:36px" onblur="document.getElementById(&#39;info&#39;).src=document.getElementById(&#39;info2&#39;).value;">{weiguanjia:$card.membermsg}</textarea>
+         </td>
+         <td align="center">
+             <textarea name="contact" class="px" id="addr2" style="width:210px; height:36px" onblur="document.getElementById(&#39;addr&#39;).src=document.getElementById(&#39;addr2&#39;).value;">{weiguanjia:$card.contact}</textarea>
+         </td>
+     </tr>
+     <tr>
+         <td></td>
+         <td>&nbsp;</td>
+         <td>&nbsp;</td>
+         <td>&nbsp;</td>
+     </tr>
 <tr>
-<td align="center" valign="top">
-	<div class="banner">
-		<img src="{weiguanjia::RES}/images/cart_info/user-2.jpg">
-		<img id="user" src="{weiguanjia:$card.memberinfo}">
-		<img src="{weiguanjia::RES}/images/cart_info/user-3.jpg">
-	</div>
-</td>
-<td align="center" valign="top">
-	<div class="banner">
-		<img src="{weiguanjia::RES}/images/cart_info/info-2.jpg">
-		<img id="info" src="{weiguanjia:$card.membermsg}">
-		<img src="{weiguanjia::RES}/images/cart_info/info-3.jpg">
-	</div>
-</td>
-<td align="center" valign="top">
-	<div class="banner">
-		<img src="{weiguanjia::RES}/images/cart_info/addr-2.jpg">
-		<img id="addr" src="{weiguanjia:$card.contact}">
-		<img src="{weiguanjia::RES}/images/cart_info/addr-3.jpg">
-	</div>
-</td>
+    <td align="center" valign="top">
+        <div class="banner">
+            <img src="{weiguanjia::RES}/images/cart_info/shopping-2.jpg">
+            <img id="shopping" src="{weiguanjia:$card.shopping}">
+            <img src="{weiguanjia::RES}/images/cart_info/shopping-3.jpg">
+        </div>
+    </td>
 <td align="center" valign="middle">
 	<span class="red">备注：图片宽640px高109px或者更高，但是不要高太多；图片类型为jpg，签到图片外与其他图片高度不同，尽量根据模板图片修改。</span>
 	<a href="{weiguanjia::RES}/images/card//template2.rar" class="green">请下载模板</a>
 </td>
+    <td>&nbsp;</td>
 </tr>
 <tr>
 <td align="center">填写外链地址查看效果</td>
-<td align="center">填写外链地址查看效果</td>
-<td align="center">填写外链地址查看效果</td>
+    <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td align="center">
-	<textarea name="memberinfo" class="px" id="user2" style="width:210px; height:36px" onblur="document.getElementById(&#39;user&#39;).src=document.getElementById(&#39;user2&#39;).value;">{weiguanjia:$card.memberinfo}</textarea>
-</td>
-<td align="center">
-	<textarea name="membermsg" class="px" id="info2" style="width:210px; height:36px" onblur="document.getElementById(&#39;info&#39;).src=document.getElementById(&#39;info2&#39;).value;">{weiguanjia:$card.membermsg}</textarea>
-</td>
-<td align="center">
-	<textarea name="contact" class="px" id="addr2" style="width:210px; height:36px" onblur="document.getElementById(&#39;addr&#39;).src=document.getElementById(&#39;addr2&#39;).value;">{weiguanjia:$card.contact}</textarea>
-</td>
+    <td align="center">
+        <textarea name="shopping" class="px" id="shopping2" style="width:210px; height:36px" onblur="document.getElementById(&#39;shopping&#39;).src=document.getElementById(&#39;shopping2&#39;).value;">{weiguanjia:$card.shopping}</textarea>
+    </td>
 <td><button type="submit" name="button" class="btnGreen">保存</button></td>
+    <td>&nbsp;</td>
 </tr>
+
 </tbody>
 </table>
   </div> 

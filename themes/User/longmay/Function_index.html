@@ -16,9 +16,15 @@
 			<ul class="changeapp">
 				<volist name="vo['sub']" id="sub">
 				<li>
-                    <span <if condition="in_array($sub['funname'],$check)">class="fun-checked"<else />class="fun-unchecked"</if>>{weiguanjia:$sub.name}</span>
-                    <span class="funnumred">300</span>
-					<div>功能说明:<br> {weiguanjia:$sub.info}</div>
+                    <if condition="$sub['lastdays'] gt 0">
+                            <span class="fun-checked">{weiguanjia:$sub.name}</span>
+                            <span class="funnumred">{weiguanjia:$sub['lastdays']}</span>
+                            <div>功能说明:<br> {weiguanjia:$sub.info}<br>到期时间:<br>{weiguanjia:$sub.expiredate|date="Y-m-d",###}</div>
+                        <else />
+                            <span class="fun-unchecked">{weiguanjia:$sub.name}</span>
+                            <span class="funnumred"></span>
+                            <div>功能说明:<br> {weiguanjia:$sub.info}</div>
+                    </if>
 				</li>
 				</volist>
 			</ul>

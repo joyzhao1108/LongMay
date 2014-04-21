@@ -13,7 +13,7 @@ body, input, button, select, textarea {
 
 a {
 	text-decoration:none;
-	color:#636b89;
+	color:rgb(0,147,211);
 	blr:expression(this.onFocus=this.blur())
 }
 /*a:link, a:visited {
@@ -405,9 +405,10 @@ textarea {
     text-align: center;
 
 }
-.accountInfo {
-    float: right;
-    margin: 0;
+.accountDiv
+{
+    float:right;
+    margin-right:50px;
 }
 .processContent {
     background: none repeat scroll 0 0 #FFFFFF;
@@ -544,7 +545,7 @@ textarea {
     padding: 0px 20px 20px;
     width:773px;
 	background-color: #FFFFFF;
-	min-height:380px;
+	min-height:580px;
 }
 .tableContent .content h4{
 	font-size:16px;
@@ -681,9 +682,9 @@ visibility:hidden
     background-color:rgb(0,147,221);
     color:#fff;
     font-size:14px;
-    line-height:75px;
+    line-height:112px;
     width:66px;
-    height: 75px;
+    height: 112px;
 }
 .btnGreensBig:hover {
     background-color:rgb(0,147,221);

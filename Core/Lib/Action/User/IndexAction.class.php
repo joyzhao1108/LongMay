@@ -3,18 +3,22 @@ class IndexAction extends UserAction{
 	//公众帐号列表
 	public function index(){
 		$where['uid']=session('uid');
-		$group=D('User_group')->select();
-		foreach($group as $key=>$val){
-			$groups[$val['id']]['did']=$val['diynum'];
-			$groups[$val['id']]['cid']=$val['connectnum'];
-		}
-		unset($group);
-		$db=M('Wxuser');
+		$user=M('Users')->find(session('uid'));
+        $group=M('User_group')->find($user['gid']);
+		$db=D('Wxuser');
 		$count=$db->where($where)->count();
 		$page=new Page($count,25);
-		$info=$db->where($where)->limit($page->firstRow.','.$page->listRows)->select();
+		$info=$db->relation(true)->where($where)->limit($page->firstRow.','.$page->listRows)->select();
+
+        $token_open=D('Wxuser_func');
+        foreach($info as $key=>$vo){
+            $where = array('token'=>$vo['token'],'uid'=>session('uid'));
+            $fun=$token_open->relation(true)->where($where)->select();
+            $info[$key]['fun']=$fun;
+        }
+
 		$this->assign('info',$info);
-		$this->assign('group',$groups);
+		$this->assign('group',$group);
 		$this->assign('page',$page->show());
 		$this->display();
 	}
@@ -52,6 +56,30 @@ class IndexAction extends UserAction{
 		$this->assign('info',$res);
 		$this->display();
 	}
+
+    public function setindustry(){
+        $db = M('Wxuser');
+        if(IS_POST)
+        {
+            $id=$this->_post('id','intval');
+            $where['id']=$id;
+            if ($db->where($where)->save($_POST)) {
+                $this->success('操作成功',U('Index/index'));
+            } else {
+                $this->error('操作失败');
+            }
+        }
+        else{
+            $id=$this->_get('id','intval');
+            $where['uid']=session('uid');
+            $res=$db->where($where)->find($id);
+            $industry=M('Industry')->where('status=1')->select();
+            $this->assign('info',$res);
+            $this->assign('industry',$industry);
+            $this->display();
+        }
+
+    }
 
 	public function editsms(){
 		$id=$this->_get('id','intval');
@@ -125,7 +153,7 @@ class IndexAction extends UserAction{
 		if($users['wechat_card_num']<$data['wechat_card_num']){
 			
 		}else{
-			$this->error('您的VIP等级所能创建的公众号数量已经到达上线，请购买后再创建',U('User/Index/index'));exit();
+			$this->error('您的服务等级所能创建的公众号数量已经到达上线，请购买后再创建',U('User/Index/index'));exit();
 		}
 		//$this->all_insert('Wxuser');
 		//
@@ -136,8 +164,22 @@ class IndexAction extends UserAction{
 			$id=$db->add();
 			if($id){
 				M('Users')->field('wechat_card_num')->where(array('id'=>session('uid')))->setInc('wechat_card_num');
-				$this->addfc();
-				//
+                if($users['createtime'] > strtotime('-3 days'))
+                {
+                    $AccessDB = D('Wxuser_func');
+                    $FunDB = D('Function');
+                    $AccessDB->where(array('token'=>$this->_post('token')))->delete();  //先删除原用户组的权限配置
+                    $fun=$FunDB->where(array('status'=>1))->select();
+                    foreach($fun as $k=>$vo){
+                        $data[$k]['token'] = $this->_post('token');
+                        $data[$k]['uid'] = $_POST['id'];
+                        $d = new Date((int)$users['createtime']);
+                        $data[$k]['expiredate'] = strtotime($d->dateAdd(3));
+                        $data[$k]['time'] = time();
+                        $data[$k]['funcid'] = $vo['id'];
+                    }
+                    $AccessDB->addAll($data);   // 重新创建角色的权限配置
+                }
 				$this->success('操作成功',U('Index/index'));
 			}else{
 				$this->error('操作失败',U('Index/index'));

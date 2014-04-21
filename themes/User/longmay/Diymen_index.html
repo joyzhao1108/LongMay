@@ -15,9 +15,8 @@ $(document).ready(function() {
 </div>
  <div class="cLineD">
  	<form enctype="multipart/form-data" action="" method="post"> 
-    AppId:<input type="text" size="20" tabindex="1" class="px" value="{weiguanjia:$diymen.appid}" id="appid" name="appid">　 
-	AppSecret: <input type="text" size="20" tabindex="1" class="px" value="{weiguanjia:$diymen.appsecret}" id="appsecret" name="appsecret">
-	<button class=" btnGrayS vm" value="true" name="appidsubmit" type="submit"><strong>保存</strong></button>
+    AppId:{weiguanjia:$wecha.appid}　
+	AppSecret: {weiguanjia:$wecha.appsecret}
 	<br><span style="color:red">通过认证服务号才能得到这2个值!</span>
 </form>
          </div>
@@ -89,7 +88,7 @@ $(document).ready(function() {
 		</style>
 		注：<br>
 		(使用前提是已经拥有了自定义菜单的用户才能够使用，)<br>
-		第一步:必须先填写【AppId】【 AppSecret】！<br>
+		第一步:必须先通过编辑公众号信息填写【AppId】【 AppSecret】,！<br>
 		第二步:添加菜单，<br>
 		第三步:点击生成!<br>
 		注意：1级菜单最多只能开启3个，2级子菜单最多开启5个<br>

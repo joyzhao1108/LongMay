@@ -3,104 +3,41 @@ function strExists($haystack, $needle)
 {
     return !(strpos($haystack, $needle) === FALSE);
 }
-class IndexAction extends BaseAction
+class IndexAction extends WapTmplAction
 {
-    private $tpl; //微信公共帐号信息
-    private $info; //分类信息
-    private $wecha_id;
     private $copyright;
-    public $company;
-    public $token;
+
     
     public function _initialize()
     {
         parent::_initialize();
-        $agent = $_SERVER['HTTP_USER_AGENT'];
-        //if (!strpos($agent, "MicroMessenger")) {
-           // echo '此功能只能在微信浏览器中使用';
-           // exit;
-        //}
-        $this->token     = $this->_get('token', 'trim');
-        $this->wecha_id  = $this->_get('wecha_id', 'trim');
-        $where['token']  = $this->token;
-        $tpl             = D('Wxuser')->where($where)->find();
-        $tpl['color_id'] = 0;
-        $info            = M('Classify')->where(array(
-            'token' => $this->_get('token'),
-            'status' => 1
-        ))->order('sorts desc')->select();
-        $info            = $this->convertLinks($info); //加外链等信息
-        $gid             = D('Users')->field('gid')->find($tpl['uid']);
+        $gid             = D('Users')->field('gid')->find($this->wxuser['uid']);
         $copy            = D('user_group')->field('iscopyright')->find($gid['gid']); //查询用户所属组
         $this->copyright = $copy['iscopyright'];
-        $this->info      = $info;
-        $this->tpl       = $tpl;
-        $company_db      = M('company');
-        $this->company   = $company_db->where(array(
-            'token' => $this->token,
-            'isbranch' => 0
-        ))->find();
-        $this->assign('company', $this->company);
-        $this->assign('token', $this->token);
-		$home            = M('Home')->where($where)->select();
-		$homeInfo        = M('Menuplus')->where($where)->select();
-		$arr             = $homeInfo[0];
-		$arr = array_slice($arr,5);
-		$array = array_chunk($arr,3,true);
-		$arrayNew = array();
-		foreach($array as $k=>$v) {
-			foreach($v as $k2=>$v2) {
-				$b = explode('_',$k2);
-				break;
-			}
-			$a = array_values($v);
-			$arrayNew[$k]['url'] = $a[0];
-			$arrayNew[$k]['sort'] = $a[1];
-			$arrayNew[$k]['display'] = $a[2];
-			$arrayNew[$k]['name'] = $b[0];
-		}
-		foreach($arrayNew as $k=>$v) {
-			$newArray[$k]['url'] = $arrayNew[$k]['url'];
-			$newArray[$k]['sort'] = $arrayNew[$k]['sort'];
-			$newArray[$k]['display'] = $arrayNew[$k]['display'];
-			$newArray[$k]['name'] = $arrayNew[$k]['name'];
-			if ($k > 2) {
-				break;
-			}
-		}
-		$newArray = array_values(array_sort($newArray, 'sort', 'asc'));
-		$user_group = M('User_group')->where(array(
-            'id' => session('gid')
-        ))->find();
-        $this->assign('homebgurl', $home[0]['homebgurl']);
-        $this->assign('homeurl', $home[0]['homebgurl']);
-		$homeInfo[0]['plugmenucolor'] = $homeInfo[0]['menupluscolor'];
-        $this->assign('homeInfo', $homeInfo[0]);
-        $this->assign('menuPlus', $newArray);
-        $this->assign('plugmenus', $newArray);
-        $this->assign('iscopyright', $user_group['iscopyright']);
+        $this->assign('copyright', $this->copyright);
     }
-    
-    public function classify()
-    {
-        $this->assign('info', $this->info);
-        $this->display($this->tpl['tpltypename']);
-    }
-    
+
     public function index()
     {
         $where['token'] = $this->_get('token');
         $flash          = M('Flash')->where($where)->select();
         $bulletin          = M('Bulletin')->where($where)->select();
+        $buarray = array();
+        foreach($bulletin as $vo)
+        {
+            $title = substr($vo["title"],0,60);
+            if(mb_strlen($vo["title"]) > 60)
+            {
+                $title .= '...';
+            }
+            $vo["title"] = $title;
+            $buarray[] = $vo;
+        }
         $count          = count($flash);
         $this->assign('flash', $flash);
-        $this->assign('bulletin', $bulletin);
-        $this->assign('info', $this->info);
+        $this->assign('bulletin', $buarray);
         $this->assign('num', $count);
-        $this->assign('info', $this->info);
-        $this->assign('tpl', $this->tpl);
-        $this->assign('copyright', $this->copyright);
-        $this->display($this->tpl['tpltypename']);
+        $this->display('index'.$this->industrytmpl);
     }
     
     public function lists()
@@ -156,72 +93,13 @@ class IndexAction extends BaseAction
     
     public function flash()
     {
-        $where['token'] = $this->_get('token', 'trim');
+        $where['token'] = $this->token;
         $flash          = M('Flash')->where($where)->select();
         $count          = count($flash);
         $this->assign('flash', $flash);
         $this->assign('info', $this->info);
         $this->assign('num', $count);
         $this->display('ty_index');
-    }
-    /**
-     * 获取链接
-     *
-     * @param unknown_type $url
-     * @return unknown
-     */
-    public function getLink($url)
-    {
-        $urlArr       = explode(' ', $url);
-        $urlInfoCount = count($urlArr);
-        if ($urlInfoCount > 1) {
-            $itemid = intval($urlArr[1]);
-        }
-        //会员卡 刮刮卡 团购 商城 大转盘 优惠券 订餐 商家订单
-        if (strExists($url, '刮刮卡')) {
-            $link = '/index.php?g=Wap&m=Guajiang&a=index&token=' . $this->token . '&wecha_id=' . $this->wecha_id;
-            if ($itemid) {
-                $link .= '&id=' . $itemid;
-            }
-        } elseif (strExists($url, '大转盘')) {
-            $link = '/index.php?g=Wap&m=Lottery&a=index&token=' . $this->token . '&wecha_id=' . $this->wecha_id;
-            if ($itemid) {
-                $link .= '&id=' . $itemid;
-            }
-        } elseif (strExists($url, '优惠券')) {
-            $link = '/index.php?g=Wap&m=Coupon&a=index&token=' . $this->token . '&wecha_id=' . $this->wecha_id;
-            if ($itemid) {
-                $link .= '&id=' . $itemid;
-            }
-        } elseif (strExists($url, '商家订单')) {
-            if ($itemid) {
-                $link = $link = '/index.php?g=Wap&m=Host&a=index&token=' . $this->token . '&wecha_id=' . $this->wecha_id . '&hid=' . $itemid;
-            } else {
-                $link = '/index.php?g=Wap&m=Host&a=Detail&token=' . $this->token . '&wecha_id=' . $this->wecha_id;
-            }
-        } elseif (strExists($url, '会员卡')) {
-            $link = '/index.php?g=Wap&m=Card&a=vip&token=' . $this->token . '&wecha_id=' . $this->wecha_id;
-        } elseif (strExists($url, '商城')) {
-            $link = '/index.php?g=Wap&m=Product&a=index&token=' . $this->token . '&wecha_id=' . $this->wecha_id;
-        } elseif (strExists($url, '订餐')) {
-            $link = '/index.php?g=Wap&m=Product&a=dining&dining=1&token=' . $this->token . '&wecha_id=' . $this->wecha_id;
-        } elseif (strExists($url, '团购')) {
-            $link = '/index.php?g=Wap&m=Groupon&a=grouponIndex&token=' . $this->token . '&wecha_id=' . $this->wecha_id;
-        } else {
-            $link = $url;
-        }
-        return $link;
-    }
-    public function convertLinks($arr)
-    {
-        $i = 0;
-        foreach ($arr as $a) {
-            if ($a['url']) {
-                $arr[$i]['url'] = $this->getLink($a['url']);
-            }
-            $i++;
-        }
-        return $arr;
     }
 }
 ?>

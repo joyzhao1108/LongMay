@@ -1,14 +1,7 @@
 <?php
-class LotteryAction extends BaseAction{
+class LotteryAction extends WapTmplAction{
 	public function index(){
-		$agent = $_SERVER['HTTP_USER_AGENT']; 
-		if(!strpos($agent,"MicroMessenger")) {
-			echo '此功能只能在微信浏览器中使用';exit;
-		}
-		$token		= $this->_get('token');
-		$wecha_id	= $this->_get('wecha_id');
-
-        $Lottery = M('Lottery')->where(array('token'=>$token,'type'=>1,'status'=>1))->find();
+        $Lottery = M('Lottery')->where(array('token'=>$this->token,'type'=>1,'status'=>1))->find();
         if($Lottery == Null){
             echo '暂无抽奖活动';
             exit;
@@ -16,7 +9,7 @@ class LotteryAction extends BaseAction{
 		$id 		= $Lottery['id'];
 		
 		$redata		= M('Lottery_record');
-		$where 		= array('token'=>$token,'wecha_id'=>$wecha_id,'lid'=>$id);
+		$where 		= array('token'=>$this->token,'wecha_id'=>$this->wecha_id,'lid'=>$id);
 		$record 	= $redata->where($where)->find();
 		if($record == Null){
 			$redata->add($where);
@@ -50,7 +43,7 @@ class LotteryAction extends BaseAction{
         M('Lottery')->where(array('id'=>$id))->setField('joinnum',$recordcount);
 		
 		$data['On'] 		= 1;
-		$data['token'] 		= $token;
+		$data['token'] 		= $this->token;
 		$data['wecha_id']	= $record['wecha_id'];		
 		$data['lid']		= $record['lid'];
 		$data['rid']		= $record['id'];

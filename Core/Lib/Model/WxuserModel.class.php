@@ -1,5 +1,5 @@
 <?php
-class WxuserModel extends Model{
+class WxuserModel extends RelationModel{
 	protected $_validate =array(
         array('wxtype',array(1,2),'帐号类型必须选择',1,'in',3),
 		array('wxname','require','公众号名称不能为空',1),
@@ -25,8 +25,17 @@ class WxuserModel extends Model{
 		array('createtime','time',self::MODEL_INSERT,'function'),
 		array('updatetime','time',self::MODEL_BOTH,'function'),
 		array('typeid','gettypeid',self::MODEL_BOTH,'callback'),
-		array('typename','gettypename',self::MODEL_BOTH,'callback'),
+		array('typename','',self::MODEL_BOTH,'string'),
 	);
+
+    protected $_link = array(
+        'Industry'=>array(
+            'mapping_type'    =>BELONGS_TO,
+            'class_name'    =>'Industry',
+            'foreign_key'=>'industryid',
+            'as_fields'=>'name:industryname',
+        ),
+    );
 	public function chekWechatCardNums(){
 		$data=M('User_group')->field('wechat_card_num')->where(array('id'=>session('gid')))->find();
 		$users=M('Users')->field('wechat_card_num')->where(array('id'=>session('uid')))->find();

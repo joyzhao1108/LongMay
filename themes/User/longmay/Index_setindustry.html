@@ -1,0 +1,43 @@
+<include file="Index:header"/>
+<div class="content">
+    <form method="post" action="" enctype="multipart/form-data">
+        <div class="regpnl">
+            <div class="regcontent">
+                <div>
+                    <table class="infoedittbl">
+                        <tr>
+                            <th>选择行业</th>
+                            <td>
+                                <select name="industryid" style="width:136px;height:30px;">
+                                    <option style="height:30px;" value="0" <eq name="$info.industryid" value="0">selected="selected"</eq> >默认</option>
+                                    <volist name="industry" id="vot">
+                                        <option style="height:30px;" value="{weiguanjia:$vot.id}" <eq name="vot.id" value="$info.industryid">selected="selected"</eq> >{weiguanjia:$vot.name}</option>
+                                    </volist>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td><span class="info">公众号只能设置一种行业模版</span></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="reg-btn-panel">
+                    <table class="infoedittbl">
+                        <tr>
+                            <th></th>
+                            <td> <input title="设置" type="submit"  value="设置" class="btnGreens">&nbsp;&nbsp;<input title="返回" type="button" onclick="location.href='{weiguanjia::U('Index/index')}'" value="返回" class="btnGreens"></td>
+                        </tr>
+                    </table>
+                </div>
+                <input id="id" type="hidden"  value="{weiguanjia:$info.id}" name="id">
+            </div>
+        </div>
+    </form>
+</div>
+<div class="clr"></div>
+</div>
+</div>
+<!--底部-->
+<include file="Public:footer" />

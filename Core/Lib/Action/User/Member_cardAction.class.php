@@ -2,12 +2,8 @@
 class Member_cardAction extends UserAction{
 	public function _initialize() {
 		parent::_initialize();
-		$this->token=session('token');
-		$this->assign('token',$this->token);
-		//权限
-		if ($this->token!=$_GET['token']){
-			//exit();
-		}
+        parent::checkRight('huiyuanka');
+
 		$this->wxuser_db=M("Wxuser");
 		//获取所在组的开卡数量
 		$thisWxUser=$this->wxuser_db->where(array('token'=>$this->token))->find();
@@ -22,10 +18,6 @@ class Member_cardAction extends UserAction{
 	}
 	//会员卡配置
 	public function index(){
-		$token_open=M('token_open')->field('queryname')->where(array('token'=>session('token')))->find();
-		if(!strpos($token_open['queryname'],'huiyuanka')){
-            $this->error('您还未开启该模块的使用权,请到功能模块中添加',U('Function/index',array('token'=>session('token'),'id'=>session('wxid'))));
-		}
 		$data=M('Member_card_set')->where(array('token'=>$_SESSION['token']))->find();
 		if(IS_POST){
 			$_POST['token']=$_SESSION['token'];			

@@ -3,6 +3,11 @@
  *首页幻灯片回复
 **/
 class FlashAction extends UserAction{
+    public function _initialize()
+    {
+        parent::_initialize();
+        parent::checkRight('flash');
+    }
 	public function index(){
 		$db=D('Flash');
 		$where['uid']=session('uid');

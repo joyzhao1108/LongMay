@@ -289,7 +289,7 @@
                 });
                 $(this).parents("li").addClass("active");
                 var myurl='index.php?g=User&m=Tmpls&a=add&style='+$(this).val()+'&r='+Math.random(); 
-                $.ajax({url:myurl,async:false});
+                //$.ajax({url:myurl,async:false});
                 $("#myiframe").attr("src",$("#myiframe").attr("src")+'&r='+Math.random());
 
 

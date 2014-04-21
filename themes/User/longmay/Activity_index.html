@@ -14,17 +14,7 @@
 </div>
 <div class="clr"></div>
 </div>
-<!--tab start-->
-<div class="tab">
-    <ul>
-        <li class="tabli" id="tab0"><a href="{weiguanjia::U('Lesson/index',array('token'=>$token))}">课程管理</a></li>
-        <li class="tabli" id="tab2"><a href="{weiguanjia::U('Lesson/cats',array('token'=>$token))}">课程分类</a></li>
-        <li class="tabli" id="tab3"><a href="{weiguanjia::U('Teacher/index',array('token'=>$token))}">名师管理</a></li>
-        <li class="tabli" id="tab4"><a href="{weiguanjia::U('Bulletin/index',array('token'=>$token))}">公告管理</a></li>
-        <li class="current tabli" id="tab5"><a href="{weiguanjia::U('Activity/index',array('token'=>$token))}">最新活动</a></li>
-    </ul>
-</div>
-<!--tab end-->
+
 <div class="cLine">
 <div class="pageNavigator left"> <a href="{weiguanjia::U('Activity/add',array('token'=>$token))}" title="添加" class="btnGrayS vm bigbtn"><img src="{weiguanjia::RES}/images/product/add.png" width="16" class="vm">添加活动</a></div>
 <div class="clr"></div>
@@ -40,9 +30,9 @@
 <th width="40">排序</th>
 <th width="60">LOGO</th>
 <th width="80">活动名称</th>
-<th width="210">活动简介</th>
-<TH>开始时间/结束时间</TH>
-<TH>状态</TH>
+<th width="160">活动简介</th>
+<TH width="120">开始时间/结束时间</TH>
+<TH width="60">状态</TH>
 <th width="200" class="norightborder">操作</th>
 </tr>
 </thead>

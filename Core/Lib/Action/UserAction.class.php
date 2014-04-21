@@ -1,31 +1,48 @@
 <?php
 class UserAction extends BaseAction{
+    protected $wxuser;
+    protected $token;
 	protected function _initialize(){
 		parent::_initialize();
+        if(session('uid')==false){
+            $this->redirect('Home/Index/login');
+        }
 		$userinfo=M('User_group')->where(array('id'=>session('gid')))->find();
 		$users=M('Users')->where(array('id'=>$_SESSION['uid']))->find();
-		$this->assign('thisUser',$users);
-		//dump($users);
-		$this->assign('viptime',$users['viptime']);
-		if(session('uid')){
-			if($users['viptime']<time()){
-				/*
-				session(null);
-				session_destroy();
-				unset($_SESSION);
-				*/
-				$_SESSION['gid'] = 1;
-				$_SESSION['gname'] = "vip0";
-				//$users['viptime'] = strtotime("+1 month");
-				//$this->success('您的帐号已经到期，请充值后再使用');
-			}
-		}
-		$wecha=M('Wxuser')->field('wxname,wxid,headerpic,weixin,typename')->where(array('token'=>session('token'),'uid'=>session('uid')))->find();
+        if(!$users['status']){
+            /*
+            session(null);
+            session_destroy();
+            unset($_SESSION);
+            */
+            $this->success('您的帐号未通过审核，请联系客服开通',U('Home/Index/login'));
+        }
+        $token=$this->_get('token','trim');
+        if($token)
+        {
+            session('token',$token);
+        }
+        $this->token = session('token');
+		$wecha=M('Wxuser')->field('wxname,wxid,headerpic,weixin,typename')->where(array('token'=>$this->token,'uid'=>session('uid')))->find();
+        $this->wxuser =$wecha;
 		$this->assign('wecha',$wecha);
-		$this->assign('token',session('token'));
+
+        $this->assign('token',$this->token);
 		$this->assign('userinfo',$userinfo);
-		if(session('uid')==false){
-			$this->redirect('Home/Index/login');
-		}
+        $this->assign('thisUser',$users);
 	}
+    public function checkRight($funname)
+    {
+        $fun = D('Function')->where(array('funname'=>$funname))->find();
+        if($fun)
+        {
+            $wherefun = array('token'=>$this->token,'funcid'=>$fun['id']);
+            $wherefun['expiredate']=array('gt',strtotime('-1 days'));
+            $token_open = D('Wxuser_func')->where($wherefun)->find();
+            if($token_open == false){
+                $this->display('NoRight:index');
+                exit;
+            }
+        }
+    }
 }

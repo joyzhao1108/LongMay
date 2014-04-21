@@ -26,7 +26,7 @@ class WeixinNewAction extends Action
             $data = M('Areply')->field('home,keyword,content')->where(array(
                 'token' => $this->token
             ))->find();
-            if ($data['home'] == 1) {
+            if ($data == false || $data['home'] == 1) {
                 return $this->home();
             }
             else {
@@ -39,121 +39,75 @@ class WeixinNewAction extends Action
 		elseif ('unsubscribe' == $data['Event']) {
             $this->requestdata('unfollownum');
         }
-        $Pin       = new GetPin();
         $key       = $data['Content'];
-        $open      = M('Token_open')->where(array(
-            'token' => $this->_get('token')
-        ))->find();
-        $this->fun = $open['queryname'];
-        $datafun   = explode(',', $open['queryname']);
-        $tags      = $this->get_tags($key);
-        $back      = explode(',', $tags);
-        foreach ($back as $keydata => $data) {
-            $string = $Pin->Pinyin($data);
-            if (in_array($string, $datafun)) {
-                $check = $this->user('connectnum');
-                if ($string == 'fujin') {
-                    $this->recordLastRequest($key);
-                }
-                $this->requestdata('textnum');
-                if ($check['connectnum'] != 1) {
-                    $return = C('connectout');
-                    continue;
-                }
-                unset($back[$keydata]);
-                eval('$return= $this->' . $string . '($back);');
-                continue;
-            }
-        }
-        if (!empty($return)) {
-            if (is_array($return)) {
-                return $return;
-            } else {
+        switch ($key) {
+            case '首页':
+                return $this->home();
+                break;
+            case '主页':
+                return $this->home();
+                break;
+            case '地图':
+                return $this->companyMap();
+            case '会员卡':
+                return $this->member();
+                break;
+            case '会员':
+                return $this->member();
+                break;
+            case '商城':
+                $pro = M('reply_info')->where(array(
+                    'infotype' => 'Shop',
+                    'token' => $this->token
+                ))->find();
                 return array(
-                    $return,
-                    'text'
+                    array(
+                        array(
+                            $pro['title'],
+                            strip_tags(htmlspecialchars_decode($pro['info'])),
+                            $pro['picurl'],
+                            C('site_url') . '/index.php?g=Wap&m=Product&a=index&token=' . $this->token . '&wecha_id=' . $this->data['FromUserName']
+                        )
+                    ),
+                    'news'
                 );
-            }
-        } 
-		else 
-		{            
-            switch ($key) {
-                case '首页':
-                    return $this->home();
-                    break;
-                case '主页':
-                    return $this->home();
-                    break;
-                case '地图':
-                    return $this->companyMap(); 
-                case '会员卡':
-                    return $this->member();
-                    break;
-                case '会员':
-                    return $this->member();
-                    break;             
-                case '商城':
-                    $pro = M('reply_info')->where(array(
-                        'infotype' => 'Shop',
-                        'token' => $this->token
-                    ))->find();
-                    return array(
+                break;
+            case '订餐':
+                $pro = M('reply_info')->where(array(
+                    'infotype' => 'Dining',
+                    'token' => $this->token
+                ))->find();
+                return array(
+                    array(
                         array(
-                            array(
-                                $pro['title'],
-                                strip_tags(htmlspecialchars_decode($pro['info'])),
-                                $pro['picurl'],
-                                C('site_url') . '/index.php?g=Wap&m=Product&a=index&token=' . $this->token . '&wecha_id=' . $this->data['FromUserName']
-                            )
-                        ),
-                        'news'
-                    );
-                    break;             
-                case '订餐':
-                    $pro = M('reply_info')->where(array(
-                        'infotype' => 'Dining',
-                        'token' => $this->token
-                    ))->find();
-                    return array(
+                            $pro['title'],
+                            strip_tags(htmlspecialchars_decode($pro['info'])),
+                            $pro['picurl'],
+                            C('site_url') . '/index.php?g=Wap&m=Product&a=dining&dining=1&token=' . $this->token . '&wecha_id=' . $this->data['FromUserName']
+                        )
+                    ),
+                    'news'
+                );
+                break;
+            case '团购':
+                $pro = M('reply_info')->where(array(
+                    'infotype' => 'Groupon',
+                    'token' => $this->token
+                ))->find();
+                return array(
+                    array(
                         array(
-                            array(
-                                $pro['title'],
-                                strip_tags(htmlspecialchars_decode($pro['info'])),
-                                $pro['picurl'],
-                                C('site_url') . '/index.php?g=Wap&m=Product&a=dining&dining=1&token=' . $this->token . '&wecha_id=' . $this->data['FromUserName']
-                            )
-                        ),
-                        'news'
-                    );
-                    break;
-                case '团购':
-                    $pro = M('reply_info')->where(array(
-                        'infotype' => 'Groupon',
-                        'token' => $this->token
-                    ))->find();
-                    return array(
-                        array(
-                            array(
-                                $pro['title'],
-                                strip_tags(htmlspecialchars_decode($pro['info'])),
-                                $pro['picurl'],
-                                C('site_url') . '/index.php?g=Wap&m=Groupon&a=grouponIndex&token=' . $this->token . '&wecha_id=' . $this->data['FromUserName']
-                            )
-                        ),
-                        'news'
-                    );
-                    break;
-                default:
-                    $check = $this->user('diynum', $key);
-                    if ($check['diynum'] != 1) {
-                        return array(
-                            C('connectout'),
-                            'text'
-                        );
-                    } else {
-                        return $this->keyword($key);
-                    }
-            }
+                            $pro['title'],
+                            strip_tags(htmlspecialchars_decode($pro['info'])),
+                            $pro['picurl'],
+                            C('site_url') . '/index.php?g=Wap&m=Groupon&a=grouponIndex&token=' . $this->token . '&wecha_id=' . $this->data['FromUserName']
+                        )
+                    ),
+                    'news'
+                );
+                break;
+            default:
+                return $this->keyword($key);
         }
     }
     function companyMap()
@@ -503,7 +457,7 @@ class WeixinNewAction extends Action
     {
         return $this->shouye();
     }
-    function shouye($name)
+    function shouye()
     {
         $company = M('Company')->where(array(
             'token' => $this->token
@@ -529,15 +483,16 @@ class WeixinNewAction extends Action
             //地址
             $address = '地址:'.$company['address'];
             $imgUrl='http://api.map.baidu.com/staticimage?center='.$company['longitude'].','.$company['latitude'].'&width=80&height=80&zoom=11&markers='.$company['longitude'].','.$company['latitude'].'&markerStyles=l,1';
-            $url = 'http://api.map.baidu.com/marker?location='.$company['longitude'].','.$company['latitude'].'&title='.$company['name'].'&output=html&wxref=mp.weixin.qq.com';
+            //$url = 'http://api.map.baidu.com/marker?location='.$company['latitude'].','.$company['longitude'].'&title='.$company['name'].'&output=html&src=www.longmey.com&wxref=mp.weixin.qq.com';
+            $url = C('site_url').'/index.php?g=Wap&m=Company&a=map&token='.$this->token;
             $return[] = array(
                 $address,
                 '',
                 $imgUrl,
                 $url
             );
-            //电话
-            $phone = '电话:'.$company['tel'];
+            //电话\手机
+            $phone = '电话:'.$company['tel']."\n手机:".$company['mp'];;
             $url = rtrim(C('site_url'), '/') . U('Wap/Company/index', array(
                 'token' => $this->token,
                 'wecha_id' => $this->data['FromUserName']
@@ -549,21 +504,16 @@ class WeixinNewAction extends Action
                 $imgUrl,
                 $url
             );
-            //手机
-            $phone = '手机:'.$company['mp'];
-            $imgUrl = rtrim(C('site_url'), '/') .'/images/tel.png';
-            $return[] = array(
-                $phone,
-                '',
-                $imgUrl,
-                $url
-            );
+            $url = rtrim(C('site_url'), '/') . U('Wap/Company/about', array(
+                    'token' => $this->token,
+                    'wecha_id' => $this->data['FromUserName']
+                ));
             //介绍
             $return[] = array(
                 $company['introbrief'],
                 $company['intro'],
                 $company['briefpic'],
-                ''
+                $url
             );
         }
         return array(
@@ -620,38 +570,6 @@ class WeixinNewAction extends Action
     function error_msg($data)
     {
         return '没有找到' . $data . '相关的数据';
-    }
-    public function user($action, $keyword = '')
-    {
-        $user      = M('Wxuser')->field('uid')->where(array(
-            'token' => $this->token
-        ))->find();
-        $usersdata = M('Users');
-        $dataarray = array(
-            'id' => $user['uid']
-        );
-        $users     = $usersdata->field('gid,diynum,connectnum,activitynum,viptime')->where(array(
-            'id' => $user['uid']
-        ))->find();
-        $group     = M('User_group')->where(array(
-            'id' => $users['gid']
-        ))->find();
-        if ($users['diynum'] < $group['diynum']) {
-            $data['diynum'] = 1;
-            if ($action == 'diynum') {
-                $usersdata->where($dataarray)->setInc('diynum');
-            }
-        }
-        if ($users['connectnum'] < $group['connectnum']) {
-            $data['connectnum'] = 1;
-            if ($action == 'connectnum') {
-                $usersdata->where($dataarray)->setInc('connectnum');
-            }
-        }
-        if ($users['viptime'] > time()) {
-            $data['viptime'] = 1;
-        }
-        return $data;
     }
     public function requestdata($field)
     {

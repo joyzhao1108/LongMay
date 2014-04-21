@@ -1,5 +1,10 @@
 <?php
 class OtherAction extends UserAction{
+    public function _initialize()
+    {
+        parent::_initialize();
+        parent::checkRight('outofreply');
+    }
 	//配置
 	public function index(){
 		$other=M('Other')->where(array('token'=>session('token')))->find();

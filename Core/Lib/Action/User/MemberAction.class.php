@@ -1,5 +1,10 @@
 <?php
 class MemberAction extends UserAction{
+    public function _initialize()
+    {
+        parent::_initialize();
+        parent::checkRight('userinfo');
+    }
 	public function index(){
 		$sql=M('Member');
 		$data['token']=$this->_get('token');

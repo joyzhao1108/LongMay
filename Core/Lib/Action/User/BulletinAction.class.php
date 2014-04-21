@@ -1,18 +1,15 @@
 <?php
 class BulletinAction extends UserAction{
-	public $token;
 	public $Bulletin_model;
-	public function _initialize() {
-		parent::_initialize();
-		$token_open = M('token_open')->field('queryname')->where(array('token'=>session('token')))->find();
-		if(!strpos($token_open['queryname'],'bulletin')){
-            $this->error('您还未开启该模块的使用权',U('Index/index',array('token'=>session('token'),'id'=>session('wxid'))));
-		}	
-	}
+    public function _initialize()
+    {
+        parent::_initialize();
+        parent::checkRight('bulletin');
+    }
 	public function index(){	
 	
 		$Bulletin_model=D('Bulletin');	
-		$where=array('token'=>session('token'));		
+		$where=array('token'=>$this->token);
 	
         if(IS_POST){
             $key = $this->_post('searchkey');
@@ -20,7 +17,7 @@ class BulletinAction extends UserAction{
                 $this->error("关键词不能为空");
             }
 
-            $map['token'] = $this->get('token'); 
+            $map['token'] = $this->token;
             $map['title|introdetail'] = array('like',"%$key%"); 
             $list = $Bulletin_model->where($map)->order('sort asc')->select(); 
             $count      = $Bulletin_model->where($map)->count();       

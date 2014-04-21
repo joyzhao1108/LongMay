@@ -80,7 +80,7 @@ font-size:12px;line-height: 48px;
 <table class="userinfoArea" style=" margin:0;" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody>
 <tr>
 <th width="120">推广页地址：</th>
-<td width="430"><a href="{weiguanjia::C('site_url')}/index.php/show/{weiguanjia:$Think.session.token}" target="ddd" title="点击查看推广页" class="green" target="_blank">{weiguanjia::C('site_url')}/index.php/show/{weiguanjia:$Think.session.token}</a></td>
+<td width="380"><a href="{weiguanjia::C('site_url')}/index.php/show/{weiguanjia:$Think.session.token}" target="ddd" title="点击查看推广页" class="green" target="_blank">{weiguanjia::C('site_url')}/index.php/show/{weiguanjia:$Think.session.token}</a></td>
 <td rowspan="6" valign="top" class="yulan">
 <div class="main">
 <h1 id="adtitle">{weiguanjia:$adma.title}</h1>
@@ -102,14 +102,14 @@ font-size:12px;line-height: 48px;
 </tr>
  <tr>
 <th valign="top">宣传页标题名：</th>
-<td><input type="text" name="title" value="{weiguanjia:$adma.title}" class="px" style="width:400px;" id="etitle" onblur="document.getElementById('adtitle').innerHTML=document.getElementById('etitle').value;">
+<td><input type="text" name="title" value="{weiguanjia:$adma.title}" class="px" style="width:300px;" id="etitle" onblur="document.getElementById('adtitle').innerHTML=document.getElementById('etitle').value;">
 <br>
 
 </td>
 </tr>	
  <tr>
 <th valign="top">二维码地址：</th>
-<td><input type="text" name="url" value="{weiguanjia:$adma.url}" class="px" style="width:400px;" id="ewm" onblur="document.getElementById('gzhewm').src=document.getElementById('ewm').value;">
+<td><input type="text" name="url" value="{weiguanjia:$adma.url}" class="px" style="width:300px;" id="ewm" onblur="document.getElementById('gzhewm').src=document.getElementById('ewm').value;">
 <br>
 <p>到公众平台下载<span class="red">二维码边长为12CM，大小为344×344PX</span>.</p>
 <p>传到自己的图床获取外链地址，<span class="red">不要直接使用公众平台的地址。</span><input style="font-size:12px;color:red"type=button onclick="window.open('{weiguanjia::U('Upload/index',array('token'=>$token,'n'=>url))}')" value="点击上传图片"></p>
@@ -118,7 +118,7 @@ font-size:12px;line-height: 48px;
                             <tr>
 <th valign="top"><br>
 功能介绍：</th>
-<td valign="top"><textarea class="px" id="info" name="info" style="width:400px; height:120px" onkeyup="DivFollowingText2()">{weiguanjia:$adma.info}</textarea> 
+<td valign="top"><textarea class="px" id="info" name="info" style="width:300px; height:120px" onkeyup="DivFollowingText2()">{weiguanjia:$adma.info}</textarea>
 <script type="text/javascript">
 function DivFollowingText2()
 {
@@ -132,7 +132,7 @@ document.getElementById("gzhinfo").innerHTML=document.getElementById("info").val
 <tr>
 	<th width="120" valign="top">版权信息:</th>
 	<td>
-	<input type="text" name="copyright" value="{weiguanjia:$adma.copyright}" class="px" style="width:400px;text-align:left;color:rgb(0, 0, 0);float:none"" id="copyright" onclick="document.getElementById('gzhcopyright').innerHTML=this.value;" onkeyup="DivFollowingText3()"/>
+	<input type="text" name="copyright" value="{weiguanjia:$adma.copyright}" class="px" style="width:300px;text-align:left;color:rgb(0, 0, 0);float:none"" id="copyright" onclick="document.getElementById('gzhcopyright').innerHTML=this.value;" onkeyup="DivFollowingText3()"/>
 	<script type="text/javascript">
 	function DivFollowingText3()
 	{
@@ -158,5 +158,8 @@ document.getElementById("gzhinfo").innerHTML=document.getElementById("info").val
  </form>
   
         </div>
+<div class="clr"></div>
+</div>
+</div>
 <include file="Public:footer"/>  
  

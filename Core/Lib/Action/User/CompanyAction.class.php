@@ -1,16 +1,12 @@
 <?php
 class CompanyAction extends UserAction
 {
-    public $token;
     public $isBranch;
     public $company_model;
     public function _initialize()
     {
         parent::_initialize();
-		
-        $this->token = session('token');
-        $this->assign('token', $this->token);
-        
+        parent::checkRight('shouye');
         //是否是分店
         $this->isBranch = 0;
         if (isset($_GET['isBranch']) && intval($_GET['isBranch'])) {
@@ -21,17 +17,6 @@ class CompanyAction extends UserAction
     }
     public function index()
     {
-		$id=$this->_get('id','intval');
-		$token=$this->_get('token','trim');	
-		$info=M('Wxuser')->find($id);
-		if($info==false||$info['token']!==$token){
-			$this->error('非法操作',U('Home/Index/index'));
-		}
-		session('token',$token);
-		session('wxid',$info['id']);
-		$this->token = session('token');
-        $this->assign('token', $this->token);
-		
         $where = array(
             'token' => $this->token
         );

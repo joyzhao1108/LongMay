@@ -1,24 +1,9 @@
 <?php
-class ProductAction extends BaseAction{
-	public $token;
-	public $wecha_id;
+class ProductAction extends WapTmplAction{
 	public $product_model;
 	public $product_cat_model;
 	public $isDining;
 	public function __construct(){
-		
-		$agent = $_SERVER['HTTP_USER_AGENT']; 
-		if(!strpos($agent,"MicroMessenger")) {
-		//	echo '此功能只能在微信浏览器中使用';exit;
-		}
-		
-		$this->token		= $this->_get('token');
-		$this->assign('token',$this->token);
-		$this->wecha_id	= $this->_get('wecha_id');
-		if (!$this->wecha_id){
-			//$this->wecha_id='';
-		}
-		$this->assign('wecha_id',$this->wecha_id);
 		$this->product_model=M('Product');
 		$this->product_cat_model=M('Product_cat');
 		//define('RES',THEME_PATH.'common');

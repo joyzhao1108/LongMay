@@ -15,15 +15,6 @@
 	<input type="input" class="px" id="keyword" value="<if condition="$vo['keyword'] eq ''">大转盘<else/>{weiguanjia:$vo.keyword}</if>" name="keyword" style="width:400px" ><br />
   	<span class="red">只能写一个关键词</span>，用户输入此关键词将会触发此活动。
   </TD>
-  <TD rowspan="7" valign="top">
-	  <div style="margin-left:20px">
-		<img id="pic" src="<if condition="$vo['starpicurl'] eq 0">{weiguanjia::C('site_url')}/themes/Wap/default/common/css/guajiang/images/activity-lottery-start.jpg<else/>{weiguanjia:$vo.starpicurl}</if>" width="373px" >	
-		<br />
-		<input class="px"  name="starpicurl" value="{weiguanjia::C('site_url')}/themes/Wap/default/common/css/guajiang/images/activity-lottery-start.jpg"   onclick="document.getElementById('pic').src=this.value;" style="width:363px;"  />
-		<br />
-		填写活动开始图片网址
-	  </div>
-  </TD>
 </TR>
 <TR>
   <th valign="top"><span class="red">*</span>活动名称：</th>
@@ -31,7 +22,18 @@
 	<input type="input" class="px" id="title" value="<if condition="$vo['title'] eq ''">幸运大转盘活动开始了<else/>{weiguanjia:$vo.title}</if>" name="title" style="width:400px" />
   	<br />
   	请不要多于50字!
-  </TD>
+  </TD></tr>
+<TR>
+    <th valign="top"><span class="red">*</span>图片网址：</th>
+    <TD>
+        <div>
+            <img id="pic" src="<if condition="$vo['starpicurl'] eq 0">{weiguanjia::C('site_url')}/themes/Wap/default/common/css/guajiang/images/activity-lottery-start.jpg<else/>{weiguanjia:$vo.starpicurl}</if>" width="373px" >
+            <br />
+            <input class="px"  name="starpicurl" value="{weiguanjia::C('site_url')}/themes/Wap/default/common/css/guajiang/images/activity-lottery-start.jpg"   onclick="document.getElementById('pic').src=this.value;" style="width:363px;"  />
+            <br />
+            填写活动开始图片网址
+        </div>
+    </TD></tr>
   <TR>
   	<th valign="top"><span class="red">*</span>兑奖信息：</th>
   	<td>
@@ -80,10 +82,6 @@
   				<td><input type="input" class="px" id="endtite" value="<if condition="$vo['endtite'] eq ''">幸运大转盘活动已经结束了<else/>{weiguanjia:$vo.endtite}</if>" name="endtite" style="width:400px" />
   					<br />
   					请不要多于50字! </td>
-  				<td rowspan="4" valign="top"><div style="margin-left:20px"><img  id="end" src="<if condition="$vo['endpicurl'] eq 0">{weiguanjia::C('site_url')}/themes/Wap/default/common/css/guajiang/images/activity-lottery-end.jpg<else/>{weiguanjia:$vo.endpicurl}</if>"  width="373px"/> <br />
-  					<input class="px"  name="endpicurl" value="{weiguanjia::C('site_url')}/themes/Wap/default/common/css/guajiang/images/activity-lottery-end.jpg"  onchange="document.getElementById('end').src=this.value;"  style="width:363px;"  />
-  					<br />
-  					填写活动结束图片网址 </div></td>
   				</tr>
   			<tr>
   				<th valign="top">活动结束说明：</th>
@@ -91,6 +89,14 @@
  &lt;br&gt;
   				  </td>
   				</tr>
+            <tr>
+                <th valign="top">图片网址：</th>
+                <td valign="top"><div><img  id="end" src="<if condition="$vo['endpicurl'] eq 0">{weiguanjia::C('site_url')}/themes/Wap/default/common/css/guajiang/images/activity-lottery-end.jpg<else/>{weiguanjia:$vo.endpicurl}</if>"  width="373px"/> <br />
+                    <input class="px"  name="endpicurl" value="{weiguanjia::C('site_url')}/themes/Wap/default/common/css/guajiang/images/activity-lottery-end.jpg"  onchange="document.getElementById('end').src=this.value;"  style="width:363px;"  />
+                    <br />
+                    填写活动结束图片网址 </div>
+                </td>
+            </tr>
   			</tbody>
   		</table>
   </div> 

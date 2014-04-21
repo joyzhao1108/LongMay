@@ -58,9 +58,10 @@
 }
 .menucontent {
     background: lightgoldenrodyellow;
+    margin: auto;
 }
 .menucontent ul {
-    margin: auto;
+
 }
 .menucontent ul li {
 
@@ -130,10 +131,11 @@ document.addEventListener('DOMContentLoaded', loaded, false);
         <div class="title">公告栏</div>
         <ul>
             <volist name="bulletin" id="so">
-                <li class="content">{weiguanjia:$so.title}<a href="{weiguanjia::U('Wap/Bulletin/content')}&id={weiguanjia:$so.id}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}"><span class="title3">[详情]</span></a></li>
+                <li class="content" style="font-size: 12px"><a href="{weiguanjia::U('Wap/Bulletin/content')}&id={weiguanjia:$so.id}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">{weiguanjia:$so.title}<span class="title3">[详情]</span></a></li>
             </volist>
         </ul>
     </div>
+    <div style="margin: 10px auto 10px"><img src="{weiguanjia::RES}/images/edu01/lessonsplitb.png" width="100%"></div>
     <div class="menucontent" id="menulist">
         <ul>
             <li>
@@ -206,6 +208,8 @@ document.addEventListener('DOMContentLoaded', loaded, false);
 
     var countmenu = document.getElementById("menulist").getElementsByTagName("img").length;
     var imgwidth = (document.body.clientWidth-20)/5;
+    var divwidth = (imgwidth+10)*4;
+    document.getElementById("menulist").style.cssText = " width:"+divwidth+"px;";
     for(i=0;i<countmenu;i++){
         document.getElementById("menulist").getElementsByTagName("img").item(i).style.cssText = " width:"+imgwidth+"px;height:"+imgwidth+"px;";
     }

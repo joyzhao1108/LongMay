@@ -3,6 +3,11 @@
  *文本回复
 **/
 class TextAction extends UserAction{
+    public function _initialize()
+    {
+        parent::_initialize();
+        parent::checkRight('txtreply');
+    }
 	public function index(){
 		$db=D('Text');
 		$where['uid']=session('uid');

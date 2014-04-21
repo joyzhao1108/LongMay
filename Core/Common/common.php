@@ -5,4 +5,10 @@ function isAndroid(){
 	}
 	return 0;
 }
+function GetLastDays($expiredate)
+{
+    $d = new Date((int)$expiredate);
+    $re = -(int)$d->dateDiff(time());
+    return $re;
+}
 ?>
