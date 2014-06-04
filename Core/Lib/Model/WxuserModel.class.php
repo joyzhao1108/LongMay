@@ -15,7 +15,6 @@ class WxuserModel extends RelationModel{
 	
 	protected $_auto = array (
 		array('uid','getuser',self::MODEL_INSERT,'callback'),
-		array('uname','getname',self::MODEL_INSERT,'callback'),
 		array('tpltypeid','1',self::MODEL_INSERT),
 		array('tpllistid','1',self::MODEL_INSERT),
 		array('tplcontentid','1',self::MODEL_INSERT),

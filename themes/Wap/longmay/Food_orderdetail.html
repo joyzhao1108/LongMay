@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>订单详情</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+    <link href="{weiguanjia::RES}/css/style/css/food.css" rel="stylesheet" type="text/css">
+    <script src="{weiguanjia::RES}/css/flash/js/iscroll.js" type="text/javascript"></script>
+<script src="{weiguanjia::RES}/css/style/js/jquery.min.js" type="text/javascript"></script>
+    <script>
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            WeixinJSBridge.call('hideToolbar');
+        });
+    </script>
+<style>
+#wrapper {
+    position:absolute;
+    z-index:1;
+    top:60px;
+    bottom:48px;
+    left:-9999px;
+    width:100%;
+    overflow:auto;
+}
+</style>
+</head>
+<body id="" >
+<include file="$menutmpl"/>
+<if condition="$success eq 1">
+    <div style="height: 60px;padding: 5px">
+        <div style="font-size: 22px;color: red;font-weight: 900;text-align: center">订单提交成功</div>
+        <div style="font-size: 16px;color: #333;font-weight: 900;margin: 5px;text-align: center">请联系服务员下单</div>
+    </div>
+    <else/>
+    <div id="headtitle">历史订单详情</div>
+    <div id="header"><div class="ts1">日期:{weiguanjia:$thisOrder.time|date="Y.m.d",###}</span></div><div class="ts3">时间:{weiguanjia:$thisOrder.time|date="H:i",###}</div></div>
+</if>
+<DIV id="wrapper" style="left: 0px; overflow: hidden;">
+    <DIV id="scroller" style="transform-origin: 0% 0%; left: 0px; top: 0px; position: absolute; transition-duration: 0s; transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);">
+        <UL id="thelist">
+            <li>
+                <div class="ts0">{weiguanjia:$table.name}</div>
+                <div class="ts11">共计:<span id="total_fee">{weiguanjia:$totalFee}</span>元</div>
+            </li>
+            <volist name="foods" id="food">
+                <li>
+                    <div class="ts0">{weiguanjia:$food.name}</div>
+                    <div class="ts01">/{weiguanjia:$food.tprice}元</div>
+                    <div class="ts1">{weiguanjia:$food.count}</div>
+                </li>
+            </volist>
+        </UL>
+        <if condition="$success eq 1">
+            <DIV id="footRemark">
+                <p>注意，订单一旦经服务员将确认不可更改，退单。若还要加菜，请另新点菜单。如有其他特殊情况，请与服务员沟通。</p>
+            </DIV>
+        </if>
+    </DIV>
+    <DIV style="top: 2px; width: 7px; right: 1px; bottom: 2px; overflow: hidden; position: absolute; z-index: 100; opacity: 1; pointer-events: none; transition-property: opacity; transition-duration: 0s; transition-delay: 0s;">
+        <DIV style="background: padding-box rgba(0, 0, 0, 0.5); border-radius: 3px; border: 1px solid rgba(255, 255, 255, 0.9); width: 100%; height: 18px; position: absolute; z-index: 100; box-sizing: border-box; pointer-events: none; transform: translate(0, 5.06496px) translateZ(0); transition-property: transform; transition-duration: 0ms; transition-timing-function: cubic-bezier(0.33, 0.66, 0.66, 1);">
+        </DIV>
+    </DIV>
+</DIV>
+<div class="footFix" id="footReturn"><a href="javascript:void(0)" onClick="location.href='{weiguanjia::U('Index/index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}';"><span>返回公众号首页</span></a></div>
+<script>
+    var myScroll;
+    function loaded() {
+        myScroll = new iScroll('wrapper', {
+            useTransition: true,
+            topOffset: 0
+        });
+    }
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+    document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+    //document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+    //    WeixinJSBridge.call('hideToolbar');
+    //});
+</script>
+</body>
+</html>

@@ -1,4 +1,5 @@
-<include file="Public:head"/> 
+<include file="Public:head"/>
+<link rel="stylesheet" type="text/css" href="{weiguanjia::RES}/css/cymain.css" />
 <script>
 function selectall(name) {
 	var checkItems=$('.cbitem');
@@ -19,17 +20,25 @@ function selectall(name) {
          
           <div class="cLineB">
               <h4 class="left">创建会员卡号　<span style="color:red">此会员卡号,会员领取一张，这里将会少一张,当全部被领取完了,请再次开卡</span></h4>
-              <br />
-           
-              <div class="clr"></div>
           </div>
+    <!--tab start-->
+    <div class="tab">
+        <ul>
+            <li class="tabli" id="tab0"><a href="{weiguanjia::U('Member_card/index',array('token'=>$token))}">版面设置</a></li>
+            <li class="tabli" id="tab2"><a href="{weiguanjia::U('Member_card/privilege',array('token'=>$token))}">会员特权</a></li>
+            <li class="tabli" id="tab3"><a href="{weiguanjia::U('Member_card/info',array('token'=>$token))}">会员卡详情</a></li>
+            <li class="current tabli" id="tab4"><a href="{weiguanjia::U('Member_card/create',array('token'=>$token))}">在线开卡</a></li>
+            <li class="tabli" id="tab5"><a href="{weiguanjia::U('Member_card/exchange',array('token'=>$token))}">积分设置</a></li>
+            <li class="tabli" id="tab6"><a href="{weiguanjia::U('Member_card/coupon',array('token'=>$token))}">优惠券</a></li>
+            <li class="tabli" id="tab7"><a href="{weiguanjia::U('Member_card/integral',array('token'=>$token))}">礼品券</a></li>
+        </ul>
+    </div>
+    <!--tab end-->
           <div class="cLine">
 			<div class="pageNavigator left">
-			
 				<a href="{weiguanjia::U('Member_card/create_add',array('token'=>$token))}" title="创建会员卡号" class="add">创建会员卡号
 				</a>&nbsp;&nbsp;<a class="delete" href="###" onclick="if(confirm('确定删除吗')){$('#info').submit()}">删除</a>&nbsp;&nbsp; <strong>已经领取 <span style="color:red">{weiguanjia:$usecount}</span> 张，剩余<span style="color:red">{weiguanjia:$ucount}</span>张未领取，一共 <span style="color:red">{weiguanjia:$count}</span>张</strong>
 			</div>
-			<a href="javascript:history.go(-1);" class="right btnGrayS vm" style="margin-top:10px">返回</a>          
 			<div class="clr"></div>
           </div>
           <div class="msgWrap">
@@ -95,4 +104,9 @@ function selectall(name) {
             <div class="clr"></div>
           </div>
         </div>
+</div>
+<div class="clr"></div>
+</div>
+</div>
+<div class="clr"></div>
 <include file="Public:footer"/>

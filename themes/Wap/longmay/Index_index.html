@@ -36,25 +36,12 @@
 }
 .bulletin .title{
     width: 100%;
-    background:rgb(108,184,45);
+    background:rgb(0,147,221);
     text-align: center;
     color: #fff;
     font-size: 16px;
     height: 30px;
     line-height: 30px;
-}
-.menubtn
-{
-    width:80px ;
-    height: 80px;
-}
-.menubtn .aboutus a
-{
-    background:url({weiguanjia::RES}/images/edu01/aboutus.png);
-}
-.menubtn .aboutus a:hover
-{
-    background:url({weiguanjia::RES}/images/edu01/aboutus_down.png);
 }
 .menucontent {
     background: lightgoldenrodyellow;
@@ -128,73 +115,48 @@ document.addEventListener('DOMContentLoaded', loaded, false);
 		<div class="clr"></div>
 	</div>
     <div class="bulletin">
-        <div class="title">公告栏</div>
+        <div class="title">最新咨讯</div>
         <ul>
-            <volist name="bulletin" id="so">
-                <li class="content" style="font-size: 12px"><a href="{weiguanjia::U('Wap/Bulletin/content')}&id={weiguanjia:$so.id}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">{weiguanjia:$so.title}<span class="title3">[详情]</span></a></li>
+            <volist name="activity" id="so">
+                <li class="content" style="font-size: 12px"><a href="{weiguanjia::U('Wap/Activity/content')}&id={weiguanjia:$so.id}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">{weiguanjia:$so.name}<span class="title3">[详情]</span></a></li>
             </volist>
         </ul>
     </div>
-    <div style="margin: 10px auto 10px"><img src="{weiguanjia::RES}/images/edu01/lessonsplitb.png" width="100%"></div>
+    <div style="margin: 10px auto 10px"><img src="{weiguanjia::RES}/images/default/lessonsplitb.png" width="100%"></div>
     <div class="menucontent" id="menulist">
         <ul>
             <li>
+                <a target="_self" href="{weiguanjia:$memberurl}">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                        <tr><td><img src="{weiguanjia::RES}/images/default/activity.png" width="50px" height="50px"></td></tr>
+                        <tr><td>会员卡</td></tr>
+                    </table>
+                </a>
+            </li>
+            <li>
                 <a target="_self" href="{weiguanjia::U('Wap/Company/about')}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">
                     <table border="0" cellpadding="0" cellspacing="0">
-                        <tr><td><img src="{weiguanjia::RES}/images/edu01/aboutus.png" width="50px" height="50px"></td></tr>
+                        <tr><td><img src="{weiguanjia::RES}/images/default/aboutus.png" width="50px" height="50px"></td></tr>
                         <tr><td>关于我们</td></tr>
-                    </table>
-                </a>
-            </li>
-            <li>
-                <a target="_self" href="{weiguanjia::U('Wap/Lottery/index')}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">
-                    <table border="0" cellpadding="0" cellspacing="0">
-                        <tr><td><img src="{weiguanjia::RES}/images/edu01/choujiang.png" width="50px" height="50px"></td></tr>
-                        <tr><td>抽奖活动</td></tr>
-                    </table>
-                </a>
-            </li>
-            <li>
-                <a target="_self" href="{weiguanjia::U('Wap/Lesson/index')}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">
-                    <table border="0" cellpadding="0" cellspacing="0">
-                        <tr><td><img src="{weiguanjia::RES}/images/edu01/lesson.png" width="50px" height="50px"></td></tr>
-                        <tr><td>课程介绍</td></tr>
-                    </table>
-                </a>
-            </li>
-            <li>
-                <a target="_self" href="{weiguanjia::U('Wap/Lesson/order')}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">
-                    <table border="0" cellpadding="0" cellspacing="0">
-                        <tr><td><img src="{weiguanjia::RES}/images/edu01/book.png" width="50px" height="50px"></td></tr>
-                        <tr><td>在线预约</td></tr>
-                    </table>
-                </a>
-            </li>
-            <li>
-                <a target="_self" href="{weiguanjia::U('Wap/Teacher/index')}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">
-                    <table border="0" cellpadding="0" cellspacing="0">
-                        <tr><td><img src="{weiguanjia::RES}/images/edu01/teacher.png" width="50px" height="50px"></td></tr>
-                        <tr><td>名师风采</td></tr>
                     </table>
                 </a>
             </li>
             <li>
                 <a target="_self" href="{weiguanjia::U('Wap/Activity/index')}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">
                     <table border="0" cellpadding="0" cellspacing="0">
-                        <tr><td><img src="{weiguanjia::RES}/images/edu01/activity.png" width="50px" height="50px"></td></tr>
-                        <tr><td>最新活动</td></tr>
+                        <tr><td><img src="{weiguanjia::RES}/images/default/activity.png" width="50px" height="50px"></td></tr>
+                        <tr><td>最新咨讯</td></tr>
                     </table>
                 </a>
             </li>
             <li>
                 <a target="_self" href="{weiguanjia::U('Wap/Company/index')}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">
                     <table border="0" cellpadding="0" cellspacing="0">
-                        <tr><td><img src="{weiguanjia::RES}/images/edu01/contactus.png" width="50px" height="50px"></td></tr>
+                        <tr><td><img src="{weiguanjia::RES}/images/default/contactus.png" width="50px" height="50px"></td></tr>
                         <tr><td>联系我们</td></tr>
                     </table>
                 </a>
             </li>
-
         </ul>
     </div>
 

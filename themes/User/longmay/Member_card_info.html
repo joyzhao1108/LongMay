@@ -1,15 +1,29 @@
 <include file="Public:head"/>
+<link rel="stylesheet" type="text/css" href="{weiguanjia::RES}/css/cymain.css" />
 <div class="content">
 	 <div class="cLineB">
-		<h4>商家设置 </h4><a href="index.php?ac=card-list&amp;id=9878" class="right btnGrayS vm" style="margin-top:-27px">返回</a>
-	 </div>  
+		<h4>商家设置 </h4>
+	 </div>
+    <!--tab start-->
+    <div class="tab">
+        <ul>
+            <li class="tabli" id="tab0"><a href="{weiguanjia::U('Member_card/index',array('token'=>$token))}">版面设置</a></li>
+            <li class="tabli" id="tab2"><a href="{weiguanjia::U('Member_card/privilege',array('token'=>$token))}">会员特权</a></li>
+            <li class="current tabli" id="tab3"><a href="{weiguanjia::U('Member_card/info',array('token'=>$token))}">会员卡详情</a></li>
+            <li class="tabli" id="tab4"><a href="{weiguanjia::U('Member_card/create',array('token'=>$token))}">在线开卡</a></li>
+            <li class="tabli" id="tab5"><a href="{weiguanjia::U('Member_card/exchange',array('token'=>$token))}">积分设置</a></li>
+            <li class="tabli" id="tab6"><a href="{weiguanjia::U('Member_card/coupon',array('token'=>$token))}">优惠券</a></li>
+            <li class="tabli" id="tab7"><a href="{weiguanjia::U('Member_card/integral',array('token'=>$token))}">礼品券</a></li>
+        </ul>
+    </div>
+    <!--tab end-->
 	<div class="msgWrap bgfc">	 
 		<table class="userinfoArea" style=" margin:0;" border="0" cellspacing="0" cellpadding="0" width="100%">
 			<form action="" method="post">
 			<tbody>
 				<tr>
-					<td width="500px" rowspan="4" valign="top">商家简介：<br>
-						<textarea class="px" id="info" name="info" style="width: 450px; height: 230px; ">{weiguanjia:$info.info}</textarea>
+					<td width="350px" rowspan="4" valign="top">商家简介：<br>
+						<textarea class="px" id="info" name="info" style="width: 300px; height: 230px; ">{weiguanjia:$info.info}</textarea>
 					</td>
 					<td valign="top">商家logo外链地址(图片尺寸100x100)<br>
 						<input type="input" class="px" id="logo" name="logo" value="{weiguanjia:$info.logo}" style="width:250px;" onblur="document.getElementById('cardlogo').src=document.getElementById('logo').value;">
@@ -72,20 +86,19 @@
 		<tbody>
 			<tr>
 				<td><input type="text" name="cname" value="" class="px" style="width:100px;"></td>
-				<td><input type="text" name="info" value="" class="px" style="width:350px;"></td>
-				<td><input type="text" name="tel" value="" class="px" style="width:150px;"></td>
+				<td><input type="text" name="info" value="" class="px" style="width:250px;"></td>
+				<td><input type="text" name="tel" value="" class="px" style="width:100px;"></td>
 				<td><input type="text" name="sort" value="" class="px" style="width:50px;"></td>
 				<td class="norightborder"><button type="submit" class="btnGray vm"><strong>添加</strong></button></td>
 			</tr>
 		 </tbody>
 		 	<tbody>
 			<tr>
-				<td rowssapn="5">
+				<td colspan="5">
 					<div class="cLineB">
 						<h4>联系方式管理 <span class="FAQ">可编辑设置商家地址及联系电话。</span></h4>
 					</div>				
 				</td>
-				
 			</tr>
 		 </tbody>
 		<thead>
@@ -158,4 +171,9 @@ function delrow(obj, tbody) {
   
   
         </div>
+</div>
+<div class="clr"></div>
+</div>
+</div>
+<div class="clr"></div>
 		<include file="Public:footer"/>

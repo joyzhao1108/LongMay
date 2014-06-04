@@ -105,7 +105,7 @@ function calDiscount(){
        <tr>         
        <th>&nbsp;</th>
        <td>
-       <if condition="$isDining neq 1"><input type="hidden" value="0" name="dining" /><else/><input type="hidden" value="1" name="dining" /></if>
+       <if condition="$ptype neq 1"><input type="hidden" value="0" name="ptype" /><else/><input type="hidden" value="1" name="ptype" /></if>
        <button type="submit" name="button" class="btnGreen">保存</button> &nbsp; <a href="{weiguanjia::U('Food/index',array('token'=>$token))}" class="btnGray vm">取消</a></td>
        </tr> 
       </tbody> 

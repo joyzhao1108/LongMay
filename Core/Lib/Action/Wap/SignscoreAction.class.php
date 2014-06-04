@@ -6,10 +6,10 @@
 class SignscoreAction extends BaseAction {
     //显示
     public function index(){
-        $agent = $_SERVER['HTTP_USER_AGENT'];
+        /*$agent = $_SERVER['HTTP_USER_AGENT'];
         if(!strpos($agent,"MicroMessenger")) {
             echo '此功能只能在微信浏览器中使用';exit;
-        }
+        }*/
 
         $token    =  $this->_get('token');
         $wecha_id = $this->_get('wecha_id');
@@ -117,10 +117,10 @@ class SignscoreAction extends BaseAction {
     //  消费记录 
     //-----------------------------------
     public function expend(){
-		$agent = $_SERVER['HTTP_USER_AGENT']; 
+		/*$agent = $_SERVER['HTTP_USER_AGENT'];
         if(!strpos($agent,"MicroMessenger")) {
             echo '此功能只能在微信浏览器中使用';exit;
-        }
+        }*/
 
         $token    =  $this->_get('token');
         $wecha_id = $this->_get('wecha_id');

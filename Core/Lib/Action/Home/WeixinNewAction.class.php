@@ -5,7 +5,7 @@ class WeixinNewAction extends Action
     private $token;
     private $fun;
     private $data = array();
-    private $my = 'AI9';
+    private $my = '龙蔓微管家';
     public function index()
     {
         $this->token = $this->_get('token');
@@ -40,6 +40,70 @@ class WeixinNewAction extends Action
             $this->requestdata('unfollownum');
         }
         $key       = $data['Content'];
+        $return = $this->innerkeyword($key);
+        if (!empty($return)) {
+            if (is_array($return)) {
+                return $return;
+            } else {
+                return array(
+                    $return,
+                    'text'
+                );
+            }
+        } else {
+            return $this->keyword($key);
+        }
+    }
+    function companyMap()
+    {
+        import("Home.Action.MapAction");
+        $mapAction = new MapAction();
+        return $mapAction->staticCompanyMap();
+    }  
+    function huiyuanka($name)
+    {
+        return $this->member();
+    }
+    function member()
+    {
+        $card     = M('member_card_create')->where(array(
+            'token' => $this->token,
+            'wecha_id' => $this->data['FromUserName']
+        ))->find();
+        $cardInfo = M('member_card_set')->where(array(
+            'token' => $this->token
+        ))->find();
+        if ($card == false) {
+            $data['picurl']  = rtrim(C('site_url'), '/') . '/themes/Static/images/member.jpg';
+            $data['title']   = '会员卡,省钱，打折,促销，优先知道,有奖励哦';
+            $data['keyword'] = '尊贵vip，是您消费身份的体现,会员卡,省钱，打折,促销，优先知道,有奖励哦';
+            $data['url']     = rtrim(C('site_url'), '/') . U('Wap/Card/get_card', array(
+                'token' => $this->token,
+                'wecha_id' => $this->data['FromUserName']
+            ));
+        } else {
+            $data['picurl']  = rtrim(C('site_url'), '/') . '/themes/Static/images/vip.jpg';
+            $data['title']   = $cardInfo['cardname'];
+            $data['keyword'] = $cardInfo['msg'];
+            $data['url']     = rtrim(C('site_url'), '/') . U('Wap/Card/vip', array(
+                'token' => $this->token,
+                'wecha_id' => $this->data['FromUserName']
+            ));
+        }
+        return array(
+            array(
+                array(
+                    $data['title'],
+                    $data['keyword'],
+                    $data['picurl'],
+                    $data['url']
+                )
+            ),
+            'news'
+        );
+    }
+    function  innerkeyword($key)
+    {
         switch ($key) {
             case '首页':
                 return $this->home();
@@ -107,57 +171,9 @@ class WeixinNewAction extends Action
                 );
                 break;
             default:
-                return $this->keyword($key);
+                return '';
         }
     }
-    function companyMap()
-    {
-        import("Home.Action.MapAction");
-        $mapAction = new MapAction();
-        return $mapAction->staticCompanyMap();
-    }  
-    function huiyuanka($name)
-    {
-        return $this->member();
-    }
-    function member()
-    {
-        $card     = M('member_card_create')->where(array(
-            'token' => $this->token,
-            'wecha_id' => $this->data['FromUserName']
-        ))->find();
-        $cardInfo = M('member_card_set')->where(array(
-            'token' => $this->token
-        ))->find();
-        if ($card == false) {
-            $data['picurl']  = rtrim(C('site_url'), '/') . '/themes/Static/images/member.jpg';
-            $data['title']   = '会员卡,省钱，打折,促销，优先知道,有奖励哦';
-            $data['keyword'] = '尊贵vip，是您消费身份的体现,会员卡,省钱，打折,促销，优先知道,有奖励哦';
-            $data['url']     = rtrim(C('site_url'), '/') . U('Wap/Card/get_card', array(
-                'token' => $this->token,
-                'wecha_id' => $this->data['FromUserName']
-            ));
-        } else {
-            $data['picurl']  = rtrim(C('site_url'), '/') . '/themes/Static/images/vip.jpg';
-            $data['title']   = $cardInfo['cardname'];
-            $data['keyword'] = $cardInfo['msg'];
-            $data['url']     = rtrim(C('site_url'), '/') . U('Wap/Card/vip', array(
-                'token' => $this->token,
-                'wecha_id' => $this->data['FromUserName']
-            ));
-        }
-        return array(
-            array(
-                array(
-                    $data['title'],
-                    $data['keyword'],
-                    $data['picurl'],
-                    $data['url']
-                )
-            ),
-            'news'
-        );
-    }  
     function keyword($key)
     {
         $like['keyword'] = array(
@@ -394,8 +410,11 @@ class WeixinNewAction extends Action
                         'music'
                     );
             }
-        } else {
-            if (!strpos($this->fun, 'liaotian')) {
+        }
+        else
+        {
+            if (!strpos($this->fun, 'liaotian'))
+            {
                 $other = M('Other')->where(array(
                     'token' => $this->token
                 ))->find();
@@ -410,40 +429,56 @@ class WeixinNewAction extends Action
                             $other['info'],
                             'text'
                         );
-                    } else {
-                        $img = M('Img')->field('id,text,pic,url,title')->limit(5)->order('id desc')->where(array(
-                            'token' => $this->token,
-                            'keyword' => array(
-                                'like',
-                                '%' . $other['keyword'] . '%'
-                            )
-                        ))->select();
-                        if ($img == false) {
-                            return array(
-                                '无此图文信息,请提醒商家，重新设定关键词',
-                                'text'
-                            );
-                        }
-                        foreach ($img as $keya => $infot) {
-                            if ($infot['url'] != false) {
-                                $url = $infot['url'];
+                    }
+                    else
+                    {
+                        $returnother = $this->innerkeyword($other['keyword']);
+                        if (!empty($returnother)) {
+                            if (is_array($returnother)) {
+                                return $returnother;
                             } else {
-                                $url = rtrim(C('site_url'), '/') . U('Wap/Index/content', array(
-                                    'token' => $this->token,
-                                    'id' => $infot['id']
-                                ));
+                                return array(
+                                    $returnother,
+                                    'text'
+                                );
                             }
-                            $return[] = array(
-                                $infot['title'],
-                                $infot['text'],
-                                $infot['pic'],
-                                $url
+                        }
+                        else
+                        {
+                            $img = M('Img')->field('id,text,pic,url,title')->limit(5)->order('id desc')->where(array(
+                                'token' => $this->token,
+                                'keyword' => array(
+                                    'like',
+                                    '%' . $other['keyword'] . '%'
+                                )
+                            ))->select();
+                            if ($img == false) {
+                                return array(
+                                    '无此图文信息,请提醒商家，重新设定关键词',
+                                    'text'
+                                );
+                            }
+                            foreach ($img as $keya => $infot) {
+                                if ($infot['url'] != false) {
+                                    $url = $infot['url'];
+                                } else {
+                                    $url = rtrim(C('site_url'), '/') . U('Wap/Index/content', array(
+                                        'token' => $this->token,
+                                        'id' => $infot['id']
+                                    ));
+                                }
+                                $return[] = array(
+                                    $infot['title'],
+                                    $infot['text'],
+                                    $infot['pic'],
+                                    $url
+                                );
+                            }
+                            return array(
+                                $return,
+                                'news'
                             );
                         }
-                        return array(
-                            $return,
-                            'news'
-                        );
                     }
                 }
             }
@@ -452,6 +487,23 @@ class WeixinNewAction extends Action
                 'text'
             );
         }
+    }
+    function chat($name)
+    {
+        if ($name == "你叫什么" || $name == "你是谁") {
+            return '咳咳，我是聪明与智慧并存的美女，主淫你可以叫我' . $this->my . ',人家刚交男朋友,你不可追我啦';
+        } elseif ($name == "你父母是谁" || $name == "你爸爸是谁" || $name == "你妈妈是谁") {
+            return '主淫,' . $this->my . '是宇布斯创造的,所以他们是我的父母,不过主人我属于你的';
+        } elseif ($name == '糗事') {
+            $name = '笑话';
+        } elseif ($name == '网站' || $name == '官网' || $name == '网址' || $name == '3g网址') {
+            return "【龙蔓网络官网网址】\www.longmey.com\n【专一服务理念】\n化繁为简,让菜鸟也能使用强大的系统!";
+        }
+        $str  = 'http://api.ajaxsns.com/api.php?key=free&appid=0&msg=' . urlencode($name);
+        $json = json_decode(file_get_contents($str));
+        $str  = str_replace('菲菲', $this->my, str_replace('提示：', $this->my . '提醒您:', str_replace('{br}', "\n", $json->content)));
+        $str  = str_replace('mzxing_com', 'longmey', $str);
+        return str_replace('菲菲', $this->my, $str);
     }
     function home()
     {

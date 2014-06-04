@@ -3,10 +3,11 @@ class ProductAction extends UserAction{
 	public $token;
 	public $product_model;
 	public $product_cat_model;
-	public $isDining;
+	public $ptype;
 	public function _initialize() {
 		parent::_initialize();
         parent::checkRight('shop');
+        $this->ptype = 0;
 	}
 	public function index(){		
 		$catid=intval($_GET['catid']);
@@ -17,7 +18,7 @@ class ProductAction extends UserAction{
 		if ($catid){
 			$where['catid']=$catid;
 		}
-		$where['dining']=$this->isDining;
+		$where['ptype']=$this->ptype;
 		$where['groupon']=array('neq',1);
         if(IS_POST){
             $key = $this->_post('searchkey');
@@ -54,7 +55,7 @@ class ProductAction extends UserAction{
 		$parentid=$parentid==''?0:$parentid;
 		$data=M('Product_cat');
 		$where=array('parentid'=>$parentid,'token'=>session('token'));
-		$where['dining']=$this->isDining;
+		$where['ptype']=$this->ptype;
         if(IS_POST){
             $key = $this->_post('searchkey');
             if(empty($key)){
@@ -84,11 +85,7 @@ class ProductAction extends UserAction{
 	}
 	public function catAdd(){ 
 		if(IS_POST){
-			if ($this->isDining){
-				$this->insert('Product_cat','/cats?dining=1&parentid='.$this->_post('parentid'));
-			}else {
-			$this->insert('Product_cat','/cats?parentid='.$this->_post('parentid'));
-			}
+            $this->insert('Product_cat','/cats?ptype='.$this->ptype.'&parentid='.$this->_post('parentid'));
 		}else{
 			$parentid=intval($_GET['parentid']);
 			$parentid=$parentid==''?0:$parentid;
@@ -146,19 +143,15 @@ class ProductAction extends UserAction{
 	}
 	public function add(){ 
 		if(IS_POST){
-			$this->all_insert('Product','/index?token='.session('token').'&dining='.$this->isDining);
+			$this->all_insert('Product','/index?token='.session('token').'&ptype='.$this->ptype);
 		}else{
 			//分类
 			$data=M('Product_cat');
 			$catWhere=array('parentid'=>0,'token'=>session('token'));
-			if ($this->isDining){
-				$catWhere['dining']=1;
-			}else {
-				$catWhere['dining']=0;
-			}
+            $catWhere['ptype']=$this->ptype;
 			$cats=$data->where($catWhere)->select();
 			if (!$cats){
-				 $this->error("请先添加分类",U('Product/catAdd',array('token'=>session('token'),'dining'=>$this->isDining)));
+				 $this->error("请先添加分类",U('Product/catAdd',array('token'=>session('token'),'ptype'=>$this->ptype)));
 				 exit();
 			}
 			$this->assign('cats',$cats);
@@ -200,7 +193,7 @@ class ProductAction extends UserAction{
 			if($check==false)$this->error('非法操作');
 			if($product_model->create()){
 				if($product_model->where($where)->save($_POST)){
-					$this->success('修改成功',U('Product/index',array('token'=>session('token'),'dining'=>$this->isDining)));
+					$this->success('修改成功',U('Product/index',array('token'=>session('token'),'ptype'=>$this->ptype)));
 				}else{
 					$this->error('操作失败');
 				}
@@ -210,9 +203,7 @@ class ProductAction extends UserAction{
 		}else{
 			//分类
 			$catWhere=array('parentid'=>0,'token'=>session('token'));
-			if ($this->isDining){
-				$catWhere['dining']=1;
-			}
+            $catWhere['ptype']=$this->ptype;
 			$cats=$product_cat_model->where($catWhere)->select();
 			$this->assign('cats',$cats);
 			
@@ -260,7 +251,7 @@ class ProductAction extends UserAction{
             if($back==true){
             	$keyword_model=M('Keyword');
             	$keyword_model->where(array('token'=>session('token'),'pid'=>$id,'module'=>'Product'));
-                $this->success('操作成功',U('Product/index',array('token'=>session('token'),'dining'=>$this->isDining)));
+                $this->success('操作成功',U('Product/index',array('token'=>session('token'),'ptype'=>$this->ptype)));
             }else{
                  $this->error('服务器繁忙,请稍后再试',U('Product/index',array('token'=>session('token'))));
             }
@@ -282,7 +273,7 @@ class ProductAction extends UserAction{
 					}
 				}
 			}
-			$this->success('操作成功',U('Product/orders',array('token'=>session('token'),'dining'=>$this->isDining)));
+			$this->success('操作成功',U('Product/orders',array('token'=>session('token'),'ptype'=>$this->ptype)));
 		}else{
 
 			$where=array('token'=>$this->_session('token'));

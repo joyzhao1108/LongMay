@@ -3,11 +3,12 @@ class FoodAction extends UserAction{
 	public $token;
 	public $product_model;
 	public $product_cat_model;
-	public $isDining;
+	public $ptype;
 	public function _initialize() {
 		parent::_initialize();
         parent::checkRight('food');
-        $this->isDining = 1;
+        $this->ptype = 1;
+        $this->assign('ptype',$this->ptype);
 	}
 	public function index(){		
 		$catid=intval($_GET['catid']);
@@ -18,7 +19,7 @@ class FoodAction extends UserAction{
 		if ($catid){
 			$where['catid']=$catid;
 		}
-		$where['dining']=$this->isDining;
+		$where['ptype']=$this->ptype;
 		$where['groupon']=array('neq',1);
         if(IS_POST){
             $key = $this->_post('searchkey');
@@ -49,7 +50,7 @@ class FoodAction extends UserAction{
 		$parentid=$parentid==''?0:$parentid;
 		$data=M('Product_cat');
 		$where=array('parentid'=>$parentid,'token'=>session('token'));
-		$where['dining']=$this->isDining;
+		$where['ptype']=$this->ptype;
         if(IS_POST){
             $key = $this->_post('searchkey');
             if(empty($key)){
@@ -79,11 +80,7 @@ class FoodAction extends UserAction{
 	}
 	public function catAdd(){ 
 		if(IS_POST){
-			if ($this->isDining){
-				$this->insert('Product_cat','/cats?dining=1&parentid='.$this->_post('parentid'));
-			}else {
-			$this->insert('Product_cat','/cats?parentid='.$this->_post('parentid'));
-			}
+            $this->insert('Product_cat','/cats?ptype=1&parentid='.$this->_post('parentid'));
 		}else{
 			$parentid=intval($_GET['parentid']);
 			$parentid=$parentid==''?0:$parentid;
@@ -102,7 +99,7 @@ class FoodAction extends UserAction{
             $product_model=M('Product');
             $productsOfCat=$product_model->where(array('catid'=>$id))->select;
             if (count($productsOfCat)){
-            	$this->error('本分类下有商品，请删除商品后再删除分类',U('Product/cats',array('token'=>session('token'),'dining'=>$this->isDining)));
+            	$this->error('本分类下有商品，请删除商品后再删除分类',U('Product/cats',array('token'=>session('token'),'ptype'=>$this->ptype)));
             }
             $back=$data->where($where)->delete();
             if($back==true){
@@ -141,7 +138,7 @@ class FoodAction extends UserAction{
 	}
 	public function add(){ 
 		if(IS_POST){
-			$this->all_insert('Product','/index?token='.session('token').'&dining='.$this->isDining);
+			$this->all_insert('Product','/index?token='.session('token').'&ptype='.$this->ptype);
 		}else{
 			//分类
 			$data=M('Product_cat');
@@ -153,7 +150,7 @@ class FoodAction extends UserAction{
 			}
 			$cats=$data->where($catWhere)->select();
 			if (!$cats){
-				 $this->error("请先添加分类",U('Food/catAdd',array('token'=>session('token'),'dining'=>$this->isDining)));
+				 $this->error("请先添加分类",U('Food/catAdd',array('token'=>session('token'),'ptype'=>$this->ptype)));
 				 exit();
 			}
 			$this->assign('cats',$cats);
@@ -195,7 +192,7 @@ class FoodAction extends UserAction{
 			if($check==false)$this->error('非法操作');
 			if($product_model->create()){
 				if($product_model->where($where)->save($_POST)){
-					$this->success('修改成功',U('Food/index',array('token'=>session('token'),'dining'=>$this->isDining)));
+					$this->success('修改成功',U('Food/index',array('token'=>session('token'),'ptype'=>$this->ptype)));
 				}else{
 					$this->error('操作失败');
 				}
@@ -205,9 +202,7 @@ class FoodAction extends UserAction{
 		}else{
 			//分类
 			$catWhere=array('parentid'=>0,'token'=>session('token'));
-			if ($this->isDining){
-				$catWhere['dining']=1;
-			}
+            $catWhere['ptype']=$this->ptype;
 			$cats=$product_cat_model->where($catWhere)->select();
 			$this->assign('cats',$cats);
 			
@@ -255,7 +250,7 @@ class FoodAction extends UserAction{
             if($back==true){
             /*	$keyword_model=M('Keyword');
             	$keyword_model->where(array('token'=>session('token'),'pid'=>$id,'module'=>'Product'));*/
-                $this->success('操作成功',U('Food/index',array('token'=>session('token'),'dining'=>$this->isDining)));
+                $this->success('操作成功',U('Food/index',array('token'=>session('token'),'ptype'=>$this->ptype)));
             }else{
                  $this->error('服务器繁忙,请稍后再试',U('Food/index',array('token'=>session('token'))));
             }
@@ -277,16 +272,12 @@ class FoodAction extends UserAction{
 					}
 				}
 			}
-			$this->success('操作成功',U('Food/orders',array('token'=>session('token'),'dining'=>$this->isDining)));
+			$this->success('操作成功',U('Food/orders',array('token'=>session('token'),'ptype'=>$this->ptype)));
 		}else{
 			
 
 			$where=array('token'=>$this->_session('token'));
-			if ($this->isDining){
-				$where['dining']=1;
-			}else {
-				$where['dining']=0;
-			}
+            $where['ptype']=$this->ptype;
 			$where['groupon']=array('neq',1);
 			if(IS_POST){
 				$key = $this->_post('searchkey');
@@ -536,7 +527,7 @@ class FoodAction extends UserAction{
         }else{
             $infoTypes=array(
                 'Groupon'=>array('type'=>'Groupon','name'=>'团购','keyword'=>'团购','url'=>'/index.php?g=Wap&m=Groupon&a=grouponIndex&token='.$this->token),
-                'Dining'=>array('type'=>'Dining','name'=>'订餐','keyword'=>'订餐','url'=>'/index.php?g=Wap&m=Product&a=dining&dining=1&token='.$this->token),
+                'Dining'=>array('type'=>'Dining','name'=>'订餐','keyword'=>'订餐','url'=>'/index.php?g=Wap&m=Product&a=dining&ptype=1&token='.$this->token),
                 'Shop'=>array('type'=>'Shop','name'=>'商城','keyword'=>'商城','url'=>'/index.php?g=Wap&m=Product&a=cats&token='.$this->token),
             );
             $this->assign('infoType',$infoTypes[$infotype]);

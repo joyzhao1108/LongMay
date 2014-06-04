@@ -1,24 +1,29 @@
-<include file="Public:head"/>  
+<include file="Public:head"/>
+<link rel="stylesheet" type="text/css" href="{weiguanjia::RES}/css/cymain.css" />
 <div class="content">
          
           <div class="cLineB">
               <h4 class="left">会员礼品对换卷</h4>
-               
-              <div class="clr"></div>
           </div>
+    <!--tab start-->
+    <div class="tab">
+        <ul>
+            <li class="tabli" id="tab0"><a href="{weiguanjia::U('Member_card/index',array('token'=>$token))}">版面设置</a></li>
+            <li class="tabli" id="tab2"><a href="{weiguanjia::U('Member_card/privilege',array('token'=>$token))}">会员特权</a></li>
+            <li class="tabli" id="tab3"><a href="{weiguanjia::U('Member_card/info',array('token'=>$token))}">会员卡详情</a></li>
+            <li class="tabli" id="tab4"><a href="{weiguanjia::U('Member_card/create',array('token'=>$token))}">在线开卡</a></li>
+            <li class="tabli" id="tab5"><a href="{weiguanjia::U('Member_card/exchange',array('token'=>$token))}">积分设置</a></li>
+            <li class="tabli" id="tab6"><a href="{weiguanjia::U('Member_card/coupon',array('token'=>$token))}">优惠券</a></li>
+            <li class="current tabli" id="tab7"><a href="{weiguanjia::U('Member_card/integral',array('token'=>$token))}">礼品券</a></li>
+        </ul>
+    </div>
+    <!--tab end-->
           <div class="cLine">
 			<div class="pageNavigator left">
-				<a href="{weiguanjia::U('Member_card/privilege',array('token'=>$token))}" title="查看会员特权" class="btnGrayS vm bigbtn">
-					<img src="{weiguanjia::RES}/images/cart_info/power1.png" width="24px" class="vm">查看会员特权
-				</a>
-			　<a href="{weiguanjia::U('Member_card/coupon',array('token'=>$token))}" title="查看优惠券" class="btnGrayS vm bigbtn">
-				<img src="{weiguanjia::RES}/images/cart_info/power2.png" width="24px" class="vm">查看优惠券
-			  </a>　
 				<a class="btnGrayS vm bigbtn" href="{weiguanjia::U('Member_card/integral_add',array('token'=>$token))}" title="发布礼品券">
 					<img src="{weiguanjia::RES}/images/cart_info/power3.png" width="24px" class="vm">发布礼品券
 				</a>　
 			</div>
-			<a href="javascript:history.go(-1);" class="right btnGrayS vm" style="margin-top:10px">返回</a>          
 			<div class="clr"></div>
           </div>
           <div class="msgWrap">
@@ -79,4 +84,9 @@
             <div class="clr"></div>
           </div>
         </div>
+</div>
+<div class="clr"></div>
+</div>
+</div>
+<div class="clr"></div>
 <include file="Public:footer"/>

@@ -20,9 +20,10 @@ class IndexAction extends WapTmplAction
     public function index()
     {
         $where['token'] = $this->_get('token');
-        $flash          = M('Flash')->where($where)->select();
-        $bulletin          = M('Bulletin')->where($where)->select();
-        $buarray = array();
+        $flash          = M('Flash')->where($where)->order('sort asc')->select();
+        $where['status'] = 1;
+        $activity          = M('Activity')->where($where)->select();
+       /* $buarray = array();
         foreach($bulletin as $vo)
         {
             $title = substr($vo["title"],0,60);
@@ -32,10 +33,11 @@ class IndexAction extends WapTmplAction
             }
             $vo["title"] = $title;
             $buarray[] = $vo;
-        }
+        }*/
         $count          = count($flash);
+        $this->assign('bgurl', $flash[0]['img']);
         $this->assign('flash', $flash);
-        $this->assign('bulletin', $buarray);
+        $this->assign('activity', $activity);
         $this->assign('num', $count);
         $this->display('index'.$this->industrytmpl);
     }

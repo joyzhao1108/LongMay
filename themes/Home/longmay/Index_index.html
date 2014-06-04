@@ -7,13 +7,89 @@
 <meta name="description" content="{weiguanjia::C('content')}" />
 <include file="Public:head" />
 <link href="{weiguanjia::RES}/css/indexbanner.css" rel="stylesheet" type="text/css" />
+
+<style>
+
+    #banner1
+    {
+        margin: 0 auto;
+        width:980px;
+    }
+    #banner1 ul
+    {
+        width:100%; overflow:hidden;
+    }
+    #banner1 li{
+        float: left;
+        width:300px;
+        height: 250px;
+        margin: 10px 12px;
+    }
+    #banner1 li a.active{
+        background: lightblue;
+    }
+    #banner4
+    {
+        margin: 0 auto;
+        width:960px;
+    }
+    #banner4 ul
+    {
+        width:100%; overflow:hidden;
+    }
+    #banner4 li{
+        float: left;
+        width:190px;
+        height: 160px;
+        padding: 10px;
+        margin: 15px;
+    }
+    #banner4 li a.active{
+        background: lightblue;
+    }
+    .industrynav table{
+        width:120px;
+        height: 100px;
+    }
+    .industrynav table th{
+        text-align: center;
+        color: #0093d3;
+        font-size: 18px;
+        font-weight: 300;
+    }
+    .industrynav table td{
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .funnav table th{
+        text-align: center;
+        color: #0093d3;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    .funnav table td{
+        text-align: center;
+        font-size: 12px;
+        font-weight: 300;
+    }
+    .baiban{
+        width:504px;
+        margin: 10px auto;
+    }
+    .baiban td{
+        padding:0px 20px;
+    }
+</style>
  <div id="body-container" style="margin-top:-80px;">
 <!--  banner开始 -->
             <div class="sl_wrap">
                 <div class="sl_wrap_in">
-                    <div class="sl sl_iphone_2" style="display: ">
+                    <div class="sl sl_iphone_1" style="display: ">
 					</div>
-                    <div class="sl sl_iphone_1" style="display:none">
+                    <div class="sl sl_iphone_2" style="display:none ">
+                    </div>
+                   <!-- <div class="sl sl_iphone_1" style="display:none">
 					<div class="clsfix"></div>
                         <div class="wrap">
                             <div class="sl_text">一切开发只为绽放您的微信商务                         
@@ -23,7 +99,7 @@
 							<div class="sl_text">从未懈怠的追求创新与服务的极致                         
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="sl sl_iphone_3" style="display: none"></div>
                     <div class="sl sl_iphone_4" style="display: none"></div>
                 </div>
@@ -40,30 +116,208 @@
             </div>
 <!--  banner结束 -->
         </div>
-
-<div style="text-align:center">
-<div class="titlefont1">您是否还在疑惑微信开发对于自己的价值和作用？</div>
-<a href="{weiguanjia::U('Home/Index/index')}"><div class="titlefont2">了解什么是微信开发</div></a>
-<hr class="hrcc" style="margin: 20px auto 0px" />
-<div class="titlefont3">为您精心烹饪的行业模版</div>
+<div style="text-align:center;padding:10px">
+    <div class="titlefont1">您是否还在疑惑微信开发对于自己的价值和作用？</div>
+    <a href="{weiguanjia::U('Home/Index/index')}"><div class="titlefont2">了解什么是微信开发</div></a>
 </div>
-
 <!--主要功能介绍开始-->
-<div class="present">
-    <table>
-        <tr>
-            <td><a href="{weiguanjia::U('Home/Index/fc')}"><div class="present001"><div class="presenttext">餐饮</div></div></a></td>
-            <td><a href="{weiguanjia::U('Home/Index/fc')}"><div class="present002"><div class="presenttext">教育</div></div></a></td>
-            <td><a href="{weiguanjia::U('Home/Index/fc')}"><div class="present003"><div class="presenttext">会所</div></div></a></td>
-        </tr>
-        <tr>
-            <td><a href="{weiguanjia::U('Home/Index/fc')}"><div class="present004"><div class="presenttext">美发</div></div></a></td>
-            <td><a href="{weiguanjia::U('Home/Index/fc')}"><div class="present005"><div class="presenttext">酒店</div></div></a></td>
-            <td><a href="{weiguanjia::U('Home/Index/fc')}"><div class="present006"><div class="presenttext">旅行社</div></div></a></td>
-        </tr>
-    </table>
+<div style="background: #EfEfEf;padding:10px;margin: 10px 0;">
+    <div class="titleh4">为您精心烹饪的行业模版</div>
+    <div class="titleh2">拥有它.你的业务开展如虎添翼.事业发展节节高升</div>
+<div id="banner1" class="banner">
+    <ul>
+        <li><a class="industrynav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/tpl1.png"></td></tr>
+                <tr><th>餐饮</th></tr>
+                <tr><td>点菜，预约，会员服务，尽在弹指间</td></tr>
+            </table>
+        </a></li>
+        <li><a class="industrynav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/tpl2.png"></td></tr>
+                <tr><th>教育培训</th></tr>
+                <tr><td>预约，互动，查看课程，从未如此容易</td></tr>
+            </table>
+        </a></li>
+        <li><a class="industrynav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/tpl3.png"></td></tr>
+                <tr><th>会所</th></tr>
+                <tr><td>预约，会员服务，活动推广，只手可得</td></tr>
+            </table>
+        </a></li>
+        <li><a class="industrynav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/tpl4.png"></td></tr>
+                <tr><th>美发</th></tr>
+                <tr><td>会员管理，新品推广，缤纷多彩</td></tr>
+            </table>
+        </a></li>
+        <li><a class="industrynav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/tpl5.png"></td></tr>
+                <tr><th>酒店</th></tr>
+                <tr><td>订房，订餐，推广，唾手可得</td></tr>
+            </table>
+        </a></li>
+        <li><a class="industrynav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/tpl6.png"></td></tr>
+                <tr><th>旅行社</th></tr>
+                <tr><td>宣传推广，会员管理，一应俱全</td></tr>
+            </table>
+        </a></li>
+        <li><a class="industrynav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/tpl7.png"></td></tr>
+                <tr><th>房产</th></tr>
+                <tr><td>靓房展示，宣传推广，轻松高效</td></tr>
+            </table>
+        </a></li>
+        <li><a class="industrynav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/tpl8.png"></td></tr>
+                <tr><th>家政</th></tr>
+                <tr><td>服务预约，顾客管理，宣传推广，面面俱到</td></tr>
+            </table>
+        </a></li>
+        <li><a class="industrynav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/tpl9.png"></td></tr>
+                <tr><th>汽车</th></tr>
+                <tr><td>服务预约，新车展示，服务四通八达</td></tr>
+            </table>
+        </a></li>
+        <li><a class="industrynav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/tpl10.png"></td></tr>
+                <tr><th>微商城</th></tr>
+                <tr><td>商品展示，在线订购，会员管理，随时随地</td></tr>
+            </table>
+        </a></li>
+        <li><a class="industrynav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/tpl11.png"></td></tr>
+                <tr><th>外卖</th></tr>
+                <tr><td>点餐，点评，订单管理，从此更加方便</td></tr>
+            </table>
+        </a></li>
+        <li><a class="industrynav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/tpl99.png"></td></tr>
+                <tr><th>更多</th></tr>
+                <tr><td>更多行业模板正在不断开发中</td></tr>
+            </table>
+        </a></li>
+    </ul>
+</div>
 </div>
 <!--主要功能介绍结束-->
+<div id="banner4" class="banner">
+    <div class="titleh4">丰富的功能模板任你组合</div>
+    <div class="titleh2">还想拥有更多功能?放心,早已为你备好</div>
+    <ul>
+        <li><a class="funnav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/fun1.png"></td></tr>
+                <tr><th>会员卡</th></tr>
+                <tr><td>电子会员卡.会员管理.积分管理.数据统计.一键倾心</td></tr>
+            </table>
+        </a></li>
+        <li><a class="funnav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/fun2.png"></td></tr>
+                <tr><th>天气查询</th></tr>
+                <tr><td>为客户提供天气预报服务.体现你的关怀.增进客商感情</td></tr>
+            </table>
+        </a></li>
+        <li><a class="funnav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/fun3.png"></td></tr>
+                <tr><th>LBS地图</th></tr>
+                <tr><td>客户还不知道你的位置?有此功能不再担心</td></tr>
+            </table>
+        </a></li>
+        <li><a class="funnav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/fun4.png"></td></tr>
+                <tr><th>抽奖</th></tr>
+                <tr><td>大转盘抽奖.调动客户兴趣.加强客商互动.促进市场推广</td></tr>
+            </table>
+        </a></li>
+        <li><a class="funnav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/fun5.png"></td></tr>
+                <tr><th>预订系统</th></tr>
+                <tr><td>预订服务和产品.从此随时随地.高效便捷</td></tr>
+            </table>
+        </a></li>
+        <li><a class="funnav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/fun6.png"></td></tr>
+                <tr><th>相册系统</th></tr>
+                <tr><td>更好地展示自己.展示产品.手机就是你的舞台</td></tr>
+            </table>
+        </a></li>
+        <li><a class="funnav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/fun7.png"></td></tr>
+                <tr><th>智能回复</th></tr>
+                <tr><td>客户喜欢和你聊天.有它.你可以轻松应对</td></tr>
+            </table>
+        </a></li>
+        <li><a class="funnav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/fun8.png"></td></tr>
+                <tr><th>优惠券</th></tr>
+                <tr><td>发送优惠券.兑换券.从此不再浪费纸张.自动统计又环保</td></tr>
+            </table>
+        </a></li>
+        <li><a class="funnav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/fun9.png"></td></tr>
+                <tr><th>在线支持</th></tr>
+                <tr><td>手机转账支付.和钱包纸币说再见</td></tr>
+            </table>
+        </a></li>
+        <li><a class="funnav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/fun10.png"></td></tr>
+                <tr><th>投票系统</th></tr>
+                <tr><td>边界的进行客户互动反馈.更轻松的了解顾客心声</td></tr>
+            </table>
+        </a></li>
+        <li><a class="funnav" href="javascript:void(0);">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr><td><img src="{weiguanjia::RES}/css/pimg/fun11.png"></td></tr>
+                <tr><th>+更多</th></tr>
+                <tr><td>更多的功能正在被开发完善.期待着你的使用</td></tr>
+            </table>
+        </a></li>
+    </ul>
+</div>
+<!--主要功能介绍开始-->
+<div style="background: #EfEfEf;padding:10px 0 0;margin: 10px 0;">
+    <div class="titleh4">什么？我们的产品依然不能覆盖你的全部需求？</div>
+    <div class="titleh2">放心.白板已经为你备好.你的精彩想法.我们为你定制开发</div>
+    <div class="baiban">
+    <table align="center" cellpadding="0" border="0">
+        <tr>
+            <td rowspan="2"><img src="{weiguanjia::RES}/css/pimg/baibanx.png"></td>
+            <td align="center" valign="middle"><img src="{weiguanjia::RES}/css/pimg/baibany.png"></td>
+        </tr>
+        <tr>
+            <td valign="top"><div class="titleh2">你的非凡想法</div><div class="titleh2">你的独特创意</div><div class="titleh4">我们为你定制开发.量身打造</div></td>
+        </tr>
+    </table></div>
+</div>
+<!--主要功能介绍结束-->
+<div style="text-align:center;padding:10px">
+    <div class="titleh4">精美的界面设计，各式风格一网打尽</div>
+    <div class="titleh2">和你一样.我们对产品的美有着与生俱来的主球.永不停歇</div>
+    <div id="wapui"></div>
+</div>
 <script src="style/js/jquery.js" type="text/javascript"></script>
  <script type="text/javascript" >
             var jQ = jQuery.noConflict();
@@ -201,4 +455,5 @@
                 
             });
         </script>
+<br>
 <include file="Public:footer" />

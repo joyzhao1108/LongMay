@@ -6,7 +6,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=no">
 <meta name="description" content="">
-<title>消费记录</title>
+<title>我的积分</title>
 <link href="{weiguanjia::RES}/css/guajiang/css/activity-style.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 #txt {
@@ -60,7 +60,7 @@ Unknown property name.-ms-filter: progid:DXImageTransform.Microsoft.gradient(Gra
  <if condition="$cardset['shopping'] neq false">
    <img src="{weiguanjia::$cardset['shopping']}">
  <else/>
-   <img src="{weiguanjia::RES}/images/cart_info/shopping.jpg">
+   <img src="{weiguanjia::RES}/images/cart_info/myscore.png">
  </if>
 
 </div>
@@ -126,7 +126,7 @@ Unknown property name.-ms-filter: progid:DXImageTransform.Microsoft.gradient(Gra
 </div>  
 
 <div style="height:20px;"></div>
-<div class="footFix" id="footReturn"><a href="javascript:void(0)" onClick="location.href='{weiguanjia::U('Wap/Index/index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}';"><span>返回3G网站</span></a></div>
+<div class="footFix" id="footReturn"><a href="javascript:void(0)" onClick="location.href='{weiguanjia::U('Card/vip',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}';"><span>返回会员卡页</span></a></div>
 
  
 </body></html>

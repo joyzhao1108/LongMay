@@ -32,12 +32,12 @@
             管理中心</a></li>
         <li id="mn_N3e36" class="nvmenu"><a href="{weiguanjia::U('Home/Index/about')}" hidefocus="true" <eq name="Think.ACTION_NAME" value="about"> class="visited"</eq>>
             联系我们</a></li>
-        <if condition="$_SESSION[uid]==false">
-            <li id="mn_N3e36"  class="nvmenu"> <a style="text-align:right;" href="{weiguanjia::U('Index/login')}" hidefocus="true" <eq name="Think.ACTION_NAME" value="login"> class="visited"</eq>>登录&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
-            <li id="mn_N3e36"  class="nvmenu"><a  style="text-align:left" href="{weiguanjia::U('Index/reg')}" hidefocus="true" <eq name="Think.ACTION_NAME" value="reg"> class="visited"</eq>>&nbsp;&nbsp;&nbsp;&nbsp;注册</a></li>
-            <else/>
+        <if condition="isset($_SESSION['uid']) and $_SESSION['uid']==true">
             <li id="mn_N3e36"  class="nvmenu"><a href="{weiguanjia::U('User/Index/index')}" hidefocus="true"  >{weiguanjia:$Think.session.uname}</a></li>
             <li id="mn_N3e36"  class="nvmenu"><a href="{weiguanjia::U('Admin/Admin/logout')}" hidefocus="true"  >退出</a></li>
+            <else/>
+            <li id="mn_N3e36"  class="nvmenu"> <a style="text-align:right;" href="{weiguanjia::U('Index/login')}" hidefocus="true" <eq name="Think.ACTION_NAME" value="login"> class="visited"</eq>>登录&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+            <li id="mn_N3e36"  class="nvmenu"><a  style="text-align:left" href="{weiguanjia::U('Index/reg')}" hidefocus="true" <eq name="Think.ACTION_NAME" value="reg"> class="visited"</eq>>&nbsp;&nbsp;&nbsp;&nbsp;注册</a></li>
         </if>
     </ul>
 </div>
@@ -82,7 +82,7 @@
                             <li <if condition="MODULE_NAME eq 'Food'">class="selected" <else/>class="subCatalogList"</if>>
                             <a href="{weiguanjia::U('Food/cats',array('token'=>$token,'dining'=>1))}">餐饮行业</a>
                             </li>
-                            <li <if condition="(MODULE_NAME eq 'Product') and (ACTION_NAME eq 'index')">class="selected"<else/>class="subCatalogList"</if> >
+                            <li <if condition="MODULE_NAME eq 'Product'">class="selected"<else/>class="subCatalogList"</if> >
                             <a href="{weiguanjia::U('Product/index',array('token'=>$token))}">微商城</a>
                             </li>
                             <li <if condition="MODULE_NAME eq 'Host'">class="selected"<else/>class="subCatalogList"</if>>
@@ -97,8 +97,8 @@
                             <li class="subCatalogList">
                                 <a href="#">会所</a>
                             </li>
-                            <li <if condition="(MODULE_NAME eq 'Product') and (ACTION_NAME eq 'orders')">class="selected"<else/>class="subCatalogList"</if> >
-                            <a href="{weiguanjia::U('Product/orders',array('token'=>$token,'dining'=>1))}">外卖</a>
+                            <li class="subCatalogList">
+                            <a href="#">外卖</a>
                             </li>
                             <li class="subCatalogList">
                                 <a href="#">汽车保养</a>
@@ -172,9 +172,9 @@
                             <li <if condition="MODULE_NAME eq 'Member'">class="selected" <else/>class="subCatalogList"</if>>
                             <a href="{weiguanjia::U('Member/index',array('token'=>$token))}">会员管理系统</a>
                             </li>
-                            <li <if condition="ACTION_NAME eq 'exchange'">class="selected" <else/>class="subCatalogList"</if>>
+                          <!--  <li <if condition="ACTION_NAME eq 'exchange'">class="selected" <else/>class="subCatalogList"</if>>
                             <a href="{weiguanjia::U('Member_card/exchange',array('token'=>$token))}">积分管理系统</a>
-                            </li>
+                            </li>-->
                             <li class="subCatalogList">
                                 <a href="#">投票点评系统</a>
                             </li>

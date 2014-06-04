@@ -33,7 +33,7 @@ class UserAction extends BaseAction{
 	}
     public function checkRight($funname)
     {
-        $fun = D('Function')->where(array('funname'=>$funname))->find();
+        $fun = D('Function')->where(array('funname'=>$funname,'status'=>1))->find();
         if($fun)
         {
             $wherefun = array('token'=>$this->token,'funcid'=>$fun['id']);

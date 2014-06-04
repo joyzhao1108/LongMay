@@ -52,19 +52,11 @@ class LotteryAction extends UserAction{
 		}
 	}
 	public function setinc(){
-		/*if(session('gid')==1){
-			$this->error('vip0无法开启活动,请充值后再使用',U('Home/Index/price'));
-		}*/
 		$id=$this->_get('id');
 		$where=array('id'=>$id,'token'=>session('token'));
 		$check=M('Lottery')->where($where)->find();
 		if($check==false)$this->error('非法操作');
-		$user=M('Users')->field('gid,activitynum')->where(array('id'=>session('uid')))->find();
-		$group=M('User_group')->where(array('id'=>$user['gid']))->find();
-		
-		if($user['activitynum']>=$group['activitynum']){
-			$this->error('您的免费活动创建数已经全部使用完,请充值后再使用',U('Home/Index/price'));
-		}
+
 		$data=M('Lottery')->where($where)->save(array('status'=>1));
 		if($data!=false){
 			$this->success('恭喜你,活动已经开始');
@@ -133,7 +125,7 @@ class LotteryAction extends UserAction{
 		$data=M('Lottery');
 		$check=$data->where($where)->find();
 		if($check==false)$this->error('非法操作');
-		$back=$data->where($wehre)->delete();
+		$back=$data->where($where)->delete();
 		if($back==true){
 			M('Keyword')->where(array('pid'=>$id,'token'=>session('token'),'module'=>'lottery'))->delete();
 			$this->success('删除成功');

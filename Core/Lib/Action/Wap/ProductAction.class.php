@@ -2,8 +2,9 @@
 class ProductAction extends WapTmplAction{
 	public $product_model;
 	public $product_cat_model;
-	public $isDining;
-	public function __construct(){
+	public $ptype;//0=商品 1=点餐
+	public function _initialize(){
+        parent::_initialize();
 		$this->product_model=M('Product');
 		$this->product_cat_model=M('Product_cat');
 		//define('RES',THEME_PATH.'common');
@@ -14,10 +15,14 @@ class ProductAction extends WapTmplAction{
 		$this->assign('totalProductCount',$calCartInfo[0]);
 		$this->assign('totalProductFee',$calCartInfo[1]);
 		//是否是餐饮
-		if (isset($_GET['dining'])&&intval($_GET['dining'])){
-			$this->isDining=1;
-			$this->assign('isDining',1);
+		if (isset($_GET['ptype'])){
+			$this->ptype=(int) $_GET['ptype'];
 		}
+        else
+        {
+            $this->ptype = 0;
+        }
+        $this->assign('ptype',$this->ptype);
 	}
 	function remove_html_tag($str){  //清除HTML代码、空格、回车换行符
 		//trim 去掉字串两端的空格
@@ -45,14 +50,10 @@ class ProductAction extends WapTmplAction{
 			$this->assign('thisCat',$thisCat);
 			$this->assign('parentid',$parentid);
 		}
-		if ($this->isDining){
-			$catWhere['dining']=1;
-		}else {
-			$catWhere['dining']=0;
-		}
+        $catWhere['ptype']=$this->ptype;
 		$cats = $this->product_cat_model->where($catWhere)->order('id asc')->select();
 		$this->assign('cats',$cats);
-		$this->assign('metaTitle','商品分类');
+		$this->assign('metaTitle','产品分类');
 		$this->display();
 	}
 	public function products(){
@@ -125,9 +126,7 @@ class ProductAction extends WapTmplAction{
 		$this->assign('branchStoreCount',$branchStoreCount);
 		//销量最高的商品
 		$sameCompanyProductWhere=array('token'=>$this->token,'id'=>array('neq',$product['id']));
-		if ($product['dining']){
-			$sameCompanyProductWhere['dining']=1;
-		}
+        $sameCompanyProductWhere['ptype']=$product['ptype'];
 		if ($product['groupon']){
 			$sameCompanyProductWhere['groupon']=1;
 		}
@@ -169,7 +168,7 @@ class ProductAction extends WapTmplAction{
 		$this->assign('branchStores',$branchStores);
 		$this->assign('metaTitle','公司信息');
 		if($display){
-		$this->display();
+		    $this->display();
 		}
 	}
 	public function companyMap(){
@@ -239,18 +238,13 @@ class ProductAction extends WapTmplAction{
 			$list=$this->product_model->where(array('id'=>array('in',$ids)))->select();
 		}
 		//判断是不是餐饮
-		$isDining=0;
 		if ($list){
 			$i=0;
 			foreach ($list as $p){
 				$list[$i]['count']=$carts[$p['id']]['count'];
-				if ($p['dining']){
-					$isDining=1;
-				}
 				$i++;
 			}
 		}
-		$this->assign('cartIsDining',$isDining);
 		$this->assign('products',$list);
 		//
 		$this->assign('totalFee',$totalFee);
@@ -275,7 +269,7 @@ class ProductAction extends WapTmplAction{
 			}
 		}
 		$_SESSION['session_cart_products']=serialize($products);
-		$this->redirect(U('Product/cart',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'])));
+		$this->redirect(U('Product/cart',array('token'=>$this->token,'wecha_id'=>$this->wecha_id)));
 	}
 	public function ajaxUpdateCart(){
 		$carts=$this->_getCart();
@@ -293,10 +287,6 @@ class ProductAction extends WapTmplAction{
 		echo $calCartInfo[0].'|'.$calCartInfo[1];
 	}
 	public function orderCart(){
-		if (isset($_GET['cartIsDining'])&&intval($_GET['cartIsDining'])){
-			$cartIsDining=1;
-			$this->assign('cartIsDining',1);
-		}
 		$userinfo_model=M('Userinfo');
 		$thisUser=$userinfo_model->where(array('token'=>$this->token,'wecha_id'=>$this->wecha_id))->find();
 		$this->assign('thisUser',$thisUser);
@@ -328,7 +318,7 @@ class ProductAction extends WapTmplAction{
 						$grouponCart[$k]=$c;
 						$carts[$k]['type']='groupon';
 					}else {
-						if ($thisProduct['dining']==1){
+						if ($thisProduct['ptype']==1){
 							$diningCart[$k]=$c;
 							$carts[$k]['type']='dining';
 						}else {
@@ -374,7 +364,7 @@ class ProductAction extends WapTmplAction{
 					$row['info']=serialize($grouponCart);
 					//
 					$row['groupon']=1;
-					$row['dining']=1;
+					$row['ptype']=1;
 					$groupon_rt=$product_cart_model->add($row);
 					$orderids['groupon']=$groupon_rt;
 				}
@@ -389,7 +379,7 @@ class ProductAction extends WapTmplAction{
 					$row['info']=serialize($diningCart);
 					//
 					$row['groupon']=0;
-					$row['dining']=1;
+					$row['ptype']=1;
 					$dining_rt=$product_cart_model->add($row);
 					$orderids['dining']=$dining_rt;
 				}
@@ -404,7 +394,7 @@ class ProductAction extends WapTmplAction{
 					$row['info']=serialize($normalCart);
 					//
 					$row['groupon']=0;
-					$row['dining']=0;
+					$row['ptype']=0;
 					$normal_rt=$product_cart_model->add($row);
 					$orderids['normal']=$normal_rt;
 				}
@@ -419,7 +409,7 @@ class ProductAction extends WapTmplAction{
 					$row['info']=serialize($diningCart);
 					//
 					$row['groupon']=0;
-					$row['dining']=1;
+					$row['ptype']=1;
 					$orderDining_rt=$product_cart_model->add($row);
 				}
 			}
@@ -472,7 +462,7 @@ class ProductAction extends WapTmplAction{
 			$this->redirect(U('Product/my',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'success'=>1)));
 		}else {
 			//如果是订餐
-			if ($cartIsDining){
+			if ($this->ptype == 1){
 				//是否外卖预定等
 				$diningConfig =M('Reply_info')->where(array('infotype'=>'Dining','token'=>$this->token))->find();
 				$this->assign('diningConfig',$diningConfig);
@@ -594,22 +584,13 @@ class ProductAction extends WapTmplAction{
 		$this->assign('shopOpen',1);
 		$this->assign('diningOpen',1);
 		$this->assign('grouponOpen',1);
-		if(!strpos($token_open['queryname'],'shop')){
-            $this->assign('shopOpen',0);
-		}
-		if(!strpos($token_open['queryname'],'dx')){
-            $this->assign('diningOpen',0);
-		}
-		if(!strpos($token_open['queryname'],'etuan')){
-            $this->assign('grouponOpen',0);
-		}
 		$this->assign('metaTitle','微信购物');
 		$this->display();
 	}
 	public function dining(){
 		//是否外卖预定等
-				$diningConfig =M('Reply_info')->where(array('infotype'=>'Dining','token'=>$this->token))->find();
-				$this->assign('diningConfig',$diningConfig);
+        $diningConfig =M('Reply_info')->where(array('infotype'=>'Dining','token'=>$this->token))->find();
+        $this->assign('diningConfig',$diningConfig);
 		$this->assign('metaTitle','订餐');
 		$this->display();
 	}

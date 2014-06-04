@@ -1,10 +1,10 @@
 <?php
 class CardAction extends BaseAction{
 	public function index(){
-		$agent = $_SERVER['HTTP_USER_AGENT'];
+		/*$agent = $_SERVER['HTTP_USER_AGENT'];
 		if(!strpos($agent,"MicroMessenger")) {
 			echo '此功能只能在微信浏览器中使用';exit;
-		}
+		}*/
 
 		$token=$this->_get('token');
 		if($token!=false){
@@ -17,10 +17,10 @@ class CardAction extends BaseAction{
     }
     
 	public function request(){
-		$agent = $_SERVER['HTTP_USER_AGENT'];
+		/*$agent = $_SERVER['HTTP_USER_AGENT'];
 		if(!strpos($agent,"MicroMessenger")) {
 			echo '此功能只能在微信浏览器中使用';exit;
-		}
+		}*/
 
 		$token=$this->_get('token');
 		if($token!=false){
@@ -43,10 +43,6 @@ class CardAction extends BaseAction{
     }
 
 	public function get_card(){
-		$agent = $_SERVER['HTTP_USER_AGENT'];
-		if(!strpos($agent,"MicroMessenger")) {
-			echo '此功能只能在微信浏览器中使用';exit;
-		}
 		
 		$token=$this->_get('token');
 		$wecha_id=$this->_get('wecha_id');
@@ -73,10 +69,10 @@ class CardAction extends BaseAction{
     }
 
 	public function info(){
-		$agent = $_SERVER['HTTP_USER_AGENT'];
+		/*$agent = $_SERVER['HTTP_USER_AGENT'];
 		if(!strpos($agent,"MicroMessenger")) {
 			echo '此功能只能在微信浏览器中使用';exit;
-		}
+		}*/
 		
 		$token=$this->_get('token');
 		if($token!=false){
@@ -100,10 +96,10 @@ class CardAction extends BaseAction{
     }
 
 	public function vip(){
-		$agent = $_SERVER['HTTP_USER_AGENT'];
+		/*$agent = $_SERVER['HTTP_USER_AGENT'];
 		if(!strpos($agent,"MicroMessenger")) {
 			echo '此功能只能在微信浏览器中使用';exit;
-		}
+		}*/
 
 		$token=$this->_get('token');
 		$wecha_id=$this->_get('wecha_id');

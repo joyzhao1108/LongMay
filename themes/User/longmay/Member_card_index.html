@@ -1,5 +1,6 @@
 <include file="Public:head"/>  
 <script src="{weiguanjia::RES}/js/cart/jscolor.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="{weiguanjia::RES}/css/cymain.css" />
 <style type="text/css">
 .vipcard{
 margin: 0 auto;
@@ -89,10 +90,23 @@ display:block; width:213px; border:0;
 </style>
   <form class="form" method="post" action="" target="_top" enctype="multipart/form-data">
         <div class="content">
-
           <div class="cLineB">
-         <h4>会员卡版面设置<span class="FAQ">开始DIY你的会员卡吧，logo、背景以及字体颜色都可以自由调整。</span></h4><a href="javascript:history.go(-1);" class="right btnGrayS vm" style="margin-top:-27px">返回</a></div>  
-<div class="msgWrap bgfc">
+         <h4>会员卡版面设置<span class="FAQ">开始DIY你的会员卡吧，logo、背景以及字体颜色都可以自由调整。</span></h4>
+          </div>
+          <!--tab start-->
+          <div class="tab">
+              <ul>
+                  <li class="current tabli" id="tab0"><a href="{weiguanjia::U('Member_card/index',array('token'=>$token))}">版面设置</a></li>
+                  <li class="tabli" id="tab2"><a href="{weiguanjia::U('Member_card/privilege',array('token'=>$token))}">会员特权</a></li>
+                  <li class="tabli" id="tab3"><a href="{weiguanjia::U('Member_card/info',array('token'=>$token))}">会员卡详情</a></li>
+                  <li class="tabli" id="tab4"><a href="{weiguanjia::U('Member_card/create',array('token'=>$token))}">在线开卡</a></li>
+                  <li class="tabli" id="tab5"><a href="{weiguanjia::U('Member_card/exchange',array('token'=>$token))}">积分设置</a></li>
+                  <li class="tabli" id="tab6"><a href="{weiguanjia::U('Member_card/coupon',array('token'=>$token))}">优惠券</a></li>
+                  <li class="tabli" id="tab7"><a href="{weiguanjia::U('Member_card/integral',array('token'=>$token))}">礼品券</a></li>
+              </ul>
+          </div>
+          <!--tab end-->
+          <div class="msgWrap bgfc">
  
 <table class="userinfoArea" style=" margin:0;" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody>
 <tr>
@@ -306,10 +320,9 @@ document.getElementById("tishi").innerHTML=document.getElementById("tishi2").val
   </div> 
         </div>
 </form>
-        
-      
-        <div class="clr"></div>
+</div>
+<div class="clr"></div>
+</div>
+</div>
+<div class="clr"></div>
 		<include file="Public:footer"/>
-      </div>
-    </div>
-  </div> 

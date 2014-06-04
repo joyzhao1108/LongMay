@@ -1,10 +1,10 @@
 <?php
 class UserinfoAction extends BaseAction{
 	public function index(){
-		$agent = $_SERVER['HTTP_USER_AGENT'];
+		/*$agent = $_SERVER['HTTP_USER_AGENT'];
 		if(!strpos($agent,"MicroMessenger")) {
 			echo '此功能只能在微信浏览器中使用';exit;
-		}
+		}*/
 
 		$card = D('Member_card_create'); 
 		$data['wecha_id']=$this->_get('wecha_id');

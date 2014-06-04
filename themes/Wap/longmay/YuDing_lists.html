@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>我的预订</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link href="{weiguanjia::RES}/css/style/css/hotels.css" rel="stylesheet" type="text/css">
+    <script src="{weiguanjia::RES}/css/style/js/jquery.min.js" type="text/javascript"></script>
+    <script>
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            WeixinJSBridge.call('hideToolbar');
+        });
+    </script>
+    <style>
+        .numtip{
+            border-radius:50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            overflow:hidden;
+            height: 20px;
+            width: 20px;
+            background-color: rgb(0, 147, 221);
+            color:#fff;
+            line-height: 20px;
+            float: left;
+            text-align: center;
+            font-size: 14px;
+            font-family: verdana, tahoma, sans-serif;
+            margin-right: 20px;
+        }
+        .headtitle{
+            text-align: center;
+            margin: 10px;
+            font-size: 18px;
+            color:#000;
+        }
+    </style>
+</head>
+
+<body id="" >
+<include file="$menutmpl"/>
+<div class="headtitle">我的订单</div>
+<div class="cardexplain">
+    您好，您现在有<span style="color:green">{weiguanjia:$countyuding}</span>条预订订单
+<ul class="round">
+    <volist name="orders" id="vo">
+    <li class="nob"><a href="tel:{weiguanjia:$vo['tel']}"><span><div class="numtip">{weiguanjia:$i}</div>{weiguanjia:$vo.booktime|date="Y.m.d",###}</span></a></li>
+    </volist>
+</ul>
+</div>
+</body>
+</html>

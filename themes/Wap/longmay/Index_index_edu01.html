@@ -128,10 +128,10 @@ document.addEventListener('DOMContentLoaded', loaded, false);
 		<div class="clr"></div>
 	</div>
     <div class="bulletin">
-        <div class="title">公告栏</div>
+        <div class="title">最新咨讯</div>
         <ul>
-            <volist name="bulletin" id="so">
-                <li class="content" style="font-size: 12px"><a href="{weiguanjia::U('Wap/Bulletin/content')}&id={weiguanjia:$so.id}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">{weiguanjia:$so.title}<span class="title3">[详情]</span></a></li>
+            <volist name="activity" id="so">
+                <li class="content" style="font-size: 12px"><a href="{weiguanjia::U('Wap/Activity/content')}&id={weiguanjia:$so.id}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">{weiguanjia:$so.name}<span class="title3">[详情]</span></a></li>
             </volist>
         </ul>
     </div>
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', loaded, false);
                 <a target="_self" href="{weiguanjia::U('Wap/Activity/index')}&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}">
                     <table border="0" cellpadding="0" cellspacing="0">
                         <tr><td><img src="{weiguanjia::RES}/images/edu01/activity.png" width="50px" height="50px"></td></tr>
-                        <tr><td>最新活动</td></tr>
+                        <tr><td>最新咨讯</td></tr>
                     </table>
                 </a>
             </li>

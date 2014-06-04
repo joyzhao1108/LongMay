@@ -4,6 +4,13 @@ class BulletinAction extends WapTmplAction{
     {
         parent::_initialize();
     }
+    public function index(){
+        $teacher_model=M('Bulletin');
+        $where=array('token'=>$this->token);
+        $teachers=$teacher_model->where($where)->order('sort asc')->select();
+        $this->assign('list',$teachers);
+        $this->display();
+    }
     public function content()
     {
         $db             = M('Bulletin');

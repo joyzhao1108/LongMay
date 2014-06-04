@@ -29,7 +29,7 @@
             	<div class="o_btn clearfix">
             	<if condition="$totalProductCount neq 0">
     		<input type="button" class="o_btn_back ts1" onclick="history.go(-1);" value="继续购物"/>
-    		<input type="button" class="o_btn_submit ts1" onclick="location.href='{weiguanjia::U('Product/orderCart',array('token'=>$_GET['token'],'cartIsDining'=>$cartIsDining,'wecha_id'=>$_GET['wecha_id']))}'" value="去结算" />
+    		<input type="button" class="o_btn_submit ts1" onclick="location.href='{weiguanjia::U('Product/orderCart',array('token'=>$_GET['token'],'ptype'=>$ptype,'wecha_id'=>$_GET['wecha_id']))}'" value="去结算" />
     		</if>
     	</div>
  

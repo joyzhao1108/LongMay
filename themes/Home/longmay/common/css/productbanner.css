@@ -26,7 +26,7 @@
 }
 #mainpnl
 {
-    width: 1024px;
+    width: 100%;
 }
 #mainpnl .banner
 {
@@ -38,7 +38,7 @@
 }
 .hrcc
 {
-    width:856px;
+    width:980px;
     color:#fff;
     background:#ccc;
     height:1px;
@@ -47,26 +47,34 @@
 #banner4
 {
     margin: 0 auto;
-    height: 160px;
-    width:760px;
+    width:960px;
+}
+#banner4 ul
+{
+    width:100%; overflow:hidden;
 }
 #banner4 li{
     float: left;
-    width:140px;
-    height: 140px;
+    width:190px;
+    height: 160px;
     padding: 10px;
     margin: 15px;
 }
 #banner4 li a.active{
     background: lightblue;
 }
-.funnav table{
-    width:140px;
-    height: 140px;
+
+
+.funnav table th{
+    text-align: center;
+    color: #0093d3;
+    font-size: 14px;
+    font-weight: 300;
 }
 .funnav table td{
     text-align: center;
-    color: #0093d3;
+    font-size: 12px;
+    font-weight: 300;
 }
 .funmore
 {
@@ -77,7 +85,7 @@
 }
 #contact td
 {
-    color: #c1c1c1;
+    color: #aaa;
     font-size: 16px;
     padding: 10px;
 }
@@ -86,30 +94,59 @@
     font-size: 14px;
     padding: 2px;
 }
-
+#banner0
+{
+    background:url('pimg/banner-0.jpg') top center no-repeat;
+    height:680px;
+}
 #banner1
 {
     margin: 0 auto;
-    height: 120px;
-    width:800px;
+    width:980px;
 }
 #banner1 li{
     float: left;
-    width:120px;
-    height: 100px;
-    padding: 10px;
-    margin: 15px 30px;
+    width:300px;
+    height: 250px;
+    margin: 10px 12px;
 }
 #banner1 li a.active{
     background: lightblue;
+}
+#banner2
+{
+    background:url('pimg/banner-2.png') top center no-repeat;
+    height:598px;
+}
+#banner3
+{
+    background:url('pimg/banner-3.png') top center no-repeat;
+    height:598px;
+}
+#banner5
+{
+    background:url('pimg/banner-5.png') top center no-repeat;
+    height:558px;
+}
+#banner6
+{
+    background:url('pimg/banner-6.png') top center no-repeat;
+    height:558px;
 }
 .industrynav table{
     width:120px;
     height: 100px;
 }
-.industrynav table td{
+.industrynav table th{
     text-align: center;
     color: #0093d3;
+    font-size: 18px;
+    font-weight: 300;
+}
+.industrynav table td{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
 }
 .industrymore
 {
@@ -120,8 +157,8 @@
 }
 .industryhead
 {
-    width:295px;
-    height: 303px;
-    background: url("pimg/industry.png");
+    width:235px;
+    height: 214px;
+    background: url("pimg/industry.png") top center no-repeat;
     margin: auto;
 }

@@ -59,10 +59,10 @@ function setlatlng(longitude,latitude){
 </div>
 
 <div class="msgWrap">
- <form class="form" method="post" id="form" action=""> 
-<if condition="$isUpdate eq 1">
-<input type="hidden" name="id" value="{weiguanjia:$set.id}" />
-</if>
+ <form class="form" method="post" id="form" action="">
+     <if condition="$isUpdate eq 1">
+         <input type="hidden" name="id" value="{weiguanjia:$set.id}" />
+     </if>
     <div class="msgWrap bgfc"> 
      <table class="userinfoArea" style=" margin:0;" border="0" cellspacing="0" cellpadding="0" width="100%"> 
       <tbody> 
@@ -88,7 +88,7 @@ function setlatlng(longitude,latitude){
        </tr>
        <tr>
         <th><span class="red">*</span>欢迎图片地址：</th>
-        <td><input type="text" id="welcomepic" name="welcomepic" value="{weiguanjia:$set.welcomepic}" class="px require" style="width:400px;" /><input class="btnFile btnGreen" type=button onclick="window.open('{weiguanjia::U('Upload/index',array('token'=>$token,'n'=>welcomepic))}')" value="点击上传图片"></td>
+        <td><input type="text" id="welcomepic" name="welcomepic" value="{weiguanjia:$set.welcomepic}" class="px require" style="width:400px;" /><input class="btnFile btnGreen" type=button onclick="window.open('{weiguanjia::U('Upload/index',array('token'=>$token,'n'=>'welcomepic'))}')" value="点击上传图片"></td>
        </tr>
        <tr>
            <th><span class="red">*</span>欢迎标题：</th>
@@ -105,14 +105,14 @@ function setlatlng(longitude,latitude){
        </tr>
        <tr>
            <th><span class="red">*</span>业务简介LOGO：</th>
-           <td><input type="text" id="briefpic" name="briefpic" value="{weiguanjia:$set.briefpic}" class="px require" style="width:400px;" /><input class="btnFile btnGreen" type=button onclick="window.open('{weiguanjia::U('Upload/index',array('token'=>$token,'n'=>briefpic))}')" value="点击上传图片"></td>
+           <td><input type="text" id="briefpic" name="briefpic" value="{weiguanjia:$set.briefpic}" class="px require" style="width:400px;" /><input class="btnFile btnGreen" type=button onclick="window.open('{weiguanjia::U('Upload/index',array('token'=>$token,'n'=>'briefpic'))}')" value="点击上传图片"></td>
        </tr>
        <tr>
            <th><span class="red">*</span>详细页图片(关于我们)：</th>
-           <td><input type="text" id="logourl" name="logourl" value="{weiguanjia:$set.logourl}" class="px require" style="width:400px;" /><input class="btnFile btnGreen" type=button onclick="window.open('{weiguanjia::U('Upload/index',array('token'=>$token,'n'=>logourl))}')" value="点击上传图片"></td>
+           <td><input type="text" id="logourl" name="logourl" value="{weiguanjia:$set.logourl}" class="px require" style="width:400px;" /><input class="btnFile btnGreen" type=button onclick="window.open('{weiguanjia::U('Upload/index',array('token'=>$token,'n'=>'logourl'))}')" value="点击上传图片"></td>
        </tr>
         <TR>
-                  <TH valign="top"><label for="info">详细页内容(关于我们)：</label></TH>
+                  <TH valign="top">详细页内容(关于我们)：</TH>
                   <TD><textarea name="intro" id="intro"  rows="5" style="width:590px;height:360px">{weiguanjia:$set.intro}</textarea></TD>
                 </TR>
        <tr style="display: none">

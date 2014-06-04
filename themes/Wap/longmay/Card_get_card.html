@@ -17,34 +17,27 @@ margin: 11px auto;
 padding: 0;
 position: relative;}
 .submit {
-background-color: #179F00;
+background: #0093dd;
+border: 0;
 padding: 10px 20px;
 font-size: 16px;
 text-decoration: none;
-border: 1px solid #0B8E00;
-Invalid property value.background-image: linear-gradient(bottom, #179F00 0%, #5DD300 100%);
-Invalid property value.background-image: -o-linear-gradient(bottom, #179F00 0%, #5DD300 100%);
-Invalid property value.background-image: -moz-linear-gradient(bottom, #179F00 0%, #5DD300 100%);
-background-image: -webkit-linear-gradient(bottom, #179F00 0%, #5DD300 100%);
-Invalid property value.background-image: -ms-linear-gradient(bottom, #179F00 0%, #5DD300 100%);
-background-image: -webkit-gradient(
- linear,
- left bottom,
- left top,
- color-stop(0, #179F00),
- color-stop(1, #5DD300)
- );
--webkit-box-shadow: 0 1px 0 #94E700 inset, 0 1px 2px rgba(0, 0, 0, 0.5);
-Unknown property name.-moz-box-shadow: 0 1px 0 #94E700 inset, 0 1px 2px rgba(0, 0, 0, 0.5);
-box-shadow: 0 1px 0 #94E700 inset, 0 1px 2px rgba(0, 0, 0, 0.5);
--webkit-border-radius: 5px;
-Unknown property name.-moz-border-radius: 5px;
-Unknown property name.-o-border-radius: 5px;
-border-radius: 5px;
 color: #ffffff;
 display: block;
 text-align: center;
-text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+width: 100%;
+background-image: linear-gradient(bottom,  #0093dd 0%, #afddf4 100%);
+background-image: -o-linear-gradient(bottom, #0093dd 0%, #afddf4 100%);
+background-image: -moz-linear-gradient(bottom, #0093dd 0%, #afddf4 100%);
+background-image: -webkit-linear-gradient(bottom, #0093dd 0%, #afddf4 100%);
+background-image: -ms-linear-gradient(bottom, #0093dd 0%, #afddf4 100%);
+background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, #0093dd),
+    color-stop(1, #afddf4)
+);
 }
 </style>
 <script type="text/javascript">
@@ -95,7 +88,9 @@ $(document).ready(function(){
     <ul class="round" style="display:block">
      <li style="height:70px;" class="intro">	 
 		<div class="footReturn">
-			<button id="showcard" class="submit"  onclick="Javascript:window.open('{weiguanjia::U('Userinfo/index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}','_parent')"  style="width:100%">点击领取会员卡</button>
+			<button id="showcard" class="submit"  onclick="Javascript:window.open('{weiguanjia::U('Userinfo/index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id']))}','_parent')">
+                点击领取会员卡
+            </button>
 			<div class="window" id="windowcenter">
 				<div id="title" class="wtitle"><span class="close" id="alertclose"></span></div>
 				<div class="content">

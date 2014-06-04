@@ -1,76 +1,66 @@
 <style>
-.footNew { }
-/***** 尾巴 *****/
-.foot { /*background-position:0 -118px; background-repeat:repeat-x;*/ height:248px;}
-.footOut { background-position:0 -118px;}
-.fother { width:970px; margin:0 auto; color:#fff;}
-.fother li { position:relative;}
-/**/
-.fother { width:970px; height:215px; line-height:22px; overflow:hidden; text-align:left;}
-.fother li { padding:20px 20px 0; float:left;}
-.fother li.fir { width:316px; _width:324px;}
-.fother li.sec { width:359px;}
-.fother li.last { width:180px; margin:0 !important; padding-right:0 !important;}
-.fother h3 ,.fother dt ,.fother a { color:#e7ecf1 !important; text-align:left;}
-.fother h3 { font-size:14px; font-weight:bold; border-bottom:#bbcfe6 1px solid; display:inline; padding:0 25px 8px 0; *padding:0 25px 7px 0; text-indent:3px;}
-.fother dl { margin:8px 0 25px;margin:8px 0 24px;}
-.fother a { padding:0 2px; margin:0 5px 0 0; text-decoration:none !important; display:inline-block; text-indent:0;}
-.fother a:hover { background-color:#ead812; color:#3585e3 !important;}
-.fother .iconArea a:hover { background-color:none;}
-
-/***** 尾巴新 *****/
-.footNew { /*background-position:0 -118px; background-repeat:repeat-x;*/ }
-.footOutNew { background-position:0 -118px;}
-.fotherNew { width:970px; margin:0 auto; color:#fff;}
-.fotherNew li { position:relative;}
-/**/
-.fotherNew { width:970px; height:191px; line-height:22px; overflow:hidden; text-align:left;}
-.fotherNew li { padding:30px 20px 0 60px; float:left;}
-.fotherNew li.fir { width:316px; _width:324px;}
-.fotherNew li.sec { width:185px;}
-.fotherNew li.last { width:180px; margin:0 !important; padding-right:0 !important;}
-.fotherNew h3 ,.fotherNew dt ,.fotherNew a { color:#e7ecf1 !important; text-align:left;}
-.fotherNew h3 { font-size:14px; font-weight:bold; border-bottom:#bbcfe6 1px solid; display:inline; padding:0 25px 8px 0; *padding:0 25px 7px 0; text-indent:3px;}
-.fotherNew dl { margin:20px 0 25px;}
-.fotherNew dt { position:relative;}
-.fotherNew dt em { color:#fff; margin-right:8px;}
-.fotherNew a { padding:1px 2px; margin:0 5px 0 0; text-decoration:none !important; display:inline-block; text-indent:0; font-family:"宋体";}
-.fotherNew a:hover { background-color:#ead812; color:#3585e3 !important;}
-.fotherNew .iconArea a:hover { background-color:none;}
-.fotherNew .widSmall {}
-.fotherNew .widBig {}
-.fotherNew .box1 { float:left; width:90px;}
-.fotherNew .box2 { float:left; width:115px;}
-.fotherNew .box3 { float:left; width:80px;}
-
 .fLink { height:37px; text-align:center; color:#333; font-size:14px;}
-.fLink a { color:#0093d3 !important; text-decoration:none; font-size:14px; height:32px; line-height:32px; margin:0 10px; font-family:"宋体";}
-.fLink a:hover { color:#820C0C !important; text-decoration:underline;}
-.flinkMain { width:960px; margin:0 auto; height:35px; line-height:38px; border-bottom:#bdc7d0 1px solid;}
+.fLink a {
+    color:#0093d3 !important;
+    text-decoration:none;
+    font-size:14px;
+    height:32px;
+    line-height:32px;
+    margin:0 10px;
+    font-family:"宋体";
+}
+.fLink a:hover {
+    color:#820C0C !important;
+    text-decoration:underline;
+}
+.flinkMain { width:960px; margin:0 auto; height:35px; line-height:38px; }
 .fLink .marWid a,.fLink .marWidMain a { margin:0 9px; text-indent:0;}
-.copyMain{color:#0093d3;font-size:14px;text-align:center;margin-top:20px}
+.copyMain{color:#0093d3;font-size:12px;text-align:center;}
+    .icpno{color:#333;font-size:12px;}
 </style>
 
 
 <div id="ft" class="cl">
     <div class="footNew">
-        <div class="footOutNew">
-            <!-- 链接 begin -->
-            <div class="fLink">
-                <div class="flinkMain marWid">
-                    <a href="index.php?g=Home&m=Index&a=index" target="_blank">龙蔓首页</a>|
-                    <a href="index.php?g=Home&m=Index&a=about" target="_blank">关于我们</a>|
-                    <a href="index.php?g=Home&m=Index&a=help" target="_blank">行业资讯</a>|
-                    <a href="" target="_blank">在线联系</a>|
-                    <a href="https://mp.weixin.qq.com/" target="_blank">微信官方入口</a>
-                </div>
+        <!-- 链接 begin -->
+        <div class="fLink">
+            <div class="flinkMain marWid">
+                <a href="index.php?g=Home&m=Index&a=index" target="_blank">龙蔓首页</a>|
+                <a href="index.php?g=Home&m=Index&a=contact" target="_blank">联系方式</a>|
+                <a href="index.php?g=Home&m=Index&a=help" target="_blank">行业资讯</a>|
+                <a href="" target="_blank">在线联系</a>|
+                <a href="https://mp.weixin.qq.com/" target="_blank">微信官方入口</a>
             </div>
-            <!-- 链接 end -->
+        </div>
+        <!-- 链接 end -->
+        <div id="contact">
+            <div style="width: 400px;margin:auto">
+                <table border="0" cellpadding="0" cellspacing="0" align="center">
+                    <tr>
+                        <td colspan="2" align="center">
+                            <table border="0" cellpadding="0" cellspacing="0" width="400px">
+                                <tr>
+                                    <td>服务电话：</td>
+                                    <td align="left">{weiguanjia::C('site_tel')}</td>
+                                    <td>24小时服务手机：</td>
+                                    <td align="left">{weiguanjia::C('site_mobile')}</td>
+                                </tr>
+                                <tr>
+                                    <td>服务QQ：</td>
+                                    <td align="left">{weiguanjia::C('site_qq')}</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
         <!-- 版权区 begin -->
         <div class="copyArea">
             <div class="copyMain">
-                版权所有 深圳龙蔓网络科技有限公司
+                <span style="font-family:arial;">Copyright © </span>2014 www.longmey.com 深圳市龙蔓网络科技有限公司.保留所有权利 <span class="icpno">粤ICP备13047635号-3</span>
             </div>
         </div>
         <!-- 版权区 end -->

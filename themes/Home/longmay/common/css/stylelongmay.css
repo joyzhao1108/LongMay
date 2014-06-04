@@ -3,12 +3,12 @@
     overflow: hidden;
     padding-left: 3px;
     height: 37px;
-    width: 856px;
+    width: 980px;
     margin: 0 auto;	
 	position:absolute;
 	top:20px;
 	left:50%;
-	margin-left:-428px;
+	margin-left:-490px;
 	z-index:99;
 }
 #nvlongmay li

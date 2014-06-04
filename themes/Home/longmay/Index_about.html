@@ -5,28 +5,65 @@
 <title>关于我们 {weiguanjia::C('site_title')} {weiguanjia::C('site_name')}</title>
 <meta name="keywords" content="{weiguanjia::C('keyword')}" />
 <meta name="description" content="{weiguanjia::C('content')}" />
+<link rel="stylesheet" type="text/css" href="{weiguanjia::RES}/css/longmey_about.css?BPm" />
 <include file="Public:head"/>
 <style type="text/css">
-.section p{padding-top:0;margin-top:0; font-size:16px;/*text-indent: 2em;*/}
+
 </style>
-<div class="qtcontent">
-        <div class="intro">
-            <div class="normalTitle"><h2>关于{weiguanjia::C('site_name')}</h2></div>
-            <div class="normalContent">
-                <div class="section ">
-                    <div>
-                        <p>
-  {weiguanjia::C('site_name')}志在帮助那些不懂技术的个人或企业建立属于自己的接口程序，让完全不懂技术的个人或企业通过简单的配置，即可拥有强大的功能。企业使用{weiguanjia::C('site_name')}可以用低廉的成本实现智能客服机器人功能，淘宝店家可以轻松实现店铺商品和粉丝的关联与互动，我们也即将为微信地方号运维人员提供强大的地方运维的管理功能模块（如商家管理,店铺管理,会员管理,活动管理,优惠券管理,以及基于LBS的各种服务的开发!）</p><br />
-                        <p>{weiguanjia::C('site_name')}不提供文章内容库，避免同质化的内容泛滥，同时{weiguanjia::C('site_name')}对用户有门槛要求，必须拥有自己的域名空间。{weiguanjia::C('site_name')}为个人或企业提供了强大的自定义回复及图文信息分类功能，通过此功能能更好做出属于自己或企业特色的内容，并自动建立一个个人或企业手机3G网站，更好的服务于您的客户。</p><br />
-<p>{weiguanjia::C('site_name')}还提供了一些便民查询和娱乐游戏功能供个人或企业使用，如：查天气，查快递，翻译，百科，人品计算，手机归属地查询，笑话，成语接龙，公交查询，谜语，百度问答，解梦，古诗欣赏等等，根据需求的不同选择某些功能，能更好的提高粉丝活跃度，忠诚度。</p><br />
-<p>龙蔓微信平台除了自定义库,也支持自定义关键词触发指定接口url处理业务(完美的兼容第三方微信接口和自己的业务接口)即可实现和你们自己的数据库的信息通信!
-                        </p>
-                    </div>
-                <p class="clr"></p>
-            	</div>
-                
-        	</div>
+<div class="aboutpnl">
+    <div class="companytitle">深圳市龙蔓网络科技有限公司</div>
+    <div class="introtitle">专注于为微信公众号提供一站式开发服务解决方案</div>
+        <div class="intropnl1">
+            <div class="introcontent">
+                <div class="introtitle">简介</div>
+                <div class="introtext">
+                <p>深圳市龙蔓网络科技有限公司是首屈一指的微信公众号第三方开发服务商。旨在帮助那些不懂技术的个人、商户和企业建立拥有专业功能的微信公众号，并可以轻松的管理维护，无须了解复杂的技术细节。
+                </p><br />
+                <p>通过在技术上不断创新和优化，龙蔓致力于利用移动互联网和微信的优势，为广大用户提供最专业，最友好的微信公众号第三方平台和产品，充分挖掘各行各业的潜力，提高商家的运作效率，帮助每一个客户实现更大的效益。
+                </p>
+                </div>
+            </div>
     	</div>
+    <div class="intropnl2">
+        <div class="introcontent">
+            <div class="introtitle">愿景</div>
+        </div>
     </div>
-<!--底部-->	</div>
+    <div class="intropnl3">
+        <div class="introcontent">
+            <div class="introtitle">优势</div>
+        </div>
+    </div>
+    <div id="contact">
+        <div style="width: 250px;margin:auto">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td>
+                        <img src="{weiguanjia::RES}/css/pimg/phone.png" width="73" height="68">
+                    </td>
+                    <td>立即联系我们<br>了解更多精彩详情</td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td>电话：</td>
+                                <td align="left">{weiguanjia::C('site_tel')}</td>
+                            </tr>
+                            <tr>
+                                <td>手机：</td>
+                                <td align="left">{weiguanjia::C('site_mobile')}</td>
+                            </tr>
+                            <tr>
+                                <td>QQ：</td>
+                                <td align="left">{weiguanjia::C('site_qq')}</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </div>
+
 <include file="Public:footer"/>

@@ -1,0 +1,106 @@
+<style>
+    .bottomctl
+    {
+        margin: 5px auto 10px;
+    }
+    .bottomctl td
+    {
+        text-align: center;
+    }
+    .bottomctl td a img
+    {
+        width: 100px;
+        height: 30px;
+    }
+    #mcover {
+        background: rgba(0, 0, 0, 0.7); left: 0px; top: 0px; width: 100%; height: 100%; display: none; position: fixed; z-index: 20000;
+    }
+    #mcover img {
+        top: 5px; width: 260px !important; height: 180px !important; right: 18px; position: fixed; z-index: 20001;
+    }
+</style>
+
+<div style="margin: 10px auto 10px"><img src="{weiguanjia::RES}/images/edu01/lessonsplitb.png" width="100%"></div>
+<table class="bottomctl" width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td><a href="javascript:scroll(0,0)"><img src="{weiguanjia::RES}/images/edu01/gotop.png"></a></td>
+        <td><a href="javascript:void(0)" onclick="share()"><img src="{weiguanjia::RES}/images/edu01/share1.png"></a></td>
+        <td><a href="javascript:share()"><img src="{weiguanjia::RES}/images/edu01/share2.png"></a></td>
+    </tr>
+</table>
+<div id="mcover" onclick="document.getElementById('mcover').style.display='';" style="display:none;">
+    <img src="{weiguanjia::RES}/images/guide.png?=2014-04-15-1">
+</div>
+<div class="copyright"  >
+    <php>echo htmlspecialchars_decode(C('copyright'))</php>
+</div>
+
+<!-------------------- templates end -------------------->
+<script>
+    window.shareData = {
+        "imgUrl": "{weiguanjia::$company['welcomepic']}",
+        "timeLineLink": "{weiguanjia:$Think.__SELF__}",
+        "sendFriendLink": "{weiguanjia:$Think.__SELF__}",
+        "weiboLink": "{weiguanjia:$Think.__SELF__}",
+        "tTitle": "{weiguanjia::$company['welcometitle']}",
+        "tContent": "欢迎进入 {weiguanjia::$company['name']}微网站",
+        "fTitle": "{weiguanjia::$company['welcometitle']}",
+        "fContent": "欢迎进入{weiguanjia::$company['name']}微网站",
+        "wContent": "欢迎进入{weiguanjia::$company['name']}微网站"
+    };
+    function share()
+    {
+        document.getElementById('mcover').style.display='block';
+    }
+    function shareFriend() {
+        WeixinJSBridge.invoke('sendAppMessage',{
+            "appid":window.shareData.appid,
+            "img_url":window.shareData.imgUrl,
+            "img_width":"640",
+            "img_height":"640",
+            "link":window.shareData.sendFriendLink,
+            "desc":window.shareData.tContent,
+            "title":window.shareData.tTitle
+        }, function(res) {
+            _report('send_msg', res.err_msg);
+        })
+    }
+    function shareTimeline() {
+        WeixinJSBridge.invoke('shareTimeline',{
+            "img_url":window.shareData.imgUrl,
+            "img_width":"640",
+            "img_height":"640",
+            "link":window.shareData.timeLineLink,
+            "desc": window.shareData.tContent,
+            "title": window.shareData.tTitle
+        }, function(res) {
+            _report('timeline', res.err_msg);
+        });
+    }
+    function shareWeibo() {
+        WeixinJSBridge.invoke('shareWeibo',{
+            "content":window.shareData.wContent,
+            "url":'http://meishi.qq.com/weixin'
+        }, function(res) {
+            _report('weibo', res.err_msg);
+        });
+    }
+    // 当微信内置浏览器完成内部初始化后会触发WeixinJSBridgeReady事件。
+    document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+
+        // 发送给好友
+        WeixinJSBridge.on('menu:share:appmessage', function(argv){
+            shareFriend();
+        });
+
+        // 分享到朋友圈
+        WeixinJSBridge.on('menu:share:timeline', function(argv){
+            shareTimeline();
+        });
+
+        // 分享到微博
+        WeixinJSBridge.on('menu:share:weibo', function(argv){
+            shareWeibo();
+        });
+    }, false)
+</script>

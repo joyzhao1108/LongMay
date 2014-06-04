@@ -9,9 +9,7 @@ class CompanyAction extends UserAction
         parent::checkRight('shouye');
         //是否是分店
         $this->isBranch = 0;
-        if (isset($_GET['isBranch']) && intval($_GET['isBranch'])) {
-            $this->isBranch = 1;
-        }
+
         $this->assign('isBranch', $this->isBranch);
         $this->company_model = M('Company');
     }
@@ -20,13 +18,6 @@ class CompanyAction extends UserAction
         $where = array(
             'token' => $this->token
         );
-        if ($this->isBranch) {
-            $id                = intval($_GET['id']);
-            $where['id']       = $id;
-            $where['isbranch'] = 1;
-        } else {
-            $where['isbranch'] = 0;
-        }
         $thisCompany = $this->company_model->where($where)->find();
         if (IS_POST) {
             if ($_FILES['file']['name']) {
@@ -34,31 +25,16 @@ class CompanyAction extends UserAction
                 $_POST['logourl'] = $img[0]['savepath'] . $img[0]['savename'];
             }
             if (!$thisCompany) {
-                if ($this->isBranch) {
-                    $this->insert('Company', U('Company/branches', array(
-                        'token' => $this->token,
-                        'isBranch' => $this->isBranch
-                    )));
-                } else {
-                    $this->insert('Company', U('Company/index', array(
-                        'token' => $this->token,
-                        'isBranch' => $this->isBranch
-                    )));
-                }
+                $this->insert('Company', U('Company/index', array(
+                    'token' => $this->token,
+                    'isBranch' => $this->isBranch
+                )));
             } else {
                 if ($this->company_model->create()) {
                     if ($this->company_model->where($where)->save($_POST)) {
-                        if ($this->isBranch) {
-                            $this->success('修改成功', U('Company/branches', array(
-                                'token' => $this->token,
-                                'isBranch' => $this->isBranch
-                            )));
-                        } else {
-                            $this->success('修改成功', U('Company/index', array(
-                                'token' => $this->token,
-                                'isBranch' => $this->isBranch
-                            )));
-                        }
+                        $this->success('修改成功', U('Company/index', array(
+                            'token' => $this->token
+                        )));
                     } else {
                         $this->error('操作失败');
                     }
@@ -68,6 +44,11 @@ class CompanyAction extends UserAction
             }
             
         } else {
+            if($thisCompany){
+                $this->assign('isUpdate',1);
+                $this->assign('id', $thisCompany['id']);
+            }
+
             $this->assign('set', $thisCompany);
             $this->display();
         }

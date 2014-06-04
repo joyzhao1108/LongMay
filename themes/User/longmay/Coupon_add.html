@@ -8,11 +8,11 @@
 <div class="msgWrap bgfc">
  
 <table class="userinfoArea" style=" margin:0;" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody>
+<tr><th valign="top"><span class="red">*</span>关键词：</th></tr>
 <tr>
-  <th valign="top"><span class="red">*</span>关键词：</th>
-  <td><input type="input" class="px" id="keyword" value="{weiguanjia:$vo.keyword}" name="keyword" style="width:400px"><br>
+  <td><input type="input" class="px" id="keyword" value="{weiguanjia:$vo.keyword}" name="keyword" style="width:300px"><br>
   	<span class="red">只能写一个关键词</span>，用户输入此关键词将会触发此活动。</td>
-  <td rowspan="7" valign="top"><div style="margin-left:20px"><img id="pic" src="{weiguanjia::C('site_url')}/themes/Wap/default/common/css/guajiang/images/activity-coupon-start.jpg" width="373px">
+  <td rowspan="10" valign="top"><div style="margin-left:20px"><img id="pic" src="{weiguanjia::C('site_url')}/themes/Wap/default/common/css/guajiang/images/activity-coupon-start.jpg" width="373px">
 <br>
 <input class="px" name="starpicurl" value="<if condition="$vo['starpicul'] eq ''">{weiguanjia::C('site_url')}/themes/Wap/default/common/css/guajiang/images/activity-coupon-start.jpg<else/>{picms:$vo.starpicurl}</if>" onclick="document.getElementById('pic').src=this.value;" style="width:363px;">
 <br>
@@ -26,22 +26,23 @@
 
   </div></td>
 </tr>
+<tr><th valign="top"><span class="red">*</span>活动名称：</th></tr>
 <tr>
-  <th valign="top"><span class="red">*</span>活动名称：</th>
-  <td><input type="input" class="px" id="title" value="{weiguanjia:$vo.title}" name="title" style="width:400px">
+  <td><input type="input" class="px" id="title" value="{weiguanjia:$vo.title}" name="title" style="width:300px">
   	<br>
   	请不要多于50字!
   	</td>
   </tr>
-
+<tr><th valign="top"><span class="red">*</span>优惠券介绍：</th></tr>
 <tr>
-  	<th valign="top"><span class="red">*</span>优惠券介绍：</th>
-  	<td><textarea class="px" id="sttxt" name="sttxt" style="width:400px; height: 125px;">{weiguanjia:$vo.sttxt}</textarea>
+
+  	<td><textarea class="px" id="sttxt" name="sttxt" style="width:300px; height: 125px;">{weiguanjia:$vo.sttxt}</textarea>
   		 </td>
 </tr>
 </TR>
+<tr><th><span class="red">*</span>活动时间：</th></tr>
 <tr>
-	<th><span class="red">*</span>活动时间：</th>
+
 	<td><input type="input" class="px" id="statdate" value="<if condition="$vo['statdate'] neq ''">{weiguanjia:$vo.statdate|date="Y-m-d H:i:s",###}<else/><?php 
 	echo date('Y-m-d H:i:s',mktime(0, 0, 0, date("m")  , date("d"), date("Y")));?></if>" onClick="WdatePicker()" name="statdate" />                
 		到
@@ -49,14 +50,16 @@
 	echo date('Y-m-d H:i:s',mktime(0, 0, 0, date("m")  , date("d")+3, date("Y")));?></if>" name="enddate" onClick="WdatePicker()"  /> 
 	</td>
 </tr>
+<tr><th valign="top"><span class="red">*</span>优惠券活动说明：</th></tr>
 <tr>
-<th valign="top"><span class="red">*</span>优惠券活动说明：</th>
-<td><textarea class="px" id="info" name="info" style="width: 400px; height: 125px;">{weiguanjia:$vo.info}</textarea>
+
+<td><textarea class="px" id="info" name="info" style="width: 300px; height: 125px;">{weiguanjia:$vo.info}</textarea>
 活动说明. </td>
 </tr>
+<tr><th><span class="red">*</span>兑换券使用说明：</th></tr>
 <tr>
-<th><span class="red">*</span>兑换券使用说明：</th>
-<td><textarea id="aginfo" class="px" name="aginfo" style="width: 400px; height: 125px;">{weiguanjia:$vo.aginfo}</textarea>用户获取优惠券后显示的提示信息
+
+<td><textarea id="aginfo" class="px" name="aginfo" style="width: 300px; height: 125px;">{weiguanjia:$vo.aginfo}</textarea>用户获取优惠券后显示的提示信息
 </td>
 </tr>
 </tbody>
@@ -69,9 +72,9 @@
  
   	<table class="userinfoArea" style=" margin: 0;" border="0" cellspacing="0" cellpadding="0" width="100%">
   		<tbody>
+        <Tr><th valign="top"><span class="red">*</span>活动结束公告主题：</th></Tr>
   			<tr>
-  				<th valign="top"><span class="red">*</span>活动结束公告主题：</th>
-  				<td><input type="input" class="px" id="endtite" value="{weiguanjia:$vo.endtite}" name="endtite" style="width:400px">
+  				<td><input type="input" class="px" id="endtite" value="{weiguanjia:$vo.endtite}" name="endtite" style="width:300px">
   					<br>
   					请不要多于50字! </td>
   				<td rowspan="4" valign="top"><div style="margin-left:20px"><img id="end" src="{weiguanjia::C('site_url')}/themes/Wap/default/common/css/guajiang/images/activity-coupon-end.jpg" width="373px"> <br>
@@ -79,9 +82,9 @@
   					<br>
   					填写活动结束图片网址 </div></td>
   				</tr>
+        <tr><th valign="top">活动结束说明：</th></tr>
   			<tr>
-  				<th valign="top">活动结束说明：</th>
-  				<td valign="top"><textarea class="px" id="endinfo" name="endinfo" style="width: 400px; height: 125px;">{weiguanjia:$vo.endinfo}</textarea>活动结束显示
+  				<td valign="top"><textarea class="px" id="endinfo" name="endinfo" style="width: 300px; height: 125px;">{weiguanjia:$vo.endinfo}</textarea>活动结束显示
   				 </td>
   				</tr>
   			</tbody>

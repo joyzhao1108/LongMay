@@ -16,23 +16,23 @@
 		<a class="u_back fl" href="javascript:history.go(-1)"></a>
 		<ul class="topbar fr">
 			<li>
-				<a class="icon_user" href="{weiguanjia::U('Product/my',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'dining'=>$isDining))}"> <i></i>
+				<a class="icon_user" href="{weiguanjia::U('Product/my',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'ptype'=>$ptype))}"> <i></i>
 					我的
 				</a>
 			</li>
 			<li>
-				<a class="icon_shopping" href="{weiguanjia::U('Product/cart',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'dining'=>$isDining))}"> <i></i>
+				<a class="icon_shopping" href="{weiguanjia::U('Product/cart',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'ptype'=>$ptype))}"> <i></i>
 					购物车
 				</a>
 			</li>
 			<li>
-				<a class="icon_class" href="{weiguanjia::U('Product/cats',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'dining'=>$isDining))}">
+				<a class="icon_class" href="{weiguanjia::U('Product/cats',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'ptype'=>$ptype))}">
 					<i></i>
 					分类
 				</a>
 			</li>
 			<li>
-				<a class="icon_index" href="{weiguanjia::U('Product/index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'dining'=>$isDining))}">
+				<a class="icon_index" href="{weiguanjia::U('Product/index',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'ptype'=>$ptype))}">
 					<i></i>
 					主页
 				</a>
@@ -43,6 +43,6 @@
     <div class="f_list_car p_buy clearfix" id="p_buy">
     	<span class="all_price">总价格：<font id="all_price">￥{weiguanjia:$totalProductFee}</font></span>
     	<span>总共<font id="all_numb">{weiguanjia:$totalProductCount}</font>件商品</span>
-    	<a href="{weiguanjia::U('Product/cart',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'dining'=>$isDining))}" class="p_btn_buy"><span class="ts1">进入购物车</span></a>
+    	<a href="{weiguanjia::U('Product/cart',array('token'=>$_GET['token'],'wecha_id'=>$_GET['wecha_id'],'ptype'=>$ptype))}" class="p_btn_buy"><span class="ts1">进入购物车</span></a>
     </div>
 </div>

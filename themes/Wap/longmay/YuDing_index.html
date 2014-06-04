@@ -1,0 +1,216 @@
+<html>
+<head>
+<title>我的预订</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link href="{weiguanjia::RES}/css/style/css/hotels.css" rel="stylesheet" type="text/css">
+    <script src="{weiguanjia::RES}/css/style/js/jquery.min.js" type="text/javascript"></script>
+    <script>
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            WeixinJSBridge.call('hideToolbar');
+        });
+    </script>
+    <style>
+        .numtip{
+            border-radius:50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            overflow:hidden;
+            height: 20px;
+            width: 20px;
+            background-color: rgb(0, 147, 221);
+            color:#fff;
+            line-height: 20px;
+            float: right;
+            text-align: center;
+            font-size: 14px;
+            font-family: verdana, tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body id="" >
+<include file="$menutmpl"/>
+<div class="cardexplain">
+<ul class="round">
+    <li class="nob"><a href="?g=Wap&m=YuDing&a=lists&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}"><span>我的预订<div class="numtip">{weiguanjia:$countyuding}</div></span></a></li>
+</ul>
+<ul class="round">
+    <li class="title mb"><span class="none">预订说明</span></li>
+    <li class="nob">
+        <p>您可以直接拨打{weiguanjia:$company['tel']}预订。</p>
+        <p>
+            微信也预订，美味更实惠。
+            通过微信服务平台提交订单，
+            喜力啤酒500ml，尊享13元/支特惠。
+        </p>
+    </li>
+</ul>
+<ul class="round">
+<li class="addr"><a href="?g=Wap&m=Company&a=map&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}"><span>地址：{weiguanjia:$company['address']}</span></a></li>
+<li class="tel"><a href="tel:{weiguanjia:$company['tel']}"><span>预订电话：{weiguanjia:$company['tel']} </span></a></li>
+
+</ul>
+<ul class="round">
+    <li class="title mb"><span class="none">预订单（请认真填写）</span></li>
+    <li class="nob">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+            <tr>
+                <th>联系人</th>
+                <td><input name="truename"  type="text" class="px" id="truename" value="{weiguanjia:$userinfo['truename']}" placeholder="请输入您的真实姓名"></td>
+            </tr>
+        </table>
+    </li>
+    <li class="nob">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+            <tr>
+                <th>联系电话</th>
+                <td><input name="tel"  type="text"  class="px" id="tel" value="{weiguanjia:$userinfo['tel']}" placeholder="请输入您的电话"></td>
+            </tr>
+        </table>
+    </li>
+    <li class="nob">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+            <tr>
+                <th>预约日期</th>
+                <td> <select name="dateline" id="dateline"  class="dropdown-select"  >
+                    <option   value=2013-08-25  >2013-08-25 </option>
+                    <option   value=2013-08-26  >2013-08-26 </option>
+                    <option   value=2013-08-27  >2013-08-27 </option>
+                    <option   value=2013-08-28  >2013-08-28 </option>
+                    <option   value=2013-08-29  >2013-08-29 </option>
+                    <option   value=2013-08-30  >2013-08-30 </option>
+                    <option   value=2013-08-31  >2013-08-31 </option>
+                    <option   value=2013-09-01  >2013-09-01 </option>
+                    <option   value=2013-09-02  >2013-09-02 </option>
+                    <option   value=2013-09-03  >2013-09-03 </option>
+                    <option   value=2013-09-04  >2013-09-04 </option>
+                    <option   value=2013-09-05  >2013-09-05 </option>
+                    <option   value=2013-09-06  >2013-09-06 </option>
+                </select>
+                </td>
+            </tr>
+        </table>
+    </li>
+    <script type="text/javascript" charset="utf-8">
+        function showdate(n)
+        {
+            var uom = new Date(new Date()-0+n*86400000);
+            uom = uom.getFullYear() + "-" + (uom.getMonth()+1) + "-" + uom.getDate();
+            return uom
+        }
+        var options = document.getElementById("dateline").options;
+        for(var i = 0; i < options.length; i++) {
+
+            options[i].value = showdate(i);
+            options[i].text = showdate(i);
+            //alert(options[i].text);
+
+        }
+    </script>
+    <li class="nob">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+            <tr>
+                <th>预约时间</th>
+                <td>
+                <select name="dateline2" id="dateline2"  class="dropdown-select"  >
+                    <option   value=00:00  >2013-08-25 </option>
+                    <option   value=2013-08-26  >2013-08-26 </option>
+                    <option   value=2013-08-27  >2013-08-27 </option>
+                    <option   value=2013-08-28  >2013-08-28 </option>
+                    <option   value=2013-08-29  >2013-08-29 </option>
+                    <option   value=2013-08-30  >2013-08-30 </option>
+                    <option   value=2013-08-31  >2013-08-31 </option>
+                    <option   value=2013-09-01  >2013-09-01 </option>
+                    <option   value=2013-09-02  >2013-09-02 </option>
+                    <option   value=2013-09-03  >2013-09-03 </option>
+                    <option   value=2013-09-04  >2013-09-04 </option>
+                    <option   value=2013-09-05  >2013-09-05 </option>
+                    <option   value=2013-09-06  >2013-09-06 </option>
+                </select>
+                </td>
+            </tr>
+        </table>
+    </li>
+    <li class="nob">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="kuang">
+            <tr>
+                <th valign="top" class="thtop">备注</th>
+                <td><textarea  name="remarks"  class="pxtextarea" style=" height:99px;overflow-y:visible"  id="remarks"   placeholder="请输入备注信息"></textarea></td>
+            </tr>
+        </table>
+    </li>
+</ul>
+    <ul class="round">
+        <li class="nob"><a href="tel:{weiguanjia:$company['tel']}"><span>预约点菜（仅限会员）</span></a></li>
+    </ul>
+    <div class="footReturn">
+        <a id="showcard"  class="submit" href="javascript:void(0)">提交预订信息</a>
+        <div class="window" id="windowcenter">
+            <div id="title" class="wtitle">提交成功<span class="close" id="alertclose"></span></div>
+            <div class="content">
+                <div id="txt"></div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#showcard").click(function () {
+            if($("#tel").val()==''){alert('联系电话不能为空');return;}
+            if($("#truename").val()==''){alert('联系不能为空');return;}
+            if($("#dateline").val()==''){alert('请选择时间');return;}
+
+            var submitData = {
+                wecha_id : "{weiguanjia:$Think.get.wecha_id}",
+                token : "{weiguanjia:$Think.get.token}",
+                truename : $("#truename").val(),
+                remarks  : $("#remarks").val(),
+                tel      : $("#tel").val(),
+                dateline : $("#dateline").val(),
+                ptype : 1,
+                action   : "yuding"
+            };
+
+            $.post('index.php?g=Wap&m=YuDing&a=yuding&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}',
+                    submitData,
+                    function(data) {
+                        if (data.success == true) {
+                            alert(data.msg);
+                            setTimeout("window.location.href='index.php?g=Wap&m=YuDing&a=lists&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}'",2000);
+                            return
+                        } else {
+                            alert(data.msg);
+                        }
+                    },
+                    "json")
+            oLay.style.display = "block";
+        });
+    });
+
+    $("#windowclosebutton").click(function () {
+        $("#windowcenter").slideUp(500);
+        oLay.style.display = "none";
+
+    });
+    $("#alertclose").click(function () {
+        $("#windowcenter").slideUp(500);
+        oLay.style.display = "none";
+
+    });
+
+    function alert(title){
+
+        $("#windowcenter").slideToggle("slow");
+        $("#txt").html(title);
+        setTimeout('$("#windowcenter").slideUp(500)',4000);
+    }
+
+
+
+</script>
+</div>
+</body>
+</html>

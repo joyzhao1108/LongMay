@@ -69,7 +69,7 @@ class Member_cardAction extends UserAction{
 			if($data==false){
 				$this->error('服务器繁忙请稍后再试');
 			}else{
-				$this->success('操作成功',U('Member_card/privilege',array('id'=>$data_vip['id'])));
+				$this->success('操作成功',U('Member_card/privilege',array('id'=>$data['id'])));
 			
 			}
 	}

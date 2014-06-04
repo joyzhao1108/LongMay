@@ -80,12 +80,12 @@ class CouponAction extends UserAction{
 		$where=array('id'=>$id,'token'=>session('token'));
 		$check=M('Lottery')->where($where)->find();
 		if($check==false)$this->error('非法操作');
-		$user=M('Users')->field('gid,activitynum')->where(array('id'=>session('uid')))->find();
-		$group=M('User_group')->where(array('id'=>$user['gid']))->find();
+		/*$user=M('Users')->field('gid,activitynum')->where(array('id'=>session('uid')))->find();
+		$group=M('User_group')->where(array('id'=>$user['gid']))->find();*/
 		
-		if($user['activitynum']>=$group['activitynum']){
+		/*if($user['activitynum']>=$group['activitynum']){
 			$this->error('您的免费活动创建数已经全部使用完,请充值后再使用',U('Home/Index/price'));
-		}
+		}*/
 		$data=M('Lottery')->where($where)->setInc('status');
 		if($data!=false){
 			$this->success('恭喜你,活动已经开始');

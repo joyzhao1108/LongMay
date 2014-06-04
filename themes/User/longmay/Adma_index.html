@@ -78,10 +78,10 @@ font-size:12px;line-height: 48px;
          <div class="msgWrap bgfc">
   	 
 <table class="userinfoArea" style=" margin:0;" border="0" cellspacing="0" cellpadding="0" width="100%"><tbody>
+<Tr><th width="120">推广页地址：</th></Tr>
 <tr>
-<th width="120">推广页地址：</th>
 <td width="380"><a href="{weiguanjia::C('site_url')}/index.php/show/{weiguanjia:$Think.session.token}" target="ddd" title="点击查看推广页" class="green" target="_blank">{weiguanjia::C('site_url')}/index.php/show/{weiguanjia:$Think.session.token}</a></td>
-<td rowspan="6" valign="top" class="yulan">
+<td rowspan="8" valign="top" class="yulan">
 <div class="main">
 <h1 id="adtitle">{weiguanjia:$adma.title}</h1>
 <div class="erweima"><img id="gzhewm" src="{weiguanjia:$adma.url}"></div>
@@ -100,24 +100,21 @@ font-size:12px;line-height: 48px;
 </div>
 </td>
 </tr>
+<tr><th valign="top">宣传页标题名：</th></tr>
  <tr>
-<th valign="top">宣传页标题名：</th>
 <td><input type="text" name="title" value="{weiguanjia:$adma.title}" class="px" style="width:300px;" id="etitle" onblur="document.getElementById('adtitle').innerHTML=document.getElementById('etitle').value;">
-<br>
-
 </td>
-</tr>	
+</tr>
+<tr><th valign="top">二维码地址：</th></tr>
  <tr>
-<th valign="top">二维码地址：</th>
 <td><input type="text" name="url" value="{weiguanjia:$adma.url}" class="px" style="width:300px;" id="ewm" onblur="document.getElementById('gzhewm').src=document.getElementById('ewm').value;">
 <br>
 <p>到公众平台下载<span class="red">二维码边长为12CM，大小为344×344PX</span>.</p>
 <p>传到自己的图床获取外链地址，<span class="red">不要直接使用公众平台的地址。</span><input style="font-size:12px;color:red"type=button onclick="window.open('{weiguanjia::U('Upload/index',array('token'=>$token,'n'=>url))}')" value="点击上传图片"></p>
 </td>
-</tr>				
-                            <tr>
-<th valign="top"><br>
-功能介绍：</th>
+</tr>
+<tr><th valign="top">功能介绍：</th></tr>
+<tr>
 <td valign="top"><textarea class="px" id="info" name="info" style="width:300px; height:120px" onkeyup="DivFollowingText2()">{weiguanjia:$adma.info}</textarea>
 <script type="text/javascript">
 function DivFollowingText2()
@@ -129,10 +126,10 @@ document.getElementById("gzhinfo").innerHTML=document.getElementById("info").val
 请简单描述您的微信公众号可以给粉丝带来什么好处，<br>
 尽量控制在<span class="red">150文字以内</span>。</td>
 </tr>
+<tr><th width="120" valign="top">版权信息:</th></tr>
 <tr>
-	<th width="120" valign="top">版权信息:</th>
 	<td>
-	<input type="text" name="copyright" value="{weiguanjia:$adma.copyright}" class="px" style="width:300px;text-align:left;color:rgb(0, 0, 0);float:none"" id="copyright" onclick="document.getElementById('gzhcopyright').innerHTML=this.value;" onkeyup="DivFollowingText3()"/>
+	<input type="text" name="copyright" value="{weiguanjia:$adma.copyright}" class="px" style="width:300px;text-align:left;color:rgb(0, 0, 0);float:none" id="copyright" onclick="document.getElementById('gzhcopyright').innerHTML=this.value;" onkeyup="DivFollowingText3()"/>
 	<script type="text/javascript">
 	function DivFollowingText3()
 	{
@@ -144,10 +141,9 @@ document.getElementById("gzhinfo").innerHTML=document.getElementById("info").val
 		</td>
 </tr>
 <tr>
-<td>&nbsp;</td>
-<td><button type="submit" name="button" class="btnGreen">保存</button>
+<td colspan="2" align="center"><button type="submit" name="button" class="btnGreen">保存</button>
 <a href="index.php?ac=erweima-edit&amp;id=9878" class="btnGray vm">取消</a>
-<a href="{weiguanjia::C('site_url')}/index.php/show/{weiguanjia:$Think.session.token}" class="right btnGray vm" target="ddd" style=" margin-right:20px" target="_blank">查看推广页</a>
+<a href="{weiguanjia::C('site_url')}/index.php/show/{weiguanjia:$Think.session.token}" class="btnGray vm" target="ddd" style=" margin-right:20px" target="_blank">查看推广页</a>
 </td>
 </tr>
 

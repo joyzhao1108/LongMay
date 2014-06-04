@@ -128,8 +128,11 @@
 .present006{background: url(img/case06.jpg) no-repeat center center;height: 187px;  }
 .present006 .presenttext{  font-family: 华文细黑;color:#fff;font-size:18pt;margin-top:145px;text-align:center }
 
-
-
+#wapui
+{
+    background: url(pimg/wapui.png) no-repeat center -100px;
+    height: 580px;
+}
 
 .weixinapps{display: block;background-color: #f1f1f2;
     padding: 40px 0;
