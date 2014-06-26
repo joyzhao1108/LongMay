@@ -15,6 +15,10 @@ class IndexAction extends UserAction{
             $where = array('token'=>$vo['token'],'uid'=>session('uid'));
             $fun=$token_open->relation(true)->where($where)->select();
             $info[$key]['fun']=$fun;
+            if(($vo['wxtype'] == 1) && (empty($vo['appid']) || empty($vo['appsecret'])))
+            {
+                $info[$key]['outrule'] = 1;
+            }
         }
 
 		$this->assign('info',$info);
@@ -54,9 +58,19 @@ class IndexAction extends UserAction{
 		$where['uid']=session('uid');
 		$res=M('Wxuser')->where($where)->find($id);
 		$this->assign('info',$res);
+        if($res['wxtype'] == 1 && (empty($res['appid']) || empty($res['appsecret'])))
+        {
+            $this->display('editappid');
+        }
 		$this->display();
 	}
-
+    public function editappid(){
+        $id=$this->_get('id','intval');
+        $where['uid']=session('uid');
+        $res=M('Wxuser')->where($where)->find($id);
+        $this->assign('info',$res);
+        $this->display();
+    }
     public function setindustry(){
         $db = M('Wxuser');
         if(IS_POST)
@@ -138,7 +152,19 @@ class IndexAction extends UserAction{
 			$this->error('操作失败',U(MODULE_NAME.'/index'));
 		}
 	}
-	
+
+    public function upsaveappid(){
+        $where['uid'] = session('uid');
+        $where['id'] = $_POST['id'];
+        $data['appid']=$_POST['appid'];
+        $data['appsecret']=$_POST['appsecret'];
+
+        if(M('Wxuser')->where($where)->save($data)){
+            $this->success('操作成功',U('Index/index'));
+        }else{
+            $this->error('操作失败');
+        }
+    }
 	public function upsave(){
 		$id = $this->_get('id','intval');
 		$where['uid'] = session('uid');
@@ -180,7 +206,12 @@ class IndexAction extends UserAction{
                     }
                     $AccessDB->addAll($data);   // 重新创建角色的权限配置
                 }
-				$this->success('操作成功',U('Index/index'));
+                if($_POST['wxtype'] == 1){
+                    $this->success('操作成功',U('Index/editappid', array('id'=>$id)));
+                }
+                else{
+                    $this->success('操作成功',U('Index/index'));
+                }
 			}else{
 				$this->error('操作失败',U('Index/index'));
 			}

@@ -9,8 +9,8 @@ class WxuserModel extends RelationModel{
 		array('token','require','TOKEN不能为空',1),
 		array('token','','token已经存在！',1,'unique',1),
 		array('qq','email','公众号邮箱格式不正确'),
-        array('wxtype,appid', 'checkAppIdEmpty', '服务号的AppId不能为空', 1,'callback', 3),
-        array('wxtype,appsecret', 'checkAppSecretEmpty', '服务号的AppSecret不能为空', 1,'callback', 3),
+        /*array('wxtype,appid', 'checkAppIdEmpty', '服务号的AppId不能为空', 1,'callback', 3),
+        array('wxtype,appsecret', 'checkAppSecretEmpty', '服务号的AppSecret不能为空', 1,'callback', 3),*/
 	);
 	
 	protected $_auto = array (

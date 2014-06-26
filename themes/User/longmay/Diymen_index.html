@@ -23,16 +23,15 @@ $(document).ready(function() {
          
  <div class="msgWrap form">
        <form enctype="multipart/form-data" action="" method="post"><input type="hidden" value="" name="anchor">
-       
-		没内容      	  
+
     <table width="100%" cellspacing="0" cellpadding="0" border="0" class="ListProduct"> 
 <thead>
 <tr>
 	<th style=" width:60px;">显示顺序</th>
-	<th style=" width:220px;">主菜单名称</th>
-	<th style=" width:170px;">关联关键词</th>
+	<th style=" width:80px;">主菜单名称</th>
+	<th style=" width:80px;">关联关键词</th>
 	<th>外链URL</th>
-	<th class="norightborder" style=" width:160px;">操作</th>
+	<th class="norightborder" style=" width:120px;">操作</th>
 </tr>
 </thead>
    <tbody>
@@ -50,7 +49,8 @@ $(document).ready(function() {
         <td><span><if condition="$class['url'] eq false">无链接地址<else/>{weiguanjia:$class.url}</if></span></td>
         <td>
 			<a class="ajax btnGreen  cboxElement" href='javascript:tipsWindown("修改菜单","iframe:{weiguanjia::C('site_url')}{weiguanjia::U('Diymen/class_edit',array('id'=>$class['id']))}","460","600","true","","true","leotheme");' title="修改主菜单">修改</a>
-			<a class=" btnGreen " href="javascript:drop_confirm('您确定要删除吗?', '{weiguanjia::C('site_url')}{weiguanjia::U('Diymen/class_del',array('id'=>$class['id']))}');">删除</a>
+            <br>
+			<a class=" btnGreen" style="margin-top: 5px" href="javascript:drop_confirm('您确定要删除吗?', '{weiguanjia::C('site_url')}{weiguanjia::U('Diymen/class_del',array('id'=>$class['id']))}');">删除</a>
 		</td>				
       </tr>
 	  <volist id="class1" name="class['class']">

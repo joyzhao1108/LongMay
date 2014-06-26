@@ -3,15 +3,16 @@ class Wechat {
 	private $data = array(); 
 	public function __construct($token){
 		if (isset($_GET['debug']) && !empty($_GET['debug'])){
-			
+
 		}else{
 			$this->auth($token) || exit;
 		}
 		if(IS_GET){ 
 			echo($_GET['echostr']);
 			exit;
-		} else { 
-			$xml = file_get_contents("php://input"); 
+		} else {
+			$xml = file_get_contents("php://input");
+
 			$xml = new SimpleXMLElement($xml); 
 			$xml || exit; 
 			foreach ($xml as $key => $value) { 
@@ -65,12 +66,23 @@ class Wechat {
 			} 
 		} 
 	} 
-	private function auth($token){ 
-		$data = array($_GET['timestamp'], $_GET['nonce'], $token); 
-		$sign = $_GET['signature']; 
-		sort($data); 
-		$signature = sha1(implode($data)); 
-		return $signature === $sign; 
+	private function auth($token){
+        $signature = $_GET["signature"];
+        $timestamp = $_GET["timestamp"];
+        $nonce = $_GET["nonce"];
+
+        $tmpArr = array($token, $timestamp, $nonce);
+        sort($tmpArr, SORT_STRING);
+        $tmpStr = implode( $tmpArr );
+        $tmpStr = sha1( $tmpStr );
+
+        if( $tmpStr == $signature ){
+            return true;
+        }else{
+            //Log::write($tmpStr, Log::INFO);
+            //Log::write($signature, Log::INFO);
+            return false;
+        }
 	} 
 }
 ?>

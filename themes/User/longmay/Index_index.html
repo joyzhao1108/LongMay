@@ -36,7 +36,7 @@
                       </volist>
                   </Td>
                   <td class="norightborder" align="right" valign="top">
-                      <table border="0" cellSpacing="0" cellPadding="0">
+                      <table border="0" cellSpacing="0" cellPadding="0" width="200px">
                           <tr>
                               <td rowspan="3">
                                   <a href="{weiguanjia::U('Index/edit',array('id'=>$vo['id']))}" class="btnGreensBig" >编辑</a>
@@ -55,7 +55,13 @@
                                   <a href="{weiguanjia::U('Index/setindustry',array('id'=>$vo['id'],'token'=>$vo['token']))}" class="btnGreens" >设置行业</a>
                               </td>
                           </tr>
+                          <if condition="$vo.outrule eq 1"><tr><td colspan="2" align="left">
+                             你还没有为你的服务号添加AppID和AppSecret值，请点击“编辑”按钮进入设置页面。否则你将无法进行功能管理操作。
+                          </td></tr></if>
                       </table>
+
+
+
                   </td>
                 </tr>
               </volist>

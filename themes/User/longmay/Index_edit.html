@@ -76,52 +76,12 @@
                         </tr>
                     </table>
                 </div>
-                <div class="appsecret">
-                    <table class="infoedittbl">
-                        <tr>
-                            <th>AppId</th>
-                            <td><input id="appid" type="text"  name="appid" class="inputextwhite"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td><span class="info">微信公众号的AppId，例如wx6b6d3a9d4201d068</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="appsecret">
-                    <table class="infoedittbl">
-                        <tr>
-                            <th>AppSecret</th>
-                            <td><input id="appsecret" type="text" maxlength="32" name="appsecret" class="inputextwhite"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td><span class="info">微信公众号的AppSecret，例如ba67c6cadb313d1a67cddf4a64c6d422</span></td>
-                        </tr>
-                    </table>
-                </div>
                 <script>
                     $('.wxtype').click(function(){
                         $(this).siblings().removeAttr("checked");
                         $('#wxtype').val($(this).val());
-                        if($(this).attr("id") == "wxtype1")
-                        {
-                            $(".appsecret").show();
-                        }
-                        else
-                        {
-                            $(".appsecret").hide();
-                        }
-                    });
-                    if($("#wxtype1").attr("checked") == "checked")
-                    {
-                        $(".appsecret").show();
-                    }
-                    else
-                    {
-                        $(".appsecret").hide();
-                    }
 
+                    });
                 </script>
                 <div class="reg-btn-panel">
                     <table class="infoedittbl">

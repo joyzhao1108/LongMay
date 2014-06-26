@@ -85,7 +85,7 @@ class BulletinAction extends UserAction{
             $check=$lesson_model->where($where)->find();
             if($check==false)   $this->error('非法操作');
 
-            $back=$lesson_model->where($wehre)->delete();
+            $back=$lesson_model->where($where)->delete();
             if($back==true){            	
                 $this->success('操作成功',U('Bulletin/index',array('token'=>session('token'))));
             }else{

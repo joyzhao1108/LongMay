@@ -23,7 +23,9 @@ class UserAction extends BaseAction{
             session('token',$token);
         }
         $this->token = session('token');
-		$wecha=M('Wxuser')->field('wxname,wxid,headerpic,weixin,typename')->where(array('token'=>$this->token,'uid'=>session('uid')))->find();
+		$wecha=M('Wxuser')->field('wxname,wxid,headerpic,weixin,typename,appid,appsecret')->where(array('token'=>$this->token,'uid'=>session('uid')))->find();
+        //dump($wecha);
+
         $this->wxuser =$wecha;
 		$this->assign('wecha',$wecha);
 

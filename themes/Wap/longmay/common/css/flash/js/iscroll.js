@@ -76,6 +76,8 @@ var m = Math,
 			useTransition: false,
 			topOffset: 0,
 			checkDOMChanges: false,		// Experimental
+            preventGhostClick: true, // prevent ghost clicks?防止2次点击
+            ghostClickTimeout: 500,   // timeout for ghost click prevention设置时间差
 
 			// Scrollbar
 			hScrollbar: true,
@@ -187,7 +189,19 @@ iScroll.prototype = {
 			case 'webkitTransitionEnd': that._transitionEnd(e); break;
 		}
 	},
-	
+    /**
+     * Prevents any real clicks.
+     * See preventGhostClick portion of _end().
+     */
+    _preventRealClick: function(e) {
+        if (e._fake !== true) {
+            e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            e.cancel = true;
+            return false;
+        }
+    },
 	_checkDOMChanges: function () {
 		if (this.moved || this.zoomed || this.animating ||
 			(this.scrollerW == this.scroller.offsetWidth * this.scale && this.scrollerH == this.scroller.offsetHeight * this.scale)) return;
@@ -530,8 +544,16 @@ iScroll.prototype = {
 								point.screenX, point.screenY, point.clientX, point.clientY,
 								e.ctrlKey, e.altKey, e.shiftKey, e.metaKey,
 								0, null);
-							ev._fake = true;
-							target.dispatchEvent(ev);
+                            ev._fake = true;
+                            if (that.options.preventGhostClick) { //preventGhostClick: true,
+                                // prevent ghost real clicks on body
+                                document.body.addEventListener('click', that._preventRealClick, true);
+                                // until ghost click timeout expires
+                                setTimeout(function () {
+                                    document.body.removeEventListener('click', that._preventRealClick, true);
+                                }, that.options.ghostClickTimeout);
+                            }
+                            target.dispatchEvent(ev);
 						}
 					}, that.options.zoom ? 250 : 0);
 				}

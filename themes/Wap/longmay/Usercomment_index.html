@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>点评板</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<link href="{weiguanjia::RES}/css/style/css/food.css?v3" rel="stylesheet" type="text/css">
+    <script src="{weiguanjia::RES}/css/style/js/jquery.min.js" type="text/javascript"></script>
+    <script src="{weiguanjia::RES}/css/flash/js/jquery.blockUI.js" type="text/javascript"></script>
+    <script>
+        document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
+            WeixinJSBridge.call('hideToolbar');
+        });
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body id="" >
+<include file="$menutmpl"/>
+<div id="headtitle">点评板</div>
+<div id="dianpingban">
+<ul>
+    <li class="total"><span>用餐总体印象<div class="stargroup" target="total">
+        <div class="stargray"></div>
+        <div class="stargray"></div>
+        <div class="stargray"></div>
+        <div class="stargray"></div>
+        <div class="stargray"></div>
+    </div></span></li>
+    <!--<li class="p0"><span>菜单菜品评分<div class="numtip">{weiguanjia:$countyuding}</div></span></li>-->
+    <li class="p1"><span>用餐价位评分<div class="stargroup" target="p1">
+        <div class="stargray"></div>
+        <div class="stargray"></div>
+        <div class="stargray"></div>
+        <div class="stargray"></div>
+        <div class="stargray"></div>
+    </div></span></li>
+    <li class="p2"><span>整体服务评分<div class="stargroup" target="p2">
+        <div class="stargray"></div>
+        <div class="stargray"></div>
+        <div class="stargray"></div>
+        <div class="stargray"></div>
+        <div class="stargray"></div>
+    </div></span></li>
+    <li class="p3"><span>就餐环境评分<div class="stargroup" target="p3">
+        <div class="stargray"></div>
+        <div class="stargray"></div>
+        <div class="stargray"></div>
+        <div class="stargray"></div>
+        <div class="stargray"></div>
+    </div></span></li>
+    <li><p>说明：1颗星代表差，2颗星代表一般，3颗星代表还行，4颗星代表满意，5颗星代表很好。</p></li>
+    <li class="comment"><span>留言板</span>
+        <textarea  name="comment"  class="pxtextarea" style=" height:99px;overflow-y:visible"
+                   id="comment"   placeholder="请输入您对我们的宝贵意见">{weiguanjia:$comment.comment}</textarea></li>
+</ul>
+<div class="footReturn">
+    <input id="total" name="total" type="hidden" value="{weiguanjia:$comment.total}" />
+    <input id="p1" name="p1" type="hidden" value="{weiguanjia:$comment.p1}" />
+    <input id="p2" name="p2" type="hidden" value="{weiguanjia:$comment.p2}" />
+    <input id="p3" name="p3" type="hidden" value="{weiguanjia:$comment.p3}" />
+    <a id="showcard"  class="submit" href="javascript:void(0)">提交点评</a>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var  cWidth;
+        cWidth = document.documentElement.clientWidth;
+        cWidth = cWidth-25 +"px";
+        document.getElementById("comment").style.width =  cWidth;
+        $('.stargroup').each(function(){
+            var target = $(this).attr("target");
+            //initial data
+            var oldvalue = $("#" + target).val();
+            $(this).find('div').removeClass("star").addClass("stargray");
+            $(this).find('div').each(function(){
+                var itemindex =  $(this).index();
+                if(itemindex < oldvalue){
+                    $(this).removeClass("stargray").addClass("star");
+                }
+            });
+
+            $(this).find('div').click(function(){
+                $(this).siblings().removeClass("star").addClass("stargray");
+                $(this).prevAll().removeClass("stargray").addClass("star");
+                $(this).removeClass("stargray").addClass("star");
+                $("#" + target).val($(this).index() + 1);
+            });
+        });
+        function alert(msg){
+            $.blockUI({ message: "<h3>"+msg+"</h3>", timeout:2000});
+        }
+        $("#showcard").click(function () {
+            if($("#total").val()=='' || $("#total").val() == '0'){alert('请为用餐总体印象评分');return;}
+            if($("#p1").val()=='' || $("#p1").val() == '0'){alert('请为用餐价位评分');return;}
+            if($("#p2").val()=='' || $("#p2").val() == '0'){alert('请为整体服务评分');return;}
+            if($("#p3").val()=='' || $("#p3").val() == '0'){alert('请为就餐环境评分');return;}
+
+            var submitData = {
+                wecha_id : "{weiguanjia:$Think.get.wecha_id}",
+                token : "{weiguanjia:$Think.get.token}",
+                total : $("#total").val(),
+                comment  : $("#comment").val(),
+                p1 : $("#p1").val(),
+                p2 : $("#p2").val(),
+                p3 : $("#p3").val(),
+                action   : "dianping"
+            };
+            //alert($("#comment").val());
+            $.post('index.php?g=Wap&m=Usercomment&a=dianping&token={weiguanjia:$Think.get.token}&wecha_id={weiguanjia:$Think.get.wecha_id}',
+                    submitData,
+                    function(data) {
+                        if (data.success == true) {
+                            alert(data.msg);
+                            return;
+                        } else {
+                            alert(data.msg);
+                            return;
+                        }
+                    },
+                    "json");
+        });
+    });
+</script>
+</div>
+</body>
+</html>

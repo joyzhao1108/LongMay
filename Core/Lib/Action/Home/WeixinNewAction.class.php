@@ -21,11 +21,13 @@ class WeixinNewAction extends Action
         if ('CLICK' == $data['Event']) {
             $data['Content'] = $data['EventKey'];
         }
+        Log::write($data['Event'], Log::INFO);
         if ('subscribe' == $data['Event']) {
             $this->requestdata('follownum');
             $data = M('Areply')->field('home,keyword,content')->where(array(
                 'token' => $this->token
             ))->find();
+
             if ($data == false || $data['home'] == 1) {
                 return $this->home();
             }
@@ -544,11 +546,11 @@ class WeixinNewAction extends Action
                 $url
             );
             //电话\手机
-            $phone = '电话:'.$company['tel']."\n手机:".$company['mp'];;
+            $phone = '电话:'.$company['tel'];//."\n手机:".$company['mp'];;
             $url = rtrim(C('site_url'), '/') . U('Wap/Company/index', array(
-                'token' => $this->token,
-                'wecha_id' => $this->data['FromUserName']
-            ));
+                    'token' => $this->token,
+                    'wecha_id' => $this->data['FromUserName']
+                ));
             $imgUrl = rtrim(C('site_url'), '/') .'/images/tel.png';
             $return[] = array(
                 $phone,
@@ -556,17 +558,35 @@ class WeixinNewAction extends Action
                 $imgUrl,
                 $url
             );
-            $url = rtrim(C('site_url'), '/') . U('Wap/Company/about', array(
-                    'token' => $this->token,
-                    'wecha_id' => $this->data['FromUserName']
-                ));
-            //介绍
-            $return[] = array(
-                $company['introbrief'],
-                $company['intro'],
-                $company['briefpic'],
-                $url
-            );
+            //wifi
+            $url = $company['wifiurl'];
+            if(!empty($url)){
+                $wifititle = $company['wifititle'];
+                if(empty($wifititle))
+                {
+                    $wifititle = '店内免费wifi，点击上网';
+                }
+                $imgUrl = rtrim(C('site_url'), '/') .'/images/wifi.png';
+                $return[] = array(
+                    $wifititle,
+                    '',
+                    $imgUrl,
+                    $url
+                );
+            }
+            if(!empty($company['introbrief'])){
+                $url = rtrim(C('site_url'), '/') . U('Wap/Company/about', array(
+                        'token' => $this->token,
+                        'wecha_id' => $this->data['FromUserName']
+                    ));
+                //介绍
+                $return[] = array(
+                    $company['introbrief'],
+                    $company['intro'],
+                    $company['briefpic'],
+                    $url
+                );
+            }
         }
         return array(
             $return,

@@ -9,170 +9,178 @@
 <include file="Public:head"/>
 <div id="body-container" style="margin-top:-80px;">
     <form action="{weiguanjia::U('Users/checkreg')}" enctype="multipart/form-data" id="regform" name="regform" autocomplete="off" method="post">
-    <div class="wrap1" id="reg_wrap">
-        <div class="left-panel">
-            <div class="nav active" id="nav1"><a>基本信息</a></div>
-            <div class="nav normal" id="nav2"><a>个人资料</a></div>
-            <div class="nav normal" id="nav3"><a>完成注册</a></div>
+    <div class="wrap" id="reg_wrap">
+    <div id="mainpnl">
+    <table cellspacing="0" cellpadding="0" border="1" bordercolor="#ccc">
+        <tr>
+            <td>
+                <div class="left-panel">
+                    <div class="nav active" id="nav1"><a>基本信息</a></div>
+                    <div class="nav normal" id="nav2"><a>个人资料</a></div>
+                    <div class="nav normal" id="nav3"><a>完成注册</a></div>
+                </div>
+            </td>
+            <td>
+                <div class="regpnl">
+        <div id="step1" class="regcontent">
+            <div>
+                <table>
+                    <tr>
+                        <th><span class="red">*</span>用户名</th>
+                        <td><input id="username" type="text" maxlength="15" placeholder="" name="username" class="inputext"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><span class="info">龙蔓用户名由字母与数字组成，6-15位</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th><span class="red">*</span>密码</th>
+                        <td><input id="password" type="password" placeholder="" name="password" class="inputext"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><span class="info">字母、数字，最短8位，区分大小写</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th><span class="red">*</span>确认密码</th>
+                        <td><input id="repassword" type="password" placeholder="" name="repassword" class="inputext"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><span class="info">请再次输入密码</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th><span class="red">*</span>邮箱</th>
+                        <td><input id="email" type="text" placeholder="" name="email" class="inputext"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><span class="info">请输入您常用的电子邮箱</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="reg-btn-panel">
+                <span style="width: 140px;display: inline-block"></span><input title="下一步" type="button" onclick="nextstep(1)" class="next-btn" value="">
+            </div>
         </div>
-        <div class="regpnl">
-            <div id="step1" class="regcontent">
-                <div>
-                    <table>
-                        <tr>
-                            <th><span class="red">*</span>用户名</th>
-                            <td><input id="username" type="text" maxlength="15" placeholder="" name="username" class="inputext"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td><span class="info">龙蔓用户名由字母与数字组成，6-15位</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <table>
-                        <tr>
-                            <th><span class="red">*</span>密码</th>
-                            <td><input id="password" type="password" placeholder="" name="password" class="inputext"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td><span class="info">字母、数字，最短8位，区分大小写</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <table>
-                        <tr>
-                            <th><span class="red">*</span>确认密码</th>
-                            <td><input id="repassword" type="password" placeholder="" name="repassword" class="inputext"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td><span class="info">请再次输入密码</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <table>
-                        <tr>
-                            <th><span class="red">*</span>邮箱</th>
-                            <td><input id="email" type="text" placeholder="" name="email" class="inputext"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td><span class="info">请输入您常用的电子邮箱</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="reg-btn-panel">
-                    <span style="width: 140px;display: inline-block"></span><input title="下一步" type="button" onclick="nextstep(1)" class="next-btn" value="">
-                </div>
+        <div id="step2" style="display: none" class="regcontent">
+            <div>
+                <table>
+                    <tr>
+                        <th><span class="red">*</span>真实姓名</th>
+                        <td><input id="truename" type="text" maxlength="15" placeholder="" name="truename" class="inputext"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><span class="info">请输入您的真实姓名，方便我们为您服务</span></td>
+                    </tr>
+                </table>
             </div>
-            <div id="step2" style="display: none" class="regcontent">
-                <div>
-                    <table>
-                        <tr>
-                            <th><span class="red">*</span>真实姓名</th>
-                            <td><input id="truename" type="text" maxlength="15" placeholder="" name="truename" class="inputext"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td><span class="info">请输入您的真实姓名，方便我们为您服务</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <table>
-                        <tr>
-                            <th><span class="red">*</span>手机号码</th>
-                            <td><input id="mobile" type="text" placeholder="" name="mobile" class="inputext"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td><span class="info">请输入您的手机号码，方便我们为您服务</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <table>
-                        <tr>
-                            <th><span class="red">*</span>公司名称</th>
-                            <td><input id="companyname" type="text" placeholder="" name="companyname" class="inputext"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td><span class="info">请填写公司或商家的名称</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div clas="district-panel">
-                    <table>
-                        <tr>
-                            <th><span class="red">*</span>所在地区</th>
-                            <td>
-                                <select  id="province" name="province" class="area"></select>
-                                <select  id="city" name="city" class="area"></select>
-                                <select id="area" name="area" class="area"></select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td><span class="info">请输入您所在地区</span></td>
-                        </tr>
-                    </table>
-                    <script type="text/javascript" src="{weiguanjia::STATICS}/js/pcasunzip.js"></script>
-                    <script language="javascript">
-                        new PCAS("province","city","area");
-                    </script>
-                </div>
-                <div class="reg-btn-panel">
-                    <input title="上一步" type="button" class="prev-btn" value="" onclick="prevstep()"><input title="下一步" onclick="nextstep(2)" type="button" class="next-btn" value="">
-                </div>
+            <div>
+                <table>
+                    <tr>
+                        <th><span class="red">*</span>手机号码</th>
+                        <td><input id="mobile" type="text" placeholder="" name="mobile" class="inputext"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><span class="info">请输入您的手机号码，方便我们为您服务</span></td>
+                    </tr>
+                </table>
             </div>
-            <div id="step3" class="regcontent" style="display: none">
-                <div>
-                    <table>
-                        <tr>
-                            <th><span class="red">*</span>所在行业</th>
-                            <td><input id="industry" type="text" maxlength="15" placeholder="" name="industry" class="inputext"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td><span class="info">请输入您公司的所在行业</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <table>
-                        <tr>
-                            <th><span class="red">&nbsp;</span>您的职务</th>
-                            <td><input id="jobtitle" type="text" placeholder="" name="jobtitle" class="inputext"></td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;</td>
-                            <td><span class="info">请输入您的公司职务</span></td>
-                        </tr>
-                    </table>
-                </div>
-                <div></div>
-                <div></div>
-                <div class="reg-btn-panel">
-                    <input title="上一步" type="button" class="prev-btn" value="" onclick="prevstep()"><input title="完成注册" type="submit" onclick="return confirmsubmit()" class="confirm-btn" value="">
-                </div>
+            <div>
+                <table>
+                    <tr>
+                        <th><span class="red">*</span>公司名称</th>
+                        <td><input id="companyname" type="text" placeholder="" name="companyname" class="inputext"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><span class="info">请填写公司或商家的名称</span></td>
+                    </tr>
+                </table>
             </div>
-            <div id="errordiv"><span id="errorinfo"></span></div>
+            <div clas="district-panel">
+                <table>
+                    <tr>
+                        <th><span class="red">*</span>所在地区</th>
+                        <td>
+                            <select  id="province" name="province" class="area"></select>
+                            <select  id="city" name="city" class="area"></select>
+                            <select id="area" name="area" class="area"></select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><span class="info">请输入您所在地区</span></td>
+                    </tr>
+                </table>
+                <script type="text/javascript" src="{weiguanjia::STATICS}/js/pcasunzip.js"></script>
+                <script language="javascript">
+                    new PCAS("province","city","area");
+                </script>
+            </div>
+            <div class="reg-btn-panel">
+                <input title="上一步" type="button" class="prev-btn" value="" onclick="prevstep()"><input title="下一步" onclick="nextstep(2)" type="button" class="next-btn" value="">
+            </div>
         </div>
+        <div id="step3" class="regcontent" style="display: none">
+            <div>
+                <table>
+                    <tr>
+                        <th><span class="red">*</span>所在行业</th>
+                        <td><input id="industry" type="text" maxlength="15" placeholder="" name="industry" class="inputext"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><span class="info">请输入您公司的所在行业</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th><span class="red">&nbsp;</span>您的职务</th>
+                        <td><input id="jobtitle" type="text" placeholder="" name="jobtitle" class="inputext"></td>
+                    </tr>
+                    <tr>
+                        <td>&nbsp;</td>
+                        <td><span class="info">请输入您的公司职务</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div></div>
+            <div></div>
+            <div class="reg-btn-panel">
+                <input title="上一步" type="button" class="prev-btn" value="" onclick="prevstep()"><input title="完成注册" type="submit" onclick="return confirmsubmit()" class="confirm-btn" value="">
+            </div>
+        </div>
+        <div id="errordiv"><span id="errorinfo"></span></div>
+    </div></td></tr></table>
+
+
         <script language="javascript">
             var currentIndex = 1;
            function prevstep()
            {
                $(".regcontent").hide();
                $("#nav"+currentIndex).removeClass("active").addClass("normal");
-               $("#reg_wrap").removeClass("wrap"+currentIndex);
+               //$("#reg_wrap").removeClass("wrap"+currentIndex);
                currentIndex = currentIndex-1;
                $("#step"+currentIndex).show();
-               $("#reg_wrap").addClass("wrap"+currentIndex);
+               //$("#reg_wrap").addClass("wrap"+currentIndex);
                $("#nav"+currentIndex).removeClass("normal").addClass("active");
            }
 
@@ -273,6 +281,7 @@
                 return true;
             }
         </script>
+    </div>
     </div>
     </form>
 </div>

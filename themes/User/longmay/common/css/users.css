@@ -4,7 +4,7 @@
 }
 .regcontent
 {
-    width: 550px;
+    width: 650px;
     margin: 0px auto 20px;
 }
 .regcontent div
@@ -26,6 +26,12 @@
 }
 .infoedittbl span.info{
     font-size: 12px;
+    color: rgb(0,147,221);
+    margin: 5px 0px;
+}
+.infoedittbl span.info16{
+    font-size: 16px;
+    font-weight: 900;
     color: rgb(0,147,221);
     margin: 5px 0px;
 }

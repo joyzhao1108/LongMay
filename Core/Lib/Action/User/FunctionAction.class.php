@@ -6,6 +6,10 @@ class FunctionAction extends UserAction{
 		if($info==false||$info['token']!==$this->token){
 			$this->error('非法操作',U('Home/Index/index'));
 		}
+        if($info['wxtype'] == 1 && (empty($info['appid']) || empty($info['appsecret'])))
+        {
+            $this->error('服务号请添加AppID和AppSecret才能进行功能管理',U('Index/editappid', array('id'=>$id)));
+        }
 		session('wxid',$info['id']);
 		//第一次登陆　创建　功能所有权
 		$token_open=D('Wxuser_func');

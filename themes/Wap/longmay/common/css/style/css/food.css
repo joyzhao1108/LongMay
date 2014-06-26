@@ -661,6 +661,7 @@ ul.roundyellow {
     margin: 11px auto;
     padding: 0;
 	position: relative;
+    text-align: center;
 }
 .footerbtn{ width:50%; float:left;}
 .right3{ margin-right:3px}
@@ -692,6 +693,8 @@ vertical-align: middle;
     );
     color: #ffffff;
     display:block;
+    width: 120px;
+    margin: auto;
     text-align:center;
 }
 .submit:active {
@@ -748,6 +751,8 @@ vertical-align: middle;
 	border-radius: 5px;
 	color: #666666;
 	display:block;
+    margin: auto;
+    width: 120px;
 	text-align:center;
 	text-shadow:0 1px #FFF;
 }
@@ -801,6 +806,7 @@ vertical-align: middle;
 	border-radius: 5px;
 	color: #333;
 	display:block;
+    width: 120px;
 	text-align:center;
 	text-shadow: 0 1px rgba(255, 255, 255, 0.5);
 }
@@ -1232,7 +1238,7 @@ vertical-align: middle;
 
 #thelist li a {
     display:block;
-    background:url({weiguanjia::RES}/images/arrow3.png) no-repeat right 50%;
+    background:url(img/arrow3.png) no-repeat right 50%;
     -webkit-background-size:8.5px 13px;
     background-size:8.5px 13px;
     padding:0px 20px 0px 0;
@@ -1240,4 +1246,134 @@ vertical-align: middle;
     font-size:16px;
     height: 22px;
     line-height:22px;
+}
+.numtip{
+    border-radius:50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    overflow:hidden;
+    height: 22px;
+    width: 22px;
+    background-color: rgb(0, 147, 221);
+    color:#fff;
+    line-height: 22px;
+    float: right;
+    text-align: center;
+    font-size: 14px;
+    font-family: verdana, tahoma, sans-serif;
+}
+
+#dianpingban ul {
+    border:1px solid #C6C6C6;
+    background-color:#fafafa;
+    text-align:left;
+    font-size:16px;
+    line-height:24px;
+    -moz-box-shadow:0 1px 1px #f6f6f6;
+    -webkit-box-shadow:0 1px 1px #f6f6f6;
+    box-shadow:0 1px 1px #f6f6f6;
+    margin-bottom:11px;
+    display:block;
+}
+
+#dianpingban ul li {
+    border:solid #C6C6C6;
+    border-width:0 0 1px 0;
+    padding:0px 10px 0 10px;
+}
+#dianpingban li, #dianpingban li span, #dianpingban li a {
+    line-height:22px;
+}
+#dianpingban li span {
+    display:block;
+    padding:10px 20px 9px 0;
+    position:relative;
+    min-height: 22px;
+}
+
+#dianpingban li.total{
+    background: url(img/dianping0.png) no-repeat scroll 9px 11px transparent;
+    background-size:20px 20px;
+    line-height: 22px;
+    padding-left: 34px;
+}
+#dianpingban li.p0{
+    background: url(img/dianping1.png) no-repeat scroll 9px 11px transparent;
+    background-size:20px 20px;
+    line-height: 22px;
+    padding-left: 34px;
+}
+#dianpingban li.p0 span {
+    background:url(img/arrow3.png) no-repeat right 50%;
+    -webkit-background-size:8.5px 13px;
+    background-size:8.5px 13px;
+}
+#dianpingban li.p1{
+    background: url(img/dianping2.png) no-repeat scroll 9px 11px transparent;
+    background-size:22px 22px;
+    line-height: 22px;
+    padding-left: 34px;
+}
+#dianpingban li.p2{
+    background: url(img/dianping3.png) no-repeat scroll 9px 11px transparent;
+    background-size:20px 20px;
+    line-height: 22px;
+    padding-left: 34px;
+}
+#dianpingban li.p3{
+    background: url(img/dianping4.png) no-repeat scroll 9px 11px transparent;
+    background-size:20px 20px;
+    line-height: 22px;
+    padding-left: 34px;
+}
+#dianpingban li.comment{
+    background: url(img/dianpingc.png) no-repeat scroll 9px 11px transparent;
+    background-size:20px 20px;
+    line-height: 22px;
+    padding-left: 34px;
+    border-bottom: none;
+}
+
+#dianpingban .stargroup{
+    overflow:hidden;
+    float: right;
+    margin-right: -20px;
+}
+#dianpingban .star{
+    display:inline-block;
+    width: 22px;
+    height: 22px;
+    background:url(img/star.png) no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    margin: 0px 0px 0px 6px;
+}
+#dianpingban .stargray{
+    display:inline-block;
+    width: 22px;
+    height: 22px;
+    background:url(img/stargray.png) no-repeat;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    margin: 0px 0px 0px 6px;
+}
+#dianpingban li .pxtextarea{
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    background-color:rgb(236,236,236);
+    border: 1px solid #E8E8E8;
+    margin: 5px -10 5px -23px;
+    padding: 5px 10px;
+    display: block;
+}
+#dianpingban li p{
+    background-color:rgb(236,236,236);
+    padding: 5px 10px;
+    margin-left:-10px;
+    margin-right:-10px;
 }

@@ -7,7 +7,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <script src="{weiguanjia::RES}/css/style/js/jquery.min.js" type="text/javascript"></script>
-    <script src="{weiguanjia::RES}/css/flash/js/iscroll.js" type="text/javascript"></script>
+    <script src="{weiguanjia::RES}/css/flash/js/iscroll.js?v" type="text/javascript"></script>
     <script src="{weiguanjia::RES}/css/flash/js/jquery.blockUI.js" type="text/javascript"></script>
     <style>
         body,ul,li {
@@ -105,11 +105,13 @@
             font-size: 11px; margin-left: 0px; position: relative; z-index: 1;
         }
         #thelist dl dd span {
+
+            background: url("{weiguanjia::RES}/images/popular.png") no-repeat;
             -moz-background-size: cover;
             -o-background-size: cover;
             -webkit-background-size:cover;
             background-size: cover;
-            background: url("{weiguanjia::RES}/images/popular.png") no-repeat; left: -40px; top: -28px; width: 22px; height: 20px; display: inline-block; position: absolute;
+            left: -40px; top: -28px; width: 22px; height: 20px; display: inline-block; position: absolute;
         }
         #thelist dl dd:nth-of-type(2) {
             height: 27px; margin-top: -8px;
@@ -157,11 +159,12 @@
             padding: 3px; top: 28%; height: 38px; right: -5px; position: absolute; cursor: pointer; background-color: transparent;
         }
         #thelist dl .btn span {
+
+            background: url("{weiguanjia::RES}/images/unchoosen.png") no-repeat;
             -moz-background-size: cover;
             -o-background-size: cover;
             -webkit-background-size:cover;
             background-size: cover;
-            background: url("{weiguanjia::RES}/images/unchoosen.png") no-repeat;
             border: 0px currentColor;
             left: -20px;
             top: -2px;
@@ -170,11 +173,12 @@
             display: block;
         }
         #thelist dl.choosen .btn span {
+
+            background: url("{weiguanjia::RES}/images/choosen.png") no-repeat;
             -moz-background-size: cover;
             -o-background-size: cover;
             -webkit-background-size:cover;
             background-size: cover;
-            background: url("{weiguanjia::RES}/images/choosen.png") no-repeat;
         }
         #thelist dl .btn button {
             padding: 0px; border: 0px currentColor; width: 40px; height: 40px; background-color: transparent;
@@ -189,35 +193,39 @@
             margin-left: -10px;
         }
         #thelist dl .btn button.minus strong {
+
+            background: url({weiguanjia::RES}/images/typebtn1a.png) no-repeat;
             -moz-background-size: 22px 22px;
             -o-background-size: 22px 22px;
             -webkit-background-size: 22px 22px;
             background-size: 22px 22px;
-            background: url({weiguanjia::RES}/images/typebtn1a.png) no-repeat;
         }
         #thelist dl .btn button.add strong {
+
+            background: url({weiguanjia::RES}/images/typebtn2a.png) no-repeat;
             -moz-background-size: 22px 22px;
             -o-background-size: 22px 22px;
             -webkit-background-size: 22px 22px;
             background-size: 22px 22px;
-            background: url({weiguanjia::RES}/images/typebtn2a.png) no-repeat;
         }
         #thelist dl .btn button.minus:active strong {
+
+            background: url("{weiguanjia::RES}/images/typebtn1.png") no-repeat;
             -moz-background-size: 22px 22px;
             -o-background-size: 22px 22px;
             -webkit-background-size: 22px 22px;
             background-size: 22px 22px;
-            background: url("{weiguanjia::RES}/images/typebtn1.png") no-repeat;
         }
         #thelist dl .btn button.add:active strong {
+
+            background: url("{weiguanjia::RES}/images/typebtn2.png") no-repeat;
             -moz-background-size: 22px 22px;
             -o-background-size: 22px 22px;
             -webkit-background-size: 22px 22px;
             background-size: 22px 22px;
-            background: url("{weiguanjia::RES}/images/typebtn2.png") no-repeat;
         }
         #thelist dl .btn i {
-            width: 22px; text-align: center; line-height: 18px; font-style: normal; margin-top: 11px; vertical-align: top;display: none;
+            width: 22px; text-align: center; color:dodgerblue;font-weight: 900; line-height: 18px;font-size: 12px;  font-style: normal; margin-top: 11px; vertical-align: top;display: none;
         }
         #thelist dl dd em.fixBig {
             padding: 3px; border-radius: 5px; top: -15px; width: 30px; height: 15px; text-align: center; right: 30px; color: rgb(204, 204, 204); line-height: 15px; font-size: 18px; display: block; position: absolute; z-index: 5; background-color: rgb(255, 255, 255);

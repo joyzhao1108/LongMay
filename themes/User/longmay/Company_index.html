@@ -79,7 +79,7 @@ function setlatlng(longitude,latitude){
         <td><input type="text" id="tel" name="tel" value="{weiguanjia:$set.tel}" class="px require" style="width:400px;" /></td>
        </tr>
        <tr>
-        <th><span class="red">*</span>手机：</th>
+        <th>手机：</th>
         <td><input type="text" id="mp" name="mp" value="{weiguanjia:$set.mp}" class="px require" style="width:400px;" /></td>
        </tr>
        <tr>
@@ -98,10 +98,17 @@ function setlatlng(longitude,latitude){
         <th><span class="red">*</span>经纬度：</th>
         <td>经度lat <input type="text" id="longitude"  name="longitude" size="14" class="px" value="{weiguanjia:$set.longitude}" /> 纬度lng <input type="text"  name="latitude" size="14" id="latitude" class="px" value="{weiguanjia:$set.latitude}" />  <a href="http://api.map.baidu.com/lbsapi/getpoint/index.html" target="_blank">坐标获取</a></td>
        </tr>
-
+       <tr>
+           <th><span class="red">*</span>WiFi上网标题：</th>
+           <td><input type="text" id="wifititle" name="wifititle" placeholder="默认：店内免费wifi，点击上网" value="{weiguanjia:$set.wifititle}" class="px require" style="width:400px;" /></td>
+       </tr>
+       <tr>
+           <th><span class="red">*</span>WiFi外链URL：</th>
+           <td><input type="text" id="wifiurl" name="wifiurl" value="{weiguanjia:$set.wifiurl}" class="px require" style="width:400px;" />（留空欢迎页面将不显示）</td>
+       </tr>
        <tr>
            <th><span class="red">*</span>业务简介：</th>
-           <td><input type="text" id="introbrief" name="introbrief" value="{weiguanjia:$set.introbrief}" class="px require" style="width:400px;" /></td>
+           <td><input type="text" id="introbrief" name="introbrief" value="{weiguanjia:$set.introbrief}" class="px require" style="width:400px;" />（留空欢迎页面将不显示）</td>
        </tr>
        <tr>
            <th><span class="red">*</span>业务简介LOGO：</th>
@@ -145,8 +152,7 @@ function setlatlng(longitude,latitude){
 $(function(){
 
 	$("#form").valid([
-	{ name:"name",simple:"名称",require:true},
-	{ name:"mp",type:"mobile",message:"手机号输入不正确"}
+	{ name:"name",simple:"名称",require:true}
 	
 	],true,true);
 
